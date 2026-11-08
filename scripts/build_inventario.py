@@ -5,8 +5,8 @@ Datos consultados el 08-11-2026. Cada programa lleva la(s) fuente(s) donde se ve
 
 Campos:
   categoria   : plan_comun | ing_civil | ing_no_civil | ing_comercial
-  en_alcance  : si   -> entra en la plataforma
-                revisar -> ingeniería cuya facultad o pertinencia no está confirmada; decidir con Benjamín
+  en_alcance  : si -> entra en la plataforma
+                no -> se revisó y Benjamín decidió excluirlo (08-11-2026); queda registrado por transparencia
   tipo_ingreso: plan_comun | carrera_directa
 """
 import csv, json, pathlib
@@ -103,7 +103,7 @@ P += [
       fuentes=("demre_2027",)),
     p("uc", "ing-recursos-naturales", "Ingeniería en Recursos Naturales", "ing_no_civil",
       facultad="Por confirmar (programa interdisciplinario)", campus="San Joaquín", codigo="12101", vacantes=85,
-      alcance="revisar", nota="Confirmar facultad responsable antes de incluir.", fuentes=("demre_2027",)),
+      alcance="si", nota="Confirmar facultad responsable antes de incluir.", fuentes=("demre_2027",)),
     p("uc", "ingenieria-comercial", "Ingeniería Comercial", "ing_comercial",
       facultad="Facultad de Economía y Administración", campus="San Joaquín", codigo="12014", vacantes=418,
       nota="No exige M2.", fuentes=("demre_2027",)),
@@ -125,7 +125,7 @@ P += [
     p("uchile", "ingenieria-comercial", "Ingeniería Comercial", "ing_comercial",
       facultad="Facultad de Economía y Negocios (FEN)", codigo="11042", vacantes=405, fuentes=("uchile_oferta",)),
     p("uchile", "ing-informacion-control-gestion", "Ingeniería en Información y Control de Gestión", "ing_no_civil",
-      facultad="Facultad de Economía y Negocios (FEN)", codigo="11027", vacantes=146, alcance="revisar",
+      facultad="Facultad de Economía y Negocios (FEN)", codigo="11027", vacantes=146, alcance="no",
       nota="Ingeniería del área de negocios, no de la FCFM.", fuentes=("uchile_oferta",)),
 ]
 
@@ -207,7 +207,7 @@ P += [
     p("unab", "civil-informatica", "Ingeniería Civil Informática", "ing_civil", facultad=FING_UNAB,
       campus="Antonio Varas y Casona de Las Condes", fuentes=("unab_folleto", "unab_uch")),
     p("unab", "civil-biomedica", "Ingeniería Civil Biomédica", "ing_civil", facultad="Por confirmar",
-      campus="Las Condes", vacantes=100, alcance="revisar",
+      campus="Las Condes", vacantes=100, alcance="si",
       nota="Carrera nueva Admisión 2027; no aparece aún en la nómina preliminar ni en el folleto 2026.", fuentes=("nuevas_2027",)),
     p("unab", "automatizacion-robotica", "Ingeniería en Automatización y Robótica", "ing_no_civil", facultad=FING_UNAB,
       nota="Diurno y vespertino.", fuentes=("unab_folleto", "unab_uch")),
@@ -216,11 +216,11 @@ P += [
     p("unab", "construccion", "Ingeniería en Construcción", "ing_no_civil", facultad=FING_UNAB, fuentes=("unab_folleto", "unab_uch")),
     p("unab", "industrial", "Ingeniería Industrial", "ing_no_civil", facultad=FING_UNAB,
       nota="Diurno y vespertino.", fuentes=("unab_folleto", "unab_uch")),
-    p("unab", "ambiental", "Ingeniería Ambiental", "ing_no_civil", facultad="Por confirmar", alcance="revisar", fuentes=("unab_uch",)),
-    p("unab", "fisica", "Ingeniería Física", "ing_no_civil", facultad="Por confirmar", alcance="revisar", fuentes=("unab_uch",)),
-    p("unab", "biotecnologia", "Ingeniería en Biotecnología", "ing_no_civil", facultad="Por confirmar", alcance="revisar", fuentes=("unab_uch",)),
+    p("unab", "ambiental", "Ingeniería Ambiental", "ing_no_civil", facultad="Por confirmar", alcance="si", fuentes=("unab_uch",)),
+    p("unab", "fisica", "Ingeniería Física", "ing_no_civil", facultad="Por confirmar", alcance="si", fuentes=("unab_uch",)),
+    p("unab", "biotecnologia", "Ingeniería en Biotecnología", "ing_no_civil", facultad="Por confirmar", alcance="si", fuentes=("unab_uch",)),
     p("unab", "engineering-technology-management", "Engineering and Technology Management", "ing_no_civil",
-      facultad="Por confirmar", campus="Las Condes", vacantes=60, alcance="revisar",
+      facultad="Por confirmar", campus="Las Condes", vacantes=60, alcance="si",
       nota="Carrera nueva Admisión 2027.", fuentes=("nuevas_2027",)),
     p("unab", "ingenieria-comercial", "Ingeniería Comercial", "ing_comercial", facultad="Facultad de Economía y Negocios",
       campus="Bellavista y Casona de Las Condes", nota="Diurno y vespertino; 5 años.", fuentes=("unab_folleto", "unab_uch")),
@@ -244,7 +244,7 @@ P += [
     p("udp", "ingenieria-comercial", "Ingeniería Comercial", "ing_comercial",
       facultad="Facultad de Administración y Economía", campus="Huechuraba", fuentes=("udp_uch",)),
     p("udp", "control-gestion", "Ingeniería en Control de Gestión", "ing_no_civil",
-      facultad="Facultad de Administración y Economía", campus="Huechuraba", alcance="revisar",
+      facultad="Facultad de Administración y Economía", campus="Huechuraba", alcance="no",
       nota="Ingeniería del área de negocios, no de la Facultad de Ingeniería.", fuentes=("udp_uch",)),
 ]
 
@@ -261,15 +261,15 @@ P += [
     p("uai", "computer-science", "Ingeniería en Computer Science", "ing_no_civil", facultad=FIC_UAI, campus="Peñalolén",
       nota="Ingreso directo. Exige M2.", fuentes=("uai_fic", "uai_uch")),
     p("uai", "bachillerato-ing-civil", "Bachillerato de Ingeniería Civil", "plan_comun", ingreso="plan_comun",
-      facultad=FIC_UAI, campus="Peñalolén", alcance="revisar",
+      facultad=FIC_UAI, campus="Peñalolén", alcance="si",
       nota="Programa de entrada alternativo; confirmar diferencia con el plan común.", fuentes=("uai_fic", "uai_uch")),
     p("uai", "doble-arquitectura-industrial", "Doble Título Arquitectura + Ingeniería Civil Industrial", "ing_civil",
-      facultad=FIC_UAI + " / Escuela de Arquitectura", campus="Peñalolén", alcance="revisar",
+      facultad=FIC_UAI + " / Escuela de Arquitectura", campus="Peñalolén", alcance="si",
       nota="Doble título.", fuentes=("uai_fic", "uai_uch")),
     p("uai", "negocios-tecnologia", "Ingeniería en Negocios y Tecnología", "ing_no_civil", facultad="Por confirmar",
-      alcance="revisar", fuentes=("uai_uch",)),
+      alcance="si", fuentes=("uai_uch",)),
     p("uai", "aeroespacial", "Ingeniería Aeroespacial", "ing_no_civil", facultad=FIC_UAI,
-      campus="Base Aérea El Bosque (FACh)", alcance="revisar",
+      campus="Base Aérea El Bosque (FACh)", alcance="no",
       nota="Aparece en la facultad pero no en la nómina DEMRE de Santiago; confirmar vía de ingreso.", fuentes=("uai_fic",)),
     p("uai", "ingenieria-comercial", "Ingeniería Comercial", "ing_comercial", facultad="Escuela de Negocios",
       campus="Peñalolén", nota="También existen Bachillerato de Ing. Comercial y dobles títulos (Derecho, Sociología).",

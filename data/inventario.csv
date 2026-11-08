@@ -3,11 +3,11 @@ uc-ingenieria,Pontificia Universidad Católica de Chile,Ingeniería,plan_comun,p
 uc-lic-ciencia-datos,Pontificia Universidad Católica de Chile,Licenciatura en Ingeniería en Ciencia de Datos,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,San Joaquín,12089,80,Licenciatura (no título de ingeniero civil). Exige M2. Confirmar si es programa conjunto Ingeniería–Matemáticas.
 uc-lic-ciencia-computacion,Pontificia Universidad Católica de Chile,Licenciatura en Ingeniería en Ciencia de la Computación,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,San Joaquín,12100,100,Licenciatura (no título de ingeniero civil). Exige M2.
 uc-construccion-civil,Pontificia Universidad Católica de Chile,Construcción Civil,ing_no_civil,carrera_directa,si,Facultad de Ingeniería (Escuela de Construcción Civil),San Joaquín,12038,205,No lleva 'ingeniería' en el nombre pero se dicta en la Facultad de Ingeniería. No exige M2.
-uc-ing-recursos-naturales,Pontificia Universidad Católica de Chile,Ingeniería en Recursos Naturales,ing_no_civil,carrera_directa,revisar,Por confirmar (programa interdisciplinario),San Joaquín,12101,85,Confirmar facultad responsable antes de incluir.
+uc-ing-recursos-naturales,Pontificia Universidad Católica de Chile,Ingeniería en Recursos Naturales,ing_no_civil,carrera_directa,si,Por confirmar (programa interdisciplinario),San Joaquín,12101,85,Confirmar facultad responsable antes de incluir.
 uc-ingenieria-comercial,Pontificia Universidad Católica de Chile,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Economía y Administración,San Joaquín,12014,418,No exige M2.
 uchile-plan-comun,Universidad de Chile,"Ingeniería y Ciencias, Plan Común",plan_comun,plan_comun,si,Facultad de Ciencias Físicas y Matemáticas (FCFM),Beauchef,11045,710,"Especialidad se elige tras dos años. Ingeniería Civil dura 11 semestres. Ponderaciones: NEM 10, Ranking 25, CL 10, M1 20, M2 20, Ciencias 15."
 uchile-ingenieria-comercial,Universidad de Chile,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Economía y Negocios (FEN),,11042,405,
-uchile-ing-informacion-control-gestion,Universidad de Chile,Ingeniería en Información y Control de Gestión,ing_no_civil,carrera_directa,revisar,Facultad de Economía y Negocios (FEN),,11027,146,"Ingeniería del área de negocios, no de la FCFM."
+uchile-ing-informacion-control-gestion,Universidad de Chile,Ingeniería en Información y Control de Gestión,ing_no_civil,carrera_directa,no,Facultad de Economía y Negocios (FEN),,11027,146,"Ingeniería del área de negocios, no de la FCFM."
 usm-plan-comun,Universidad Técnica Federico Santa María,Ingeniería Civil Plan Común,plan_comun,plan_comun,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15300,,Ver data/planes_comunes.json: selección competitiva por ranking de primer año.
 usm-civil,Universidad Técnica Federico Santa María,Ingeniería Civil,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15311,,
 usm-civil-minas,Universidad Técnica Federico Santa María,Ingeniería Civil de Minas,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15312,,
@@ -51,15 +51,15 @@ unab-civil-electrica,Universidad Andrés Bello,Ingeniería Civil Eléctrica,ing_
 unab-civil-minas,Universidad Andrés Bello,Ingeniería Civil en Minas,ing_civil,carrera_directa,si,Facultad de Ingeniería,,,,
 unab-civil-industrial,Universidad Andrés Bello,Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería,Antonio Varas y Casona de Las Condes,,,Diurno y vespertino.
 unab-civil-informatica,Universidad Andrés Bello,Ingeniería Civil Informática,ing_civil,carrera_directa,si,Facultad de Ingeniería,Antonio Varas y Casona de Las Condes,,,
-unab-civil-biomedica,Universidad Andrés Bello,Ingeniería Civil Biomédica,ing_civil,carrera_directa,revisar,Por confirmar,Las Condes,,100,Carrera nueva Admisión 2027; no aparece aún en la nómina preliminar ni en el folleto 2026.
+unab-civil-biomedica,Universidad Andrés Bello,Ingeniería Civil Biomédica,ing_civil,carrera_directa,si,Por confirmar,Las Condes,,100,Carrera nueva Admisión 2027; no aparece aún en la nómina preliminar ni en el folleto 2026.
 unab-automatizacion-robotica,Universidad Andrés Bello,Ingeniería en Automatización y Robótica,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,,,,Diurno y vespertino.
 unab-computacion-informatica,Universidad Andrés Bello,Ingeniería en Computación e Informática,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,,,,Diurno y vespertino.
 unab-construccion,Universidad Andrés Bello,Ingeniería en Construcción,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,,,,
 unab-industrial,Universidad Andrés Bello,Ingeniería Industrial,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,,,,Diurno y vespertino.
-unab-ambiental,Universidad Andrés Bello,Ingeniería Ambiental,ing_no_civil,carrera_directa,revisar,Por confirmar,,,,
-unab-fisica,Universidad Andrés Bello,Ingeniería Física,ing_no_civil,carrera_directa,revisar,Por confirmar,,,,
-unab-biotecnologia,Universidad Andrés Bello,Ingeniería en Biotecnología,ing_no_civil,carrera_directa,revisar,Por confirmar,,,,
-unab-engineering-technology-management,Universidad Andrés Bello,Engineering and Technology Management,ing_no_civil,carrera_directa,revisar,Por confirmar,Las Condes,,60,Carrera nueva Admisión 2027.
+unab-ambiental,Universidad Andrés Bello,Ingeniería Ambiental,ing_no_civil,carrera_directa,si,Por confirmar,,,,
+unab-fisica,Universidad Andrés Bello,Ingeniería Física,ing_no_civil,carrera_directa,si,Por confirmar,,,,
+unab-biotecnologia,Universidad Andrés Bello,Ingeniería en Biotecnología,ing_no_civil,carrera_directa,si,Por confirmar,,,,
+unab-engineering-technology-management,Universidad Andrés Bello,Engineering and Technology Management,ing_no_civil,carrera_directa,si,Por confirmar,Las Condes,,60,Carrera nueva Admisión 2027.
 unab-ingenieria-comercial,Universidad Andrés Bello,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Economía y Negocios,Bellavista y Casona de Las Condes,,,Diurno y vespertino; 5 años.
 udp-plan-comun,Universidad Diego Portales,Ingeniería Civil Plan Común,plan_comun,plan_comun,si,Facultad de Ingeniería y Ciencias,,,,Primer año común; especialidad sin límite de cupos. Título profesional + magíster de continuidad.
 udp-civil-industrial,Universidad Diego Portales,Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,,,,
@@ -67,13 +67,13 @@ udp-civil-obras-civiles,Universidad Diego Portales,Ingeniería Civil en Obras Ci
 udp-civil-informatica-telecom,Universidad Diego Portales,Ingeniería Civil en Informática y Telecomunicaciones,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,,,,
 udp-civil-ciencia-datos-ia,Universidad Diego Portales,Ingeniería Civil en Ciencia de Datos e Inteligencia Artificial,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,,,,
 udp-ingenieria-comercial,Universidad Diego Portales,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Administración y Economía,Huechuraba,,,
-udp-control-gestion,Universidad Diego Portales,Ingeniería en Control de Gestión,ing_no_civil,carrera_directa,revisar,Facultad de Administración y Economía,Huechuraba,,,"Ingeniería del área de negocios, no de la Facultad de Ingeniería."
+udp-control-gestion,Universidad Diego Portales,Ingeniería en Control de Gestión,ing_no_civil,carrera_directa,no,Facultad de Administración y Economía,Huechuraba,,,"Ingeniería del área de negocios, no de la Facultad de Ingeniería."
 uai-plan-comun,Universidad Adolfo Ibáñez,Ingeniería Civil (Plan Común),plan_comun,plan_comun,si,Facultad de Ingeniería y Ciencias,Peñalolén,,,En Santiago todas las ingenierías civiles entran por plan común (7 especialidades).
 uai-computer-science,Universidad Adolfo Ibáñez,Ingeniería en Computer Science,ing_no_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,Peñalolén,,,Ingreso directo. Exige M2.
-uai-bachillerato-ing-civil,Universidad Adolfo Ibáñez,Bachillerato de Ingeniería Civil,plan_comun,plan_comun,revisar,Facultad de Ingeniería y Ciencias,Peñalolén,,,Programa de entrada alternativo; confirmar diferencia con el plan común.
-uai-doble-arquitectura-industrial,Universidad Adolfo Ibáñez,Doble Título Arquitectura + Ingeniería Civil Industrial,ing_civil,carrera_directa,revisar,Facultad de Ingeniería y Ciencias / Escuela de Arquitectura,Peñalolén,,,Doble título.
-uai-negocios-tecnologia,Universidad Adolfo Ibáñez,Ingeniería en Negocios y Tecnología,ing_no_civil,carrera_directa,revisar,Por confirmar,,,,
-uai-aeroespacial,Universidad Adolfo Ibáñez,Ingeniería Aeroespacial,ing_no_civil,carrera_directa,revisar,Facultad de Ingeniería y Ciencias,Base Aérea El Bosque (FACh),,,Aparece en la facultad pero no en la nómina DEMRE de Santiago; confirmar vía de ingreso.
+uai-bachillerato-ing-civil,Universidad Adolfo Ibáñez,Bachillerato de Ingeniería Civil,plan_comun,plan_comun,si,Facultad de Ingeniería y Ciencias,Peñalolén,,,Programa de entrada alternativo; confirmar diferencia con el plan común.
+uai-doble-arquitectura-industrial,Universidad Adolfo Ibáñez,Doble Título Arquitectura + Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias / Escuela de Arquitectura,Peñalolén,,,Doble título.
+uai-negocios-tecnologia,Universidad Adolfo Ibáñez,Ingeniería en Negocios y Tecnología,ing_no_civil,carrera_directa,si,Por confirmar,,,,
+uai-aeroespacial,Universidad Adolfo Ibáñez,Ingeniería Aeroespacial,ing_no_civil,carrera_directa,no,Facultad de Ingeniería y Ciencias,Base Aérea El Bosque (FACh),,,Aparece en la facultad pero no en la nómina DEMRE de Santiago; confirmar vía de ingreso.
 uai-ingenieria-comercial,Universidad Adolfo Ibáñez,Ingeniería Comercial,ing_comercial,carrera_directa,si,Escuela de Negocios,Peñalolén,,,"También existen Bachillerato de Ing. Comercial y dobles títulos (Derecho, Sociología)."
 udd-plan-comun,Universidad del Desarrollo,Ingeniería Civil Plan Común,plan_comun,plan_comun,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",,,Especialidad se elige tras 3 semestres; conduce a todas las carreras de la facultad salvo BioMedicina. Dura 11 semestres. Lista de especialidades basada en documento 2024.
 udd-civil-industrial,Universidad del Desarrollo,Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",,,

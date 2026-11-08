@@ -199,7 +199,7 @@
       "codigo_demre": "12101",
       "vacantes_regulares_2027": 85,
       "especialidades": [],
-      "en_alcance": "revisar",
+      "en_alcance": "si",
       "nota": "Confirmar facultad responsable antes de incluir.",
       "fuentes": [
         "demre_2027"
@@ -290,7 +290,7 @@
       "codigo_demre": "11027",
       "vacantes_regulares_2027": 146,
       "especialidades": [],
-      "en_alcance": "revisar",
+      "en_alcance": "no",
       "nota": "Ingeniería del área de negocios, no de la FCFM.",
       "fuentes": [
         "uchile_oferta"
@@ -1168,7 +1168,7 @@
       "codigo_demre": null,
       "vacantes_regulares_2027": 100,
       "especialidades": [],
-      "en_alcance": "revisar",
+      "en_alcance": "si",
       "nota": "Carrera nueva Admisión 2027; no aparece aún en la nómina preliminar ni en el folleto 2026.",
       "fuentes": [
         "nuevas_2027"
@@ -1267,7 +1267,7 @@
       "codigo_demre": null,
       "vacantes_regulares_2027": null,
       "especialidades": [],
-      "en_alcance": "revisar",
+      "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "unab_uch"
@@ -1286,7 +1286,7 @@
       "codigo_demre": null,
       "vacantes_regulares_2027": null,
       "especialidades": [],
-      "en_alcance": "revisar",
+      "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "unab_uch"
@@ -1305,7 +1305,7 @@
       "codigo_demre": null,
       "vacantes_regulares_2027": null,
       "especialidades": [],
-      "en_alcance": "revisar",
+      "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "unab_uch"
@@ -1324,7 +1324,7 @@
       "codigo_demre": null,
       "vacantes_regulares_2027": 60,
       "especialidades": [],
-      "en_alcance": "revisar",
+      "en_alcance": "si",
       "nota": "Carrera nueva Admisión 2027.",
       "fuentes": [
         "nuevas_2027"
@@ -1483,7 +1483,7 @@
       "codigo_demre": null,
       "vacantes_regulares_2027": null,
       "especialidades": [],
-      "en_alcance": "revisar",
+      "en_alcance": "no",
       "nota": "Ingeniería del área de negocios, no de la Facultad de Ingeniería.",
       "fuentes": [
         "udp_uch"
@@ -1550,7 +1550,7 @@
       "codigo_demre": null,
       "vacantes_regulares_2027": null,
       "especialidades": [],
-      "en_alcance": "revisar",
+      "en_alcance": "si",
       "nota": "Programa de entrada alternativo; confirmar diferencia con el plan común.",
       "fuentes": [
         "uai_fic",
@@ -1570,7 +1570,7 @@
       "codigo_demre": null,
       "vacantes_regulares_2027": null,
       "especialidades": [],
-      "en_alcance": "revisar",
+      "en_alcance": "si",
       "nota": "Doble título.",
       "fuentes": [
         "uai_fic",
@@ -1590,7 +1590,7 @@
       "codigo_demre": null,
       "vacantes_regulares_2027": null,
       "especialidades": [],
-      "en_alcance": "revisar",
+      "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "uai_uch"
@@ -1609,7 +1609,7 @@
       "codigo_demre": null,
       "vacantes_regulares_2027": null,
       "especialidades": [],
-      "en_alcance": "revisar",
+      "en_alcance": "no",
       "nota": "Aparece en la facultad pero no en la nómina DEMRE de Santiago; confirmar vía de ingreso.",
       "fuentes": [
         "uai_fic"
