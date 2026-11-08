@@ -1,0 +1,1876 @@
+{
+  "version": "0.2",
+  "consultado": "2026-11-08",
+  "alcance": "Facultad/Escuela de Ingeniería (sede Santiago) + Ingeniería Comercial, 8 universidades",
+  "fuentes": {
+    "demre_2027": {
+      "nombre": "DEMRE — Oferta definitiva de carreras, vacantes y ponderaciones, Admisión 2027",
+      "url": "https://demre.cl/publicaciones/pdf/2027-26-09-24-oferta-definitiva-carreras-p2027.pdf"
+    },
+    "uc_majors": {
+      "nombre": "Ingeniería UC — Majors y minors",
+      "url": "https://www.ing.uc.cl/en/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/"
+    },
+    "uchile_oferta": {
+      "nombre": "U. de Chile — Oferta de carreras Admisión regular",
+      "url": "https://uchile.cl/admision-y-matriculas/admision-regular-pregrado/oferta-de-carreras"
+    },
+    "uchile_civil": {
+      "nombre": "U. de Chile — Ingeniería Civil (plan común FCFM)",
+      "url": "https://uchile.cl/carreras/4969/ingenieria-civil"
+    },
+    "usm_uch": {
+      "nombre": "universidadeschile.cl — USM (nómina preliminar DEMRE 2027, verificada 15-10-2026)",
+      "url": "https://universidadeschile.cl/universidad/universidad-tecnica-federico-santa-maria"
+    },
+    "usach_fing": {
+      "nombre": "USACH Admisión — Facultad de Ingeniería",
+      "url": "https://admision.usach.cl/FING-USACH"
+    },
+    "usach_uch": {
+      "nombre": "universidadeschile.cl — USACH (nómina preliminar DEMRE 2027)",
+      "url": "https://universidadeschile.cl/universidad/universidad-de-santiago-de-chile"
+    },
+    "unab_folleto": {
+      "nombre": "UNAB — Folleto Admisión 2026",
+      "url": "https://unabwps3.s3.amazonaws.com/exploraunab/wp-content/uploads/2025/04/02113053/FOLLETO-ADMISION-2026-1.pdf"
+    },
+    "unab_uch": {
+      "nombre": "universidadeschile.cl — UNAB (nómina preliminar DEMRE 2027)",
+      "url": "https://universidadeschile.cl/universidad/universidad-andres-bello"
+    },
+    "nuevas_2027": {
+      "nombre": "Meganoticias — Nuevas carreras Admisión 2027 (25-09-2026)",
+      "url": "https://www.meganoticias.cl/nacional/532470-admision-2027-nuevas-carreras-chile-universidades-vacantes-25-09-2026.html"
+    },
+    "udp_uch": {
+      "nombre": "universidadeschile.cl — UDP (nómina preliminar DEMRE 2027)",
+      "url": "https://universidadeschile.cl/universidad/universidad-diego-portales"
+    },
+    "udp_plancomun": {
+      "nombre": "UDP — Malla Ingeniería Civil Plan Común 2026",
+      "url": "https://ingenieriayciencias.udp.cl/cms/wp-content/uploads/2025/12/INGENIERIA-CIVIL-PLAN-COMUN_2026.pdf"
+    },
+    "uai_fic": {
+      "nombre": "UAI — Facultad de Ingeniería y Ciencias, nuestras carreras",
+      "url": "https://www.uai.cl/ingenieria-y-ciencias/carreras/nuestras-carreras"
+    },
+    "uai_uch": {
+      "nombre": "universidadeschile.cl — UAI (nómina preliminar DEMRE 2027)",
+      "url": "https://universidadeschile.cl/universidad/universidad-adolfo-ibanez"
+    },
+    "udd_fing": {
+      "nombre": "UDD — Facultad de Ingeniería, carreras",
+      "url": "https://ingenieria.udd.cl/carreras/"
+    },
+    "udd_plancomun": {
+      "nombre": "UDD — Plan común de ingenierías (2024)",
+      "url": "https://ingenieria.udd.cl/files/2024/03/07-plan-comun-ingenierias.pdf"
+    },
+    "udd_uch": {
+      "nombre": "universidadeschile.cl — UDD (nómina preliminar DEMRE 2027)",
+      "url": "https://universidadeschile.cl/universidad/universidad-del-desarrollo"
+    }
+  },
+  "universidades": {
+    "uc": "Pontificia Universidad Católica de Chile",
+    "uchile": "Universidad de Chile",
+    "usm": "Universidad Técnica Federico Santa María",
+    "usach": "Universidad de Santiago de Chile",
+    "unab": "Universidad Andrés Bello",
+    "udp": "Universidad Diego Portales",
+    "uai": "Universidad Adolfo Ibáñez",
+    "udd": "Universidad del Desarrollo"
+  },
+  "programas": [
+    {
+      "id": "uc-ingenieria",
+      "universidad_id": "uc",
+      "universidad": "Pontificia Universidad Católica de Chile",
+      "nombre_oficial": "Ingeniería",
+      "categoria": "plan_comun",
+      "tipo_ingreso": "plan_comun",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "San Joaquín",
+      "codigo_demre": "12039",
+      "vacantes_regulares_2027": 650,
+      "especialidades": [
+        "Ingeniería y Ciencias Ambientales",
+        "Computación y Sistemas de Información",
+        "Ingeniería en Construcción",
+        "Ingeniería Eléctrica",
+        "Ingeniería Estructural",
+        "Ingeniería Geotécnica",
+        "Ingeniería Hidráulica",
+        "Ingeniería Mecánica",
+        "Ingeniería en Minería",
+        "Ingeniería Química",
+        "Investigación Operativa",
+        "Ingeniería de Sistemas de Transporte",
+        "Ingeniería de Software",
+        "Geociencias (interdisciplinario)",
+        "Ingeniería Biológica (interdisciplinario)",
+        "Ingeniería Biomédica (interdisciplinario)",
+        "Ingeniería Matemática (interdisciplinario)",
+        "Ingeniería y Arquitectura (interdisciplinario)",
+        "Ingeniería, Diseño e Innovación (interdisciplinario)",
+        "Ingeniería Robótica (interdisciplinario)",
+        "Ingeniería Física (interdisciplinario)",
+        "Ingeniería Civil (interdisciplinario)"
+      ],
+      "en_alcance": "si",
+      "nota": "Ingreso único a Licenciatura en Ciencias de la Ingeniería con major; luego título de Ingeniero Civil UC en su especialidad. Exige M2 (pondera 15%).",
+      "fuentes": [
+        "demre_2027",
+        "uc_majors"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uc-lic-ciencia-datos",
+      "universidad_id": "uc",
+      "universidad": "Pontificia Universidad Católica de Chile",
+      "nombre_oficial": "Licenciatura en Ingeniería en Ciencia de Datos",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "San Joaquín",
+      "codigo_demre": "12089",
+      "vacantes_regulares_2027": 80,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Licenciatura (no título de ingeniero civil). Exige M2. Confirmar si es programa conjunto Ingeniería–Matemáticas.",
+      "fuentes": [
+        "demre_2027"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uc-lic-ciencia-computacion",
+      "universidad_id": "uc",
+      "universidad": "Pontificia Universidad Católica de Chile",
+      "nombre_oficial": "Licenciatura en Ingeniería en Ciencia de la Computación",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "San Joaquín",
+      "codigo_demre": "12100",
+      "vacantes_regulares_2027": 100,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Licenciatura (no título de ingeniero civil). Exige M2.",
+      "fuentes": [
+        "demre_2027"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uc-construccion-civil",
+      "universidad_id": "uc",
+      "universidad": "Pontificia Universidad Católica de Chile",
+      "nombre_oficial": "Construcción Civil",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería (Escuela de Construcción Civil)",
+      "campus": "San Joaquín",
+      "codigo_demre": "12038",
+      "vacantes_regulares_2027": 205,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "No lleva 'ingeniería' en el nombre pero se dicta en la Facultad de Ingeniería. No exige M2.",
+      "fuentes": [
+        "demre_2027"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uc-ing-recursos-naturales",
+      "universidad_id": "uc",
+      "universidad": "Pontificia Universidad Católica de Chile",
+      "nombre_oficial": "Ingeniería en Recursos Naturales",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Por confirmar (programa interdisciplinario)",
+      "campus": "San Joaquín",
+      "codigo_demre": "12101",
+      "vacantes_regulares_2027": 85,
+      "especialidades": [],
+      "en_alcance": "revisar",
+      "nota": "Confirmar facultad responsable antes de incluir.",
+      "fuentes": [
+        "demre_2027"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uc-ingenieria-comercial",
+      "universidad_id": "uc",
+      "universidad": "Pontificia Universidad Católica de Chile",
+      "nombre_oficial": "Ingeniería Comercial",
+      "categoria": "ing_comercial",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Economía y Administración",
+      "campus": "San Joaquín",
+      "codigo_demre": "12014",
+      "vacantes_regulares_2027": 418,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "No exige M2.",
+      "fuentes": [
+        "demre_2027"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uchile-plan-comun",
+      "universidad_id": "uchile",
+      "universidad": "Universidad de Chile",
+      "nombre_oficial": "Ingeniería y Ciencias, Plan Común",
+      "categoria": "plan_comun",
+      "tipo_ingreso": "plan_comun",
+      "facultad": "Facultad de Ciencias Físicas y Matemáticas (FCFM)",
+      "campus": "Beauchef",
+      "codigo_demre": "11045",
+      "vacantes_regulares_2027": 710,
+      "especialidades": [
+        "Ingeniería Civil (menciones Estructuras, Construcción y Geotecnia; Hidráulica, Sanitaria y Ambiental; Transporte)",
+        "Ingeniería Civil de Minas",
+        "Ingeniería Civil en Biotecnología",
+        "Ingeniería Civil en Computación",
+        "Ingeniería Civil Eléctrica",
+        "Ingeniería Civil Industrial",
+        "Ingeniería Civil Matemática",
+        "Ingeniería Civil Mecánica",
+        "Ingeniería Civil Química",
+        "Geología (no ingeniería)",
+        "Lic. en Ciencias mención Astronomía (no ingeniería)",
+        "Lic. en Ciencias mención Física (no ingeniería)",
+        "Geofísica (no ingeniería)"
+      ],
+      "en_alcance": "si",
+      "nota": "Especialidad se elige tras dos años. Ingeniería Civil dura 11 semestres. Ponderaciones: NEM 10, Ranking 25, CL 10, M1 20, M2 20, Ciencias 15.",
+      "fuentes": [
+        "uchile_oferta",
+        "uchile_civil"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uchile-ingenieria-comercial",
+      "universidad_id": "uchile",
+      "universidad": "Universidad de Chile",
+      "nombre_oficial": "Ingeniería Comercial",
+      "categoria": "ing_comercial",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Economía y Negocios (FEN)",
+      "campus": "",
+      "codigo_demre": "11042",
+      "vacantes_regulares_2027": 405,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "uchile_oferta"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uchile-ing-informacion-control-gestion",
+      "universidad_id": "uchile",
+      "universidad": "Universidad de Chile",
+      "nombre_oficial": "Ingeniería en Información y Control de Gestión",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Economía y Negocios (FEN)",
+      "campus": "",
+      "codigo_demre": "11027",
+      "vacantes_regulares_2027": 146,
+      "especialidades": [],
+      "en_alcance": "revisar",
+      "nota": "Ingeniería del área de negocios, no de la FCFM.",
+      "fuentes": [
+        "uchile_oferta"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-plan-comun",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería Civil Plan Común",
+      "categoria": "plan_comun",
+      "tipo_ingreso": "plan_comun",
+      "facultad": "USM (organizada por departamentos, sin facultades)",
+      "campus": "San Joaquín",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Especialidades del plan común por confirmar en Fase 3.",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-civil",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería Civil",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "USM (organizada por departamentos, sin facultades)",
+      "campus": "San Joaquín",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-civil-minas",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería Civil de Minas",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "USM (organizada por departamentos, sin facultades)",
+      "campus": "San Joaquín",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-civil-electrica",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería Civil Eléctrica",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "USM (organizada por departamentos, sin facultades)",
+      "campus": "San Joaquín",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-civil-fisica",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería Civil Física",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "USM (organizada por departamentos, sin facultades)",
+      "campus": "San Joaquín",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-civil-informatica",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería Civil Informática",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "USM (organizada por departamentos, sin facultades)",
+      "campus": "San Joaquín",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-civil-matematica",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería Civil Matemática",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "USM (organizada por departamentos, sin facultades)",
+      "campus": "San Joaquín",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-civil-mecanica",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería Civil Mecánica",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "USM (organizada por departamentos, sin facultades)",
+      "campus": "San Joaquín",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-civil-quimica",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería Civil Química",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "USM (organizada por departamentos, sin facultades)",
+      "campus": "San Joaquín",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-civil-telematica",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería Civil Telemática",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "USM (organizada por departamentos, sin facultades)",
+      "campus": "San Joaquín",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-diseno-productos",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería en Diseño de Productos",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "USM (departamentos)",
+      "campus": "San Joaquín",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-civil-industrial",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería Civil Industrial",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "USM (departamentos)",
+      "campus": "Vitacura",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-aviacion-comercial",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería en Aviación Comercial",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "USM (departamentos)",
+      "campus": "Vitacura",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usm-ingenieria-comercial",
+      "universidad_id": "usm",
+      "universidad": "Universidad Técnica Federico Santa María",
+      "nombre_oficial": "Ingeniería Comercial",
+      "categoria": "ing_comercial",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "USM — Departamento de Industrias",
+      "campus": "Vitacura",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usm_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-biomedica",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil Biomédica",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-en-ambiente",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil en Ambiente",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-en-biotecnologia",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil en Biotecnología",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-en-electricidad",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil en Electricidad",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-en-geomensura-y-geomatica",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil en Geomensura y Geomática",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-en-mecanica",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil en Mecánica",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-en-metalurgia",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil en Metalurgia",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-en-minas",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil en Minas",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-en-obras-civiles",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil en Obras Civiles",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-en-quimica",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil en Química",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-en-telematica",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil en Telemática",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-en-territorio-y-medio-ambiente",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil en Territorio y Medio Ambiente",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-industrial",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil Industrial",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-mecatronica",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil Mecatrónica",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-civil-informatica-plan-comun",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Civil en Informática – Plan Común",
+      "categoria": "plan_comun",
+      "tipo_ingreso": "plan_comun",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": 90,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Carrera nueva Admisión 2027 (90 vacantes según prensa). Especialidades por confirmar en Fase 3.",
+      "fuentes": [
+        "usach_fing",
+        "nuevas_2027"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-ejecucion-en-climatizacion",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería de Ejecución en Climatización",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-ejecucion-en-computacion-e-informatica",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería de Ejecución en Computación e Informática",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-ejecucion-en-electricidad",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería de Ejecución en Electricidad",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-ejecucion-en-mecanica",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería de Ejecución en Mecánica",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-ejecucion-en-metalurgia",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería de Ejecución en Metalurgia",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-ejecucion-en-minas",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería de Ejecución en Minas",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-ejecucion-en-quimica",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería de Ejecución en Química",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-ejecucion-industrial",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería de Ejecución Industrial",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_fing",
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "usach-ingenieria-comercial",
+      "universidad_id": "usach",
+      "universidad": "Universidad de Santiago de Chile",
+      "nombre_oficial": "Ingeniería Comercial",
+      "categoria": "ing_comercial",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Administración y Economía (FAE)",
+      "campus": "Campus Usach, Estación Central",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "usach_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-civil",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería Civil",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "unab_folleto",
+        "unab_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-civil-electrica",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería Civil Eléctrica",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "unab_folleto",
+        "unab_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-civil-minas",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería Civil en Minas",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "unab_folleto",
+        "unab_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-civil-industrial",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería Civil Industrial",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Antonio Varas y Casona de Las Condes",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Diurno y vespertino.",
+      "fuentes": [
+        "unab_folleto",
+        "unab_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-civil-informatica",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería Civil Informática",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Antonio Varas y Casona de Las Condes",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "unab_folleto",
+        "unab_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-civil-biomedica",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería Civil Biomédica",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Por confirmar",
+      "campus": "Las Condes",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": 100,
+      "especialidades": [],
+      "en_alcance": "revisar",
+      "nota": "Carrera nueva Admisión 2027; no aparece aún en la nómina preliminar ni en el folleto 2026.",
+      "fuentes": [
+        "nuevas_2027"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-automatizacion-robotica",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería en Automatización y Robótica",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Diurno y vespertino.",
+      "fuentes": [
+        "unab_folleto",
+        "unab_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-computacion-informatica",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería en Computación e Informática",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Diurno y vespertino.",
+      "fuentes": [
+        "unab_folleto",
+        "unab_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-construccion",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería en Construcción",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "unab_folleto",
+        "unab_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-industrial",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería Industrial",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Diurno y vespertino.",
+      "fuentes": [
+        "unab_folleto",
+        "unab_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-ambiental",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería Ambiental",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Por confirmar",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "revisar",
+      "nota": "",
+      "fuentes": [
+        "unab_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-fisica",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería Física",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Por confirmar",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "revisar",
+      "nota": "",
+      "fuentes": [
+        "unab_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-biotecnologia",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería en Biotecnología",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Por confirmar",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "revisar",
+      "nota": "",
+      "fuentes": [
+        "unab_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-engineering-technology-management",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Engineering and Technology Management",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Por confirmar",
+      "campus": "Las Condes",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": 60,
+      "especialidades": [],
+      "en_alcance": "revisar",
+      "nota": "Carrera nueva Admisión 2027.",
+      "fuentes": [
+        "nuevas_2027"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "unab-ingenieria-comercial",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Ingeniería Comercial",
+      "categoria": "ing_comercial",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Economía y Negocios",
+      "campus": "Bellavista y Casona de Las Condes",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Diurno y vespertino; 5 años.",
+      "fuentes": [
+        "unab_folleto",
+        "unab_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udp-plan-comun",
+      "universidad_id": "udp",
+      "universidad": "Universidad Diego Portales",
+      "nombre_oficial": "Ingeniería Civil Plan Común",
+      "categoria": "plan_comun",
+      "tipo_ingreso": "plan_comun",
+      "facultad": "Facultad de Ingeniería y Ciencias",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [
+        "Ingeniería Civil Industrial",
+        "Ingeniería Civil en Obras Civiles",
+        "Ingeniería Civil en Informática y Telecomunicaciones",
+        "Ingeniería Civil en Ciencia de Datos e Inteligencia Artificial"
+      ],
+      "en_alcance": "si",
+      "nota": "Primer año común; especialidad sin límite de cupos. Título profesional + magíster de continuidad.",
+      "fuentes": [
+        "udp_plancomun",
+        "udp_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udp-civil-industrial",
+      "universidad_id": "udp",
+      "universidad": "Universidad Diego Portales",
+      "nombre_oficial": "Ingeniería Civil Industrial",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería y Ciencias",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "udp_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udp-civil-obras-civiles",
+      "universidad_id": "udp",
+      "universidad": "Universidad Diego Portales",
+      "nombre_oficial": "Ingeniería Civil en Obras Civiles",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería y Ciencias",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "udp_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udp-civil-informatica-telecom",
+      "universidad_id": "udp",
+      "universidad": "Universidad Diego Portales",
+      "nombre_oficial": "Ingeniería Civil en Informática y Telecomunicaciones",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería y Ciencias",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "udp_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udp-civil-ciencia-datos-ia",
+      "universidad_id": "udp",
+      "universidad": "Universidad Diego Portales",
+      "nombre_oficial": "Ingeniería Civil en Ciencia de Datos e Inteligencia Artificial",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería y Ciencias",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "udp_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udp-ingenieria-comercial",
+      "universidad_id": "udp",
+      "universidad": "Universidad Diego Portales",
+      "nombre_oficial": "Ingeniería Comercial",
+      "categoria": "ing_comercial",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Administración y Economía",
+      "campus": "Huechuraba",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "udp_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udp-control-gestion",
+      "universidad_id": "udp",
+      "universidad": "Universidad Diego Portales",
+      "nombre_oficial": "Ingeniería en Control de Gestión",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Administración y Economía",
+      "campus": "Huechuraba",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "revisar",
+      "nota": "Ingeniería del área de negocios, no de la Facultad de Ingeniería.",
+      "fuentes": [
+        "udp_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uai-plan-comun",
+      "universidad_id": "uai",
+      "universidad": "Universidad Adolfo Ibáñez",
+      "nombre_oficial": "Ingeniería Civil (Plan Común)",
+      "categoria": "plan_comun",
+      "tipo_ingreso": "plan_comun",
+      "facultad": "Facultad de Ingeniería y Ciencias",
+      "campus": "Peñalolén",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [
+        "Ingeniería Civil Industrial",
+        "Ingeniería Civil Informática",
+        "Ingeniería Civil en Bioingeniería",
+        "Ingeniería Civil (Obras Civiles)",
+        "Ingeniería Civil en Energía",
+        "Ingeniería Civil Mecánica",
+        "Ingeniería Civil en Minería"
+      ],
+      "en_alcance": "si",
+      "nota": "En Santiago todas las ingenierías civiles entran por plan común (7 especialidades).",
+      "fuentes": [
+        "uai_fic",
+        "uai_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uai-computer-science",
+      "universidad_id": "uai",
+      "universidad": "Universidad Adolfo Ibáñez",
+      "nombre_oficial": "Ingeniería en Computer Science",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería y Ciencias",
+      "campus": "Peñalolén",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Ingreso directo. Exige M2.",
+      "fuentes": [
+        "uai_fic",
+        "uai_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uai-bachillerato-ing-civil",
+      "universidad_id": "uai",
+      "universidad": "Universidad Adolfo Ibáñez",
+      "nombre_oficial": "Bachillerato de Ingeniería Civil",
+      "categoria": "plan_comun",
+      "tipo_ingreso": "plan_comun",
+      "facultad": "Facultad de Ingeniería y Ciencias",
+      "campus": "Peñalolén",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "revisar",
+      "nota": "Programa de entrada alternativo; confirmar diferencia con el plan común.",
+      "fuentes": [
+        "uai_fic",
+        "uai_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uai-doble-arquitectura-industrial",
+      "universidad_id": "uai",
+      "universidad": "Universidad Adolfo Ibáñez",
+      "nombre_oficial": "Doble Título Arquitectura + Ingeniería Civil Industrial",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería y Ciencias / Escuela de Arquitectura",
+      "campus": "Peñalolén",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "revisar",
+      "nota": "Doble título.",
+      "fuentes": [
+        "uai_fic",
+        "uai_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uai-negocios-tecnologia",
+      "universidad_id": "uai",
+      "universidad": "Universidad Adolfo Ibáñez",
+      "nombre_oficial": "Ingeniería en Negocios y Tecnología",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Por confirmar",
+      "campus": "",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "revisar",
+      "nota": "",
+      "fuentes": [
+        "uai_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uai-aeroespacial",
+      "universidad_id": "uai",
+      "universidad": "Universidad Adolfo Ibáñez",
+      "nombre_oficial": "Ingeniería Aeroespacial",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería y Ciencias",
+      "campus": "Base Aérea El Bosque (FACh)",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "revisar",
+      "nota": "Aparece en la facultad pero no en la nómina DEMRE de Santiago; confirmar vía de ingreso.",
+      "fuentes": [
+        "uai_fic"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "uai-ingenieria-comercial",
+      "universidad_id": "uai",
+      "universidad": "Universidad Adolfo Ibáñez",
+      "nombre_oficial": "Ingeniería Comercial",
+      "categoria": "ing_comercial",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Escuela de Negocios",
+      "campus": "Peñalolén",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "También existen Bachillerato de Ing. Comercial y dobles títulos (Derecho, Sociología).",
+      "fuentes": [
+        "uai_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udd-plan-comun",
+      "universidad_id": "udd",
+      "universidad": "Universidad del Desarrollo",
+      "nombre_oficial": "Ingeniería Civil Plan Común",
+      "categoria": "plan_comun",
+      "tipo_ingreso": "plan_comun",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [
+        "Ingeniería Civil Industrial",
+        "Ingeniería Civil en Obras Civiles",
+        "Ingeniería Civil en Minería",
+        "Ingeniería Civil en Informática e Innovación Tecnológica",
+        "Ingeniería Civil en Informática e Inteligencia Artificial (por confirmar)",
+        "Geología (no ingeniería)"
+      ],
+      "en_alcance": "si",
+      "nota": "Especialidad se elige tras 3 semestres; conduce a todas las carreras de la facultad salvo BioMedicina. Dura 11 semestres. Lista de especialidades basada en documento 2024.",
+      "fuentes": [
+        "udd_fing",
+        "udd_plancomun",
+        "udd_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udd-civil-industrial",
+      "universidad_id": "udd",
+      "universidad": "Universidad del Desarrollo",
+      "nombre_oficial": "Ingeniería Civil Industrial",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "udd_fing",
+        "udd_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udd-civil-obras-civiles",
+      "universidad_id": "udd",
+      "universidad": "Universidad del Desarrollo",
+      "nombre_oficial": "Ingeniería Civil en Obras Civiles",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "udd_fing",
+        "udd_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udd-civil-mineria",
+      "universidad_id": "udd",
+      "universidad": "Universidad del Desarrollo",
+      "nombre_oficial": "Ingeniería Civil en Minería",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "udd_fing",
+        "udd_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udd-civil-informatica-innovacion",
+      "universidad_id": "udd",
+      "universidad": "Universidad del Desarrollo",
+      "nombre_oficial": "Ingeniería Civil en Informática e Innovación Tecnológica",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "",
+      "fuentes": [
+        "udd_fing",
+        "udd_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udd-civil-informatica-ia",
+      "universidad_id": "udd",
+      "universidad": "Universidad del Desarrollo",
+      "nombre_oficial": "Ingeniería Civil en Informática e Inteligencia Artificial",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Carrera nueva.",
+      "fuentes": [
+        "udd_fing",
+        "udd_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udd-civil-biomedicina",
+      "universidad_id": "udd",
+      "universidad": "Universidad del Desarrollo",
+      "nombre_oficial": "Ingeniería Civil en Biomedicina",
+      "categoria": "ing_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Ingeniería",
+      "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Carrera nueva; no se accede por plan común.",
+      "fuentes": [
+        "udd_fing",
+        "udd_uch"
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "id": "udd-ingenieria-comercial",
+      "universidad_id": "udd",
+      "universidad": "Universidad del Desarrollo",
+      "nombre_oficial": "Ingeniería Comercial",
+      "categoria": "ing_comercial",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Facultad de Economía y Negocios",
+      "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
+      "codigo_demre": null,
+      "vacantes_regulares_2027": null,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Nuevos dobles títulos 2027 con Derecho, Psicología y Diseño; también Bachillerato en Ing. Comercial.",
+      "fuentes": [
+        "udd_uch",
+        "nuevas_2027"
+      ],
+      "consultado": "2026-11-08"
+    }
+  ],
+  "fuera_de_alcance": [
+    {
+      "universidad_id": "uchile",
+      "nombre": "Ingeniería en Biotecnología Molecular",
+      "facultad": "Facultad de Ciencias"
+    },
+    {
+      "universidad_id": "uchile",
+      "nombre": "Ingeniería en Sonido",
+      "facultad": "Facultad de Artes"
+    },
+    {
+      "universidad_id": "uchile",
+      "nombre": "Ingeniería Agronómica",
+      "facultad": "Facultad de Ciencias Agronómicas"
+    },
+    {
+      "universidad_id": "uchile",
+      "nombre": "Ingeniería en Recursos Naturales Renovables",
+      "facultad": "Facultad de Ciencias Agronómicas"
+    },
+    {
+      "universidad_id": "uchile",
+      "nombre": "Ingeniería Forestal",
+      "facultad": "Facultad de Ciencias Forestales y de la Conservación de la Naturaleza"
+    },
+    {
+      "universidad_id": "uchile",
+      "nombre": "Ingeniería en Recursos Hídricos",
+      "facultad": "Facultad de Ciencias Forestales y de la Conservación de la Naturaleza"
+    },
+    {
+      "universidad_id": "uchile",
+      "nombre": "Ingeniería en Alimentos",
+      "facultad": "Facultad de Ciencias Químicas y Farmacéuticas"
+    },
+    {
+      "universidad_id": "uc",
+      "nombre": "Agronomía e Ingeniería Forestal",
+      "facultad": "Facultad de Agronomía y Sistemas Naturales"
+    },
+    {
+      "universidad_id": "usach",
+      "nombre": "Ingeniería de Alimentos",
+      "facultad": "Otra facultad (por confirmar)"
+    },
+    {
+      "universidad_id": "usach",
+      "nombre": "Ingeniería en Agronegocios",
+      "facultad": "Otra facultad (por confirmar)"
+    },
+    {
+      "universidad_id": "usach",
+      "nombre": "Ingeniería Estadística",
+      "facultad": "Otra facultad (por confirmar)"
+    },
+    {
+      "universidad_id": "usach",
+      "nombre": "Ingeniería Física",
+      "facultad": "Otra facultad (por confirmar)"
+    },
+    {
+      "universidad_id": "usach",
+      "nombre": "Ingeniería Matemática",
+      "facultad": "Otra facultad (por confirmar)"
+    },
+    {
+      "universidad_id": "unab",
+      "nombre": "Ingeniería en Administración de Empresas",
+      "facultad": "Área de negocios"
+    },
+    {
+      "universidad_id": "unab",
+      "nombre": "Ingeniería en Negocios Internacionales",
+      "facultad": "Área de negocios"
+    },
+    {
+      "universidad_id": "unab",
+      "nombre": "Ingeniería en Administración Hotelera Internacional",
+      "facultad": "Área de turismo"
+    },
+    {
+      "universidad_id": "unab",
+      "nombre": "Ingeniería en Turismo y Hotelería",
+      "facultad": "Área de turismo"
+    }
+  ]
+}
