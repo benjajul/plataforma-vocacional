@@ -61,3 +61,20 @@ Prototipo: `web/rutas.html` (generado con `python3 scripts/build_web.py`).
     python3 scripts/build_inventario.py
     python3 scripts/build_planes_comunes.py
     python3 scripts/build_web.py
+
+## Publicar en GitHub Pages
+El workflow `.github/workflows/pages.yml` regenera los datos y publica la carpeta `web/` en cada push a `main`.
+
+1. Crear el repositorio vacío `benjajul/plataforma-vocacional` en GitHub (sin README).
+2. Subir este repo:
+
+        git remote add origin https://github.com/benjajul/plataforma-vocacional.git
+        git push -u origin main
+
+3. En GitHub: Settings → Pages → Build and deployment → Source: **GitHub Actions**.
+4. El sitio queda en https://benjajul.github.io/plataforma-vocacional/
+
+Probar localmente:
+
+        python3 scripts/build_web.py
+        python3 -m http.server -d web 8000   # abrir http://localhost:8000

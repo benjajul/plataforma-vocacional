@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/<usuario>/plataforma-vocacional/data/schema/carrera.schema.json",
+  "$id": "https://github.com/benjajul/plataforma-vocacional/data/schema/carrera.schema.json",
   "title": "Ficha de carrera — Plataforma de orientación vocacional",
   "description": "Una ficha por combinación universidad + programa. Cada dato lleva su fuente y fecha de consulta (ver $defs/dato). Versión 0.3 — 08-11-2026.",
   "type": "object",
