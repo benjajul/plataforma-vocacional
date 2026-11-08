@@ -1,0 +1,693 @@
+{
+  "version": "0.3",
+  "consultado": "2026-11-08",
+  "planes_comunes": [
+    {
+      "programa_id": "uchile-plan-comun",
+      "universidad_id": "uchile",
+      "nombre": "Ingeniería y Ciencias, Plan Común (FCFM)",
+      "resumen": "Todos entran a un mismo plan común de 4 semestres en Beauchef. Al terminar el 4.º semestre cada estudiante elige su especialidad libremente: no hay cupos por especialidad.",
+      "duracion_plan_comun_semestres": 4,
+      "seleccion": {
+        "momento": "Al finalizar el 4.º semestre (plazo obligatorio)",
+        "mecanismo": "libre",
+        "cupos": "sin_limite",
+        "criterio": "No hay selección: el estudiante elige.",
+        "requisitos": "Elegir dentro del plazo para conservar beneficios MINEDUC (p. ej. gratuidad).",
+        "irrevocable": null,
+        "apoyo": "Unidad de Orientación Vocacional e 'Inicia Beauchef' presentan las especialidades."
+      },
+      "duracion_total": "11 semestres (Ingeniería Civil, incluye plan común)",
+      "grado_intermedio": "Licenciatura en Ciencias de la Ingeniería, mención según especialidad",
+      "salidas": [
+        {
+          "nombre": "Ingeniería Civil",
+          "titulo": "Ingeniero/a Civil (menciones Estructuras, Construcción y Geotecnia; Hidráulica, Sanitaria y Ambiental; Transporte)",
+          "tipo": "ing_civil",
+          "malla_url": "https://uchile.cl/carreras/4969/ingenieria-civil",
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil de Minas",
+          "titulo": "Ingeniería Civil de Minas",
+          "tipo": "ing_civil",
+          "malla_url": "https://uchile.cl/carreras/4977/ingenieria-civil-de-minas",
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil en Biotecnología",
+          "titulo": "Ingeniería Civil en Biotecnología",
+          "tipo": "ing_civil",
+          "malla_url": "https://uchile.cl/carreras/4970/ingenieria-civil-en-biotecnologia",
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil en Computación",
+          "titulo": "Ingeniería Civil en Computación",
+          "tipo": "ing_civil",
+          "malla_url": "https://uchile.cl/carreras/4971/ingenieria-civil-en-computacion",
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil Eléctrica",
+          "titulo": "Ingeniería Civil Eléctrica",
+          "tipo": "ing_civil",
+          "malla_url": "https://uchile.cl/carreras/4972/ingenieria-civil-electrica",
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil Industrial",
+          "titulo": "Ingeniería Civil Industrial",
+          "tipo": "ing_civil",
+          "malla_url": "https://uchile.cl/dam/jcr:cdc0ae92-f9b3-46fb-8aff-4d49fe4c6440/MallaCivilIndustrial2021.jpg",
+          "programa_directo_id": null,
+          "nota": "Especialización desde el 5.º semestre."
+        },
+        {
+          "nombre": "Ingeniería Civil Matemática",
+          "titulo": "Ingeniería Civil Matemática",
+          "tipo": "ing_civil",
+          "malla_url": "https://uchile.cl/carreras/4974/ingenieria-civil-matematica",
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil Mecánica",
+          "titulo": "Ingeniería Civil Mecánica",
+          "tipo": "ing_civil",
+          "malla_url": "https://uchile.cl/carreras/4976/ingenieria-civil-mecanica",
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil Química",
+          "titulo": "Ingeniería Civil Química",
+          "tipo": "ing_civil",
+          "malla_url": "https://uchile.cl/carreras/4978/ingenieria-civil-quimica",
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Geología",
+          "titulo": "Geología",
+          "tipo": "no_ingenieria",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Geofísica",
+          "titulo": "Geofísica",
+          "tipo": "no_ingenieria",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Licenciatura en Ciencias mención Astronomía",
+          "titulo": "Licenciatura en Ciencias mención Astronomía",
+          "tipo": "no_ingenieria",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Licenciatura en Ciencias mención Física",
+          "titulo": "Licenciatura en Ciencias mención Física",
+          "tipo": "no_ingenieria",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        }
+      ],
+      "fuentes": [
+        {
+          "nombre": "FCFM — Preguntas frecuentes de admisión",
+          "url": "https://ingenieria.uchile.cl/admision/preguntas-frecuentes"
+        },
+        {
+          "nombre": "FCFM — Plazo para elegir tu especialidad",
+          "url": "https://ingenieria.uchile.cl/escuela/pregrado/informacion-para-estudiantes/plazo-para-elegir-tu-especialidad"
+        },
+        {
+          "nombre": "U. de Chile — Ingeniería Civil",
+          "url": "https://uchile.cl/carreras/4969/ingenieria-civil"
+        }
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "programa_id": "uc-ingenieria",
+      "universidad_id": "uc",
+      "nombre": "Ingeniería UC (Licenciatura en Ciencias de la Ingeniería + título)",
+      "resumen": "Se entra a 'Ingeniería'. Los primeros 4 años son una licenciatura donde cada estudiante arma su perfil con un major (22 opciones) y un minor. Después de la licenciatura se 'articula' con uno de 7 títulos de Ingeniero Civil UC, sin postulación separada; varios títulos tienen 'diplomas' que definen la especialidad.",
+      "duracion_plan_comun_semestres": null,
+      "seleccion": {
+        "momento": "Major y minor durante la licenciatura (4 años); título después de la licenciatura",
+        "mecanismo": "sin_postulacion",
+        "cupos": "no_informado",
+        "criterio": "Para continuar con el título de Ingeniero Civil UC no se necesita postulación separada. La duración de la articulación depende de la combinación major/minor/título.",
+        "requisitos": "Completar la Licenciatura en Ciencias de la Ingeniería (major + minor + requisitos adicionales).",
+        "irrevocable": null,
+        "excepciones": "Las articulaciones con Medicina, Arquitectura y Diseño UC tienen vacantes limitadas y requieren postulación y selección.",
+        "pendiente": "Confirmar si algún major tiene cupos o requisitos de entrada, y en qué semestre se declara."
+      },
+      "duracion_total": "4 años de licenciatura + articulación al título (duración variable según combinación)",
+      "grado_intermedio": "Licenciatura en Ciencias de la Ingeniería",
+      "etapa_intermedia": {
+        "nombre": "Majors",
+        "opciones": [
+          {
+            "nombre": "Ingeniería y Ciencias Ambientales",
+            "url": "https://www.ing.uc.cl/major-en-ingenieria-y-ciencias-ambientales/"
+          },
+          {
+            "nombre": "Computación y Sistemas de Información",
+            "url": "https://www.ing.uc.cl/major-en-computacion-y-sistemas-de-informacion/"
+          },
+          {
+            "nombre": "Ingeniería de Construcción",
+            "url": "http://www.ing.uc.cl/programas-de-estudio/major-ingenieria-construccion/"
+          },
+          {
+            "nombre": "Ingeniería Eléctrica",
+            "url": "http://www.ing.uc.cl/programas-de-estudio/major-ingenieria-electrica/"
+          },
+          {
+            "nombre": "Ingeniería Estructural",
+            "url": "http://www.ing.uc.cl/programas-de-estudio/major-ingenieria-estructural/"
+          },
+          {
+            "nombre": "Ingeniería Geotécnica",
+            "url": "http://www.ing.uc.cl/programas-de-estudio/major-ingenieria-geotecnica/"
+          },
+          {
+            "nombre": "Ingeniería y Ciencias del Agua",
+            "url": "https://www.ing.uc.cl/major-ingenieria-y-ciencias-agua/"
+          },
+          {
+            "nombre": "Ingeniería Mecánica",
+            "url": "http://www.ing.uc.cl/programas-de-estudio/major-ingenieria-mecanica/"
+          },
+          {
+            "nombre": "Ingeniería Minera",
+            "url": "http://www.ing.uc.cl/programas-de-estudio/major-ingenieria-minera/"
+          },
+          {
+            "nombre": "Ingeniería Química",
+            "url": "https://www.ing.uc.cl/major-ingenieria-quimica/"
+          },
+          {
+            "nombre": "Ingeniería en Investigación Operativa",
+            "url": "https://www.ing.uc.cl/major-investigacion-operativa/"
+          },
+          {
+            "nombre": "Ingeniería de Sistemas de Transportes",
+            "url": "https://www.ing.uc.cl/major-sistemas-transporte/"
+          },
+          {
+            "nombre": "Ingeniería de Software",
+            "url": "https://www.ing.uc.cl/major-en-ingenieria-de-software/"
+          },
+          {
+            "nombre": "Geociencias (interdisciplinario)",
+            "url": "https://www.ing.uc.cl/major-en-geociencias/"
+          },
+          {
+            "nombre": "Ingeniería Biológica (interdisciplinario)",
+            "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/major-ingenieria-biologica/"
+          },
+          {
+            "nombre": "Ingeniería Biomédica (interdisciplinario)",
+            "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/major-ingenieria-biomedica/"
+          },
+          {
+            "nombre": "Ingeniería Matemática (interdisciplinario)",
+            "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/major-ingenieria-matematica/"
+          },
+          {
+            "nombre": "Ingeniería y Arquitectura (interdisciplinario)",
+            "url": "https://www.ing.uc.cl/major-en-ingenieria-y-arquitectura/"
+          },
+          {
+            "nombre": "Ingeniería, Diseño e Innovación (interdisciplinario)",
+            "url": "https://www.ing.uc.cl/major-ingenieria-diseno-e-innovacion/"
+          },
+          {
+            "nombre": "Ingeniería Robótica (interdisciplinario)",
+            "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/major-ingenieria-robotica/"
+          },
+          {
+            "nombre": "Ingeniería Física (interdisciplinario)",
+            "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/ingenieria-fisica/"
+          },
+          {
+            "nombre": "Ingeniería Civil (interdisciplinario)",
+            "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/major-ingenieria-civil/"
+          }
+        ]
+      },
+      "salidas": [
+        {
+          "nombre": "Ingeniero Civil",
+          "titulo": "Ingeniero Civil UC, con Diploma en: Ambiental · Diseño y Construcción de Obras · Ingeniería y Gestión de la Construcción · Estructural · Geotécnica · Hidráulica · Minería · Transporte",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniero Civil de Industrias",
+          "titulo": "Ingeniero Civil de Industrias UC, con Diploma en: Ambiental · Construcción · Bioprocesos · Computación · Eléctrica · Hidráulica · Matemática · Mecánica · Minería · Química · Tecnologías de la Información · Transporte",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": "Es la salida 'industrial' de la UC; se combina con un diploma técnico."
+        },
+        {
+          "nombre": "Ingeniero Civil de Computación",
+          "titulo": "Ingeniero Civil de Computación",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniero Civil Electricista",
+          "titulo": "Ingeniero Civil Electricista",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniero Civil Mecánico",
+          "titulo": "Ingeniero Civil Mecánico",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniero Civil de Biotecnología",
+          "titulo": "Ingeniero Civil de Biotecnología",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniero Civil Matemático Computacional",
+          "titulo": "Ingeniero Civil Matemático Computacional",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Articulación con Médico Cirujano, Arquitecto o Diseñador UC",
+          "titulo": "Articulación con Médico Cirujano, Arquitecto o Diseñador UC",
+          "tipo": "no_ingenieria",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": "Vacantes limitadas; requiere postulación y selección."
+        }
+      ],
+      "fuentes": [
+        {
+          "nombre": "Ingeniería UC — ¿Cómo es nuestro plan de estudios?",
+          "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/plan-estudios-ingenieria-uc/"
+        },
+        {
+          "nombre": "Ingeniería UC — Títulos profesionales",
+          "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/titulos-profesionales-ingenieria/"
+        },
+        {
+          "nombre": "Ingeniería UC — Majors y minors",
+          "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/"
+        }
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "programa_id": "usm-plan-comun",
+      "universidad_id": "usm",
+      "nombre": "Ingeniería Civil Plan Común (Campus San Joaquín)",
+      "resumen": "Programa para quienes aún no deciden su ingeniería. Tras aprobar el primer año se postula a una especialidad del mismo campus. Hay cupos por cohorte y se asignan por ranking del rendimiento académico de primer año. La asignación es irrevocable.",
+      "duracion_plan_comun_semestres": 4,
+      "seleccion": {
+        "momento": "Al aprobar el primer año (2 semestres); proceso al cierre de semestre vía SIGA",
+        "mecanismo": "competitivo",
+        "cupos": "limitados",
+        "criterio": "Ranking por promedio ponderado de las asignaturas de primer año, frente al resto de la generación. Se deben indicar 6 preferencias en orden.",
+        "requisitos": "Aprobar el 100% de los créditos de los dos primeros semestres.",
+        "irrevocable": true,
+        "detalle": "Cupos no usados quedan para la misma cohorte en el proceso siguiente. Hay simulaciones periódicas para ver las posibilidades. Otros programas de la USM solo por cambio de carrera interno.",
+        "cupos_publicos": false,
+        "pendiente": "Los cupos por especialidad se publican en un portal interno con clave (SIGA). Confirmar si Civil Industrial (Vitacura) es accesible desde el plan común de San Joaquín."
+      },
+      "duracion_total": "Plan común: 2 años (Bachiller). Las carreras de destino duran 10 semestres en total.",
+      "grado_intermedio": "Bachiller/Bachillera en Ciencias de la Ingeniería",
+      "malla_plan_comun": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBnzEjwo1hrS4MvHlyeqZK4AdQ5qWvLM0Ce86i6BALCYsw?e=Z463TE",
+      "salidas": [
+        {
+          "nombre": "Ingeniería Civil",
+          "titulo": "Ingeniería Civil",
+          "tipo": "ing_civil",
+          "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQDcpUxPns9GRJq2WgCGaqJPAQYqzYwUZ5pd4KKswDeCVdg?e=9SzTnH",
+          "programa_directo_id": "usm-civil",
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil de Minas",
+          "titulo": "Ingeniería Civil de Minas",
+          "tipo": "ing_civil",
+          "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBVUUO4UA03SqHG4jkxCGxwAenm-FJjo8gBPdxT0ec54Ew?e=DGySzl",
+          "programa_directo_id": "usm-civil-minas",
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil Eléctrica",
+          "titulo": "Ingeniero/a Civil Electricista",
+          "tipo": "ing_civil",
+          "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQDZ0sWXoGXvQJrfX6EyQyKYAYJROwzQQzfGTkVx0Bbl7Hs?e=5EwD9O",
+          "programa_directo_id": "usm-civil-electrica",
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil Física",
+          "titulo": "Ingeniería Civil Física",
+          "tipo": "ing_civil",
+          "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBnqJYyFZxbQI2jB5dfO87KAcmviiBgOW-x-AjssTh660w?e=vtSKZo",
+          "programa_directo_id": "usm-civil-fisica",
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil Informática",
+          "titulo": "Ingeniería Civil Informática",
+          "tipo": "ing_civil",
+          "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQCz2fCQ-qwoQLp3HpJkE6nCAWQ6F3XeXcswa-qyobhU7Xk?e=9s0YlQ",
+          "programa_directo_id": "usm-civil-informatica",
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil Matemática",
+          "titulo": "Ingeniería Civil Matemática",
+          "tipo": "ing_civil",
+          "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQD2zpR9tcUSR7DmKW25d6LdAUUO9Cwk_7SkZ9w5n-pXoJs?e=Kw6lvi",
+          "programa_directo_id": "usm-civil-matematica",
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil Mecánica",
+          "titulo": "Ingeniería Civil Mecánica",
+          "tipo": "ing_civil",
+          "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBJHhY7n5h_T5br1QVNCjGQAd5hpN4Tq0iSvTPceZQI0MI?e=hbDbs1",
+          "programa_directo_id": "usm-civil-mecanica",
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil Química",
+          "titulo": "Ingeniería Civil Química",
+          "tipo": "ing_civil",
+          "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQAb1xZ3jZAvR4Ejdm5nkqxwAegbwjH1cmalYmWGVz7KoyQ?e=5dHFlJ",
+          "programa_directo_id": "usm-civil-quimica",
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil Telemática",
+          "titulo": "Ingeniería Civil Telemática",
+          "tipo": "ing_civil",
+          "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBdlCP7cd-MTp14pTPSSnecAUVvKtLmdGHjJq6P2ZJt-Zg?e=x0qaEJ",
+          "programa_directo_id": "usm-civil-telematica",
+          "nota": ""
+        }
+      ],
+      "nota_salidas": "Lista = ingenierías civiles que se dictan en San Joaquín, según la regla 'oferta del campus donde esté matriculado'. La USM no publica la lista ni los cupos por cohorte fuera de su portal interno.",
+      "fuentes": [
+        {
+          "nombre": "USM — Ingeniería Civil Plan Común",
+          "url": "https://usm.cl/admision/carreras/ingenieria-civil-plan-comun/"
+        },
+        {
+          "nombre": "USM — Circular Postulación a Especialidad (dic-2025)",
+          "url": "https://autoservicio.usm.cl/docs/usmtransparente/informaciones/Circular_PostulacionesEspecialidad2.pdf"
+        },
+        {
+          "nombre": "USM — Admisión Centralizada PAES (vacantes 2026)",
+          "url": "https://usm.cl/admision/admision-centralizada-paes-3/"
+        }
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "programa_id": "udp-plan-comun",
+      "universidad_id": "udp",
+      "nombre": "Ingeniería Civil Plan Común",
+      "resumen": "Primer año común. Al terminarlo se elige una de 4 ingenierías civiles sin límite de cupos. Se titula con título profesional + magíster de continuidad.",
+      "duracion_plan_comun_semestres": 2,
+      "seleccion": {
+        "momento": "Al terminar el primer año",
+        "mecanismo": "libre",
+        "cupos": "sin_limite",
+        "criterio": "Sin selección; también se puede cambiar a otra carrera de la facultad sin cupo si se cumplen requisitos académicos.",
+        "requisitos": "Requisitos académicos del plan común.",
+        "irrevocable": null
+      },
+      "duracion_total": "no informado en la fuente",
+      "malla_plan_comun": "https://ingenieriayciencias.udp.cl/cms/wp-content/uploads/2025/12/INGENIERIA-CIVIL-PLAN-COMUN_2026.pdf",
+      "salidas": [
+        {
+          "nombre": "Ingeniería Civil Industrial",
+          "titulo": "Ingeniería Civil Industrial",
+          "tipo": "ing_civil",
+          "malla_url": "https://admision.udp.cl/cms/wp-content/uploads/2025/09/INGENIERIA-CIVIL-INDUSTRIAL_2026.pdf",
+          "programa_directo_id": "udp-civil-industrial",
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil en Obras Civiles",
+          "titulo": "Ingeniería Civil en Obras Civiles",
+          "tipo": "ing_civil",
+          "malla_url": "https://eoc.udp.cl/cms/wp-content/uploads/2023/12/MALLA-INGENIERIA-CIVIL-EN-OBRAS-CIVILES.pdf",
+          "programa_directo_id": "udp-civil-obras-civiles",
+          "nota": "Malla publicada en 2023."
+        },
+        {
+          "nombre": "Ingeniería Civil en Informática y Telecomunicaciones",
+          "titulo": "Ingeniería Civil en Informática y Telecomunicaciones",
+          "tipo": "ing_civil",
+          "malla_url": "https://eit.udp.cl/cms/wp-content/uploads/2025/12/INGENIERIA-CIVIL-EN-INFORMATICA-Y-TELECOMUNICACIONES.pdf",
+          "programa_directo_id": "udp-civil-informatica-telecom",
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil en Ciencia de Datos e Inteligencia Artificial",
+          "titulo": "Ingeniería Civil en Ciencia de Datos e Inteligencia Artificial",
+          "tipo": "ing_civil",
+          "malla_url": "https://admision.udp.cl/cms/wp-content/uploads/2025/09/INGENIERIA-CIVIL-EN-CIENCIA-DE-DATOS-E-INTELIGENCIA-ARTIFICIAL_2026.pdf",
+          "programa_directo_id": "udp-civil-ciencia-datos-ia",
+          "nota": ""
+        }
+      ],
+      "fuentes": [
+        {
+          "nombre": "UDP — Malla Ingeniería Civil Plan Común 2026",
+          "url": "https://ingenieriayciencias.udp.cl/cms/wp-content/uploads/2025/12/INGENIERIA-CIVIL-PLAN-COMUN_2026.pdf"
+        }
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "programa_id": "udd-plan-comun",
+      "universidad_id": "udd",
+      "nombre": "Ingeniería Civil Plan Común",
+      "resumen": "Tres semestres comunes. Luego se elige especialidad con cupo garantizado en cualquier carrera de la facultad (salvo BioMedicina).",
+      "duracion_plan_comun_semestres": 3,
+      "seleccion": {
+        "momento": "Al terminar el 3.er semestre",
+        "mecanismo": "garantizado",
+        "cupos": "sin_limite",
+        "criterio": "Cupo garantizado.",
+        "requisitos": "no informado",
+        "irrevocable": null,
+        "pendiente": "Fuente de 2024; confirmar si Informática e IA ya es salida del plan común."
+      },
+      "duracion_total": "11 semestres",
+      "malla_plan_comun": "https://www.udd.cl/mallas/ingenieriacivilplancomun.pdf",
+      "salidas": [
+        {
+          "nombre": "Ingeniería Civil Industrial",
+          "titulo": "Ingeniería Civil Industrial",
+          "tipo": "ing_civil",
+          "malla_url": "https://ingenieria.udd.cl/files/2020/04/12.-ing-civil-pc_ing-civil-industrial.pdf",
+          "programa_directo_id": "udd-civil-industrial",
+          "nota": "Malla publicada en 2020."
+        },
+        {
+          "nombre": "Ingeniería Civil en Obras Civiles",
+          "titulo": "Ingeniería Civil en Obras Civiles",
+          "tipo": "ing_civil",
+          "malla_url": "https://ingenieria.udd.cl/files/2020/04/12.-ing-civil-pc_ing-civil-obras-civiles.pdf",
+          "programa_directo_id": "udd-civil-obras-civiles",
+          "nota": "Malla publicada en 2020."
+        },
+        {
+          "nombre": "Ingeniería Civil en Minería",
+          "titulo": "Ingeniería Civil en Minería",
+          "tipo": "ing_civil",
+          "malla_url": "https://ingenieria.udd.cl/files/2020/04/12.-ing-civil-pc_ing-civil-mineria-1.pdf",
+          "programa_directo_id": "udd-civil-mineria",
+          "nota": "Malla publicada en 2020."
+        },
+        {
+          "nombre": "Ingeniería Civil en Informática e Innovación Tecnológica",
+          "titulo": "Ingeniería Civil en Informática e Innovación Tecnológica",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": "udd-civil-informatica-innovacion",
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil en Informática e Inteligencia Artificial",
+          "titulo": "Ingeniería Civil en Informática e Inteligencia Artificial",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": "udd-civil-informatica-ia",
+          "nota": "Por confirmar como salida del plan común."
+        },
+        {
+          "nombre": "Geología",
+          "titulo": "Geología",
+          "tipo": "no_ingenieria",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        }
+      ],
+      "fuentes": [
+        {
+          "nombre": "UDD — Plan común de ingenierías",
+          "url": "https://ingenieria.udd.cl/files/2024/03/07-plan-comun-ingenierias.pdf"
+        },
+        {
+          "nombre": "UDD — Facultad de Ingeniería, carreras",
+          "url": "https://ingenieria.udd.cl/carreras/"
+        }
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "programa_id": "uai-plan-comun",
+      "universidad_id": "uai",
+      "nombre": "Ingeniería Civil (Plan Común) — Peñalolén",
+      "resumen": "En Santiago todas las ingenierías civiles de la UAI se ingresan por plan común, que lleva a 7 especialidades.",
+      "duracion_plan_comun_semestres": null,
+      "seleccion": {
+        "momento": "no informado",
+        "mecanismo": "no_informado",
+        "cupos": "no_informado",
+        "criterio": "no informado",
+        "requisitos": "no informado",
+        "irrevocable": null,
+        "pendiente": "Buscar reglamento de elección de especialidad UAI."
+      },
+      "duracion_total": "no informado",
+      "salidas": [
+        {
+          "nombre": "Ingeniería Civil Industrial",
+          "titulo": "Ingeniería Civil Industrial",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil Informática",
+          "titulo": "Ingeniería Civil Informática",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil en Bioingeniería",
+          "titulo": "Ingeniería Civil en Bioingeniería",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil (Obras Civiles)",
+          "titulo": "Ingeniería Civil (Obras Civiles)",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil en Energía",
+          "titulo": "Ingeniería Civil en Energía",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil Mecánica",
+          "titulo": "Ingeniería Civil Mecánica",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        },
+        {
+          "nombre": "Ingeniería Civil en Minería",
+          "titulo": "Ingeniería Civil en Minería",
+          "tipo": "ing_civil",
+          "malla_url": null,
+          "programa_directo_id": null,
+          "nota": ""
+        }
+      ],
+      "fuentes": [
+        {
+          "nombre": "UAI — Facultad de Ingeniería y Ciencias",
+          "url": "https://www.uai.cl/ingenieria-y-ciencias/carreras/nuestras-carreras"
+        }
+      ],
+      "consultado": "2026-11-08"
+    },
+    {
+      "programa_id": "usach-civil-informatica-plan-comun",
+      "universidad_id": "usach",
+      "nombre": "Ingeniería Civil en Informática – Plan Común (nueva 2027)",
+      "resumen": "Carrera nueva para Admisión 2027 (90 vacantes según prensa). Aún no hay información oficial sobre sus salidas.",
+      "duracion_plan_comun_semestres": null,
+      "seleccion": {
+        "momento": "no informado",
+        "mecanismo": "no_informado",
+        "cupos": "no_informado",
+        "criterio": "no informado",
+        "requisitos": "no informado",
+        "irrevocable": null,
+        "pendiente": "Revisar ficha oficial USACH cuando se publique."
+      },
+      "duracion_total": "no informado",
+      "salidas": [],
+      "fuentes": [
+        {
+          "nombre": "USACH Admisión — Facultad de Ingeniería",
+          "url": "https://admision.usach.cl/FING-USACH"
+        }
+      ],
+      "consultado": "2026-11-08"
+    }
+  ]
+}

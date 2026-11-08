@@ -2,7 +2,7 @@
 
 Herramienta interactiva para explorar carreras de Ingeniería (y la carrera de Ingeniería Comercial) en 8 universidades chilenas, pensada para un estudiante de 4.º medio que tiene claros sus gustos pero no todavía su área laboral.
 
-Versión 0.1 — 08-11-2026 — Fase 1 (estructura).
+Versión 0.3 — 08-11-2026 — Fases 1-2 + lógica de planes comunes.
 
 ## Alcance inicial
 | id | Universidad |
@@ -45,3 +45,19 @@ Carreras: las de la Facultad/Escuela de Ingeniería de cada una + Ingeniería Co
 - No se copia íntegro el texto de perfiles de egreso: se resume y se enlaza al original.
 - Un dato que no se encuentra se muestra como "no informado", nunca se estima.
 - Las comparaciones de empleabilidad e ingreso se hacen entre carreras equivalentes (misma carrera genérica de Mi Futuro), no entre plan común y carrera directa sin aclararlo.
+
+## Lógica de planes comunes (v0.3)
+`data/planes_comunes.json` modela cada puerta de entrada común como:
+
+    plan común --(regla de selección)--> salida (carrera o título) --> malla
+
+- `seleccion.mecanismo`: `libre` (U. de Chile, UDP), `garantizado` (UDD), `competitivo` (USM: cupos por ranking de 1.er año, irrevocable), `sin_postulacion` (UC: major durante la licenciatura y luego título sin postular), `no_informado` (UAI, USACH).
+- `salidas[].programa_directo_id` enlaza con la misma carrera cuando también admite postulación directa.
+- `etapa_intermedia` cubre los 22 majors UC.
+
+Prototipo: `web/rutas.html` (generado con `python3 scripts/build_web.py`).
+
+## Cómo regenerar
+    python3 scripts/build_inventario.py
+    python3 scripts/build_planes_comunes.py
+    python3 scripts/build_web.py

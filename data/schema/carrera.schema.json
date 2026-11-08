@@ -2,84 +2,208 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/<usuario>/plataforma-vocacional/data/schema/carrera.schema.json",
   "title": "Ficha de carrera — Plataforma de orientación vocacional",
-  "description": "Una ficha por combinación universidad + programa. Cada dato lleva su fuente y fecha de consulta (ver $defs/dato). Versión 0.1 — 08-11-2026.",
+  "description": "Una ficha por combinación universidad + programa. Cada dato lleva su fuente y fecha de consulta (ver $defs/dato). Versión 0.3 — 08-11-2026.",
   "type": "object",
-  "required": ["id", "universidad_id", "nombre_oficial", "tipo_ingreso", "fuentes"],
+  "required": [
+    "id",
+    "universidad_id",
+    "nombre_oficial",
+    "tipo_ingreso",
+    "fuentes"
+  ],
   "properties": {
-    "id": { "type": "string", "description": "slug estable, p.ej. 'uc-ingenieria-civil-plan-comun'" },
-    "universidad_id": { "type": "string", "enum": ["uc", "uchile", "usm", "usach", "unab", "udp", "uai", "udd"] },
-    "nombre_oficial": { "type": "string" },
-    "nombre_generico_mifuturo": { "type": "string", "description": "Carrera genérica con la que Mi Futuro agrupa los datos (p.ej. 'Ingeniería Civil Industrial')" },
-    "codigo_demre": { "type": ["string", "null"], "description": "Código de carrera en la oferta del proceso de admisión" },
-    "area": { "type": "string", "enum": ["ingenieria", "negocios"] },
-
+    "id": {
+      "type": "string",
+      "description": "slug estable, p.ej. 'uc-ingenieria-civil-plan-comun'"
+    },
+    "universidad_id": {
+      "type": "string",
+      "enum": [
+        "uc",
+        "uchile",
+        "usm",
+        "usach",
+        "unab",
+        "udp",
+        "uai",
+        "udd"
+      ]
+    },
+    "nombre_oficial": {
+      "type": "string"
+    },
+    "nombre_generico_mifuturo": {
+      "type": "string",
+      "description": "Carrera genérica con la que Mi Futuro agrupa los datos (p.ej. 'Ingeniería Civil Industrial')"
+    },
+    "codigo_demre": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Código de carrera en la oferta del proceso de admisión"
+    },
+    "area": {
+      "type": "string",
+      "enum": [
+        "ingenieria",
+        "negocios"
+      ]
+    },
     "tipo_ingreso": {
       "type": "string",
-      "enum": ["plan_comun", "carrera_directa"],
+      "enum": [
+        "plan_comun",
+        "carrera_directa"
+      ],
       "description": "UC y U. de Chile admiten a un plan común y la especialidad se elige después; otras universidades admiten directo a la carrera. Clave para no comparar peras con manzanas."
     },
     "especialidades": {
       "type": "array",
       "description": "Solo si tipo_ingreso = plan_comun: majors / especialidades / títulos a los que se puede llegar",
-      "items": { "type": "object", "properties": {
-        "nombre": { "type": "string" },
-        "titulo": { "type": "string" },
-        "momento_eleccion": { "type": "string", "description": "p.ej. 'fin de 2.º año'" },
-        "url": { "type": "string", "format": "uri" }
-      } }
+      "items": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string"
+          },
+          "titulo": {
+            "type": "string"
+          },
+          "momento_eleccion": {
+            "type": "string",
+            "description": "p.ej. 'fin de 2.º año'"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
     },
-
     "sede": {
       "type": "object",
       "properties": {
-        "facultad": { "type": "string" },
-        "campus": { "type": "string" },
-        "direccion": { "type": "string" },
-        "comuna": { "type": "string" },
-        "lat": { "type": "number" },
-        "lng": { "type": "number" },
-        "metro_cercano": { "type": "string" }
+        "facultad": {
+          "type": "string"
+        },
+        "campus": {
+          "type": "string"
+        },
+        "direccion": {
+          "type": "string"
+        },
+        "comuna": {
+          "type": "string"
+        },
+        "lat": {
+          "type": "number"
+        },
+        "lng": {
+          "type": "number"
+        },
+        "metro_cercano": {
+          "type": "string"
+        }
       }
     },
-
     "academico": {
       "type": "object",
       "properties": {
-        "grado": { "$ref": "#/$defs/dato" },
-        "titulo": { "$ref": "#/$defs/dato" },
-        "duracion_formal_semestres": { "$ref": "#/$defs/dato" },
-        "duracion_real_semestres": { "$ref": "#/$defs/dato", "description": "Mi Futuro" },
-        "regimen": { "type": "string", "enum": ["diurno", "vespertino"] },
-        "perfil_egreso": { "$ref": "#/$defs/dato", "description": "Resumen propio + enlace al texto oficial (no copiar íntegro)" },
+        "grado": {
+          "$ref": "#/$defs/dato"
+        },
+        "titulo": {
+          "$ref": "#/$defs/dato"
+        },
+        "duracion_formal_semestres": {
+          "$ref": "#/$defs/dato"
+        },
+        "duracion_real_semestres": {
+          "$ref": "#/$defs/dato",
+          "description": "Mi Futuro"
+        },
+        "regimen": {
+          "type": "string",
+          "enum": [
+            "diurno",
+            "vespertino"
+          ]
+        },
+        "perfil_egreso": {
+          "$ref": "#/$defs/dato",
+          "description": "Resumen propio + enlace al texto oficial (no copiar íntegro)"
+        },
         "malla": {
           "type": "object",
           "properties": {
-            "url_pdf": { "type": "string", "format": "uri" },
-            "fecha_version": { "type": "string" },
-            "lineas_formativas": { "type": "array", "items": { "type": "string" }, "description": "p.ej. ciencias básicas, programación, gestión" },
-            "pct_ciencias_basicas": { "type": ["number", "null"] },
-            "tiene_practicas": { "type": "boolean" },
-            "tiene_intercambio": { "type": "boolean" },
-            "doble_titulo_o_continuidad_magister": { "type": "boolean" }
+            "url_pdf": {
+              "type": "string",
+              "format": "uri"
+            },
+            "fecha_version": {
+              "type": "string"
+            },
+            "lineas_formativas": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "p.ej. ciencias básicas, programación, gestión"
+            },
+            "pct_ciencias_basicas": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "tiene_practicas": {
+              "type": "boolean"
+            },
+            "tiene_intercambio": {
+              "type": "boolean"
+            },
+            "doble_titulo_o_continuidad_magister": {
+              "type": "boolean"
+            }
           }
         },
-        "areas_desarrollo_laboral": { "type": "array", "items": { "type": "string" } }
+        "areas_desarrollo_laboral": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
-
     "admision": {
       "type": "object",
       "properties": {
-        "proceso": { "type": "string", "description": "p.ej. 'Admisión 2027'" },
-        "ponderaciones": { "type": "object", "description": "NEM, ranking, CL, M1, M2, Ciencias/Historia (%)" },
-        "puntaje_corte_ultimo": { "$ref": "#/$defs/dato" },
-        "vacantes": { "$ref": "#/$defs/dato" },
-        "exige_m2": { "type": "boolean" },
-        "arancel_anual_clp": { "$ref": "#/$defs/dato" },
-        "matricula_clp": { "$ref": "#/$defs/dato" }
+        "proceso": {
+          "type": "string",
+          "description": "p.ej. 'Admisión 2027'"
+        },
+        "ponderaciones": {
+          "type": "object",
+          "description": "NEM, ranking, CL, M1, M2, Ciencias/Historia (%)"
+        },
+        "puntaje_corte_ultimo": {
+          "$ref": "#/$defs/dato"
+        },
+        "vacantes": {
+          "$ref": "#/$defs/dato"
+        },
+        "exige_m2": {
+          "type": "boolean"
+        },
+        "arancel_anual_clp": {
+          "$ref": "#/$defs/dato"
+        },
+        "matricula_clp": {
+          "$ref": "#/$defs/dato"
+        }
       }
     },
-
     "calidad_y_financiamiento": {
       "type": "object",
       "properties": {
@@ -87,79 +211,336 @@
           "$ref": "#/$defs/dato",
           "description": "En ingeniería la acreditación de carrera es voluntaria: puede no existir o estar vencida. Mostrar 'no informada' en vez de asumir algo."
         },
-        "gratuidad": { "$ref": "#/$defs/dato", "description": "Se hereda de la universidad (adscripción institucional)" }
+        "gratuidad": {
+          "$ref": "#/$defs/dato",
+          "description": "Se hereda de la universidad (adscripción institucional)"
+        }
       }
     },
-
     "resultados": {
       "type": "object",
       "description": "Fuente principal: Mi Futuro (Buscador de Empleabilidad e Ingresos)",
       "properties": {
-        "empleabilidad_1er_anio_pct": { "$ref": "#/$defs/dato" },
-        "empleabilidad_2do_anio_pct": { "$ref": "#/$defs/dato" },
-        "ingreso_4to_anio_rango": { "$ref": "#/$defs/dato" },
-        "retencion_1er_anio_pct": { "$ref": "#/$defs/dato" },
-        "titulados_cohorte": { "$ref": "#/$defs/dato" }
+        "empleabilidad_1er_anio_pct": {
+          "$ref": "#/$defs/dato"
+        },
+        "empleabilidad_2do_anio_pct": {
+          "$ref": "#/$defs/dato"
+        },
+        "ingreso_4to_anio_rango": {
+          "$ref": "#/$defs/dato"
+        },
+        "retencion_1er_anio_pct": {
+          "$ref": "#/$defs/dato"
+        },
+        "titulados_cohorte": {
+          "$ref": "#/$defs/dato"
+        }
       }
     },
-
     "rankings_carrera": {
       "type": "array",
       "description": "Rankings por disciplina (QS by Subject, THE by Subject, rankings nacionales por carrera)",
-      "items": { "$ref": "#/$defs/ranking" }
+      "items": {
+        "$ref": "#/$defs/ranking"
+      }
     },
-
     "perfil_vocacional": {
       "type": "object",
       "description": "Contenido elaborado por el equipo (no viene de la universidad)",
       "properties": {
-        "riasec": { "type": "array", "items": { "type": "string", "enum": ["R", "I", "A", "S", "E", "C"] }, "maxItems": 3, "description": "Código Holland dominante, en orden" },
-        "te_puede_gustar_si": { "type": "array", "items": { "type": "string" }, "description": "Frases en lenguaje de gustos, no de cargos: 'te gusta desarmar cosas para entender cómo funcionan'" },
-        "habilidades_clave": { "type": "array", "items": { "type": "string" } },
-        "parrafo_descriptivo": { "type": "string" },
-        "mitos_y_realidades": { "type": "array", "items": { "type": "string" } },
-        "carreras_cercanas": { "type": "array", "items": { "type": "string" }, "description": "ids de otras fichas para comparar" }
+        "riasec": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "R",
+              "I",
+              "A",
+              "S",
+              "E",
+              "C"
+            ]
+          },
+          "maxItems": 3,
+          "description": "Código Holland dominante, en orden"
+        },
+        "te_puede_gustar_si": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Frases en lenguaje de gustos, no de cargos: 'te gusta desarmar cosas para entender cómo funcionan'"
+        },
+        "habilidades_clave": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "parrafo_descriptivo": {
+          "type": "string"
+        },
+        "mitos_y_realidades": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "carreras_cercanas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "ids de otras fichas para comparar"
+        }
       }
     },
-
-    "fuentes": { "type": "array", "items": { "$ref": "#/$defs/fuente" } }
+    "fuentes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/fuente"
+      }
+    },
+    "plan_comun_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Si la carrera también se alcanza desde un plan común, id del plan en data/planes_comunes.json. Permite mostrar las dos puertas de entrada a la misma carrera."
+    }
   },
-
   "$defs": {
     "dato": {
       "type": "object",
       "description": "Todo dato publicable lleva su valor, fuente y fecha de consulta: la plataforma muestra 'según X, consultado el dd-mm-aaaa'.",
-      "required": ["valor", "fuente_id", "consultado"],
+      "required": [
+        "valor",
+        "fuente_id",
+        "consultado"
+      ],
       "properties": {
         "valor": {},
-        "unidad": { "type": "string" },
-        "fuente_id": { "type": "string" },
-        "consultado": { "type": "string", "format": "date" },
-        "vigente_hasta": { "type": ["string", "null"], "format": "date" },
-        "nota": { "type": "string" }
+        "unidad": {
+          "type": "string"
+        },
+        "fuente_id": {
+          "type": "string"
+        },
+        "consultado": {
+          "type": "string",
+          "format": "date"
+        },
+        "vigente_hasta": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "nota": {
+          "type": "string"
+        }
       }
     },
     "fuente": {
       "type": "object",
-      "required": ["id", "nombre", "url"],
+      "required": [
+        "id",
+        "nombre",
+        "url"
+      ],
       "properties": {
-        "id": { "type": "string" },
-        "nombre": { "type": "string" },
-        "url": { "type": "string", "format": "uri" },
-        "tipo": { "type": "string", "enum": ["central", "universidad", "ranking", "elaboracion_propia"] }
+        "id": {
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "tipo": {
+          "type": "string",
+          "enum": [
+            "central",
+            "universidad",
+            "ranking",
+            "elaboracion_propia"
+          ]
+        }
       }
     },
     "ranking": {
       "type": "object",
-      "required": ["nombre", "edicion", "posicion"],
+      "required": [
+        "nombre",
+        "edicion",
+        "posicion"
+      ],
       "properties": {
-        "nombre": { "type": "string", "description": "p.ej. 'QS World University Rankings', 'QS by Subject — Engineering & Technology'" },
-        "edicion": { "type": "string" },
-        "ambito": { "type": "string", "enum": ["mundial", "latam", "nacional"] },
-        "posicion": { "type": "string", "description": "texto, porque muchos son rangos: '1001-1200'" },
-        "posicion_en_chile": { "type": ["integer", "null"] },
-        "url": { "type": "string", "format": "uri" },
-        "consultado": { "type": "string", "format": "date" }
+        "nombre": {
+          "type": "string",
+          "description": "p.ej. 'QS World University Rankings', 'QS by Subject — Engineering & Technology'"
+        },
+        "edicion": {
+          "type": "string"
+        },
+        "ambito": {
+          "type": "string",
+          "enum": [
+            "mundial",
+            "latam",
+            "nacional"
+          ]
+        },
+        "posicion": {
+          "type": "string",
+          "description": "texto, porque muchos son rangos: '1001-1200'"
+        },
+        "posicion_en_chile": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "consultado": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "plan_comun": {
+      "type": "object",
+      "description": "Puerta de entrada común. Ver data/planes_comunes.json.",
+      "required": [
+        "programa_id",
+        "universidad_id",
+        "seleccion",
+        "salidas"
+      ],
+      "properties": {
+        "programa_id": {
+          "type": "string"
+        },
+        "universidad_id": {
+          "type": "string"
+        },
+        "nombre": {
+          "type": "string"
+        },
+        "resumen": {
+          "type": "string",
+          "description": "Explicación en lenguaje simple para el estudiante"
+        },
+        "duracion_plan_comun_semestres": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "seleccion": {
+          "type": "object",
+          "required": [
+            "mecanismo",
+            "cupos"
+          ],
+          "properties": {
+            "momento": {
+              "type": "string"
+            },
+            "mecanismo": {
+              "enum": [
+                "libre",
+                "garantizado",
+                "competitivo",
+                "sin_postulacion",
+                "no_informado"
+              ]
+            },
+            "cupos": {
+              "enum": [
+                "sin_limite",
+                "limitados",
+                "no_informado"
+              ]
+            },
+            "criterio": {
+              "type": "string"
+            },
+            "requisitos": {
+              "type": "string"
+            },
+            "irrevocable": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "excepciones": {
+              "type": "string"
+            },
+            "pendiente": {
+              "type": "string"
+            }
+          }
+        },
+        "etapa_intermedia": {
+          "type": "object",
+          "description": "Ej.: majors UC antes del título"
+        },
+        "malla_plan_comun": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "salidas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "nombre",
+              "tipo"
+            ],
+            "properties": {
+              "nombre": {
+                "type": "string"
+              },
+              "titulo": {
+                "type": "string"
+              },
+              "tipo": {
+                "enum": [
+                  "ing_civil",
+                  "ing_no_civil",
+                  "no_ingenieria"
+                ]
+              },
+              "malla_url": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "programa_directo_id": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Misma carrera con ingreso directo, si existe"
+              },
+              "nota": {
+                "type": "string"
+              }
+            }
+          }
+        }
       }
     }
   }

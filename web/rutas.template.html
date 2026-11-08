@@ -1,0 +1,211 @@
+<title>Rutas de Ingreso a Ingeniería</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: columna de lectura de ~70ch; pestañas por universidad arriba; cada ruta = regla de semestres + reglas + salidas */
+:root{
+  --bg:#f3f6f7; --surface:#ffffff; --ink:#15212b; --muted:#566673; --line:#d5dee3;
+  --accent:#0d5f86; --accent-soft:#dcebf2;
+  --ok:#1f7a4d; --ok-soft:#dcf1e5; --warn:#a15c00; --warn-soft:#fbead1; --info:#5b4fa8; --info-soft:#e7e3f7; --na:#6b7680; --na-soft:#e7ebee;
+  --f-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f171d; --surface:#16222a; --ink:#e4ecf0; --muted:#9aabb6; --line:#2a3a45;
+  --accent:#6cb8dd; --accent-soft:#18394a;
+  --ok:#6fcf9b; --ok-soft:#173a29; --warn:#f0b35c; --warn-soft:#3d2c12; --info:#b0a6f0; --info-soft:#2a2547; --na:#a3adb5; --na-soft:#26323a;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f171d; --surface:#16222a; --ink:#e4ecf0; --muted:#9aabb6; --line:#2a3a45;
+  --accent:#6cb8dd; --accent-soft:#18394a;
+  --ok:#6fcf9b; --ok-soft:#173a29; --warn:#f0b35c; --warn-soft:#3d2c12; --info:#b0a6f0; --info-soft:#2a2547; --na:#a3adb5; --na-soft:#26323a;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.55 var(--f-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:700}
+h2{font-size:1.4rem;font-weight:700}
+h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-family:var(--f-body);font-weight:600}
+p{margin:0}
+.lede{color:var(--muted);max-width:68ch}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 10px;font-size:.85rem;font-weight:600;white-space:nowrap}
+.pill::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.m-libre,.m-garantizado{color:var(--ok);background:var(--ok-soft)}
+.m-competitivo{color:var(--warn);background:var(--warn-soft)}
+.m-sin_postulacion{color:var(--info);background:var(--info-soft)}
+.m-no_informado{color:var(--na);background:var(--na-soft)}
+
+.tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.tab{font:600 .95rem var(--f-body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:7px 12px;cursor:pointer;display:flex;align-items:center;gap:7px}
+.tab .dot{width:8px;height:8px;border-radius:50%;background:currentColor}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.tab[aria-selected="true"] .dot{background:var(--surface)}
+
+.route{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:20px}
+.route-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:flex-start}
+.route-head > div{min-width:0}
+.uni{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+
+/* regla de semestres */
+.ruler{overflow-x:auto}
+.ruler-grid{display:grid;grid-template-columns:repeat(12,minmax(34px,1fr));gap:3px;min-width:430px}
+.sem{font-family:var(--f-mono);font-size:.72rem;text-align:center;color:var(--muted)}
+.bar{height:30px;border-radius:5px;display:flex;align-items:center;padding:0 8px;font-size:.8rem;font-weight:600;overflow:hidden;white-space:nowrap}
+.bar.pc{background:var(--accent-soft);color:var(--accent)}
+.bar.esp{background:var(--line);color:var(--ink)}
+.bar.lic{background:var(--accent-soft);color:var(--accent)}
+.bar.tit{background:var(--info-soft);color:var(--info)}
+.bar.unk{background:repeating-linear-gradient(45deg,var(--na-soft) 0 8px,transparent 8px 16px);color:var(--na);border:1px dashed var(--line)}
+.ruler-note{font-size:.85rem;color:var(--muted);margin-top:6px}
+
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.rule{background:var(--surface);padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.rule .k{font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+.rule .v{font-size:.95rem}
+.callout{border-radius:10px;padding:12px 14px;font-size:.92rem}
+.callout.warn{background:var(--warn-soft);color:var(--ink)}
+.callout.na{background:var(--na-soft);color:var(--ink)}
+.callout b{font-weight:600}
+
+.mid{display:flex;flex-direction:column;gap:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.85rem;border:1px solid var(--line);border-radius:6px;padding:3px 8px;text-decoration:none;color:var(--ink);background:var(--bg)}
+a.chip:hover{border-color:var(--accent);color:var(--accent)}
+
+.outs{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.out{border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.out.ni{border-style:dashed}
+.out-name{font-weight:600;font-size:1rem;line-height:1.3}
+.out-title{font-size:.86rem;color:var(--muted)}
+.out-foot{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:auto}
+.tag{font-family:var(--f-mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;padding:2px 6px;border-radius:4px;background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.tag.direct{color:var(--ok);border-color:var(--ok)}
+.malla{font-size:.88rem;font-weight:600}
+.nomalla{font-size:.85rem;color:var(--muted)}
+.out-note{font-size:.82rem;color:var(--muted)}
+.sources{font-size:.85rem;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.sources ul{margin:0;padding-left:18px}
+footer{font-size:.82rem;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.route{animation:in .25s ease-out}@keyframes in{from{transform:translateY(4px)}to{transform:none}}}
+</style>
+
+<div class="wrap">
+  <header style="display:flex;flex-direction:column;gap:10px">
+    <h1>¿Cómo se llega a una ingeniería?</h1>
+    <p class="lede">En varias universidades no se postula a una carrera específica sino a un <b>plan común</b>: unos semestres compartidos y después se elige la especialidad. Lo que cambia entre universidades es <b>cuándo</b> se elige y <b>si hay cupos</b>. Elige una universidad para ver su ruta.</p>
+    <div class="legend" aria-label="Cómo se asigna la especialidad">
+      <span class="pill m-libre">Elección libre, sin cupos</span>
+      <span class="pill m-competitivo">Cupos limitados por ranking</span>
+      <span class="pill m-sin_postulacion">Sin postulación (articulación)</span>
+      <span class="pill m-no_informado">No informado aún</span>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" id="tabs"></nav>
+  <section id="route" aria-live="polite"></section>
+
+  <footer>Datos consultados en fuentes oficiales el <span id="fecha"></span>. Cada ruta indica sus fuentes. Los cupos y reglas pueden cambiar cada año; confirmar con la universidad antes de postular.</footer>
+</div>
+
+<script>
+const DATA = __DATA__;
+const UNI = {uc:"UC",uchile:"U. de Chile",usm:"USM",udp:"UDP",udd:"UDD",uai:"UAI",usach:"USACH"};
+const UNI_LONG = {uc:"Pontificia Universidad Católica de Chile",uchile:"Universidad de Chile",usm:"Universidad Técnica Federico Santa María",udp:"Universidad Diego Portales",udd:"Universidad del Desarrollo",uai:"Universidad Adolfo Ibáñez",usach:"Universidad de Santiago de Chile"};
+const MEC = {libre:"Elección libre, sin cupos",garantizado:"Cupo garantizado",competitivo:"Cupos limitados por ranking",sin_postulacion:"Sin postulación (articulación)",no_informado:"No informado aún"};
+const CUPOS = {sin_limite:"Sin límite",limitados:"Limitados por cohorte",no_informado:"No informado"};
+const ORDER = ["uchile","uc","usm","udp","udd","uai","usach"];
+const planes = ORDER.map(u=>DATA.planes_comunes.find(p=>p.universidad_id===u)).filter(Boolean);
+const esc = s => String(s ?? "").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const mecClass = m => "m-" + (m==="garantizado" ? "libre" : m);
+document.getElementById("fecha").textContent = DATA.consultado.split("-").reverse().join("-");
+
+function ruler(p){
+  const cells = n => Array.from({length:12},(_,i)=>`<div class="sem">S${i+1}</div>`).join("");
+  let bars = "", note = "";
+  const id = p.universidad_id, pc = p.duracion_plan_comun_semestres;
+  if (id === "uc"){
+    bars = `<div class="bar lic" style="grid-column:1 / span 8">Licenciatura: ciencias básicas + major + minor</div>
+            <div class="bar tit" style="grid-column:9 / span 4">Título (duración variable)</div>`;
+    note = "El major se cursa dentro de los 4 años de licenciatura; el título se articula después.";
+  } else if (pc){
+    const total = id==="usm" ? 10 : 11;
+    const elige = id==="usm" ? 2 : pc;
+    bars = `<div class="bar pc" style="grid-column:1 / span ${pc}">Plan común</div>
+            <div class="bar esp" style="grid-column:${pc+1} / span ${total-pc}">Especialidad</div>`;
+    note = id==="usm"
+      ? `La postulación a especialidad ocurre al aprobar el semestre ${elige}; el plan común completo dura ${pc} semestres. Carrera total: ${total} semestres.`
+      : `Se elige al terminar el semestre ${elige}. Duración total referencial: ${total} semestres.`;
+  } else {
+    bars = `<div class="bar unk" style="grid-column:1 / span 12">Duración del plan común no informada</div>`;
+  }
+  return `<div class="ruler"><div class="ruler-grid">${cells()}${bars}</div></div><p class="ruler-note">${note}</p>`;
+}
+
+function render(id){
+  const p = planes.find(x=>x.universidad_id===id);
+  const s = p.seleccion;
+  const rules = [
+    ["Cuándo se elige", s.momento],
+    ["Cupos", CUPOS[s.cupos]],
+    ["Criterio", s.criterio],
+    ["Requisito", s.requisitos],
+  ].filter(r=>r[1]);
+  const callouts = [];
+  if (s.irrevocable) callouts.push(`<div class="callout warn"><b>Importante:</b> la especialidad asignada no se puede cambiar por esta vía (asignación irrevocable).</div>`);
+  if (s.excepciones) callouts.push(`<div class="callout warn"><b>Excepción:</b> ${esc(s.excepciones)}</div>`);
+  if (s.detalle) callouts.push(`<div class="callout warn">${esc(s.detalle)}</div>`);
+  if (s.pendiente) callouts.push(`<div class="callout na"><b>Por confirmar:</b> ${esc(s.pendiente)}</div>`);
+  if (p.nota_salidas) callouts.push(`<div class="callout na">${esc(p.nota_salidas)}</div>`);
+
+  const mid = p.etapa_intermedia ? `<div class="mid"><h3>Paso intermedio: ${esc(p.etapa_intermedia.nombre)} (${p.etapa_intermedia.opciones.length})</h3>
+    <div class="chips">${p.etapa_intermedia.opciones.map(o=>`<a class="chip" href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.nombre)}</a>`).join("")}</div></div>` : "";
+
+  const outs = p.salidas.length ? p.salidas.map(o=>{
+    const ni = o.tipo==="no_ingenieria";
+    const titulo = o.titulo && o.titulo!==o.nombre ? `<div class="out-title">${esc(o.titulo)}</div>` : "";
+    const malla = o.malla_url ? `<a class="malla" href="${esc(o.malla_url)}" target="_blank" rel="noopener">Ver malla</a>` : `<span class="nomalla">Malla pendiente</span>`;
+    const direct = o.programa_directo_id ? `<span class="tag direct" title="Esta carrera también acepta postulación directa">También ingreso directo</span>` : "";
+    const tipo = ni ? `<span class="tag">No es ingeniería</span>` : "";
+    return `<article class="out${ni?" ni":""}"><div class="out-name">${esc(o.nombre)}</div>${titulo}
+      ${o.nota?`<div class="out-note">${esc(o.nota)}</div>`:""}
+      <div class="out-foot">${malla}${direct}${tipo}</div></article>`;
+  }).join("") : `<div class="callout na">Esta universidad todavía no publica a qué carreras lleva este plan común.</div>`;
+
+  const extra = p.malla_plan_comun ? ` · <a href="${esc(p.malla_plan_comun)}" target="_blank" rel="noopener">Malla del plan común</a>` : "";
+  document.getElementById("route").innerHTML = `
+  <div class="route">
+    <div class="route-head">
+      <div><div class="uni">${esc(UNI_LONG[id])}</div><h2>${esc(p.nombre)}</h2></div>
+      <span class="pill ${mecClass(s.mecanismo)}">${MEC[s.mecanismo]}</span>
+    </div>
+    <p>${esc(p.resumen)}${extra}</p>
+    ${ruler(p)}
+    <div class="rules">${rules.map(r=>`<div class="rule"><span class="k">${r[0]}</span><span class="v">${esc(r[1])}</span></div>`).join("")}</div>
+    ${callouts.join("")}
+    ${mid}
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <h3>${id==="uc" ? "Títulos a los que se accede" : "Carreras a las que se accede"} (${p.salidas.length})</h3>
+      <div class="outs">${outs}</div>
+    </div>
+    <div class="sources"><h3>Fuentes</h3><ul>${p.fuentes.map(f=>`<li><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.nombre)}</a></li>`).join("")}</ul></div>
+  </div>`;
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected", t.dataset.id===id));
+  try{ localStorage.setItem("ruta-uni", id) }catch(e){}
+}
+
+const tabs = document.getElementById("tabs");
+const DOT = {libre:"--ok",garantizado:"--ok",competitivo:"--warn",sin_postulacion:"--info",no_informado:"--na"};
+tabs.innerHTML = planes.map(p=>`<button class="tab" role="tab" id="tab-${p.universidad_id}" data-id="${p.universidad_id}"><span class="dot" style="color:var(${DOT[p.seleccion.mecanismo]})"></span>${UNI[p.universidad_id]}</button>`).join("");
+tabs.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>render(t.dataset.id)));
+let start = "uchile"; try{ start = localStorage.getItem("ruta-uni") || start }catch(e){}
+if (!planes.some(p=>p.universidad_id===start)) start = "uchile";
+render(start);
+</script>

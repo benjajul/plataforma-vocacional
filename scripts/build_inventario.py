@@ -24,6 +24,8 @@ FUENTES = {
                      "https://uchile.cl/carreras/4969/ingenieria-civil"),
     "usm_uch": ("universidadeschile.cl — USM (nómina preliminar DEMRE 2027, verificada 15-10-2026)",
                 "https://universidadeschile.cl/universidad/universidad-tecnica-federico-santa-maria"),
+    "usm_paes": ("USM — Admisión Centralizada PAES (códigos y vacantes)",
+                 "https://usm.cl/admision/admision-centralizada-paes-3/"),
     "usach_fing": ("USACH Admisión — Facultad de Ingeniería", "https://admision.usach.cl/FING-USACH"),
     "usach_uch": ("universidadeschile.cl — USACH (nómina preliminar DEMRE 2027)",
                   "https://universidadeschile.cl/universidad/universidad-de-santiago-de-chile"),
@@ -76,7 +78,7 @@ P = []
 P += [
     p("uc", "ingenieria", "Ingeniería", "plan_comun", ingreso="plan_comun", facultad=FING_UC,
       campus="San Joaquín", codigo="12039", vacantes=650,
-      especialidades=[  # majors (traducidos al español desde la página en inglés)
+      especialidades=[  # majors — detalle en data/planes_comunes.json (traducidos al español desde la página en inglés)
           "Ingeniería y Ciencias Ambientales", "Computación y Sistemas de Información", "Ingeniería en Construcción",
           "Ingeniería Eléctrica", "Ingeniería Estructural", "Ingeniería Geotécnica", "Ingeniería Hidráulica",
           "Ingeniería Mecánica", "Ingeniería en Minería", "Ingeniería Química", "Investigación Operativa",
@@ -139,19 +141,27 @@ usm_civiles_sj = [("plan-comun", "Ingeniería Civil Plan Común", "plan_comun"),
                   ("civil-mecanica", "Ingeniería Civil Mecánica", "ing_civil"),
                   ("civil-quimica", "Ingeniería Civil Química", "ing_civil"),
                   ("civil-telematica", "Ingeniería Civil Telemática", "ing_civil")]
+# Códigos de postulación USM (tabla Admisión 2026 en usm.cl; los códigos se mantienen entre procesos)
+USM_COD = {"plan-comun": "15300", "civil": "15311", "civil-minas": "15312", "civil-electrica": "15330",
+           "civil-fisica": "15384", "civil-informatica": "15360", "civil-matematica": "15301",
+           "civil-mecanica": "15340", "civil-quimica": "15350", "civil-telematica": "15361",
+           "diseno-productos": "15381", "civil-industrial": "15270", "aviacion-comercial": "15220",
+           "ingenieria-comercial": "15271"}
 for slug, nombre, cat in usm_civiles_sj:
     P.append(p("usm", slug, nombre, cat, ingreso="plan_comun" if cat == "plan_comun" else "carrera_directa",
-               facultad="USM (organizada por departamentos, sin facultades)", campus=SJ, fuentes=("usm_uch",),
-               nota="Especialidades del plan común por confirmar en Fase 3." if cat == "plan_comun" else ""))
+               facultad="USM (organizada por departamentos, sin facultades)", campus=SJ, codigo=USM_COD[slug],
+               fuentes=("usm_uch", "usm_paes"),
+               nota="Ver data/planes_comunes.json: selección competitiva por ranking de primer año." if cat == "plan_comun" else ""))
 P += [
     p("usm", "diseno-productos", "Ingeniería en Diseño de Productos", "ing_no_civil", facultad="USM (departamentos)",
-      campus=SJ, fuentes=("usm_uch",)),
+      campus=SJ, codigo=USM_COD["diseno-productos"], fuentes=("usm_uch", "usm_paes")),
     p("usm", "civil-industrial", "Ingeniería Civil Industrial", "ing_civil", facultad="USM (departamentos)",
-      campus=VIT, fuentes=("usm_uch",)),
+      campus=VIT, codigo=USM_COD["civil-industrial"], fuentes=("usm_uch", "usm_paes")),
     p("usm", "aviacion-comercial", "Ingeniería en Aviación Comercial", "ing_no_civil", facultad="USM (departamentos)",
-      campus=VIT, fuentes=("usm_uch",)),
+      campus=VIT, codigo=USM_COD["aviacion-comercial"], fuentes=("usm_uch", "usm_paes")),
     p("usm", "ingenieria-comercial", "Ingeniería Comercial", "ing_comercial",
-      facultad="USM — Departamento de Industrias", campus=VIT, fuentes=("usm_uch",)),
+      facultad="USM — Departamento de Ingeniería Comercial", campus=VIT, codigo=USM_COD["ingenieria-comercial"],
+      fuentes=("usm_uch", "usm_paes")),
 ]
 
 # ---------- USACH ----------

@@ -23,6 +23,10 @@
       "nombre": "universidadeschile.cl — USM (nómina preliminar DEMRE 2027, verificada 15-10-2026)",
       "url": "https://universidadeschile.cl/universidad/universidad-tecnica-federico-santa-maria"
     },
+    "usm_paes": {
+      "nombre": "USM — Admisión Centralizada PAES (códigos y vacantes)",
+      "url": "https://usm.cl/admision/admision-centralizada-paes-3/"
+    },
     "usach_fing": {
       "nombre": "USACH Admisión — Facultad de Ingeniería",
       "url": "https://admision.usach.cl/FING-USACH"
@@ -302,13 +306,14 @@
       "tipo_ingreso": "plan_comun",
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
-      "codigo_demre": null,
+      "codigo_demre": "15300",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
-      "nota": "Especialidades del plan común por confirmar en Fase 3.",
+      "nota": "Ver data/planes_comunes.json: selección competitiva por ranking de primer año.",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },
@@ -321,13 +326,14 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
-      "codigo_demre": null,
+      "codigo_demre": "15311",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },
@@ -340,13 +346,14 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
-      "codigo_demre": null,
+      "codigo_demre": "15312",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },
@@ -359,13 +366,14 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
-      "codigo_demre": null,
+      "codigo_demre": "15330",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },
@@ -378,13 +386,14 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
-      "codigo_demre": null,
+      "codigo_demre": "15384",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },
@@ -397,13 +406,14 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
-      "codigo_demre": null,
+      "codigo_demre": "15360",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },
@@ -416,13 +426,14 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
-      "codigo_demre": null,
+      "codigo_demre": "15301",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },
@@ -435,13 +446,14 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
-      "codigo_demre": null,
+      "codigo_demre": "15340",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },
@@ -454,13 +466,14 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
-      "codigo_demre": null,
+      "codigo_demre": "15350",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },
@@ -473,13 +486,14 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
-      "codigo_demre": null,
+      "codigo_demre": "15361",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },
@@ -492,13 +506,14 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "USM (departamentos)",
       "campus": "San Joaquín",
-      "codigo_demre": null,
+      "codigo_demre": "15381",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },
@@ -511,13 +526,14 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "USM (departamentos)",
       "campus": "Vitacura",
-      "codigo_demre": null,
+      "codigo_demre": "15270",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },
@@ -530,13 +546,14 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "USM (departamentos)",
       "campus": "Vitacura",
-      "codigo_demre": null,
+      "codigo_demre": "15220",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },
@@ -547,15 +564,16 @@
       "nombre_oficial": "Ingeniería Comercial",
       "categoria": "ing_comercial",
       "tipo_ingreso": "carrera_directa",
-      "facultad": "USM — Departamento de Industrias",
+      "facultad": "USM — Departamento de Ingeniería Comercial",
       "campus": "Vitacura",
-      "codigo_demre": null,
+      "codigo_demre": "15271",
       "vacantes_regulares_2027": null,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usm_uch"
+        "usm_uch",
+        "usm_paes"
       ],
       "consultado": "2026-11-08"
     },

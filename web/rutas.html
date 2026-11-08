@@ -1,0 +1,211 @@
+<title>Rutas de Ingreso a Ingeniería</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: columna de lectura de ~70ch; pestañas por universidad arriba; cada ruta = regla de semestres + reglas + salidas */
+:root{
+  --bg:#f3f6f7; --surface:#ffffff; --ink:#15212b; --muted:#566673; --line:#d5dee3;
+  --accent:#0d5f86; --accent-soft:#dcebf2;
+  --ok:#1f7a4d; --ok-soft:#dcf1e5; --warn:#a15c00; --warn-soft:#fbead1; --info:#5b4fa8; --info-soft:#e7e3f7; --na:#6b7680; --na-soft:#e7ebee;
+  --f-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f171d; --surface:#16222a; --ink:#e4ecf0; --muted:#9aabb6; --line:#2a3a45;
+  --accent:#6cb8dd; --accent-soft:#18394a;
+  --ok:#6fcf9b; --ok-soft:#173a29; --warn:#f0b35c; --warn-soft:#3d2c12; --info:#b0a6f0; --info-soft:#2a2547; --na:#a3adb5; --na-soft:#26323a;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f171d; --surface:#16222a; --ink:#e4ecf0; --muted:#9aabb6; --line:#2a3a45;
+  --accent:#6cb8dd; --accent-soft:#18394a;
+  --ok:#6fcf9b; --ok-soft:#173a29; --warn:#f0b35c; --warn-soft:#3d2c12; --info:#b0a6f0; --info-soft:#2a2547; --na:#a3adb5; --na-soft:#26323a;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.55 var(--f-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:700}
+h2{font-size:1.4rem;font-weight:700}
+h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-family:var(--f-body);font-weight:600}
+p{margin:0}
+.lede{color:var(--muted);max-width:68ch}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 10px;font-size:.85rem;font-weight:600;white-space:nowrap}
+.pill::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.m-libre,.m-garantizado{color:var(--ok);background:var(--ok-soft)}
+.m-competitivo{color:var(--warn);background:var(--warn-soft)}
+.m-sin_postulacion{color:var(--info);background:var(--info-soft)}
+.m-no_informado{color:var(--na);background:var(--na-soft)}
+
+.tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.tab{font:600 .95rem var(--f-body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:7px 12px;cursor:pointer;display:flex;align-items:center;gap:7px}
+.tab .dot{width:8px;height:8px;border-radius:50%;background:currentColor}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.tab[aria-selected="true"] .dot{background:var(--surface)}
+
+.route{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:20px}
+.route-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:flex-start}
+.route-head > div{min-width:0}
+.uni{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+
+/* regla de semestres */
+.ruler{overflow-x:auto}
+.ruler-grid{display:grid;grid-template-columns:repeat(12,minmax(34px,1fr));gap:3px;min-width:430px}
+.sem{font-family:var(--f-mono);font-size:.72rem;text-align:center;color:var(--muted)}
+.bar{height:30px;border-radius:5px;display:flex;align-items:center;padding:0 8px;font-size:.8rem;font-weight:600;overflow:hidden;white-space:nowrap}
+.bar.pc{background:var(--accent-soft);color:var(--accent)}
+.bar.esp{background:var(--line);color:var(--ink)}
+.bar.lic{background:var(--accent-soft);color:var(--accent)}
+.bar.tit{background:var(--info-soft);color:var(--info)}
+.bar.unk{background:repeating-linear-gradient(45deg,var(--na-soft) 0 8px,transparent 8px 16px);color:var(--na);border:1px dashed var(--line)}
+.ruler-note{font-size:.85rem;color:var(--muted);margin-top:6px}
+
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.rule{background:var(--surface);padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.rule .k{font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+.rule .v{font-size:.95rem}
+.callout{border-radius:10px;padding:12px 14px;font-size:.92rem}
+.callout.warn{background:var(--warn-soft);color:var(--ink)}
+.callout.na{background:var(--na-soft);color:var(--ink)}
+.callout b{font-weight:600}
+
+.mid{display:flex;flex-direction:column;gap:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.85rem;border:1px solid var(--line);border-radius:6px;padding:3px 8px;text-decoration:none;color:var(--ink);background:var(--bg)}
+a.chip:hover{border-color:var(--accent);color:var(--accent)}
+
+.outs{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.out{border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.out.ni{border-style:dashed}
+.out-name{font-weight:600;font-size:1rem;line-height:1.3}
+.out-title{font-size:.86rem;color:var(--muted)}
+.out-foot{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:auto}
+.tag{font-family:var(--f-mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;padding:2px 6px;border-radius:4px;background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.tag.direct{color:var(--ok);border-color:var(--ok)}
+.malla{font-size:.88rem;font-weight:600}
+.nomalla{font-size:.85rem;color:var(--muted)}
+.out-note{font-size:.82rem;color:var(--muted)}
+.sources{font-size:.85rem;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.sources ul{margin:0;padding-left:18px}
+footer{font-size:.82rem;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.route{animation:in .25s ease-out}@keyframes in{from{transform:translateY(4px)}to{transform:none}}}
+</style>
+
+<div class="wrap">
+  <header style="display:flex;flex-direction:column;gap:10px">
+    <h1>¿Cómo se llega a una ingeniería?</h1>
+    <p class="lede">En varias universidades no se postula a una carrera específica sino a un <b>plan común</b>: unos semestres compartidos y después se elige la especialidad. Lo que cambia entre universidades es <b>cuándo</b> se elige y <b>si hay cupos</b>. Elige una universidad para ver su ruta.</p>
+    <div class="legend" aria-label="Cómo se asigna la especialidad">
+      <span class="pill m-libre">Elección libre, sin cupos</span>
+      <span class="pill m-competitivo">Cupos limitados por ranking</span>
+      <span class="pill m-sin_postulacion">Sin postulación (articulación)</span>
+      <span class="pill m-no_informado">No informado aún</span>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" id="tabs"></nav>
+  <section id="route" aria-live="polite"></section>
+
+  <footer>Datos consultados en fuentes oficiales el <span id="fecha"></span>. Cada ruta indica sus fuentes. Los cupos y reglas pueden cambiar cada año; confirmar con la universidad antes de postular.</footer>
+</div>
+
+<script>
+const DATA = {"version": "0.3", "consultado": "2026-11-08", "planes_comunes": [{"programa_id": "uchile-plan-comun", "universidad_id": "uchile", "nombre": "Ingeniería y Ciencias, Plan Común (FCFM)", "resumen": "Todos entran a un mismo plan común de 4 semestres en Beauchef. Al terminar el 4.º semestre cada estudiante elige su especialidad libremente: no hay cupos por especialidad.", "duracion_plan_comun_semestres": 4, "seleccion": {"momento": "Al finalizar el 4.º semestre (plazo obligatorio)", "mecanismo": "libre", "cupos": "sin_limite", "criterio": "No hay selección: el estudiante elige.", "requisitos": "Elegir dentro del plazo para conservar beneficios MINEDUC (p. ej. gratuidad).", "irrevocable": null, "apoyo": "Unidad de Orientación Vocacional e 'Inicia Beauchef' presentan las especialidades."}, "duracion_total": "11 semestres (Ingeniería Civil, incluye plan común)", "grado_intermedio": "Licenciatura en Ciencias de la Ingeniería, mención según especialidad", "salidas": [{"nombre": "Ingeniería Civil", "titulo": "Ingeniero/a Civil (menciones Estructuras, Construcción y Geotecnia; Hidráulica, Sanitaria y Ambiental; Transporte)", "tipo": "ing_civil", "malla_url": "https://uchile.cl/carreras/4969/ingenieria-civil", "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniería Civil de Minas", "titulo": "Ingeniería Civil de Minas", "tipo": "ing_civil", "malla_url": "https://uchile.cl/carreras/4977/ingenieria-civil-de-minas", "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniería Civil en Biotecnología", "titulo": "Ingeniería Civil en Biotecnología", "tipo": "ing_civil", "malla_url": "https://uchile.cl/carreras/4970/ingenieria-civil-en-biotecnologia", "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniería Civil en Computación", "titulo": "Ingeniería Civil en Computación", "tipo": "ing_civil", "malla_url": "https://uchile.cl/carreras/4971/ingenieria-civil-en-computacion", "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniería Civil Eléctrica", "titulo": "Ingeniería Civil Eléctrica", "tipo": "ing_civil", "malla_url": "https://uchile.cl/carreras/4972/ingenieria-civil-electrica", "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniería Civil Industrial", "titulo": "Ingeniería Civil Industrial", "tipo": "ing_civil", "malla_url": "https://uchile.cl/dam/jcr:cdc0ae92-f9b3-46fb-8aff-4d49fe4c6440/MallaCivilIndustrial2021.jpg", "programa_directo_id": null, "nota": "Especialización desde el 5.º semestre."}, {"nombre": "Ingeniería Civil Matemática", "titulo": "Ingeniería Civil Matemática", "tipo": "ing_civil", "malla_url": "https://uchile.cl/carreras/4974/ingenieria-civil-matematica", "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniería Civil Mecánica", "titulo": "Ingeniería Civil Mecánica", "tipo": "ing_civil", "malla_url": "https://uchile.cl/carreras/4976/ingenieria-civil-mecanica", "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniería Civil Química", "titulo": "Ingeniería Civil Química", "tipo": "ing_civil", "malla_url": "https://uchile.cl/carreras/4978/ingenieria-civil-quimica", "programa_directo_id": null, "nota": ""}, {"nombre": "Geología", "titulo": "Geología", "tipo": "no_ingenieria", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Geofísica", "titulo": "Geofísica", "tipo": "no_ingenieria", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Licenciatura en Ciencias mención Astronomía", "titulo": "Licenciatura en Ciencias mención Astronomía", "tipo": "no_ingenieria", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Licenciatura en Ciencias mención Física", "titulo": "Licenciatura en Ciencias mención Física", "tipo": "no_ingenieria", "malla_url": null, "programa_directo_id": null, "nota": ""}], "fuentes": [{"nombre": "FCFM — Preguntas frecuentes de admisión", "url": "https://ingenieria.uchile.cl/admision/preguntas-frecuentes"}, {"nombre": "FCFM — Plazo para elegir tu especialidad", "url": "https://ingenieria.uchile.cl/escuela/pregrado/informacion-para-estudiantes/plazo-para-elegir-tu-especialidad"}, {"nombre": "U. de Chile — Ingeniería Civil", "url": "https://uchile.cl/carreras/4969/ingenieria-civil"}], "consultado": "2026-11-08"}, {"programa_id": "uc-ingenieria", "universidad_id": "uc", "nombre": "Ingeniería UC (Licenciatura en Ciencias de la Ingeniería + título)", "resumen": "Se entra a 'Ingeniería'. Los primeros 4 años son una licenciatura donde cada estudiante arma su perfil con un major (22 opciones) y un minor. Después de la licenciatura se 'articula' con uno de 7 títulos de Ingeniero Civil UC, sin postulación separada; varios títulos tienen 'diplomas' que definen la especialidad.", "duracion_plan_comun_semestres": null, "seleccion": {"momento": "Major y minor durante la licenciatura (4 años); título después de la licenciatura", "mecanismo": "sin_postulacion", "cupos": "no_informado", "criterio": "Para continuar con el título de Ingeniero Civil UC no se necesita postulación separada. La duración de la articulación depende de la combinación major/minor/título.", "requisitos": "Completar la Licenciatura en Ciencias de la Ingeniería (major + minor + requisitos adicionales).", "irrevocable": null, "excepciones": "Las articulaciones con Medicina, Arquitectura y Diseño UC tienen vacantes limitadas y requieren postulación y selección.", "pendiente": "Confirmar si algún major tiene cupos o requisitos de entrada, y en qué semestre se declara."}, "duracion_total": "4 años de licenciatura + articulación al título (duración variable según combinación)", "grado_intermedio": "Licenciatura en Ciencias de la Ingeniería", "etapa_intermedia": {"nombre": "Majors", "opciones": [{"nombre": "Ingeniería y Ciencias Ambientales", "url": "https://www.ing.uc.cl/major-en-ingenieria-y-ciencias-ambientales/"}, {"nombre": "Computación y Sistemas de Información", "url": "https://www.ing.uc.cl/major-en-computacion-y-sistemas-de-informacion/"}, {"nombre": "Ingeniería de Construcción", "url": "http://www.ing.uc.cl/programas-de-estudio/major-ingenieria-construccion/"}, {"nombre": "Ingeniería Eléctrica", "url": "http://www.ing.uc.cl/programas-de-estudio/major-ingenieria-electrica/"}, {"nombre": "Ingeniería Estructural", "url": "http://www.ing.uc.cl/programas-de-estudio/major-ingenieria-estructural/"}, {"nombre": "Ingeniería Geotécnica", "url": "http://www.ing.uc.cl/programas-de-estudio/major-ingenieria-geotecnica/"}, {"nombre": "Ingeniería y Ciencias del Agua", "url": "https://www.ing.uc.cl/major-ingenieria-y-ciencias-agua/"}, {"nombre": "Ingeniería Mecánica", "url": "http://www.ing.uc.cl/programas-de-estudio/major-ingenieria-mecanica/"}, {"nombre": "Ingeniería Minera", "url": "http://www.ing.uc.cl/programas-de-estudio/major-ingenieria-minera/"}, {"nombre": "Ingeniería Química", "url": "https://www.ing.uc.cl/major-ingenieria-quimica/"}, {"nombre": "Ingeniería en Investigación Operativa", "url": "https://www.ing.uc.cl/major-investigacion-operativa/"}, {"nombre": "Ingeniería de Sistemas de Transportes", "url": "https://www.ing.uc.cl/major-sistemas-transporte/"}, {"nombre": "Ingeniería de Software", "url": "https://www.ing.uc.cl/major-en-ingenieria-de-software/"}, {"nombre": "Geociencias (interdisciplinario)", "url": "https://www.ing.uc.cl/major-en-geociencias/"}, {"nombre": "Ingeniería Biológica (interdisciplinario)", "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/major-ingenieria-biologica/"}, {"nombre": "Ingeniería Biomédica (interdisciplinario)", "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/major-ingenieria-biomedica/"}, {"nombre": "Ingeniería Matemática (interdisciplinario)", "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/major-ingenieria-matematica/"}, {"nombre": "Ingeniería y Arquitectura (interdisciplinario)", "url": "https://www.ing.uc.cl/major-en-ingenieria-y-arquitectura/"}, {"nombre": "Ingeniería, Diseño e Innovación (interdisciplinario)", "url": "https://www.ing.uc.cl/major-ingenieria-diseno-e-innovacion/"}, {"nombre": "Ingeniería Robótica (interdisciplinario)", "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/major-ingenieria-robotica/"}, {"nombre": "Ingeniería Física (interdisciplinario)", "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/ingenieria-fisica/"}, {"nombre": "Ingeniería Civil (interdisciplinario)", "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/major-ingenieria-civil/"}]}, "salidas": [{"nombre": "Ingeniero Civil", "titulo": "Ingeniero Civil UC, con Diploma en: Ambiental · Diseño y Construcción de Obras · Ingeniería y Gestión de la Construcción · Estructural · Geotécnica · Hidráulica · Minería · Transporte", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniero Civil de Industrias", "titulo": "Ingeniero Civil de Industrias UC, con Diploma en: Ambiental · Construcción · Bioprocesos · Computación · Eléctrica · Hidráulica · Matemática · Mecánica · Minería · Química · Tecnologías de la Información · Transporte", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": "Es la salida 'industrial' de la UC; se combina con un diploma técnico."}, {"nombre": "Ingeniero Civil de Computación", "titulo": "Ingeniero Civil de Computación", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniero Civil Electricista", "titulo": "Ingeniero Civil Electricista", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniero Civil Mecánico", "titulo": "Ingeniero Civil Mecánico", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniero Civil de Biotecnología", "titulo": "Ingeniero Civil de Biotecnología", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniero Civil Matemático Computacional", "titulo": "Ingeniero Civil Matemático Computacional", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Articulación con Médico Cirujano, Arquitecto o Diseñador UC", "titulo": "Articulación con Médico Cirujano, Arquitecto o Diseñador UC", "tipo": "no_ingenieria", "malla_url": null, "programa_directo_id": null, "nota": "Vacantes limitadas; requiere postulación y selección."}], "fuentes": [{"nombre": "Ingeniería UC — ¿Cómo es nuestro plan de estudios?", "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/plan-estudios-ingenieria-uc/"}, {"nombre": "Ingeniería UC — Títulos profesionales", "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/titulos-profesionales-ingenieria/"}, {"nombre": "Ingeniería UC — Majors y minors", "url": "https://www.ing.uc.cl/programas-de-estudio/pregrado/plan-estudios/cuales-los-majors-los-minors-ingenieria-uc/"}], "consultado": "2026-11-08"}, {"programa_id": "usm-plan-comun", "universidad_id": "usm", "nombre": "Ingeniería Civil Plan Común (Campus San Joaquín)", "resumen": "Programa para quienes aún no deciden su ingeniería. Tras aprobar el primer año se postula a una especialidad del mismo campus. Hay cupos por cohorte y se asignan por ranking del rendimiento académico de primer año. La asignación es irrevocable.", "duracion_plan_comun_semestres": 4, "seleccion": {"momento": "Al aprobar el primer año (2 semestres); proceso al cierre de semestre vía SIGA", "mecanismo": "competitivo", "cupos": "limitados", "criterio": "Ranking por promedio ponderado de las asignaturas de primer año, frente al resto de la generación. Se deben indicar 6 preferencias en orden.", "requisitos": "Aprobar el 100% de los créditos de los dos primeros semestres.", "irrevocable": true, "detalle": "Cupos no usados quedan para la misma cohorte en el proceso siguiente. Hay simulaciones periódicas para ver las posibilidades. Otros programas de la USM solo por cambio de carrera interno.", "cupos_publicos": false, "pendiente": "Los cupos por especialidad se publican en un portal interno con clave (SIGA). Confirmar si Civil Industrial (Vitacura) es accesible desde el plan común de San Joaquín."}, "duracion_total": "Plan común: 2 años (Bachiller). Las carreras de destino duran 10 semestres en total.", "grado_intermedio": "Bachiller/Bachillera en Ciencias de la Ingeniería", "malla_plan_comun": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBnzEjwo1hrS4MvHlyeqZK4AdQ5qWvLM0Ce86i6BALCYsw?e=Z463TE", "salidas": [{"nombre": "Ingeniería Civil", "titulo": "Ingeniería Civil", "tipo": "ing_civil", "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQDcpUxPns9GRJq2WgCGaqJPAQYqzYwUZ5pd4KKswDeCVdg?e=9SzTnH", "programa_directo_id": "usm-civil", "nota": ""}, {"nombre": "Ingeniería Civil de Minas", "titulo": "Ingeniería Civil de Minas", "tipo": "ing_civil", "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBVUUO4UA03SqHG4jkxCGxwAenm-FJjo8gBPdxT0ec54Ew?e=DGySzl", "programa_directo_id": "usm-civil-minas", "nota": ""}, {"nombre": "Ingeniería Civil Eléctrica", "titulo": "Ingeniero/a Civil Electricista", "tipo": "ing_civil", "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQDZ0sWXoGXvQJrfX6EyQyKYAYJROwzQQzfGTkVx0Bbl7Hs?e=5EwD9O", "programa_directo_id": "usm-civil-electrica", "nota": ""}, {"nombre": "Ingeniería Civil Física", "titulo": "Ingeniería Civil Física", "tipo": "ing_civil", "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBnqJYyFZxbQI2jB5dfO87KAcmviiBgOW-x-AjssTh660w?e=vtSKZo", "programa_directo_id": "usm-civil-fisica", "nota": ""}, {"nombre": "Ingeniería Civil Informática", "titulo": "Ingeniería Civil Informática", "tipo": "ing_civil", "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQCz2fCQ-qwoQLp3HpJkE6nCAWQ6F3XeXcswa-qyobhU7Xk?e=9s0YlQ", "programa_directo_id": "usm-civil-informatica", "nota": ""}, {"nombre": "Ingeniería Civil Matemática", "titulo": "Ingeniería Civil Matemática", "tipo": "ing_civil", "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQD2zpR9tcUSR7DmKW25d6LdAUUO9Cwk_7SkZ9w5n-pXoJs?e=Kw6lvi", "programa_directo_id": "usm-civil-matematica", "nota": ""}, {"nombre": "Ingeniería Civil Mecánica", "titulo": "Ingeniería Civil Mecánica", "tipo": "ing_civil", "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBJHhY7n5h_T5br1QVNCjGQAd5hpN4Tq0iSvTPceZQI0MI?e=hbDbs1", "programa_directo_id": "usm-civil-mecanica", "nota": ""}, {"nombre": "Ingeniería Civil Química", "titulo": "Ingeniería Civil Química", "tipo": "ing_civil", "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQAb1xZ3jZAvR4Ejdm5nkqxwAegbwjH1cmalYmWGVz7KoyQ?e=5dHFlJ", "programa_directo_id": "usm-civil-quimica", "nota": ""}, {"nombre": "Ingeniería Civil Telemática", "titulo": "Ingeniería Civil Telemática", "tipo": "ing_civil", "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBdlCP7cd-MTp14pTPSSnecAUVvKtLmdGHjJq6P2ZJt-Zg?e=x0qaEJ", "programa_directo_id": "usm-civil-telematica", "nota": ""}], "nota_salidas": "Lista = ingenierías civiles que se dictan en San Joaquín, según la regla 'oferta del campus donde esté matriculado'. La USM no publica la lista ni los cupos por cohorte fuera de su portal interno.", "fuentes": [{"nombre": "USM — Ingeniería Civil Plan Común", "url": "https://usm.cl/admision/carreras/ingenieria-civil-plan-comun/"}, {"nombre": "USM — Circular Postulación a Especialidad (dic-2025)", "url": "https://autoservicio.usm.cl/docs/usmtransparente/informaciones/Circular_PostulacionesEspecialidad2.pdf"}, {"nombre": "USM — Admisión Centralizada PAES (vacantes 2026)", "url": "https://usm.cl/admision/admision-centralizada-paes-3/"}], "consultado": "2026-11-08"}, {"programa_id": "udp-plan-comun", "universidad_id": "udp", "nombre": "Ingeniería Civil Plan Común", "resumen": "Primer año común. Al terminarlo se elige una de 4 ingenierías civiles sin límite de cupos. Se titula con título profesional + magíster de continuidad.", "duracion_plan_comun_semestres": 2, "seleccion": {"momento": "Al terminar el primer año", "mecanismo": "libre", "cupos": "sin_limite", "criterio": "Sin selección; también se puede cambiar a otra carrera de la facultad sin cupo si se cumplen requisitos académicos.", "requisitos": "Requisitos académicos del plan común.", "irrevocable": null}, "duracion_total": "no informado en la fuente", "malla_plan_comun": "https://ingenieriayciencias.udp.cl/cms/wp-content/uploads/2025/12/INGENIERIA-CIVIL-PLAN-COMUN_2026.pdf", "salidas": [{"nombre": "Ingeniería Civil Industrial", "titulo": "Ingeniería Civil Industrial", "tipo": "ing_civil", "malla_url": "https://admision.udp.cl/cms/wp-content/uploads/2025/09/INGENIERIA-CIVIL-INDUSTRIAL_2026.pdf", "programa_directo_id": "udp-civil-industrial", "nota": ""}, {"nombre": "Ingeniería Civil en Obras Civiles", "titulo": "Ingeniería Civil en Obras Civiles", "tipo": "ing_civil", "malla_url": "https://eoc.udp.cl/cms/wp-content/uploads/2023/12/MALLA-INGENIERIA-CIVIL-EN-OBRAS-CIVILES.pdf", "programa_directo_id": "udp-civil-obras-civiles", "nota": "Malla publicada en 2023."}, {"nombre": "Ingeniería Civil en Informática y Telecomunicaciones", "titulo": "Ingeniería Civil en Informática y Telecomunicaciones", "tipo": "ing_civil", "malla_url": "https://eit.udp.cl/cms/wp-content/uploads/2025/12/INGENIERIA-CIVIL-EN-INFORMATICA-Y-TELECOMUNICACIONES.pdf", "programa_directo_id": "udp-civil-informatica-telecom", "nota": ""}, {"nombre": "Ingeniería Civil en Ciencia de Datos e Inteligencia Artificial", "titulo": "Ingeniería Civil en Ciencia de Datos e Inteligencia Artificial", "tipo": "ing_civil", "malla_url": "https://admision.udp.cl/cms/wp-content/uploads/2025/09/INGENIERIA-CIVIL-EN-CIENCIA-DE-DATOS-E-INTELIGENCIA-ARTIFICIAL_2026.pdf", "programa_directo_id": "udp-civil-ciencia-datos-ia", "nota": ""}], "fuentes": [{"nombre": "UDP — Malla Ingeniería Civil Plan Común 2026", "url": "https://ingenieriayciencias.udp.cl/cms/wp-content/uploads/2025/12/INGENIERIA-CIVIL-PLAN-COMUN_2026.pdf"}], "consultado": "2026-11-08"}, {"programa_id": "udd-plan-comun", "universidad_id": "udd", "nombre": "Ingeniería Civil Plan Común", "resumen": "Tres semestres comunes. Luego se elige especialidad con cupo garantizado en cualquier carrera de la facultad (salvo BioMedicina).", "duracion_plan_comun_semestres": 3, "seleccion": {"momento": "Al terminar el 3.er semestre", "mecanismo": "garantizado", "cupos": "sin_limite", "criterio": "Cupo garantizado.", "requisitos": "no informado", "irrevocable": null, "pendiente": "Fuente de 2024; confirmar si Informática e IA ya es salida del plan común."}, "duracion_total": "11 semestres", "malla_plan_comun": "https://www.udd.cl/mallas/ingenieriacivilplancomun.pdf", "salidas": [{"nombre": "Ingeniería Civil Industrial", "titulo": "Ingeniería Civil Industrial", "tipo": "ing_civil", "malla_url": "https://ingenieria.udd.cl/files/2020/04/12.-ing-civil-pc_ing-civil-industrial.pdf", "programa_directo_id": "udd-civil-industrial", "nota": "Malla publicada en 2020."}, {"nombre": "Ingeniería Civil en Obras Civiles", "titulo": "Ingeniería Civil en Obras Civiles", "tipo": "ing_civil", "malla_url": "https://ingenieria.udd.cl/files/2020/04/12.-ing-civil-pc_ing-civil-obras-civiles.pdf", "programa_directo_id": "udd-civil-obras-civiles", "nota": "Malla publicada en 2020."}, {"nombre": "Ingeniería Civil en Minería", "titulo": "Ingeniería Civil en Minería", "tipo": "ing_civil", "malla_url": "https://ingenieria.udd.cl/files/2020/04/12.-ing-civil-pc_ing-civil-mineria-1.pdf", "programa_directo_id": "udd-civil-mineria", "nota": "Malla publicada en 2020."}, {"nombre": "Ingeniería Civil en Informática e Innovación Tecnológica", "titulo": "Ingeniería Civil en Informática e Innovación Tecnológica", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": "udd-civil-informatica-innovacion", "nota": ""}, {"nombre": "Ingeniería Civil en Informática e Inteligencia Artificial", "titulo": "Ingeniería Civil en Informática e Inteligencia Artificial", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": "udd-civil-informatica-ia", "nota": "Por confirmar como salida del plan común."}, {"nombre": "Geología", "titulo": "Geología", "tipo": "no_ingenieria", "malla_url": null, "programa_directo_id": null, "nota": ""}], "fuentes": [{"nombre": "UDD — Plan común de ingenierías", "url": "https://ingenieria.udd.cl/files/2024/03/07-plan-comun-ingenierias.pdf"}, {"nombre": "UDD — Facultad de Ingeniería, carreras", "url": "https://ingenieria.udd.cl/carreras/"}], "consultado": "2026-11-08"}, {"programa_id": "uai-plan-comun", "universidad_id": "uai", "nombre": "Ingeniería Civil (Plan Común) — Peñalolén", "resumen": "En Santiago todas las ingenierías civiles de la UAI se ingresan por plan común, que lleva a 7 especialidades.", "duracion_plan_comun_semestres": null, "seleccion": {"momento": "no informado", "mecanismo": "no_informado", "cupos": "no_informado", "criterio": "no informado", "requisitos": "no informado", "irrevocable": null, "pendiente": "Buscar reglamento de elección de especialidad UAI."}, "duracion_total": "no informado", "salidas": [{"nombre": "Ingeniería Civil Industrial", "titulo": "Ingeniería Civil Industrial", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniería Civil Informática", "titulo": "Ingeniería Civil Informática", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniería Civil en Bioingeniería", "titulo": "Ingeniería Civil en Bioingeniería", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniería Civil (Obras Civiles)", "titulo": "Ingeniería Civil (Obras Civiles)", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniería Civil en Energía", "titulo": "Ingeniería Civil en Energía", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniería Civil Mecánica", "titulo": "Ingeniería Civil Mecánica", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": ""}, {"nombre": "Ingeniería Civil en Minería", "titulo": "Ingeniería Civil en Minería", "tipo": "ing_civil", "malla_url": null, "programa_directo_id": null, "nota": ""}], "fuentes": [{"nombre": "UAI — Facultad de Ingeniería y Ciencias", "url": "https://www.uai.cl/ingenieria-y-ciencias/carreras/nuestras-carreras"}], "consultado": "2026-11-08"}, {"programa_id": "usach-civil-informatica-plan-comun", "universidad_id": "usach", "nombre": "Ingeniería Civil en Informática – Plan Común (nueva 2027)", "resumen": "Carrera nueva para Admisión 2027 (90 vacantes según prensa). Aún no hay información oficial sobre sus salidas.", "duracion_plan_comun_semestres": null, "seleccion": {"momento": "no informado", "mecanismo": "no_informado", "cupos": "no_informado", "criterio": "no informado", "requisitos": "no informado", "irrevocable": null, "pendiente": "Revisar ficha oficial USACH cuando se publique."}, "duracion_total": "no informado", "salidas": [], "fuentes": [{"nombre": "USACH Admisión — Facultad de Ingeniería", "url": "https://admision.usach.cl/FING-USACH"}], "consultado": "2026-11-08"}]};
+const UNI = {uc:"UC",uchile:"U. de Chile",usm:"USM",udp:"UDP",udd:"UDD",uai:"UAI",usach:"USACH"};
+const UNI_LONG = {uc:"Pontificia Universidad Católica de Chile",uchile:"Universidad de Chile",usm:"Universidad Técnica Federico Santa María",udp:"Universidad Diego Portales",udd:"Universidad del Desarrollo",uai:"Universidad Adolfo Ibáñez",usach:"Universidad de Santiago de Chile"};
+const MEC = {libre:"Elección libre, sin cupos",garantizado:"Cupo garantizado",competitivo:"Cupos limitados por ranking",sin_postulacion:"Sin postulación (articulación)",no_informado:"No informado aún"};
+const CUPOS = {sin_limite:"Sin límite",limitados:"Limitados por cohorte",no_informado:"No informado"};
+const ORDER = ["uchile","uc","usm","udp","udd","uai","usach"];
+const planes = ORDER.map(u=>DATA.planes_comunes.find(p=>p.universidad_id===u)).filter(Boolean);
+const esc = s => String(s ?? "").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const mecClass = m => "m-" + (m==="garantizado" ? "libre" : m);
+document.getElementById("fecha").textContent = DATA.consultado.split("-").reverse().join("-");
+
+function ruler(p){
+  const cells = n => Array.from({length:12},(_,i)=>`<div class="sem">S${i+1}</div>`).join("");
+  let bars = "", note = "";
+  const id = p.universidad_id, pc = p.duracion_plan_comun_semestres;
+  if (id === "uc"){
+    bars = `<div class="bar lic" style="grid-column:1 / span 8">Licenciatura: ciencias básicas + major + minor</div>
+            <div class="bar tit" style="grid-column:9 / span 4">Título (duración variable)</div>`;
+    note = "El major se cursa dentro de los 4 años de licenciatura; el título se articula después.";
+  } else if (pc){
+    const total = id==="usm" ? 10 : 11;
+    const elige = id==="usm" ? 2 : pc;
+    bars = `<div class="bar pc" style="grid-column:1 / span ${pc}">Plan común</div>
+            <div class="bar esp" style="grid-column:${pc+1} / span ${total-pc}">Especialidad</div>`;
+    note = id==="usm"
+      ? `La postulación a especialidad ocurre al aprobar el semestre ${elige}; el plan común completo dura ${pc} semestres. Carrera total: ${total} semestres.`
+      : `Se elige al terminar el semestre ${elige}. Duración total referencial: ${total} semestres.`;
+  } else {
+    bars = `<div class="bar unk" style="grid-column:1 / span 12">Duración del plan común no informada</div>`;
+  }
+  return `<div class="ruler"><div class="ruler-grid">${cells()}${bars}</div></div><p class="ruler-note">${note}</p>`;
+}
+
+function render(id){
+  const p = planes.find(x=>x.universidad_id===id);
+  const s = p.seleccion;
+  const rules = [
+    ["Cuándo se elige", s.momento],
+    ["Cupos", CUPOS[s.cupos]],
+    ["Criterio", s.criterio],
+    ["Requisito", s.requisitos],
+  ].filter(r=>r[1]);
+  const callouts = [];
+  if (s.irrevocable) callouts.push(`<div class="callout warn"><b>Importante:</b> la especialidad asignada no se puede cambiar por esta vía (asignación irrevocable).</div>`);
+  if (s.excepciones) callouts.push(`<div class="callout warn"><b>Excepción:</b> ${esc(s.excepciones)}</div>`);
+  if (s.detalle) callouts.push(`<div class="callout warn">${esc(s.detalle)}</div>`);
+  if (s.pendiente) callouts.push(`<div class="callout na"><b>Por confirmar:</b> ${esc(s.pendiente)}</div>`);
+  if (p.nota_salidas) callouts.push(`<div class="callout na">${esc(p.nota_salidas)}</div>`);
+
+  const mid = p.etapa_intermedia ? `<div class="mid"><h3>Paso intermedio: ${esc(p.etapa_intermedia.nombre)} (${p.etapa_intermedia.opciones.length})</h3>
+    <div class="chips">${p.etapa_intermedia.opciones.map(o=>`<a class="chip" href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.nombre)}</a>`).join("")}</div></div>` : "";
+
+  const outs = p.salidas.length ? p.salidas.map(o=>{
+    const ni = o.tipo==="no_ingenieria";
+    const titulo = o.titulo && o.titulo!==o.nombre ? `<div class="out-title">${esc(o.titulo)}</div>` : "";
+    const malla = o.malla_url ? `<a class="malla" href="${esc(o.malla_url)}" target="_blank" rel="noopener">Ver malla</a>` : `<span class="nomalla">Malla pendiente</span>`;
+    const direct = o.programa_directo_id ? `<span class="tag direct" title="Esta carrera también acepta postulación directa">También ingreso directo</span>` : "";
+    const tipo = ni ? `<span class="tag">No es ingeniería</span>` : "";
+    return `<article class="out${ni?" ni":""}"><div class="out-name">${esc(o.nombre)}</div>${titulo}
+      ${o.nota?`<div class="out-note">${esc(o.nota)}</div>`:""}
+      <div class="out-foot">${malla}${direct}${tipo}</div></article>`;
+  }).join("") : `<div class="callout na">Esta universidad todavía no publica a qué carreras lleva este plan común.</div>`;
+
+  const extra = p.malla_plan_comun ? ` · <a href="${esc(p.malla_plan_comun)}" target="_blank" rel="noopener">Malla del plan común</a>` : "";
+  document.getElementById("route").innerHTML = `
+  <div class="route">
+    <div class="route-head">
+      <div><div class="uni">${esc(UNI_LONG[id])}</div><h2>${esc(p.nombre)}</h2></div>
+      <span class="pill ${mecClass(s.mecanismo)}">${MEC[s.mecanismo]}</span>
+    </div>
+    <p>${esc(p.resumen)}${extra}</p>
+    ${ruler(p)}
+    <div class="rules">${rules.map(r=>`<div class="rule"><span class="k">${r[0]}</span><span class="v">${esc(r[1])}</span></div>`).join("")}</div>
+    ${callouts.join("")}
+    ${mid}
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <h3>${id==="uc" ? "Títulos a los que se accede" : "Carreras a las que se accede"} (${p.salidas.length})</h3>
+      <div class="outs">${outs}</div>
+    </div>
+    <div class="sources"><h3>Fuentes</h3><ul>${p.fuentes.map(f=>`<li><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.nombre)}</a></li>`).join("")}</ul></div>
+  </div>`;
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected", t.dataset.id===id));
+  try{ localStorage.setItem("ruta-uni", id) }catch(e){}
+}
+
+const tabs = document.getElementById("tabs");
+const DOT = {libre:"--ok",garantizado:"--ok",competitivo:"--warn",sin_postulacion:"--info",no_informado:"--na"};
+tabs.innerHTML = planes.map(p=>`<button class="tab" role="tab" id="tab-${p.universidad_id}" data-id="${p.universidad_id}"><span class="dot" style="color:var(${DOT[p.seleccion.mecanismo]})"></span>${UNI[p.universidad_id]}</button>`).join("");
+tabs.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>render(t.dataset.id)));
+let start = "uchile"; try{ start = localStorage.getItem("ruta-uni") || start }catch(e){}
+if (!planes.some(p=>p.universidad_id===start)) start = "uchile";
+render(start);
+</script>
