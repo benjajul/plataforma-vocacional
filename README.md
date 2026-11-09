@@ -2,7 +2,7 @@
 
 Herramienta interactiva para explorar carreras de Ingeniería (y la carrera de Ingeniería Comercial) en 8 universidades chilenas, pensada para un estudiante de 4.º medio que tiene claros sus gustos pero no todavía su área laboral.
 
-Versión 0.3 — 08-11-2026 — Fases 1-2 + lógica de planes comunes.
+Versión 0.5 — 08-11-2026 — Inventario con datos DEMRE 2027, planes comunes y análisis de habilidades por carrera.
 
 ## Alcance inicial
 | id | Universidad |
@@ -57,9 +57,25 @@ Carreras: las de la Facultad/Escuela de Ingeniería de cada una + Ingeniería Co
 
 Prototipo: `web/rutas.html` (generado con `python3 scripts/build_web.py`).
 
+## Análisis de habilidades (v0.5)
+- `data/demre_2027.json`: códigos, vacantes y ponderaciones de la Oferta Definitiva DEMRE 2027 (8 universidades), generado con `scripts/parse_demre.py` desde el PDF oficial.
+- `data/perfiles/*.json`: una ficha por carrera o salida de plan común con la URL del perfil de egreso oficial y las habilidades detectadas (15, definidas en `scripts/tagger.js`). No se guarda el texto de las universidades, solo las etiquetas.
+- `data/habilidades.json`: agrupación en 21 familias de carreras, % de perfiles que mencionan cada habilidad, habilidades distintivas y textos de orientación de elaboración propia (`scripts/build_habilidades.py`).
+- Página: `web/habilidades.html`.
+
+## Explorar, simulador y cuestionario (v0.6)
+- `data/cortes_2026.json`: puntaje de corte y matriculados/seleccionados de la Admisión 2026. Fuentes oficiales: UC (último matriculado y vacantes ocupadas), U. de Chile, USM (puntaje mínimo de selección) y UAI (corte y convocados). Fuentes secundarias (marcadas con *): UDD y UDP. USACH desde las fichas oficiales de cada carrera (última matrícula; 6 carreras solo con dato 2025). UNAB queda "sin corte publicado". Cada universidad publica una medida distinta, y se indica en cada fila.
+- `scripts/build_plataforma.py` → `data/plataforma.json`: agrupa las 21 familias en 7 áreas de ingeniería y une inventario, ponderaciones 2027, requisitos mínimos y cortes 2026.
+- `web/index.html` (Explorar): navegación por área o por universidad, con vacantes 2027, corte 2026, ingresados 2026, mínimos y M2.
+- `web/simulador.html`: calcula el puntaje ponderado con ponderaciones 2027, revisa requisitos (M2, ponderado mínimo, promedio CL+M1) y lo compara con el corte 2026. Categorías: Alcanzable (≥ corte), Te falta poco (hasta 25 pts bajo), Difícil (hasta 60), Muy difícil (más de 60).
+- `web/cuestionario.html`: 17 preguntas cotidianas (escala 0–3) que se traducen a las 15 habilidades y se comparan con el perfil distintivo de cada familia. Sugiere 3 carreras, 2 áreas y universidades; si se usó el simulador, cruza el resultado.
+- `web/base.css`: estilos compartidos (claro/oscuro).
+
 ## Cómo regenerar
     python3 scripts/build_inventario.py
     python3 scripts/build_planes_comunes.py
+    python3 scripts/build_habilidades.py
+    python3 scripts/build_plataforma.py
     python3 scripts/build_web.py
 
 ## Publicar en GitHub Pages

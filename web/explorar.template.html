@@ -1,0 +1,120 @@
+<title>Explorar Ingenierías</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+__BASE_CSS__
+.modes{display:flex;gap:6px;flex-wrap:wrap}
+.areas{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.area{all:unset;cursor:pointer;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:2px}
+.area b{font-family:var(--f-display);font-size:1rem;line-height:1.2}
+.area span{font-size:.78rem;color:var(--muted)}
+.area[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);background:var(--accent-soft)}
+.unis{display:flex;flex-wrap:wrap;gap:6px}
+.filters{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;font-size:.9rem}
+.filters input[type=search]{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);min-width:0;width:16rem;max-width:100%}
+.fam{display:flex;flex-direction:column;gap:10px}
+.famhead{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;align-items:baseline}
+.famhead h2{font-size:1.2rem}
+.prog-name{font-weight:600;line-height:1.3}
+.pond{font:500 .72rem var(--f-mono);color:var(--muted);margin-top:3px;white-space:normal}
+.tag{font:500 .66rem var(--f-mono);text-transform:uppercase;letter-spacing:.04em;padding:1px 6px;border-radius:4px;border:1px solid var(--line);color:var(--muted);margin-left:4px;white-space:nowrap;vertical-align:1px}
+.tag.pc{color:var(--info);border-color:var(--info)}
+.sec{color:var(--warn)}
+.empty{padding:16px;color:var(--muted)}
+</style>
+
+<div class="wrap">
+  __NAV__
+  <header style="display:flex;flex-direction:column;gap:10px">
+    <h1>Explorar ingenierías</h1>
+    <p class="lede">82 carreras de ingeniería e Ingeniería Comercial en 8 universidades de Santiago. Navega por <b>área</b> (carreras emparentadas por lo que hacen) o por <b>universidad</b>. Para cada carrera: vacantes y ponderaciones de la Admisión 2027, y el puntaje de corte y matriculados de la Admisión 2026 cuando la universidad los publica.</p>
+  </header>
+
+  <div class="modes" role="group" aria-label="Forma de navegar">
+    <button class="btn" id="m-area" type="button">Por área de ingeniería</button>
+    <button class="btn" id="m-uni" type="button">Por universidad</button>
+  </div>
+
+  <div id="selector"></div>
+  <div class="filters">
+    <label><input type="checkbox" id="f-m2"> Solo carreras que piden M2</label>
+    <label><input type="checkbox" id="f-civil"> Solo ingenierías civiles y planes comunes</label>
+    <input type="search" id="f-q" placeholder="Buscar carrera…" aria-label="Buscar carrera">
+  </div>
+  <section id="lista" aria-live="polite"></section>
+
+  <footer id="pie"></footer>
+</div>
+
+<script>
+const D = __DATA__;
+const UNI = {uc:"UC",uchile:"U. de Chile",usm:"USM",usach:"USACH",unab:"UNAB",udp:"UDP",uai:"UAI",udd:"UDD"};
+const esc = s => String(s ?? "").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt = n => n==null ? "—" : Number(n).toLocaleString("es-CL",{minimumFractionDigits: n%1?1:0, maximumFractionDigits:2});
+const AREA = Object.fromEntries(D.areas.map(a=>[a.id,a]));
+const FAM = Object.fromEntries(D.familias.map(f=>[f.id,f]));
+let state = {modo:"area", area:"gestion", uni:"uchile"};
+try{ Object.assign(state, JSON.parse(localStorage.getItem("explorar")||"{}")) }catch(e){}
+const h = location.hash.slice(1);
+if (h.startsWith("area-") && AREA[h.slice(5)]) Object.assign(state,{modo:"area",area:h.slice(5)});
+if (h.startsWith("uni-") && UNI[h.slice(4)]) Object.assign(state,{modo:"uni",uni:h.slice(4)});
+
+function pondTxt(p){
+  const w=p.ponderaciones; if(!w) return "";
+  const parts=[["NEM",w.nem],["Rank",w.ranking],["CL",w.cl],["M1",w.m1]];
+  if (w.hyc && w.ciencias) parts.push(["Hist. o Cs.", w.hyc]); else { if(w.hyc) parts.push(["Hist.",w.hyc]); if(w.ciencias) parts.push(["Cs.",w.ciencias]); }
+  if (w.m2) parts.push(["M2",w.m2]);
+  return parts.filter(x=>x[1]).map(([k,v])=>`${k} ${v}%`).join(" · ");
+}
+function filtrar(ps){
+  const q = document.getElementById("f-q").value.trim().toLowerCase();
+  return ps.filter(p => (!document.getElementById("f-m2").checked || p.exige_m2)
+    && (!document.getElementById("f-civil").checked || p.categoria==="ing_civil" || p.categoria==="plan_comun")
+    && (!q || (p.nombre+" "+UNI[p.universidad_id]).toLowerCase().includes(q)));
+}
+function tabla(ps, mostrarUni){
+  if (!ps.length) return `<div class="empty">No hay carreras con estos filtros.</div>`;
+  return `<div class="tablewrap"><table class="data"><thead><tr>${mostrarUni?"<th>Universidad</th>":""}<th>Carrera</th><th class="num">Vacantes 2027</th><th class="num">Corte 2026</th><th class="num">Ingresaron 2026</th><th class="num">Mínimos para postular</th><th>M2</th></tr></thead><tbody>${
+    ps.map(p=>{const c=p.corte_2026;
+      const tags=(p.plan_comun?`<span class="tag pc">${p.universidad_id==="uc"?"Licenciatura + título":"Plan común"}</span>`:"")+(p.categoria==="ing_no_civil"?`<span class="tag">No civil</span>`:"");
+      const corte=c?`<span title="${esc(c.medida)} · ${esc(c.fuente)}">${fmt(c.valor)}</span>${c.oficial?"":`<span class="sec" title="Fuente secundaria: ${esc(c.fuente)}"> *</span>`}<div class="src">${esc(c.medida)}</div>${c.nota?`<div class="src" style="max-width:24ch">${esc(c.nota)}</div>`:""}`:`<span class="small">No publicado</span>`;
+      const ing=c&&c.ingresaron?`${fmt(c.ingresaron)}<div class="src">${esc(c.ingresaron_medida)}</div>`:`<span class="small">No publicado</span>`;
+      const mins=[p.puntaje_ponderado_minimo?`Ponderado ${p.puntaje_ponderado_minimo}`:null, p.promedio_cl_m1_minimo?`CL+M1 ${p.promedio_cl_m1_minimo}`:null].filter(Boolean).join("<br>")||"—";
+      return `<tr>${mostrarUni?`<td><b>${UNI[p.universidad_id]}</b></td>`:""}<td><div class="prog-name">${esc(p.nombre)}${tags}</div><div class="pond">${esc(pondTxt(p))}</div><div class="src">Código ${esc(Array.isArray(p.codigo)?p.codigo.join(" / "):p.codigo)}${p.campus?" · "+esc(p.campus):""}</div></td>
+      <td class="num">${fmt(p.vacantes_2027)}</td><td class="num">${corte}</td><td class="num">${ing}</td><td class="num small">${mins}</td><td>${p.exige_m2?"Sí":"No"}</td></tr>`}).join("")}</tbody></table></div>`;
+}
+function render(){
+  try{ localStorage.setItem("explorar", JSON.stringify(state)) }catch(e){}
+  document.getElementById("m-area").setAttribute("aria-pressed", state.modo==="area");
+  document.getElementById("m-uni").setAttribute("aria-pressed", state.modo==="uni");
+  const sel = document.getElementById("selector"), lista = document.getElementById("lista");
+  if (state.modo==="area"){
+    sel.innerHTML = `<div class="areas">${D.areas.map(a=>{const n=D.programas.filter(p=>p.areas.includes(a.id)).length;
+      return `<button class="area" type="button" data-area="${a.id}" aria-pressed="${a.id===state.area}"><b>${esc(a.nombre)}</b><span>${a.familias.length} tipo${a.familias.length>1?"s":""} de carrera · ${n} programas</span></button>`}).join("")}</div>`;
+    const a = AREA[state.area];
+    const vinc = a.vinculadas.map(v=>`<button class="chip" type="button" data-area="${v}" style="cursor:pointer">${esc(AREA[v].nombre)}</button>`).join(" ");
+    lista.innerHTML = `<div class="card fade"><div><h2>${esc(a.nombre)}</h2><p style="margin-top:6px">${esc(a.descripcion)}</p></div>
+      <p class="small">Áreas vinculadas: ${vinc}</p>
+      ${a.familias.map(fid=>{const f=FAM[fid]; const ps=filtrar(D.programas.filter(p=>p.familias.includes(fid))).sort((x,y)=>UNI[x.universidad_id].localeCompare(UNI[y.universidad_id]));
+        return `<div class="fam"><div class="famhead"><h2>${esc(f.nombre)}</h2><a class="small" href="habilidades.html#fam-${f.id}">Ver habilidades de esta carrera</a></div><p class="small" style="max-width:75ch">${esc(f.que_hace)}</p>${tabla(ps,true)}</div>`}).join("")}</div>`;
+    location.replace("#area-"+state.area);
+  } else {
+    sel.innerHTML = `<div class="unis">${Object.keys(UNI).map(u=>`<button class="btn" type="button" data-uni="${u}" aria-pressed="${u===state.uni}">${UNI[u]}</button>`).join("")}</div>`;
+    const ps = D.programas.filter(p=>p.universidad_id===state.uni);
+    lista.innerHTML = `<div class="card fade"><div><h2>${esc(D.universidades[state.uni])}</h2><p class="small" style="margin-top:4px">${ps.length} carreras en el alcance del proyecto. Las carreras que llevan a varias áreas (planes comunes) aparecen en cada una.</p></div>
+      ${D.areas.map(a=>{const qs=filtrar(ps.filter(p=>p.areas.includes(a.id))); if(!qs.length) return "";
+        return `<div class="fam"><div class="famhead"><h2>${esc(a.nombre)}</h2><button class="chip" type="button" data-area="${a.id}" style="cursor:pointer">Comparar con otras universidades</button></div>${tabla(qs,false)}</div>`}).join("")}</div>`;
+    location.replace("#uni-"+state.uni);
+  }
+}
+document.addEventListener("click", e=>{
+  const a=e.target.closest("[data-area]"), u=e.target.closest("[data-uni]");
+  if (a){ Object.assign(state,{modo:"area",area:a.dataset.area}); render(); }
+  else if (u){ Object.assign(state,{modo:"uni",uni:u.dataset.uni}); render(); }
+});
+document.getElementById("m-area").onclick=()=>{state.modo="area";render()};
+document.getElementById("m-uni").onclick=()=>{state.modo="uni";render()};
+["f-m2","f-civil","f-q"].forEach(id=>document.getElementById(id).addEventListener("input",render));
+document.getElementById("pie").innerHTML = `Ponderaciones, vacantes y mínimos: ${esc(D.bases.ponderaciones)} (<a href="${D.fuentes.demre}" target="_blank" rel="noopener">PDF oficial</a>). Cortes y matriculados: ${esc(D.bases.cortes)}; cada universidad publica una medida distinta (se indica bajo cada cifra). <span class="sec">*</span> = fuente secundaria. Fuentes de cortes: ${Object.values(D.fuentes.cortes).map(f=>`<a href="${f.url}" target="_blank" rel="noopener">${esc(f.nombre)}</a>`).join(" · ")}. Consultado el ${D.consultado.split("-").reverse().join("-")}.`;
+render();
+</script>

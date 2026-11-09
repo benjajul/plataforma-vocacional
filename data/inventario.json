@@ -1,5 +1,5 @@
 {
-  "version": "0.2",
+  "version": "0.5",
   "consultado": "2026-11-08",
   "alcance": "Facultad/Escuela de Ingeniería (sede Santiago) + Ingeniería Comercial, 8 universidades",
   "fuentes": {
@@ -128,7 +128,20 @@
         "demre_2027",
         "uc_majors"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 20,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 20,
+        "hyc": null,
+        "ciencias": 15,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "uc-lic-ciencia-datos",
@@ -147,7 +160,20 @@
       "fuentes": [
         "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 20,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 30,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "uc-lic-ciencia-computacion",
@@ -166,7 +192,20 @@
       "fuentes": [
         "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 20,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 25,
+        "hyc": null,
+        "ciencias": 15,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "uc-construccion-civil",
@@ -185,7 +224,20 @@
       "fuentes": [
         "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 20,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 40,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": null
+      },
+      "exige_m2": false,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "uc-ing-recursos-naturales",
@@ -204,7 +256,20 @@
       "fuentes": [
         "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 25,
+        "hyc": null,
+        "ciencias": 15,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "uc-ingenieria-comercial",
@@ -223,7 +288,20 @@
       "fuentes": [
         "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 20,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 30,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "uchile-plan-comun",
@@ -255,9 +333,23 @@
       "nota": "Especialidad se elige tras dos años. Ingeniería Civil dura 11 semestres. Ponderaciones: NEM 10, Ranking 25, CL 10, M1 20, M2 20, Ciencias 15.",
       "fuentes": [
         "uchile_oferta",
-        "uchile_civil"
+        "uchile_civil",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 20,
+        "hyc": null,
+        "ciencias": 15,
+        "m2": 20
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "uchile-ingenieria-comercial",
@@ -274,9 +366,23 @@
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "uchile_oferta"
+        "uchile_oferta",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "uchile-ing-informacion-control-gestion",
@@ -307,15 +413,29 @@
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
       "codigo_demre": "15300",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 130,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Ver data/planes_comunes.json: selección competitiva por ranking de primer año.",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 600,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usm-civil",
@@ -327,15 +447,29 @@
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
       "codigo_demre": "15311",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 75,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 600,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usm-civil-minas",
@@ -347,15 +481,29 @@
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
       "codigo_demre": "15312",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 100,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 600,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usm-civil-electrica",
@@ -367,15 +515,29 @@
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
       "codigo_demre": "15330",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 60,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 600,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usm-civil-fisica",
@@ -387,15 +549,29 @@
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
       "codigo_demre": "15384",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 40,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 600,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usm-civil-informatica",
@@ -407,15 +583,29 @@
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
       "codigo_demre": "15360",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 135,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 600,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usm-civil-matematica",
@@ -427,15 +617,29 @@
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
       "codigo_demre": "15301",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 35,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 600,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usm-civil-mecanica",
@@ -447,15 +651,29 @@
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
       "codigo_demre": "15340",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 75,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 600,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usm-civil-quimica",
@@ -467,15 +685,29 @@
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
       "codigo_demre": "15350",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 50,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 600,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usm-civil-telematica",
@@ -487,15 +719,29 @@
       "facultad": "USM (organizada por departamentos, sin facultades)",
       "campus": "San Joaquín",
       "codigo_demre": "15361",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 75,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 600,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usm-diseno-productos",
@@ -507,15 +753,29 @@
       "facultad": "USM (departamentos)",
       "campus": "San Joaquín",
       "codigo_demre": "15381",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 30,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usm-civil-industrial",
@@ -527,15 +787,29 @@
       "facultad": "USM (departamentos)",
       "campus": "Vitacura",
       "codigo_demre": "15270",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 140,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 600,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usm-aviacion-comercial",
@@ -547,15 +821,29 @@
       "facultad": "USM (departamentos)",
       "campus": "Vitacura",
       "codigo_demre": "15220",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 40,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 20,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usm-ingenieria-comercial",
@@ -567,15 +855,29 @@
       "facultad": "USM — Departamento de Ingeniería Comercial",
       "campus": "Vitacura",
       "codigo_demre": "15271",
-      "vacantes_regulares_2027": null,
+      "vacantes_regulares_2027": 200,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usm_uch",
-        "usm_paes"
+        "usm_paes",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 15,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 40,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": null
+      },
+      "exige_m2": false,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-biomedica",
@@ -586,16 +888,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16101",
+      "vacantes_regulares_2027": 55,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-en-ambiente",
@@ -606,16 +922,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16105",
+      "vacantes_regulares_2027": 40,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-en-biotecnologia",
@@ -626,16 +956,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16104",
+      "vacantes_regulares_2027": 55,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-en-electricidad",
@@ -646,16 +990,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16001",
+      "vacantes_regulares_2027": 95,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-en-geomensura-y-geomatica",
@@ -666,16 +1024,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16107",
+      "vacantes_regulares_2027": 30,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-en-mecanica",
@@ -686,16 +1058,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16005",
+      "vacantes_regulares_2027": 110,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-en-metalurgia",
@@ -706,16 +1092,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16006",
+      "vacantes_regulares_2027": 50,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-en-minas",
@@ -726,16 +1126,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16007",
+      "vacantes_regulares_2027": 90,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-en-obras-civiles",
@@ -746,16 +1160,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16008",
+      "vacantes_regulares_2027": 90,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-en-quimica",
@@ -766,16 +1194,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16009",
+      "vacantes_regulares_2027": 85,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-en-telematica",
@@ -786,16 +1228,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16102",
+      "vacantes_regulares_2027": 60,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-en-territorio-y-medio-ambiente",
@@ -806,16 +1262,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16111",
+      "vacantes_regulares_2027": 25,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-industrial",
@@ -826,16 +1296,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16003",
+      "vacantes_regulares_2027": 120,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-mecatronica",
@@ -846,16 +1330,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16103",
+      "vacantes_regulares_2027": 110,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 15,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-civil-informatica-plan-comun",
@@ -866,16 +1364,30 @@
       "tipo_ingreso": "plan_comun",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
+      "codigo_demre": "16113",
       "vacantes_regulares_2027": 90,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Carrera nueva Admisión 2027 (90 vacantes según prensa). Especialidades por confirmar en Fase 3.",
       "fuentes": [
         "usach_fing",
-        "nuevas_2027"
+        "nuevas_2027",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 15,
+        "m1": 10,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-ejecucion-en-climatizacion",
@@ -886,16 +1398,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16021",
+      "vacantes_regulares_2027": 30,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 20,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-ejecucion-en-computacion-e-informatica",
@@ -906,16 +1432,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16014",
+      "vacantes_regulares_2027": 40,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 15,
+        "m1": 10,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 15
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-ejecucion-en-electricidad",
@@ -926,16 +1466,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16011",
+      "vacantes_regulares_2027": 60,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 20,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-ejecucion-en-mecanica",
@@ -946,16 +1500,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16015",
+      "vacantes_regulares_2027": 50,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 20,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-ejecucion-en-metalurgia",
@@ -966,16 +1534,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16016",
+      "vacantes_regulares_2027": 25,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 20,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-ejecucion-en-minas",
@@ -986,16 +1568,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16017",
+      "vacantes_regulares_2027": 70,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 20,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-ejecucion-en-quimica",
@@ -1006,16 +1602,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16019",
+      "vacantes_regulares_2027": 35,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 20,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-ejecucion-industrial",
@@ -1026,16 +1636,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16013",
+      "vacantes_regulares_2027": 70,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "usach_fing",
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 20,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 10
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "usach-ingenieria-comercial",
@@ -1046,15 +1670,29 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Administración y Economía (FAE)",
       "campus": "Campus Usach, Estación Central",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "16035",
+      "vacantes_regulares_2027": 430,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "usach_uch"
+        "usach_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 40,
+        "cl": 10,
+        "m1": 25,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 550,
+      "promedio_cl_m1_minimo_2027": 485
     },
     {
       "id": "unab-civil",
@@ -1065,16 +1703,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "41044",
+      "vacantes_regulares_2027": 150,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "unab_folleto",
-        "unab_uch"
+        "unab_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 30,
+        "ranking": 15,
+        "cl": 10,
+        "m1": 30,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "unab-civil-electrica",
@@ -1085,16 +1737,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "41204",
+      "vacantes_regulares_2027": 180,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "unab_folleto",
-        "unab_uch"
+        "unab_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 20,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 30,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "unab-civil-minas",
@@ -1105,16 +1771,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "41130",
+      "vacantes_regulares_2027": 210,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "unab_folleto",
-        "unab_uch"
+        "unab_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 35,
+        "cl": 10,
+        "m1": 30,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "unab-civil-industrial",
@@ -1125,16 +1805,45 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Antonio Varas y Casona de Las Condes",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": [
+        "41046",
+        "41206"
+      ],
+      "vacantes_regulares_2027": 695,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Diurno y vespertino.",
       "fuentes": [
         "unab_folleto",
-        "unab_uch"
+        "unab_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 20,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 30,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458,
+      "codigos_detalle": [
+        {
+          "codigo": "41046",
+          "nombre": "INGENIERÍA CIVIL INDUSTRIAL (ANTONIO VARAS)",
+          "vacantes": 520
+        },
+        {
+          "codigo": "41206",
+          "nombre": "INGENIERÍA CIVIL INDUSTRIAL (LAS CONDES)",
+          "vacantes": 175
+        }
+      ]
     },
     {
       "id": "unab-civil-informatica",
@@ -1145,16 +1854,45 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Antonio Varas y Casona de Las Condes",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": [
+        "41045",
+        "41207"
+      ],
+      "vacantes_regulares_2027": 500,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "unab_folleto",
-        "unab_uch"
+        "unab_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 30,
+        "ranking": 10,
+        "cl": 10,
+        "m1": 35,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458,
+      "codigos_detalle": [
+        {
+          "codigo": "41045",
+          "nombre": "INGENIERÍA CIVIL INFORMÁTICA (ANTONIO VARAS)",
+          "vacantes": 400
+        },
+        {
+          "codigo": "41207",
+          "nombre": "INGENIERÍA CIVIL INFORMÁTICA (LAS CONDES)",
+          "vacantes": 100
+        }
+      ]
     },
     {
       "id": "unab-civil-biomedica",
@@ -1165,15 +1903,29 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Por confirmar",
       "campus": "Las Condes",
-      "codigo_demre": null,
+      "codigo_demre": "41227",
       "vacantes_regulares_2027": 100,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Carrera nueva Admisión 2027; no aparece aún en la nómina preliminar ni en el folleto 2026.",
       "fuentes": [
-        "nuevas_2027"
+        "nuevas_2027",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 25,
+        "ranking": 15,
+        "cl": 10,
+        "m1": 35,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "unab-automatizacion-robotica",
@@ -1184,16 +1936,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "41047",
+      "vacantes_regulares_2027": 110,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Diurno y vespertino.",
       "fuentes": [
         "unab_folleto",
-        "unab_uch"
+        "unab_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 30,
+        "ranking": 10,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "unab-computacion-informatica",
@@ -1204,16 +1970,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "41048",
+      "vacantes_regulares_2027": 320,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Diurno y vespertino.",
       "fuentes": [
         "unab_folleto",
-        "unab_uch"
+        "unab_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 30,
+        "ranking": 15,
+        "cl": 10,
+        "m1": 30,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "unab-construccion",
@@ -1224,16 +2004,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "41049",
+      "vacantes_regulares_2027": 100,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "unab_folleto",
-        "unab_uch"
+        "unab_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 30,
+        "ranking": 15,
+        "cl": 10,
+        "m1": 30,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "unab-industrial",
@@ -1244,16 +2038,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "41055",
+      "vacantes_regulares_2027": 90,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Diurno y vespertino.",
       "fuentes": [
         "unab_folleto",
-        "unab_uch"
+        "unab_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 30,
+        "ranking": 15,
+        "cl": 10,
+        "m1": 30,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "unab-ambiental",
@@ -1264,15 +2072,29 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Por confirmar",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "41024",
+      "vacantes_regulares_2027": 70,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "unab_uch"
+        "unab_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 20,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 30,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "unab-fisica",
@@ -1283,15 +2105,29 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Por confirmar",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "41011",
+      "vacantes_regulares_2027": 60,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "unab_uch"
+        "unab_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 20,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 30,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "unab-biotecnologia",
@@ -1302,15 +2138,29 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Por confirmar",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "41006",
+      "vacantes_regulares_2027": 80,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "unab_uch"
+        "unab_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 20,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 20,
+        "hyc": null,
+        "ciencias": 20,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "unab-engineering-technology-management",
@@ -1321,15 +2171,61 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Por confirmar",
       "campus": "Las Condes",
-      "codigo_demre": null,
+      "codigo_demre": "41226",
       "vacantes_regulares_2027": 60,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Carrera nueva Admisión 2027.",
       "fuentes": [
-        "nuevas_2027"
+        "nuevas_2027",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 30,
+        "ranking": 10,
+        "cl": 10,
+        "m1": 35,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
+    },
+    {
+      "id": "unab-computer-science-engineering",
+      "universidad_id": "unab",
+      "universidad": "Universidad Andrés Bello",
+      "nombre_oficial": "Computer Science Engineering",
+      "categoria": "ing_no_civil",
+      "tipo_ingreso": "carrera_directa",
+      "facultad": "Por confirmar",
+      "campus": "Las Condes",
+      "codigo_demre": "41222",
+      "vacantes_regulares_2027": 60,
+      "especialidades": [],
+      "en_alcance": "si",
+      "nota": "Carrera detectada en la oferta DEMRE 2027 (no figuraba en folleto 2026 ni en la nómina preliminar).",
+      "fuentes": [
+        "demre_2027"
+      ],
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 30,
+        "ranking": 10,
+        "cl": 10,
+        "m1": 35,
+        "hyc": null,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": false,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458
     },
     {
       "id": "unab-ingenieria-comercial",
@@ -1340,16 +2236,45 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Economía y Negocios",
       "campus": "Bellavista y Casona de Las Condes",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": [
+        "41129",
+        "41028"
+      ],
+      "vacantes_regulares_2027": 980,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Diurno y vespertino; 5 años.",
       "fuentes": [
         "unab_folleto",
-        "unab_uch"
+        "unab_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 40,
+        "cl": 10,
+        "m1": 30,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": null
+      },
+      "exige_m2": false,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": null,
+      "promedio_cl_m1_minimo_2027": 458,
+      "codigos_detalle": [
+        {
+          "codigo": "41129",
+          "nombre": "INGENIERÍA COMERCIAL (BELLAVISTA)",
+          "vacantes": 500
+        },
+        {
+          "codigo": "41028",
+          "nombre": "INGENIERÍA COMERCIAL (LAS CONDES)",
+          "vacantes": 480
+        }
+      ]
     },
     {
       "id": "udp-plan-comun",
@@ -1360,8 +2285,8 @@
       "tipo_ingreso": "plan_comun",
       "facultad": "Facultad de Ingeniería y Ciencias",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "38080",
+      "vacantes_regulares_2027": 180,
       "especialidades": [
         "Ingeniería Civil Industrial",
         "Ingeniería Civil en Obras Civiles",
@@ -1372,9 +2297,23 @@
       "nota": "Primer año común; especialidad sin límite de cupos. Título profesional + magíster de continuidad.",
       "fuentes": [
         "udp_plancomun",
-        "udp_uch"
+        "udp_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 30,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udp-civil-industrial",
@@ -1385,15 +2324,29 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería y Ciencias",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "38174",
+      "vacantes_regulares_2027": 280,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "udp_uch"
+        "udp_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 30,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udp-civil-obras-civiles",
@@ -1404,15 +2357,29 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería y Ciencias",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "38176",
+      "vacantes_regulares_2027": 85,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "udp_uch"
+        "udp_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 30,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udp-civil-informatica-telecom",
@@ -1423,15 +2390,29 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería y Ciencias",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "38175",
+      "vacantes_regulares_2027": 185,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "udp_uch"
+        "udp_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 30,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udp-civil-ciencia-datos-ia",
@@ -1442,15 +2423,29 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería y Ciencias",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "38346",
+      "vacantes_regulares_2027": 65,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "udp_uch"
+        "udp_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 30,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udp-ingenieria-comercial",
@@ -1461,15 +2456,29 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Administración y Economía",
       "campus": "Huechuraba",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "38003",
+      "vacantes_regulares_2027": 360,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "udp_uch"
+        "udp_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 35,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": null
+      },
+      "exige_m2": false,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 530,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udp-control-gestion",
@@ -1480,15 +2489,29 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Administración y Economía",
       "campus": "Huechuraba",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "38292",
+      "vacantes_regulares_2027": 125,
       "especialidades": [],
       "en_alcance": "no",
       "nota": "Ingeniería del área de negocios, no de la Facultad de Ingeniería.",
       "fuentes": [
-        "udp_uch"
+        "udp_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 35,
+        "cl": 10,
+        "m1": 35,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": null
+      },
+      "exige_m2": false,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "uai-plan-comun",
@@ -1499,8 +2522,8 @@
       "tipo_ingreso": "plan_comun",
       "facultad": "Facultad de Ingeniería y Ciencias",
       "campus": "Peñalolén",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "42002",
+      "vacantes_regulares_2027": 405,
       "especialidades": [
         "Ingeniería Civil Industrial",
         "Ingeniería Civil Informática",
@@ -1514,9 +2537,23 @@
       "nota": "En Santiago todas las ingenierías civiles entran por plan común (7 especialidades).",
       "fuentes": [
         "uai_fic",
-        "uai_uch"
+        "uai_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 40,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 640,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "uai-computer-science",
@@ -1527,16 +2564,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería y Ciencias",
       "campus": "Peñalolén",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "42202",
+      "vacantes_regulares_2027": 35,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Ingreso directo. Exige M2.",
       "fuentes": [
         "uai_fic",
-        "uai_uch"
+        "uai_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 40,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 640,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "uai-bachillerato-ing-civil",
@@ -1547,16 +2598,30 @@
       "tipo_ingreso": "plan_comun",
       "facultad": "Facultad de Ingeniería y Ciencias",
       "campus": "Peñalolén",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "42012",
+      "vacantes_regulares_2027": 55,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Programa de entrada alternativo; confirmar diferencia con el plan común.",
       "fuentes": [
         "uai_fic",
-        "uai_uch"
+        "uai_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 45,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": null
+      },
+      "exige_m2": false,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 640,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "uai-doble-arquitectura-industrial",
@@ -1567,16 +2632,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería y Ciencias / Escuela de Arquitectura",
       "campus": "Peñalolén",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "42106",
+      "vacantes_regulares_2027": 35,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Doble título.",
       "fuentes": [
         "uai_fic",
-        "uai_uch"
+        "uai_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 40,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 640,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "uai-negocios-tecnologia",
@@ -1587,15 +2666,29 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Por confirmar",
       "campus": "",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "42101",
+      "vacantes_regulares_2027": 30,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
-        "uai_uch"
+        "uai_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 45,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": null
+      },
+      "exige_m2": false,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 640,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "uai-aeroespacial",
@@ -1625,15 +2718,29 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Escuela de Negocios",
       "campus": "Peñalolén",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "42001",
+      "vacantes_regulares_2027": 420,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "También existen Bachillerato de Ing. Comercial y dobles títulos (Derecho, Sociología).",
       "fuentes": [
-        "uai_uch"
+        "uai_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 45,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": null
+      },
+      "exige_m2": false,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 640,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udd-plan-comun",
@@ -1644,8 +2751,8 @@
       "tipo_ingreso": "plan_comun",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "44043",
+      "vacantes_regulares_2027": 180,
       "especialidades": [
         "Ingeniería Civil Industrial",
         "Ingeniería Civil en Obras Civiles",
@@ -1659,9 +2766,23 @@
       "fuentes": [
         "udd_fing",
         "udd_plancomun",
-        "udd_uch"
+        "udd_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 40,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udd-civil-industrial",
@@ -1672,16 +2793,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "44015",
+      "vacantes_regulares_2027": 80,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "udd_fing",
-        "udd_uch"
+        "udd_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 40,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udd-civil-obras-civiles",
@@ -1692,16 +2827,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "44014",
+      "vacantes_regulares_2027": 50,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "udd_fing",
-        "udd_uch"
+        "udd_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 40,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udd-civil-mineria",
@@ -1712,16 +2861,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "44039",
+      "vacantes_regulares_2027": 100,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "udd_fing",
-        "udd_uch"
+        "udd_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 40,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udd-civil-informatica-innovacion",
@@ -1732,16 +2895,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "44046",
+      "vacantes_regulares_2027": 35,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "",
       "fuentes": [
         "udd_fing",
-        "udd_uch"
+        "udd_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 40,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udd-civil-informatica-ia",
@@ -1752,16 +2929,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "44052",
+      "vacantes_regulares_2027": 25,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Carrera nueva.",
       "fuentes": [
         "udd_fing",
-        "udd_uch"
+        "udd_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 40,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 500,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udd-civil-biomedicina",
@@ -1772,16 +2963,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Ingeniería",
       "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "44051",
+      "vacantes_regulares_2027": 25,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Carrera nueva; no se accede por plan común.",
       "fuentes": [
         "udd_fing",
-        "udd_uch"
+        "udd_uch",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 25,
+        "cl": 10,
+        "m1": 40,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": 5
+      },
+      "exige_m2": true,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 650,
+      "promedio_cl_m1_minimo_2027": 500
     },
     {
       "id": "udd-ingenieria-comercial",
@@ -1792,16 +2997,30 @@
       "tipo_ingreso": "carrera_directa",
       "facultad": "Facultad de Economía y Negocios",
       "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-      "codigo_demre": null,
-      "vacantes_regulares_2027": null,
+      "codigo_demre": "44008",
+      "vacantes_regulares_2027": 135,
       "especialidades": [],
       "en_alcance": "si",
       "nota": "Nuevos dobles títulos 2027 con Derecho, Psicología y Diseño; también Bachillerato en Ing. Comercial.",
       "fuentes": [
         "udd_uch",
-        "nuevas_2027"
+        "nuevas_2027",
+        "demre_2027"
       ],
-      "consultado": "2026-11-08"
+      "consultado": "2026-11-08",
+      "ponderaciones_2027": {
+        "nem": 10,
+        "ranking": 30,
+        "cl": 10,
+        "m1": 40,
+        "hyc": 10,
+        "ciencias": 10,
+        "m2": null
+      },
+      "exige_m2": false,
+      "hyc_o_ciencias": true,
+      "puntaje_ponderado_minimo_2027": 600,
+      "promedio_cl_m1_minimo_2027": 500
     }
   ],
   "fuera_de_alcance": [

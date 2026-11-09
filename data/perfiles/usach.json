@@ -1,0 +1,367 @@
+{
+"usach-civil-biomedica": {
+"tipo": "perfil_egreso",
+"len": 1768,
+"tags": {
+"PROG": 1,
+"DIS": 3,
+"OPER": 5,
+"GEST": 4,
+"NEG": 1,
+"CIEN": 3,
+"INFRA": 1,
+"INV": 1,
+"INNO": 3,
+"EQ": 5,
+"ETI": 4,
+"SOST": 1
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-biomedica"
+},
+"usach-civil-en-ambiente": {
+"tipo": "perfil_egreso",
+"len": 1972,
+"tags": {
+"MAT": 2,
+"DIS": 2,
+"OPER": 4,
+"GEST": 4,
+"NEG": 1,
+"CIEN": 1,
+"INFRA": 2,
+"INNO": 2,
+"EQ": 3,
+"ETI": 1,
+"SOST": 9
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-en-ambiente"
+},
+"usach-civil-en-biotecnologia": {
+"tipo": "perfil_egreso",
+"len": 1626,
+"tags": {
+"MAT": 2,
+"DIS": 2,
+"OPER": 4,
+"GEST": 4,
+"NEG": 3,
+"CIEN": 5,
+"INFRA": 1,
+"INV": 1,
+"INNO": 4,
+"EQ": 5,
+"ETI": 3,
+"SOST": 3
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-en-biotecnologia"
+},
+"usach-civil-en-electricidad": {
+"tipo": "perfil_egreso",
+"len": 1698,
+"tags": {
+"DIS": 2,
+"OPER": 5,
+"GEST": 4,
+"NEG": 2,
+"INFRA": 6,
+"INV": 1,
+"INNO": 3,
+"EQ": 2,
+"COM": 1,
+"ETI": 1,
+"SOST": 3
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-en-electricidad"
+},
+"usach-civil-en-geomensura-y-geomatica": {
+"tipo": "perfil_egreso",
+"len": 1791,
+"tags": {
+"DATA": 1,
+"DIS": 2,
+"OPER": 1,
+"GEST": 6,
+"NEG": 1,
+"CIEN": 1,
+"INFRA": 5,
+"INNO": 4,
+"EQ": 3,
+"ETI": 1,
+"SOST": 3
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-en-geomensura-y-geomatica"
+},
+"usach-civil-informatica-plan-comun": {
+"tipo": "no_encontrado",
+"len": 0,
+"tags": {},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-en-informatica-plan-comun"
+},
+"usach-civil-en-mecanica": {
+"tipo": "perfil_egreso",
+"len": 660,
+"tags": {
+"OPER": 3,
+"NEG": 1,
+"INFRA": 3,
+"INV": 1,
+"INNO": 2,
+"SOST": 2
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-en-mecanica"
+},
+"usach-civil-en-metalurgia": {
+"tipo": "perfil_egreso",
+"len": 985,
+"tags": {
+"PROG": 1,
+"DIS": 1,
+"OPER": 5,
+"GEST": 3,
+"NEG": 1,
+"CIEN": 2,
+"INNO": 1,
+"ETI": 1,
+"SOST": 2
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-en-metalurgia"
+},
+"usach-civil-en-minas": {
+"tipo": "perfil_egreso",
+"len": 791,
+"tags": {
+"DIS": 1,
+"OPER": 4,
+"GEST": 5,
+"NEG": 3,
+"INFRA": 5,
+"EQ": 2,
+"ETI": 2,
+"SOST": 1
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-en-minas"
+},
+"usach-civil-en-obras-civiles": {
+"tipo": "perfil_egreso",
+"len": 1573,
+"tags": {
+"DIS": 3,
+"GEST": 7,
+"NEG": 2,
+"CIEN": 2,
+"INFRA": 8,
+"INV": 2,
+"EQ": 1,
+"SOST": 2
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-en-obras-civiles"
+},
+"usach-civil-en-quimica": {
+"tipo": "perfil_egreso",
+"len": 889,
+"tags": {
+"MAT": 2,
+"DIS": 1,
+"OPER": 4,
+"GEST": 2,
+"NEG": 2,
+"CIEN": 3,
+"INFRA": 1,
+"INV": 1,
+"INNO": 2,
+"EQ": 3,
+"ETI": 3,
+"SOST": 2
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-en-quimica"
+},
+"usach-civil-en-telematica": {
+"tipo": "perfil_egreso",
+"len": 1458,
+"tags": {
+"MAT": 1,
+"PROG": 3,
+"DATA": 1,
+"DIS": 7,
+"OPER": 3,
+"GEST": 2,
+"NEG": 2,
+"INFRA": 3,
+"INNO": 2,
+"ETI": 2,
+"SOST": 1
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-en-telematica"
+},
+"usach-civil-en-territorio-y-medio-ambiente": {
+"tipo": "perfil_egreso",
+"len": 2000,
+"tags": {
+"MAT": 4,
+"DIS": 2,
+"OPER": 1,
+"GEST": 6,
+"NEG": 3,
+"INFRA": 1,
+"ETI": 1,
+"SOST": 12
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-en-territorio-y-medio-ambiente"
+},
+"usach-civil-industrial": {
+"tipo": "perfil_egreso",
+"len": 867,
+"tags": {
+"MAT": 1,
+"DIS": 1,
+"OPER": 8,
+"GEST": 2,
+"NEG": 1,
+"INV": 1,
+"INNO": 2,
+"ETI": 1,
+"SOST": 1
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-industrial"
+},
+"usach-civil-mecatronica": {
+"tipo": "perfil_egreso",
+"len": 578,
+"tags": {
+"NEG": 2,
+"CIEN": 1,
+"EQ": 2
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-mecatronica"
+},
+"usach-ejecucion-en-climatizacion": {
+"tipo": "perfil_egreso",
+"len": 650,
+"tags": {
+"GEST": 2,
+"NEG": 1,
+"CIEN": 1,
+"EQ": 1,
+"COM": 2
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-de-ejecucion-en-climatizacion"
+},
+"usach-ejecucion-en-computacion-e-informatica": {
+"tipo": "perfil_egreso",
+"len": 503,
+"tags": {
+"MAT": 1,
+"PROG": 4,
+"DATA": 1,
+"DIS": 1,
+"OPER": 2,
+"GEST": 4,
+"INNO": 1,
+"EQ": 2,
+"ETI": 1
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-de-ejecucion-en-computacion-e-informatica"
+},
+"usach-ejecucion-en-electricidad": {
+"tipo": "perfil_egreso",
+"len": 787,
+"tags": {
+"DIS": 1,
+"OPER": 3,
+"GEST": 1,
+"NEG": 1,
+"CIEN": 1,
+"INFRA": 2,
+"ETI": 1,
+"SOST": 1
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-de-ejecucion-en-electricidad"
+},
+"usach-ejecucion-en-mecanica": {
+"tipo": "perfil_egreso",
+"len": 1475,
+"tags": {
+"MAT": 1,
+"OPER": 2,
+"GEST": 2,
+"NEG": 2,
+"CIEN": 5,
+"INFRA": 4,
+"EQ": 1,
+"COM": 4,
+"ETI": 1,
+"SOST": 1
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-de-ejecucion-en-mecanica"
+},
+"usach-ejecucion-en-metalurgia": {
+"tipo": "perfil_egreso",
+"len": 933,
+"tags": {
+"PROG": 1,
+"DIS": 1,
+"OPER": 4,
+"GEST": 2,
+"CIEN": 3,
+"INFRA": 1,
+"EQ": 2
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-de-ejecucion-en-metalurgia"
+},
+"usach-ejecucion-en-minas": {
+"tipo": "perfil_egreso",
+"len": 1663,
+"tags": {
+"MAT": 1,
+"PROG": 1,
+"OPER": 1,
+"GEST": 2,
+"NEG": 2,
+"CIEN": 7,
+"INFRA": 6,
+"EQ": 1,
+"COM": 4,
+"ETI": 1,
+"SOST": 1
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-de-ejecucion-en-minas"
+},
+"usach-ejecucion-en-quimica": {
+"tipo": "perfil_egreso",
+"len": 636,
+"tags": {
+"OPER": 3,
+"GEST": 1,
+"CIEN": 2
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-de-ejecucion-en-quimica"
+},
+"usach-ejecucion-industrial": {
+"tipo": "perfil_egreso",
+"len": 1596,
+"tags": {
+"MAT": 1,
+"PROG": 1,
+"DIS": 1,
+"OPER": 11,
+"GEST": 8,
+"NEG": 1,
+"EQ": 2,
+"COM": 3,
+"ETI": 1,
+"SOST": 1
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-de-ejecucion-industrial"
+},
+"usach-ingenieria-comercial": {
+"tipo": "perfil_egreso",
+"len": 748,
+"tags": {
+"GEST": 4,
+"NEG": 2,
+"INNO": 3,
+"EQ": 4
+},
+"url": "https://admision.usach.cl/carreras/ingenieria-comercial"
+}
+}

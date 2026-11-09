@@ -1,0 +1,135 @@
+<title>Cuestionario de Intereses</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+__BASE_CSS__
+ol.qs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;counter-reset:q}
+ol.qs li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;counter-increment:q}
+ol.qs li.done{border-color:color-mix(in srgb, var(--accent) 45%, var(--line))}
+.qt{font-weight:600;line-height:1.35;display:flex;gap:10px}
+.qt::before{content:counter(q);font:500 .78rem var(--f-mono);color:var(--muted);min-width:1.4em;padding-top:2px}
+.scale{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.scale label{position:relative}
+.scale input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.scale span{display:block;text-align:center;font-size:.85rem;padding:7px 4px;border:1px solid var(--line);border-radius:8px;background:var(--bg);cursor:pointer}
+.scale input:checked + span{background:var(--accent);border-color:var(--accent);color:var(--surface);font-weight:600}
+.scale input:focus-visible + span{outline:2px solid var(--accent);outline-offset:2px}
+.bar-sticky{position:sticky;bottom:0;background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(4px);padding:10px 0 calc(10px + env(safe-area-inset-bottom,0px));display:flex;flex-wrap:wrap;gap:10px;align-items:center;border-top:1px solid var(--line)}
+.prog{flex:1 1 140px;height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--accent)}
+.match{display:flex;flex-direction:column;gap:12px;border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--surface)}
+.match .top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:baseline}
+.score{font:700 1.5rem var(--f-display);color:var(--accent);font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.me{display:flex;flex-direction:column;gap:6px}
+.me .row{display:grid;grid-template-columns:minmax(0,15rem) 1fr 2.6rem;gap:10px;align-items:center;font-size:.86rem}
+.me .t{height:10px;background:var(--bg);border:1px solid var(--line);border-radius:5px;position:relative}
+.me .t i{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:5px}
+@media (max-width:520px){.me .row{grid-template-columns:1fr 2.4rem}.me .row span:first-child{grid-column:1/-1}.scale span{font-size:.78rem}}
+</style>
+
+<div class="wrap">
+  __NAV__
+  <header style="display:flex;flex-direction:column;gap:10px">
+    <h1>¿Hacia dónde apuntan tus gustos?</h1>
+    <p class="lede">16 preguntas sobre cosas cotidianas. No hay respuestas correctas: responde pensando en lo que de verdad disfrutas, no en lo que crees que conviene. Al final verás las áreas y carreras cuyos perfiles de egreso más se parecen a tus respuestas, y dónde se estudian.</p>
+    <p class="small">Es una herramienta para explorar y conversar, no un test psicométrico validado. Toma unos 4 minutos.</p>
+  </header>
+
+  <ol class="qs" id="qs"></ol>
+
+  <div class="bar-sticky">
+    <div class="prog" aria-hidden="true"><i id="pbar" style="width:0%"></i></div>
+    <span class="small" id="pcount"></span>
+    <button class="btn primary" type="button" id="ver">Ver resultados</button>
+    <button class="btn" type="button" id="reset">Empezar de nuevo</button>
+  </div>
+
+  <section id="res" aria-live="polite"></section>
+  <footer>Las sugerencias comparan tus respuestas con las 15 habilidades detectadas en 95 perfiles de egreso oficiales (ver "Habilidades por carrera"). Si ya usaste el simulador, se muestra también qué tan alcanzable es cada carrera con tus puntajes.</footer>
+</div>
+
+<script>
+const D = __DATA__;
+const UNI = {uc:"UC",uchile:"U. de Chile",usm:"USM",usach:"USACH",unab:"UNAB",udp:"UDP",uai:"UAI",udd:"UDD"};
+const OPC = ["Nada","Poco","Bastante","Mucho"];
+// Cada pregunta suma a una o más habilidades (peso 1 = principal, 0.5 = secundaria)
+const PREG = [
+ {t:"Cuando algo se echa a perder en la casa (un enchufe, la bicicleta, un mueble), me dan ganas de entender por qué y arreglarlo.", h:{INFRA:1, DIS:0.5}},
+ {t:"Disfruto los problemas de matemáticas difíciles, aunque me tomen tiempo.", h:{MAT:1}},
+ {t:"Me entretiene programar, hacer fórmulas en una planilla o automatizar tareas en el computador.", h:{PROG:1, DATA:0.5}},
+ {t:"Me gusta mirar datos y encontrar patrones: estadísticas deportivas, rankings, encuestas.", h:{DATA:1, MAT:0.5}},
+ {t:"Me imagino diseñando algo concreto: un edificio, una máquina, una app o un objeto.", h:{DIS:1, INNO:0.5}},
+ {t:"Cuando organizo algo con amigos (un paseo, un evento), me fijo en los costos, los tiempos y quién hace qué.", h:{GEST:1, OPER:0.5}},
+ {t:"Me interesan la economía, cómo ganan dinero las empresas o la idea de tener mi propio negocio.", h:{NEG:1, INNO:0.5}},
+ {t:"Me gustan los experimentos de química, física o biología.", h:{CIEN:1, INV:0.5}},
+ {t:"Me preocupan el medio ambiente y el cambio climático, y me gustaría trabajar en eso.", h:{SOST:1, ETI:0.5}},
+ {t:"Me interesa la salud y cómo la tecnología puede ayudar a las personas a sanarse.", h:{CIEN:0.5, DIS:0.5, ETI:0.5}},
+ {t:"Me atrae un trabajo con terreno (una obra, una mina, una planta) más que estar siempre en una oficina.", h:{INFRA:1, OPER:1}},
+ {t:"En los trabajos en grupo suelo coordinar o liderar.", h:{EQ:1, GEST:0.5}},
+ {t:"Me gusta explicar ideas, escribir o presentar frente a otros (también en inglés).", h:{COM:1}},
+ {t:"Cuando algo me interesa, investigo a fondo hasta entender por qué funciona así.", h:{INV:1, MAT:0.5, CIEN:0.5}},
+ {t:"Se me ocurren ideas nuevas y me gusta crear cosas desde cero.", h:{INNO:1, DIS:0.5}},
+ {t:"Me importa que mi trabajo futuro tenga un impacto positivo en la sociedad.", h:{ETI:1, SOST:0.5}},
+ {t:"Me gusta encontrar la forma más eficiente de hacer las cosas y mejorar cómo funcionan.", h:{OPER:1, MAT:0.5, GEST:0.5}},
+];
+const HK = Object.keys(D.habilidades);
+const esc = s => String(s ?? "").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let resp = {}; try{ resp = JSON.parse(localStorage.getItem("cuestionario")||"{}") }catch(e){}
+
+document.querySelector("header .lede").innerHTML = document.querySelector("header .lede").innerHTML.replace("16 preguntas", PREG.length+" preguntas");
+const ol = document.getElementById("qs");
+ol.innerHTML = PREG.map((q,i)=>`<li id="q${i}"><div class="qt">${esc(q.t)}</div><div class="scale" role="radiogroup" aria-label="Pregunta ${i+1}">${OPC.map((o,v)=>`<label><input type="radio" name="q${i}" value="${v}" ${resp[i]===v?"checked":""}><span>${o}</span></label>`).join("")}</div></li>`).join("");
+ol.addEventListener("change", e=>{ const i=+e.target.name.slice(1); resp[i]=+e.target.value; try{localStorage.setItem("cuestionario",JSON.stringify(resp))}catch(x){} progreso(); });
+function progreso(){ const n=Object.keys(resp).length; document.getElementById("pbar").style.width=(n/PREG.length*100)+"%";
+  document.getElementById("pcount").textContent=`${n} de ${PREG.length} respondidas`;
+  PREG.forEach((_,i)=>document.getElementById("q"+i).classList.toggle("done", resp[i]!=null)); }
+progreso();
+
+function perfilUsuario(){
+  const num=Object.fromEntries(HK.map(h=>[h,0])), den=Object.fromEntries(HK.map(h=>[h,0]));
+  PREG.forEach((q,i)=>{ if(resp[i]==null) return; for(const [h,w] of Object.entries(q.h)){ num[h]+=w*resp[i]/3; den[h]+=w; } });
+  return Object.fromEntries(HK.map(h=>[h, den[h]? num[h]/den[h] : null]));
+}
+function afinidad(u, f){
+  // correlación entre tus habilidades (centradas en tu propio promedio) y lo que distingue a la carrera.
+  // El perfil de la carrera se "acerca al promedio" si tiene pocos perfiles (k=2), para no sobrevalorar carreras con 1 perfil.
+  const ks = HK.filter(h=>u[h]!=null && h!=="GEST");
+  const k=2, n=f.n_perfiles;
+  const fv = ks.map(h=>((n*f.porcentaje[h] + k*D.promedio_habilidades[h])/(n+k)) - D.promedio_habilidades[h]);
+  const um = ks.reduce((a,h)=>a+u[h],0)/ks.length; const uv = ks.map(h=>u[h]-um);
+  const dot = uv.reduce((a,x,i)=>a+x*fv[i],0), nu=Math.hypot(...uv), nf=Math.hypot(...fv);
+  return (nu&&nf) ? dot/(nu*nf) : 0;
+}
+function resultados(scroll=true){
+  const n=Object.keys(resp).length;
+  if (n < Math.ceil(PREG.length*0.75)) { document.getElementById("res").innerHTML=`<div class="note">Responde al menos ${Math.ceil(PREG.length*0.75)} preguntas para ver resultados (llevas ${n}).</div>`; return; }
+  const u = perfilUsuario();
+  let sim=null; try{ sim=JSON.parse(localStorage.getItem("sim-resultado")||"null") }catch(e){}
+  const CAT = {ok:["Alcanzable","p-ok"],poco:["Te falta poco","p-warn"],dificil:["Difícil","p-bad"],muy:["Muy difícil","p-bad"],req:["No cumple requisitos","p-na"],sin:["Sin corte publicado","p-info"]};
+  const ranking = D.familias.map(f=>({f, a:afinidad(u,f)})).sort((x,y)=>y.a-x.a);
+  const top = ranking.slice(0,3);
+  const areaScore = {}; ranking.forEach(r=>{ areaScore[r.f.area]=Math.max(areaScore[r.f.area]??-1, r.a); });
+  const areas = Object.entries(areaScore).sort((a,b)=>b[1]-a[1]).slice(0,2).map(([id])=>D.areas.find(a=>a.id===id));
+  const tuyas = HK.filter(h=>u[h]!=null).sort((a,b)=>u[b]-u[a]);
+  const pct = a => Math.round((a+1)/2*100);
+  document.getElementById("res").innerHTML = `<div class="card fade">
+    <div><h2>Tus resultados</h2><p class="small" style="margin-top:4px">Áreas que más se acercan a tus respuestas: ${areas.map(a=>`<a href="index.html#area-${a.id}"><b>${esc(a.nombre)}</b></a>`).join(" y ")}.</p></div>
+    <div class="me"><h3>Lo que más te representa según tus respuestas</h3>${tuyas.slice(0,6).map(h=>`<div class="row"><span>${esc(D.habilidades[h])}</span><span class="t"><i style="width:${Math.round(u[h]*100)}%"></i></span><span class="mono">${Math.round(u[h]*100)}%</span></div>`).join("")}</div>
+    <h3>Carreras cuyos perfiles más se parecen a tus respuestas</h3>
+    ${top.map((r,i)=>{ const f=r.f; const comunes=f.distintivas.filter(h=>u[h]!=null&&u[h]>=0.5);
+      const progs=D.programas.filter(p=>p.familias.includes(f.id)).sort((a,b)=>UNI[a.universidad_id].localeCompare(UNI[b.universidad_id]));
+      return `<article class="match"><div class="top"><div><span class="small">Opción ${i+1}</span><h2>${esc(f.nombre)}</h2></div><span class="score" title="Afinidad entre tus respuestas y las habilidades que distinguen a esta carrera">${pct(r.a)}%</span></div>
+        <p>${esc(f.que_hace)}</p>
+        ${comunes.length?`<p class="small">Coincide contigo en: ${comunes.map(h=>`<b>${esc(D.habilidades[h])}</b>`).join(", ")}.</p>`:""}
+        <div><h3 style="margin-bottom:6px">Dónde se estudia</h3><div class="chips">${progs.map(p=>{const c=sim&&sim[p.id]; return `<span class="chip">${UNI[p.universidad_id]} · ${esc(p.nombre)}${c?` <span class="pill ${CAT[c][1]}" style="margin-left:4px">${CAT[c][0]}</span>`:""}</span>`}).join("")}</div></div>
+        <p class="small"><a href="habilidades.html#fam-${f.id}">Ver habilidades de esta carrera</a> · <a href="index.html#area-${f.area}">Ver en Explorar</a></p></article>`}).join("")}
+    <details><summary style="cursor:pointer;font-weight:600">Ver el resto de las carreras ordenadas</summary><ol class="small" style="margin-top:8px">${ranking.slice(3).map(r=>`<li>${esc(r.f.nombre)} · ${pct(r.a)}%</li>`).join("")}</ol></details>
+    <p class="note">${sim?"Las etiquetas de alcance vienen de tu última simulación.":`Para ver qué tan alcanzable es cada carrera con tus puntajes, usa el <a href="simulador.html">simulador de ingreso</a> y vuelve aquí.`} Estos resultados son un punto de partida para conversar: tus gustos cambian y casi todas las ingenierías comparten una base común.</p>
+  </div>`;
+  if (scroll) document.getElementById("res").scrollIntoView({behavior:"smooth",block:"start"});
+}
+document.getElementById("ver").onclick = ()=>resultados(true);
+document.getElementById("reset").onclick = ()=>{ resp={}; try{localStorage.removeItem("cuestionario")}catch(e){} ol.querySelectorAll("input").forEach(i=>i.checked=false); progreso(); document.getElementById("res").innerHTML=""; window.scrollTo({top:0}); };
+if (Object.keys(resp).length >= Math.ceil(PREG.length*0.75)) resultados(false);
+</script>

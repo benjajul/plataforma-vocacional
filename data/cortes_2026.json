@@ -1,0 +1,492 @@
+{
+ "proceso": "Admisión 2026",
+ "consultado": "2026-11-08",
+ "nota": "El 'puntaje de corte' no se publica de forma centralizada. Cada universidad informa una medida distinta (último matriculado, último seleccionado o puntaje mínimo de selección); se registra cuál es en 'medida'. Las cifras de Filadd y PreuAI son de fuentes secundarias que declaran usar datos DEMRE: dos cifras de la UDD coinciden con lo publicado por la propia universidad y la de Ingeniería Comercial UAI de PreuAI coincide con la oficial.",
+ "fuentes": {
+  "uc": {
+   "nombre": "Admisión UC — Puntajes últimos matriculados 2026",
+   "url": "https://admision.uc.cl/htdocs/content/uploads/2021/12/Puntajes-Ultimos-Matriculados-2026.pdf",
+   "oficial": true
+  },
+  "uchile": {
+   "nombre": "U. de Chile — Puntajes de ingreso 2026",
+   "url": "https://uchile.cl/admision-y-matriculas/admision-regular-pregrado/puntajes-de-ingreso",
+   "oficial": true
+  },
+  "usm": {
+   "nombre": "USM — Admisión Centralizada PAES (tabla DEMRE 2026)",
+   "url": "https://usm.cl/admision/admision-centralizada-paes-3/",
+   "oficial": true
+  },
+  "uai": {
+   "nombre": "UAI — Puntajes de selección Admisión 2026",
+   "url": "https://www.uai.cl/admision/ponderaciones-y-puntajes/puntajes",
+   "oficial": true
+  },
+  "udd_oficial": {
+   "nombre": "UDD — Proceso de Admisión 2026: alzas de puntajes de corte",
+   "url": "https://www.udd.cl/noticias/2026/01/30/proceso-de-admision-2026-udd-registra-alzas-de-puntajes-de-corte-en-diversas-carreras/",
+   "oficial": true
+  },
+  "udd_filadd": {
+   "nombre": "Preu Filadd — Puntajes de corte UDD 2026",
+   "url": "https://blog.filadd.cl/puntajes-de-corte-universidad-del-desarrollo-udd/",
+   "oficial": false
+  },
+  "udp_preuai": {
+   "nombre": "PreuAI — Puntajes de corte UDP",
+   "url": "https://www.preuai.com/paes/puntajes-de-corte/ingenieria-civil-plan-comun-universidad-diego-portales",
+   "oficial": false
+  },
+  "usach": {
+   "nombre": "Admisión USACH — fichas de carrera (primera y última matrícula)",
+   "url": "https://admision.usach.cl/busca-tu-carreras",
+   "oficial": true
+  }
+ },
+ "programas": {
+  "uc-ingenieria": {
+   "corte": 898.1,
+   "medida": "último matriculado",
+   "ingresaron": 650,
+   "ingresaron_medida": "vacantes ocupadas",
+   "fuente": "uc",
+   "historico": {
+    "2025": 899.95,
+    "2024": 894.2
+   }
+  },
+  "uc-ingenieria-comercial": {
+   "corte": 870.1,
+   "medida": "último matriculado",
+   "ingresaron": 418,
+   "ingresaron_medida": "vacantes ocupadas",
+   "fuente": "uc",
+   "historico": {
+    "2025": 880.4,
+    "2024": 872.9
+   }
+  },
+  "uc-construccion-civil": {
+   "corte": 749.3,
+   "medida": "último matriculado",
+   "ingresaron": 205,
+   "ingresaron_medida": "vacantes ocupadas",
+   "fuente": "uc",
+   "historico": {
+    "2025": 711.1,
+    "2024": 673.1
+   }
+  },
+  "uc-ing-recursos-naturales": {
+   "corte": 679.0,
+   "medida": "último matriculado",
+   "ingresaron": 85,
+   "ingresaron_medida": "vacantes ocupadas",
+   "fuente": "uc",
+   "historico": {
+    "2025": 677.25,
+    "2024": 695.0
+   }
+  },
+  "uc-lic-ciencia-datos": {
+   "corte": 791.0,
+   "medida": "último matriculado",
+   "ingresaron": 80,
+   "ingresaron_medida": "vacantes ocupadas",
+   "fuente": "uc",
+   "historico": {
+    "2025": 798.9,
+    "2024": 767.7
+   }
+  },
+  "uc-lic-ciencia-computacion": {
+   "corte": 807.05,
+   "medida": "último matriculado",
+   "ingresaron": 100,
+   "ingresaron_medida": "vacantes ocupadas",
+   "fuente": "uc",
+   "historico": {
+    "2025": 810.9,
+    "2024": 818.85
+   }
+  },
+  "uchile-plan-comun": {
+   "corte": 832.4,
+   "medida": "último matriculado",
+   "ultimo_seleccionado": 833.85,
+   "primer_matriculado": 966.35,
+   "fuente": "uchile"
+  },
+  "uchile-ingenieria-comercial": {
+   "corte": 829.6,
+   "medida": "último matriculado",
+   "ultimo_seleccionado": 829.6,
+   "primer_matriculado": 961.7,
+   "fuente": "uchile"
+  },
+  "usm-plan-comun": {
+   "corte": 825.6,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 913.25,
+   "fuente": "usm"
+  },
+  "usm-civil": {
+   "corte": 811.15,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 905.4,
+   "fuente": "usm"
+  },
+  "usm-civil-minas": {
+   "corte": 805.7,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 909.9,
+   "fuente": "usm"
+  },
+  "usm-civil-electrica": {
+   "corte": 822.5,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 939.45,
+   "fuente": "usm"
+  },
+  "usm-civil-fisica": {
+   "corte": 783.85,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 965.4,
+   "fuente": "usm"
+  },
+  "usm-civil-informatica": {
+   "corte": 820.05,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 930.9,
+   "fuente": "usm"
+  },
+  "usm-civil-matematica": {
+   "corte": 805.2,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 984.6,
+   "fuente": "usm"
+  },
+  "usm-civil-mecanica": {
+   "corte": 822.6,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 910.1,
+   "fuente": "usm"
+  },
+  "usm-civil-quimica": {
+   "corte": 815.4,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 921.55,
+   "fuente": "usm"
+  },
+  "usm-civil-telematica": {
+   "corte": 763.3,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 882.0,
+   "fuente": "usm"
+  },
+  "usm-diseno-productos": {
+   "corte": 677.2,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 907.55,
+   "fuente": "usm"
+  },
+  "usm-civil-industrial": {
+   "corte": 837.4,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 929.0,
+   "fuente": "usm"
+  },
+  "usm-ingenieria-comercial": {
+   "corte": 799.55,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 892.75,
+   "fuente": "usm"
+  },
+  "usm-aviacion-comercial": {
+   "corte": 722.7,
+   "medida": "puntaje mínimo de selección",
+   "maximo": 878.05,
+   "fuente": "usm"
+  },
+  "uai-plan-comun": {
+   "corte": 815.0,
+   "medida": "puntaje ponderado de corte",
+   "ingresaron": 422,
+   "ingresaron_medida": "convocados (seleccionados)",
+   "promedio": 857.9,
+   "fuente": "uai"
+  },
+  "uai-bachillerato-ing-civil": {
+   "corte": 792.1,
+   "medida": "puntaje ponderado de corte",
+   "ingresaron": 75,
+   "ingresaron_medida": "convocados (seleccionados)",
+   "promedio": 815.9,
+   "fuente": "uai"
+  },
+  "uai-computer-science": {
+   "corte": 756.8,
+   "medida": "puntaje ponderado de corte",
+   "ingresaron": 35,
+   "ingresaron_medida": "convocados (seleccionados)",
+   "promedio": 788.5,
+   "fuente": "uai"
+  },
+  "uai-doble-arquitectura-industrial": {
+   "corte": 800.7,
+   "medida": "puntaje ponderado de corte",
+   "ingresaron": 35,
+   "ingresaron_medida": "convocados (seleccionados)",
+   "promedio": 849.1,
+   "fuente": "uai"
+  },
+  "uai-negocios-tecnologia": {
+   "corte": 794.9,
+   "medida": "puntaje ponderado de corte",
+   "ingresaron": 32,
+   "ingresaron_medida": "convocados (seleccionados)",
+   "promedio": 829.4,
+   "fuente": "uai"
+  },
+  "uai-ingenieria-comercial": {
+   "corte": 811.4,
+   "medida": "puntaje ponderado de corte",
+   "ingresaron": 465,
+   "ingresaron_medida": "convocados (seleccionados)",
+   "promedio": 850.7,
+   "fuente": "uai"
+  },
+  "udd-plan-comun": {
+   "corte": 680.65,
+   "medida": "puntaje de corte",
+   "fuente": "udd_filadd"
+  },
+  "udd-civil-industrial": {
+   "corte": 767.25,
+   "medida": "puntaje de corte",
+   "fuente": "udd_filadd"
+  },
+  "udd-civil-obras-civiles": {
+   "corte": 512.95,
+   "medida": "puntaje de corte",
+   "fuente": "udd_filadd",
+   "nota": "Cifra baja respecto de las otras carreras; verificar."
+  },
+  "udd-civil-mineria": {
+   "corte": 616.15,
+   "medida": "puntaje de corte",
+   "fuente": "udd_filadd"
+  },
+  "udd-civil-informatica-innovacion": {
+   "corte": 763.45,
+   "medida": "puntaje de corte",
+   "fuente": "udd_filadd"
+  },
+  "udd-civil-informatica-ia": {
+   "corte": 782.1,
+   "medida": "puntaje de corte",
+   "fuente": "udd_filadd"
+  },
+  "udd-civil-biomedicina": {
+   "corte": 881.4,
+   "medida": "puntaje de corte",
+   "maximo": 941.15,
+   "fuente": "udd_oficial"
+  },
+  "udd-ingenieria-comercial": {
+   "corte": 772.3,
+   "medida": "puntaje de corte",
+   "promedio": 809.5,
+   "fuente": "udd_oficial"
+  },
+  "udp-plan-comun": {
+   "corte": 710.8,
+   "medida": "puntaje de corte",
+   "fuente": "udp_preuai",
+   "historico": {
+    "2025": 679.1
+   }
+  },
+  "udp-civil-industrial": {
+   "corte": 756.2,
+   "medida": "puntaje de corte",
+   "fuente": "udp_preuai"
+  },
+  "usach-civil-biomedica": {
+   "corte": 747.9,
+   "medida": "última matrícula",
+   "primer_matriculado": 857.3,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-biomedica"
+  },
+  "usach-civil-en-ambiente": {
+   "corte": 653.6,
+   "medida": "última matrícula",
+   "primer_matriculado": 819.35,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-en-ambiente"
+  },
+  "usach-civil-en-biotecnologia": {
+   "corte": 741.1,
+   "medida": "última matrícula 2025 (2026 no publicado)",
+   "primer_matriculado": 833.4,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-en-biotecnologia",
+   "anio": 2025
+  },
+  "usach-civil-en-electricidad": {
+   "corte": 762.6,
+   "medida": "última matrícula",
+   "primer_matriculado": 862.75,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-en-electricidad"
+  },
+  "usach-civil-en-geomensura-y-geomatica": {
+   "corte": 678.45,
+   "medida": "última matrícula",
+   "primer_matriculado": 845.35,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-en-geomensura-y-geomatica"
+  },
+  "usach-civil-en-mecanica": {
+   "corte": 755.15,
+   "medida": "última matrícula",
+   "primer_matriculado": 884.05,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-en-mecanica"
+  },
+  "usach-civil-en-metalurgia": {
+   "corte": 743.2,
+   "medida": "última matrícula",
+   "primer_matriculado": 878.45,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-en-metalurgia"
+  },
+  "usach-civil-en-minas": {
+   "corte": 784.45,
+   "medida": "última matrícula",
+   "primer_matriculado": 895.25,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-en-minas"
+  },
+  "usach-civil-en-obras-civiles": {
+   "corte": 732.45,
+   "medida": "última matrícula",
+   "primer_matriculado": 860.35,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-en-obras-civiles"
+  },
+  "usach-civil-en-quimica": {
+   "corte": 745.15,
+   "medida": "última matrícula",
+   "primer_matriculado": 872.65,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-en-quimica"
+  },
+  "usach-civil-en-telematica": {
+   "corte": 689.8,
+   "medida": "última matrícula",
+   "primer_matriculado": 851.35,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-en-telematica"
+  },
+  "usach-civil-en-territorio-y-medio-ambiente": {
+   "corte": 604.35,
+   "medida": "última matrícula",
+   "primer_matriculado": 783.4,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-en-territorio-y-medio-ambiente"
+  },
+  "usach-civil-industrial": {
+   "corte": 805.9,
+   "medida": "última matrícula",
+   "primer_matriculado": 878,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-industrial"
+  },
+  "usach-civil-mecatronica": {
+   "corte": 728.95,
+   "medida": "última matrícula 2025 (2026 no publicado)",
+   "primer_matriculado": 857.65,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-mecatronica",
+   "anio": 2025
+  },
+  "usach-civil-informatica-plan-comun": {
+   "corte": 787.8,
+   "medida": "última matrícula",
+   "primer_matriculado": 888.25,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-civil-en-informatica",
+   "nota": "El plan común es nuevo en 2027; la ficha muestra cifras 2026 que corresponden a la carrera de Informática anterior."
+  },
+  "usach-ejecucion-en-climatizacion": {
+   "corte": 593.9,
+   "medida": "última matrícula",
+   "primer_matriculado": 805.05,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-de-ejecucion-en-climatizacion"
+  },
+  "usach-ejecucion-en-computacion-e-informatica": {
+   "corte": 750.25,
+   "medida": "última matrícula",
+   "primer_matriculado": 827.8,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-de-ejecucion-en-computacion-e-informatica"
+  },
+  "usach-ejecucion-en-electricidad": {
+   "corte": 727,
+   "medida": "última matrícula 2025 (2026 no publicado)",
+   "primer_matriculado": 852.75,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-de-ejecucion-en-electricidad",
+   "anio": 2025
+  },
+  "usach-ejecucion-en-mecanica": {
+   "corte": 701.4,
+   "medida": "última matrícula",
+   "primer_matriculado": 804.05,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-de-ejecucion-en-mecanica"
+  },
+  "usach-ejecucion-en-metalurgia": {
+   "corte": 697,
+   "medida": "última matrícula 2025 (2026 no publicado)",
+   "primer_matriculado": 800.25,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-de-ejecucion-en-metalurgia",
+   "anio": 2025
+  },
+  "usach-ejecucion-en-minas": {
+   "corte": 720.5,
+   "medida": "última matrícula 2025 (2026 no publicado)",
+   "primer_matriculado": 798.9,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-de-ejecucion-en-minas",
+   "anio": 2025
+  },
+  "usach-ejecucion-en-quimica": {
+   "corte": 634.25,
+   "medida": "última matrícula",
+   "primer_matriculado": 816.95,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-de-ejecucion-en-quimica"
+  },
+  "usach-ejecucion-industrial": {
+   "corte": 728.55,
+   "medida": "última matrícula 2025 (2026 no publicado)",
+   "primer_matriculado": 816.85,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-de-ejecucion-industrial",
+   "anio": 2025
+  },
+  "usach-ingenieria-comercial": {
+   "corte": 741.75,
+   "medida": "última matrícula",
+   "primer_matriculado": 886.95,
+   "fuente": "usach",
+   "url": "https://www.admision.usach.cl/carreras/ingenieria-comercial"
+  }
+ }
+}

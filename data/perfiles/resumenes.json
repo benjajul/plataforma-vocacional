@@ -1,0 +1,511 @@
+{
+"unab-civil": {
+"url": "https://facultades.unab.cl/ingenieria/carrera/ingenieria-civil/",
+"tipo": "resumen_leido",
+"tags": {
+"DIS": 1,
+"GEST": 1,
+"NEG": 1,
+"INFRA": 1,
+"MAT": 1,
+"COM": 1,
+"ETI": 1,
+"SOST": 1,
+"CIEN": 1,
+"OPER": 1
+}
+},
+"unab-civil-electrica": {
+"url": "https://admision.unab.cl/carreras/ingenieria-civil-electrica/",
+"tipo": "descripcion_formacion",
+"tags": {
+"DIS": 1,
+"GEST": 1,
+"INFRA": 1,
+"PROG": 1,
+"DATA": 1,
+"MAT": 1,
+"INNO": 1,
+"EQ": 1,
+"SOST": 1
+}
+},
+"unab-civil-minas": {
+"url": "https://facultades.unab.cl/ingenieria/carrera/ingenieria-civil-en-minas/",
+"tipo": "resumen_leido",
+"tags": {
+"DIS": 1,
+"GEST": 1,
+"EQ": 1,
+"CIEN": 1,
+"NEG": 1,
+"OPER": 1,
+"INFRA": 1,
+"ETI": 1,
+"SOST": 1
+}
+},
+"unab-civil-industrial": {
+"url": "https://facultades.unab.cl/ingenieria/carrera/ingenieria-civil-industrial/",
+"tipo": "resumen_leido",
+"tags": {
+"ETI": 1,
+"EQ": 1,
+"COM": 1,
+"GEST": 1,
+"NEG": 1,
+"DATA": 1,
+"CIEN": 1,
+"OPER": 1,
+"SOST": 1
+}
+},
+"unab-civil-informatica": {
+"url": "https://facultades.unab.cl/ingenieria/carrera/ingenieria-civil-informatica/",
+"tipo": "resumen_leido",
+"tags": {
+"ETI": 1,
+"EQ": 1,
+"COM": 1,
+"GEST": 1,
+"PROG": 1,
+"DIS": 1,
+"DATA": 1
+}
+},
+"unab-civil-biomedica": {
+"url": "https://admision.unab.cl/carreras/ingenieria-civil-biomedica/",
+"tipo": "descripcion_formacion",
+"tags": {
+"CIEN": 1,
+"DIS": 1,
+"DATA": 1,
+"INNO": 1,
+"EQ": 1,
+"ETI": 1,
+"SOST": 1,
+"GEST": 1
+},
+"facultad": "Facultad de Ingeniería (según enlace de la página)"
+},
+"unab-automatizacion-robotica": {
+"url": "https://admision.unab.cl/carreras/ingenieria-en-automatizacion-y-robotica/",
+"tipo": "descripcion_formacion",
+"tags": {
+"DIS": 1,
+"PROG": 1,
+"INFRA": 1,
+"GEST": 1,
+"NEG": 1,
+"OPER": 1
+}
+},
+"unab-computacion-informatica": {
+"url": "https://facultades.unab.cl/ingenieria/carrera/ingenieria-en-computacion-e-informatica/",
+"tipo": "resumen_leido",
+"tags": {
+"ETI": 1,
+"PROG": 1,
+"INNO": 1,
+"DIS": 1,
+"GEST": 1,
+"EQ": 1,
+"INV": 1
+}
+},
+"unab-construccion": {
+"url": "https://facultades.unab.cl/ingenieria/carrera/ingenieria-en-construccion/",
+"tipo": "resumen_leido",
+"tags": {
+"GEST": 1,
+"NEG": 1,
+"INFRA": 1,
+"OPER": 1
+}
+},
+"unab-industrial": {
+"url": "https://facultades.unab.cl/ingenieria/carrera/ingenieria-industrial/",
+"tipo": "resumen_leido",
+"tags": {
+"ETI": 1,
+"EQ": 1,
+"MAT": 1,
+"COM": 1,
+"INNO": 1,
+"GEST": 1,
+"NEG": 1,
+"OPER": 1,
+"SOST": 1
+}
+},
+"unab-ambiental": {
+"url": "https://admision.unab.cl/carreras/ingenieria-ambiental/",
+"tipo": "descripcion_formacion",
+"tags": {
+"SOST": 1,
+"INNO": 1,
+"EQ": 1,
+"MAT": 1,
+"GEST": 1,
+"NEG": 1,
+"CIEN": 1,
+"ETI": 1
+},
+"facultad": "Facultad de Ciencias de la Vida"
+},
+"unab-fisica": {
+"url": "https://admision.unab.cl/carreras/ingenieria-fisica/",
+"tipo": "descripcion_formacion",
+"tags": {
+"INV": 1,
+"ETI": 1,
+"MAT": 1,
+"CIEN": 1,
+"PROG": 1,
+"DATA": 1,
+"EQ": 1,
+"NEG": 1
+},
+"facultad": "Facultad de Ciencias Exactas"
+},
+"unab-biotecnologia": {
+"url": "https://admision.unab.cl/carreras/ingenieria-en-biotecnologia/",
+"tipo": "descripcion_formacion",
+"tags": {
+"CIEN": 1,
+"GEST": 1,
+"INV": 1,
+"EQ": 1,
+"DIS": 1,
+"OPER": 1
+},
+"facultad": "Facultad de Ciencias de la Vida"
+},
+"unab-engineering-technology-management": {
+"url": "https://internationalcollege.unab.cl/en/engineering-management/",
+"tipo": "resumen_leido",
+"tags": {
+"DIS": 1,
+"OPER": 1,
+"GEST": 1,
+"NEG": 1,
+"INNO": 1,
+"EQ": 1,
+"COM": 1,
+"ETI": 1,
+"SOST": 1,
+"DATA": 1
+},
+"facultad": "UNAB International College (programa dual con Arizona State University)"
+},
+"unab-computer-science-engineering": {
+"url": "https://internationalcollege.unab.cl/en/computer-science-engineering/",
+"tipo": "resumen_leido",
+"tags": {
+"DIS": 1,
+"PROG": 1,
+"GEST": 1,
+"ETI": 1,
+"SOST": 1,
+"EQ": 1,
+"COM": 1
+},
+"facultad": "UNAB International College (programa dual con Arizona State University)"
+},
+"unab-ingenieria-comercial": {
+"url": "https://admision.unab.cl/carreras/ingenieria-comercial/",
+"tipo": "descripcion_formacion",
+"tags": {
+"NEG": 1,
+"GEST": 1,
+"DATA": 1,
+"ETI": 1,
+"INNO": 1,
+"EQ": 1
+}
+},
+"udp-civil-industrial": {
+"url": "https://admision.udp.cl/carrera/ingenieria-civil-industrial/",
+"tipo": "resumen_leido",
+"tags": {
+"CIEN": 1,
+"DIS": 1,
+"GEST": 1,
+"ETI": 1,
+"OPER": 1,
+"SOST": 1,
+"DATA": 1,
+"EQ": 1,
+"MAT": 1,
+"NEG": 1,
+"INNO": 1
+}
+},
+"udp-civil-obras-civiles": {
+"url": "https://admision.udp.cl/carrera/ingenieria-civil-en-obras-civiles/",
+"tipo": "resumen_leido",
+"tags": {
+"DIS": 1,
+"GEST": 1,
+"INFRA": 1,
+"ETI": 1,
+"SOST": 1,
+"CIEN": 1,
+"EQ": 1,
+"COM": 1
+}
+},
+"udp-civil-informatica-telecom": {
+"url": "https://admision.udp.cl/carrera/ingenieria-civil-en-informatica-y-telecomunicaciones/",
+"tipo": "resumen_leido",
+"tags": {
+"EQ": 1,
+"INNO": 1,
+"ETI": 1,
+"CIEN": 1,
+"PROG": 1,
+"INFRA": 1,
+"DATA": 1,
+"GEST": 1,
+"NEG": 1,
+"DIS": 1
+}
+},
+"udp-civil-ciencia-datos-ia": {
+"url": "https://admision.udp.cl/carrera/ingenieria-civil-en-ciencia-de-datos-e-inteligencia-artificial/",
+"tipo": "resumen_leido",
+"tags": {
+"DIS": 1,
+"DATA": 1,
+"PROG": 1,
+"CIEN": 1,
+"ETI": 1,
+"INNO": 1,
+"EQ": 1,
+"GEST": 1
+}
+},
+"udp-ingenieria-comercial": {
+"url": "https://admision.udp.cl/cms/wp-content/uploads/2025/09/INGENIERIA-COMERCIAL-2026.pdf",
+"tipo": "descripcion_formacion",
+"tags": {
+"NEG": 1,
+"GEST": 1,
+"INNO": 1,
+"COM": 1,
+"EQ": 1,
+"ETI": 1,
+"SOST": 1
+}
+},
+"uai-civil-industrial": {
+"url": "https://admision.uai.cl/carreras/ingenieria-civil-industrial/",
+"tipo": "descripcion_formacion",
+"tags": {
+"INNO": 1,
+"EQ": 1,
+"GEST": 1,
+"SOST": 1,
+"NEG": 1
+},
+"salida_de": "uai-plan-comun",
+"nombre": "Ingeniería Civil Industrial"
+},
+"uai-civil-informatica": {
+"url": "https://admision.uai.cl/carreras/ingenieria-civil-informatica/",
+"tipo": "descripcion_formacion",
+"tags": {
+"GEST": 1,
+"PROG": 1,
+"NEG": 1,
+"ETI": 1,
+"SOST": 1
+},
+"salida_de": "uai-plan-comun",
+"nombre": "Ingeniería Civil Informática"
+},
+"uai-civil-bioingenieria": {
+"url": "https://admision.uai.cl/carreras/ingenieria-civil-en-bioingenieria/",
+"tipo": "descripcion_formacion",
+"tags": {
+"CIEN": 1,
+"GEST": 1,
+"INNO": 1,
+"SOST": 1,
+"EQ": 1
+},
+"salida_de": "uai-plan-comun",
+"nombre": "Ingeniería Civil en Bioingeniería"
+},
+"uai-civil-obras-civiles": {
+"url": "https://www.uai.cl/admision/carreras/ingenieria-civil-obras-civiles",
+"tipo": "resumen_leido",
+"tags": {
+"INFRA": 1,
+"DIS": 1,
+"GEST": 1,
+"SOST": 1,
+"ETI": 1,
+"MAT": 1,
+"CIEN": 1,
+"COM": 1,
+"EQ": 1
+},
+"salida_de": "uai-plan-comun",
+"nombre": "Ingeniería Civil (Obras Civiles)"
+},
+"uai-civil-energia": {
+"url": "https://www.uai.cl/admision/carreras/ingenieria-civil-en-energia",
+"tipo": "resumen_leido",
+"tags": {
+"INFRA": 1,
+"GEST": 1,
+"SOST": 1,
+"INNO": 1,
+"EQ": 1
+},
+"salida_de": "uai-plan-comun",
+"nombre": "Ingeniería Civil en Energía"
+},
+"uai-civil-mecanica": {
+"url": "https://www.uai.cl/admision/carreras/ingenieria-civil-mecanica",
+"tipo": "resumen_leido",
+"tags": {
+"DIS": 1,
+"INFRA": 1,
+"OPER": 1,
+"INNO": 1
+},
+"salida_de": "uai-plan-comun",
+"nombre": "Ingeniería Civil Mecánica"
+},
+"uai-civil-mineria": {
+"url": "https://www.uai.cl/admision/carreras/ingenieria-civil-en-mineria",
+"tipo": "resumen_leido",
+"tags": {
+"INFRA": 1,
+"OPER": 1,
+"SOST": 1,
+"NEG": 1,
+"GEST": 1,
+"INNO": 1
+},
+"salida_de": "uai-plan-comun",
+"nombre": "Ingeniería Civil en Minería"
+},
+"uai-computer-science": {
+"url": "https://admision.uai.cl/carreras/ingenieria-en-computer-science/",
+"tipo": "resumen_leido",
+"tags": {
+"PROG": 1,
+"DIS": 1,
+"COM": 1,
+"EQ": 1,
+"ETI": 1
+}
+},
+"uai-negocios-tecnologia": {
+"url": "https://www.diarioestrategia.cl/texto-diario/mostrar/4448335/universidad-adolfo-ibanez-lanza-nueva-carrera-ingenieria-negocios-tecnologia",
+"tipo": "descripcion_prensa",
+"tags": {
+"NEG": 1,
+"GEST": 1,
+"DATA": 1,
+"PROG": 1,
+"INNO": 1,
+"SOST": 1
+},
+"facultad": "Escuela de Negocios UAI"
+},
+"udd-civil-industrial": {
+"url": "https://ingenieria.udd.cl/carrera/industrial/",
+"tipo": "descripcion_formacion",
+"tags": {
+"DIS": 1,
+"OPER": 1,
+"INNO": 1,
+"EQ": 1,
+"ETI": 1,
+"COM": 1,
+"CIEN": 1,
+"NEG": 1,
+"GEST": 1
+}
+},
+"udd-civil-obras-civiles": {
+"url": "https://ingenieria.udd.cl/carrera/obras-civiles/",
+"tipo": "descripcion_formacion",
+"tags": {
+"INFRA": 1,
+"GEST": 1,
+"CIEN": 1,
+"NEG": 1,
+"ETI": 1,
+"SOST": 1
+}
+},
+"udd-civil-mineria": {
+"url": "https://ingenieria.udd.cl/carrera/mineria/",
+"tipo": "descripcion_formacion",
+"tags": {
+"CIEN": 1,
+"NEG": 1,
+"INFRA": 1,
+"DIS": 1,
+"SOST": 1,
+"GEST": 1,
+"DATA": 1,
+"OPER": 1,
+"EQ": 1
+}
+},
+"udd-civil-informatica-innovacion": {
+"url": "https://ingenieria.udd.cl/carrera/ingenieria-civil-en-informatica-e-innovacion-tecnologica/",
+"tipo": "descripcion_formacion",
+"tags": {
+"PROG": 1,
+"INNO": 1,
+"DATA": 1,
+"GEST": 1,
+"EQ": 1,
+"COM": 1,
+"CIEN": 1
+}
+},
+"udd-civil-informatica-ia": {
+"url": "https://ingenieria.udd.cl/carrera/ingenieria-civil-en-informatica-e-inteligencia-artificial/",
+"tipo": "descripcion_formacion",
+"tags": {
+"DATA": 1,
+"PROG": 1,
+"DIS": 1,
+"GEST": 1,
+"INNO": 1,
+"OPER": 1
+}
+},
+"udd-civil-biomedicina": {
+"url": "https://ingenieria.udd.cl/carrera/ingenieria-civil-en-biomedicina/",
+"tipo": "descripcion_formacion",
+"tags": {
+"DIS": 1,
+"INNO": 1,
+"CIEN": 1,
+"DATA": 1,
+"GEST": 1,
+"EQ": 1,
+"COM": 1
+}
+},
+"usach-civil-informatica-plan-comun": {
+"url": "https://admision.usach.cl/carreras/ingenieria-civil-en-informatica-plan-comun",
+"tipo": "resumen_leido",
+"tags": {
+"INNO": 1,
+"EQ": 1,
+"ETI": 1,
+"PROG": 1,
+"CIEN": 1
+}
+}
+}

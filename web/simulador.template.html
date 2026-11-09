@@ -1,0 +1,149 @@
+<title>Simulador de Ingreso</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+__BASE_CSS__
+form.inputs{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+form.inputs label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:600}
+form.inputs label span{font-weight:400;color:var(--muted);font-size:.75rem}
+form.inputs input{font:500 1.05rem var(--f-mono);padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%;font-variant-numeric:tabular-nums}
+form.inputs input:invalid{border-color:var(--bad)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.sum{all:unset;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--surface);display:flex;flex-direction:column;gap:2px}
+.sum b{font:700 1.6rem var(--f-display);font-variant-numeric:tabular-nums}
+.sum[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--accent)}
+.sum.ok b{color:var(--ok)} .sum.warn b{color:var(--warn)} .sum.bad b{color:var(--bad)} .sum.na b{color:var(--na)}
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:.9rem}
+.filters select{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.diff.pos{color:var(--ok)} .diff.neg{color:var(--bad)}
+.req{font-size:.78rem;color:var(--bad);margin-top:3px}
+.how{font-size:.78rem;color:var(--muted);margin-top:3px}
+.legend{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.85rem}
+</style>
+
+<div class="wrap">
+  __NAV__
+  <header style="display:flex;flex-direction:column;gap:10px">
+    <h1>Simulador de ingreso</h1>
+    <p class="lede">Ingresa tus puntajes y el simulador calcula tu <b>puntaje ponderado</b> en cada carrera con las ponderaciones oficiales de la <b>Admisión 2027</b>, revisa los requisitos mínimos y lo compara con el <b>puntaje de corte de la Admisión 2026</b>, el último proceso con resultados.</p>
+  </header>
+
+  <section class="card">
+    <h3>Tus puntajes (escala 100 a 1.000)</h3>
+    <form class="inputs" id="form" autocomplete="off">
+      <label for="i-nem">NEM<span>Puntaje NEM, no la nota</span><input id="i-nem" type="number" min="100" max="1000" step="0.5" inputmode="decimal"></label>
+      <label for="i-ranking">Ranking<span>Puntaje ranking</span><input id="i-ranking" type="number" min="100" max="1000" step="0.5" inputmode="decimal"></label>
+      <label for="i-cl">Comp. Lectora<span>PAES CL</span><input id="i-cl" type="number" min="100" max="1000" step="0.5" inputmode="decimal"></label>
+      <label for="i-m1">Matemática 1<span>PAES M1</span><input id="i-m1" type="number" min="100" max="1000" step="0.5" inputmode="decimal"></label>
+      <label for="i-m2">Matemática 2<span>PAES M2 (si la rendiste)</span><input id="i-m2" type="number" min="100" max="1000" step="0.5" inputmode="decimal"></label>
+      <label for="i-ciencias">Ciencias<span>Si la rendiste</span><input id="i-ciencias" type="number" min="100" max="1000" step="0.5" inputmode="decimal"></label>
+      <label for="i-hyc">Historia y Cs. Soc.<span>Si la rendiste</span><input id="i-hyc" type="number" min="100" max="1000" step="0.5" inputmode="decimal"></label>
+    </form>
+    <div class="actions">
+      <button class="btn primary" type="button" id="calc">Calcular</button>
+      <button class="btn" type="button" id="ej">Cargar ejemplo</button>
+      <button class="btn" type="button" id="limpiar">Limpiar</button>
+      <span class="small" id="estado"></span>
+    </div>
+  </section>
+
+  <section id="res" aria-live="polite"></section>
+
+  <details class="card" style="gap:8px">
+    <summary style="cursor:pointer;font-weight:600">¿Cómo se calcula y qué tan confiable es?</summary>
+    <p class="small" style="max-width:78ch">Puntaje ponderado = suma de cada puntaje por su ponderación (Admisión 2027, DEMRE). Cuando la carrera acepta "Historia o Ciencias", se usa la mayor de las dos. Si la carrera pondera M2, se exige haberla rendido.</p>
+    <p class="small" style="max-width:78ch">Requisitos: puntaje ponderado mínimo de postulación y promedio mínimo entre Competencia Lectora y M1, ambos según la oferta DEMRE 2027.</p>
+    <p class="small" style="max-width:78ch">Categorías frente al corte 2026: <b>Alcanzable</b> si igualas o superas el corte; <b>Te falta poco</b> si estás hasta 25 puntos bajo; <b>Difícil</b> entre 25 y 60 puntos bajo; <b>Muy difícil</b> a más de 60. Los cortes cambian cada año (en algunas carreras más de 30 puntos de un año a otro), dependen de cuántas personas postulan y de las vacantes, y cada universidad publica una medida distinta (último matriculado, último seleccionado o puntaje mínimo de selección). Úsalo como referencia, no como garantía.</p>
+    <p class="small" style="max-width:78ch">En las carreras con plan común, el corte es el de la puerta de entrada; en la USM, además, la especialidad se asigna después según el rendimiento del primer año.</p>
+  </details>
+  <footer id="pie"></footer>
+</div>
+
+<script>
+const D = __DATA__;
+const UNI = {uc:"UC",uchile:"U. de Chile",usm:"USM",usach:"USACH",unab:"UNAB",udp:"UDP",uai:"UAI",udd:"UDD"};
+const CAMPOS = ["nem","ranking","cl","m1","m2","ciencias","hyc"];
+const EJEMPLO = {nem:780, ranking:820, cl:700, m1:820, m2:650, ciencias:640, hyc:""};
+const CAT = {ok:{t:"Alcanzable",c:"p-ok"}, poco:{t:"Te falta poco",c:"p-warn"}, dificil:{t:"Difícil",c:"p-bad"}, muy:{t:"Muy difícil",c:"p-bad"}, req:{t:"No cumple requisitos",c:"p-na"}, sin:{t:"Sin corte publicado",c:"p-info"}};
+const esc = s => String(s ?? "").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const f1 = n => n==null ? "—" : Number(n).toLocaleString("es-CL",{minimumFractionDigits:1,maximumFractionDigits:1});
+let filtroCat = "todas";
+
+function leer(){ const o={}; for(const k of CAMPOS){ const v=document.getElementById("i-"+k).value; o[k]= v===""?null:Number(v); } return o; }
+function poner(o){ for(const k of CAMPOS) document.getElementById("i-"+k).value = o[k]??""; }
+
+// Puntaje ponderado de un programa. Devuelve {valor, faltan:[...]}
+function ponderar(p, s){
+  const w = p.ponderaciones, faltan = [];
+  let total = 0;
+  for (const [k,lbl] of [["nem","NEM"],["ranking","Ranking"],["cl","Competencia Lectora"],["m1","M1"]]) {
+    if (w[k]) { if (s[k]==null) faltan.push(lbl); else total += s[k]*w[k]; }
+  }
+  if (p.hyc_o_ciencias) {        // "Historia o Ciencias": se usa la mayor
+    const e = Math.max(s.hyc ?? -1, s.ciencias ?? -1);
+    if (e < 0) faltan.push("Historia o Ciencias"); else total += e*w.hyc;
+  } else {
+    if (w.hyc) { if (s.hyc==null) faltan.push("Historia"); else total += s.hyc*w.hyc; }
+    if (w.ciencias) { if (s.ciencias==null) faltan.push("Ciencias"); else total += s.ciencias*w.ciencias; }
+  }
+  if (w.m2) { if (s.m2==null) faltan.push("M2"); else total += s.m2*w.m2; }
+  return {valor: Math.round(total)/100, faltan};
+}
+function evaluar(p, s){
+  const r = ponderar(p, s), problemas = [];
+  if (r.faltan.length) problemas.push("Falta puntaje de: " + r.faltan.join(", "));
+  if (!r.faltan.length) {
+    if (p.puntaje_ponderado_minimo && r.valor < p.puntaje_ponderado_minimo) problemas.push(`Ponderado bajo el mínimo de postulación (${p.puntaje_ponderado_minimo})`);
+    if (p.promedio_cl_m1_minimo && s.cl!=null && s.m1!=null && (s.cl+s.m1)/2 < p.promedio_cl_m1_minimo) problemas.push(`Promedio CL+M1 bajo el mínimo (${p.promedio_cl_m1_minimo})`);
+  }
+  let cat, diff=null;
+  if (problemas.length) cat="req";
+  else if (!p.corte_2026) cat="sin";
+  else { diff = Math.round((r.valor - p.corte_2026.valor)*100)/100;
+    cat = diff>=0 ? "ok" : diff>=-25 ? "poco" : diff>=-60 ? "dificil" : "muy"; }
+  return {p, ponderado: r.faltan.length?null:r.valor, diff, cat, problemas};
+}
+function calcular(){
+  const s = leer();
+  const base = ["nem","ranking","cl","m1"].filter(k=>s[k]==null);
+  if (base.length){ document.getElementById("estado").textContent = "Completa al menos NEM, Ranking, Competencia Lectora y M1."; return; }
+  if (CAMPOS.some(k=>s[k]!=null && (s[k]<100||s[k]>1000))){ document.getElementById("estado").textContent = "Los puntajes van de 100 a 1.000."; return; }
+  document.getElementById("estado").textContent = "";
+  try{ localStorage.setItem("sim-puntajes", JSON.stringify(s)) }catch(e){}
+  const res = D.programas.map(p=>evaluar(p,s));
+  try{ localStorage.setItem("sim-resultado", JSON.stringify(Object.fromEntries(res.map(r=>[r.p.id,r.cat])))) }catch(e){}
+  pintar(res);
+}
+function pintar(res){
+  const cuenta = k => res.filter(r=>r.cat===k).length;
+  const areaSel = document.getElementById("f-area")?.value || "todas", uniSel = document.getElementById("f-uni")?.value || "todas";
+  const vis = res.filter(r=>(filtroCat==="todas"||r.cat===filtroCat)&&(areaSel==="todas"||r.p.areas.includes(areaSel))&&(uniSel==="todas"||r.p.universidad_id===uniSel))
+                 .sort((a,b)=> (b.diff??-9999)-(a.diff??-9999) || (b.ponderado??0)-(a.ponderado??0));
+  const sum = (k,cls)=>`<button class="sum ${cls}" type="button" data-cat="${k}" aria-pressed="${filtroCat===k}"><b>${k==="todas"?res.length:cuenta(k)}</b><span>${k==="todas"?"Todas":CAT[k].t}</span></button>`;
+  document.getElementById("res").innerHTML = `<div class="card fade">
+    <div><h2>Resultados</h2><p class="small" style="margin-top:4px">Ponderaciones y requisitos: ${esc(D.bases.ponderaciones)}. Cortes: ${esc(D.bases.cortes)}.</p></div>
+    <div class="summary">${sum("todas","")}${sum("ok","ok")}${sum("poco","warn")}${sum("dificil","bad")}${sum("muy","bad")}${sum("sin","na")}${sum("req","na")}</div>
+    <div class="filters"><label>Área <select id="f-area"><option value="todas">Todas</option>${D.areas.map(a=>`<option value="${a.id}" ${a.id===areaSel?"selected":""}>${esc(a.nombre)}</option>`).join("")}</select></label>
+      <label>Universidad <select id="f-uni"><option value="todas">Todas</option>${Object.entries(UNI).map(([k,v])=>`<option value="${k}" ${k===uniSel?"selected":""}>${v}</option>`).join("")}</select></label></div>
+    <div class="tablewrap"><table class="data"><thead><tr><th>Universidad</th><th>Carrera</th><th class="num">Tu ponderado</th><th class="num">Corte 2026</th><th class="num">Diferencia</th><th>Estado</th></tr></thead><tbody>${
+      vis.map(r=>{const p=r.p,c=p.corte_2026; const m1w=p.ponderaciones.m1;
+        const subir = r.diff!=null && r.diff<0 && m1w ? `<div class="how">≈ +${Math.ceil(-r.diff*100/m1w)} pts en M1 (pondera ${m1w}%)</div>` : "";
+        return `<tr><td><b>${UNI[p.universidad_id]}</b></td><td>${esc(p.nombre)}${p.plan_comun?` <span class="small">(${p.universidad_id==="uc"?"licenciatura + título":"plan común"})</span>`:""}${r.problemas.map(x=>`<div class="req">${esc(x)}</div>`).join("")}${c&&!c.oficial?`<div class="src">Corte de fuente secundaria</div>`:""}</td>
+        <td class="num">${f1(r.ponderado)}</td><td class="num">${c?f1(c.valor):"—"}${c?`<div class="src">${esc(c.medida)}</div>`:""}</td>
+        <td class="num"><span class="diff ${r.diff==null?"":r.diff>=0?"pos":"neg"}">${r.diff==null?"—":(r.diff>0?"+":"")+f1(r.diff)}</span>${subir}</td>
+        <td><span class="pill ${CAT[r.cat].c}">${CAT[r.cat].t}</span></td></tr>`}).join("") || `<tr><td colspan="6" class="small">No hay carreras en esta combinación de filtros.</td></tr>`}</tbody></table></div>
+    <p class="small">"≈ +X pts en M1" es una guía: cuántos puntos tendría que subir solo tu M1 para alcanzar el corte, manteniendo lo demás igual.</p>
+  </div>`;
+}
+document.addEventListener("click", e=>{ const b=e.target.closest("[data-cat]"); if(b){ filtroCat=b.dataset.cat; calcular(); } });
+document.addEventListener("change", e=>{ if(e.target.id==="f-area"||e.target.id==="f-uni") calcular(); });
+document.getElementById("calc").onclick = calcular;
+document.getElementById("ej").onclick = ()=>{ poner(EJEMPLO); filtroCat="todas"; calcular(); document.getElementById("estado").textContent="Puntajes de ejemplo, no son de nadie en particular."; };
+document.getElementById("limpiar").onclick = ()=>{ poner({}); document.getElementById("res").innerHTML=""; try{localStorage.removeItem("sim-puntajes");localStorage.removeItem("sim-resultado")}catch(e){} };
+document.getElementById("form").addEventListener("keydown", e=>{ if(e.key==="Enter"){ e.preventDefault(); calcular(); } });
+document.getElementById("pie").innerHTML = `Fuentes: <a href="${D.fuentes.demre}" target="_blank" rel="noopener">Oferta Definitiva DEMRE 2027</a> · ${Object.values(D.fuentes.cortes).map(f=>`<a href="${f.url}" target="_blank" rel="noopener">${esc(f.nombre)}</a>${f.oficial?"":" (secundaria)"}`).join(" · ")}. En USACH, seis carreras solo muestran la última matrícula 2025 y se usa ese dato (se indica en la fila). UNAB no publica cortes: sus carreras aparecen como "sin corte publicado". Consultado el ${D.consultado.split("-").reverse().join("-")}.`;
+let guardado=null; try{ guardado=JSON.parse(localStorage.getItem("sim-puntajes")||"null") }catch(e){}
+poner(guardado || EJEMPLO); calcular();
+if(!guardado) document.getElementById("estado").textContent="Se muestran puntajes de ejemplo. Reemplázalos por los tuyos.";
+</script>

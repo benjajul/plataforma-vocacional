@@ -222,6 +222,9 @@ P += [
     p("unab", "engineering-technology-management", "Engineering and Technology Management", "ing_no_civil",
       facultad="Por confirmar", campus="Las Condes", vacantes=60, alcance="si",
       nota="Carrera nueva Admisión 2027.", fuentes=("nuevas_2027",)),
+    p("unab", "computer-science-engineering", "Computer Science Engineering", "ing_no_civil", facultad="Por confirmar",
+      campus="Las Condes", nota="Carrera detectada en la oferta DEMRE 2027 (no figuraba en folleto 2026 ni en la nómina preliminar).",
+      fuentes=("demre_2027",)),
     p("unab", "ingenieria-comercial", "Ingeniería Comercial", "ing_comercial", facultad="Facultad de Economía y Negocios",
       campus="Bellavista y Casona de Las Condes", nota="Diurno y vespertino; 5 años.", fuentes=("unab_folleto", "unab_uch")),
 ]
@@ -323,17 +326,71 @@ FUERA = [
     ("unab", "Ingeniería en Turismo y Hotelería", "Área de turismo"),
 ]
 
+# Códigos DEMRE Admisión 2027 (verificados contra data/demre_2027.json). Varios códigos = mismo programa en distintos campus de Santiago.
+DEMRE = {
+ "uc-ingenieria":["12039"],"uc-lic-ciencia-datos":["12089"],"uc-lic-ciencia-computacion":["12100"],"uc-construccion-civil":["12038"],
+ "uc-ing-recursos-naturales":["12101"],"uc-ingenieria-comercial":["12014"],
+ "uchile-plan-comun":["11045"],"uchile-ingenieria-comercial":["11042"],
+ "usm-plan-comun":["15300"],"usm-civil":["15311"],"usm-civil-minas":["15312"],"usm-civil-electrica":["15330"],"usm-civil-fisica":["15384"],
+ "usm-civil-informatica":["15360"],"usm-civil-matematica":["15301"],"usm-civil-mecanica":["15340"],"usm-civil-quimica":["15350"],
+ "usm-civil-telematica":["15361"],"usm-diseno-productos":["15381"],"usm-civil-industrial":["15270"],"usm-aviacion-comercial":["15220"],
+ "usm-ingenieria-comercial":["15271"],
+ "usach-civil-biomedica":["16101"],"usach-civil-en-ambiente":["16105"],"usach-civil-en-biotecnologia":["16104"],
+ "usach-civil-en-electricidad":["16001"],"usach-civil-en-geomensura-y-geomatica":["16107"],"usach-civil-en-mecanica":["16005"],
+ "usach-civil-en-metalurgia":["16006"],"usach-civil-en-minas":["16007"],"usach-civil-en-obras-civiles":["16008"],"usach-civil-en-quimica":["16009"],
+ "usach-civil-en-telematica":["16102"],"usach-civil-en-territorio-y-medio-ambiente":["16111"],"usach-civil-industrial":["16003"],
+ "usach-civil-mecatronica":["16103"],"usach-civil-informatica-plan-comun":["16113"],
+ "usach-ejecucion-en-climatizacion":["16021"],"usach-ejecucion-en-computacion-e-informatica":["16014"],"usach-ejecucion-en-electricidad":["16011"],
+ "usach-ejecucion-en-mecanica":["16015"],"usach-ejecucion-en-metalurgia":["16016"],"usach-ejecucion-en-minas":["16017"],
+ "usach-ejecucion-en-quimica":["16019"],"usach-ejecucion-industrial":["16013"],"usach-ingenieria-comercial":["16035"],
+ "unab-civil":["41044"],"unab-civil-electrica":["41204"],"unab-civil-minas":["41130"],"unab-civil-industrial":["41046","41206"],
+ "unab-civil-informatica":["41045","41207"],"unab-civil-biomedica":["41227"],"unab-automatizacion-robotica":["41047"],
+ "unab-computacion-informatica":["41048"],"unab-construccion":["41049"],"unab-industrial":["41055"],"unab-ambiental":["41024"],
+ "unab-fisica":["41011"],"unab-biotecnologia":["41006"],"unab-engineering-technology-management":["41226"],
+ "unab-computer-science-engineering":["41222"],"unab-ingenieria-comercial":["41129","41028"],
+ "udp-plan-comun":["38080"],"udp-civil-industrial":["38174"],"udp-civil-obras-civiles":["38176"],"udp-civil-informatica-telecom":["38175"],
+ "udp-civil-ciencia-datos-ia":["38346"],"udp-ingenieria-comercial":["38003"],"udp-control-gestion":["38292"],
+ "uai-plan-comun":["42002"],"uai-computer-science":["42202"],"uai-bachillerato-ing-civil":["42012"],"uai-doble-arquitectura-industrial":["42106"],
+ "uai-negocios-tecnologia":["42101"],"uai-ingenieria-comercial":["42001"],
+ "udd-plan-comun":["44043"],"udd-civil-industrial":["44015"],"udd-civil-obras-civiles":["44014"],"udd-civil-mineria":["44039"],
+ "udd-civil-informatica-innovacion":["44046"],"udd-civil-informatica-ia":["44052"],"udd-civil-biomedicina":["44051"],
+ "udd-ingenieria-comercial":["44008"],
+}
+
+def enriquecer(root):
+    path = root / "data" / "demre_2027.json"
+    if not path.exists():
+        print("aviso: falta data/demre_2027.json (correr scripts/parse_demre.py)"); return
+    filas = {r["codigo"]: r for r in json.loads(path.read_text(encoding="utf-8"))["carreras"]}
+    for x in P:
+        cods = DEMRE.get(x["id"])
+        if not cods: continue
+        rs = [filas[c] for c in cods if c in filas]
+        assert len(rs) == len(cods), f"código no encontrado para {x['id']}: {cods}"
+        x["codigo_demre"] = cods[0] if len(cods) == 1 else cods
+        vac = [r["vacantes_regulares"] for r in rs if r["vacantes_regulares"] is not None]
+        x["vacantes_regulares_2027"] = sum(vac) if vac else None
+        x["ponderaciones_2027"] = rs[0]["ponderaciones"]
+        x["exige_m2"] = rs[0]["exige_m2"]
+        x["hyc_o_ciencias"] = rs[0]["hyc_o_ciencias"]
+        x["puntaje_ponderado_minimo_2027"] = rs[0].get("puntaje_ponderado_minimo")
+        x["promedio_cl_m1_minimo_2027"] = rs[0].get("promedio_cl_m1_minimo")
+        if len(rs) > 1:
+            x["codigos_detalle"] = [{"codigo": r["codigo"], "nombre": r["nombre"], "vacantes": r["vacantes_regulares"]} for r in rs]
+        if "demre_2027" not in x["fuentes"]: x["fuentes"].append("demre_2027")
+
 def main():
     root = pathlib.Path(__file__).resolve().parent.parent
     data = root / "data"
     data.mkdir(exist_ok=True)
     ids = [x["id"] for x in P]
     assert len(ids) == len(set(ids)), "ids duplicados"
+    enriquecer(root)
     for x in P:
         for f in x["fuentes"]:
             assert f in FUENTES, f"fuente desconocida {f}"
     out = {
-        "version": "0.2", "consultado": CONSULTADO,
+        "version": "0.5", "consultado": CONSULTADO,
         "alcance": "Facultad/Escuela de Ingeniería (sede Santiago) + Ingeniería Comercial, 8 universidades",
         "fuentes": {k: {"nombre": v[0], "url": v[1]} for k, v in FUENTES.items()},
         "universidades": UNIVERSIDADES,
@@ -342,7 +399,7 @@ def main():
     }
     (data / "inventario.json").write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
     cols = ["id", "universidad", "nombre_oficial", "categoria", "tipo_ingreso", "en_alcance", "facultad",
-            "campus", "codigo_demre", "vacantes_regulares_2027", "nota"]
+            "campus", "codigo_demre", "vacantes_regulares_2027", "exige_m2", "nota"]
     with open(data / "inventario.csv", "w", newline="", encoding="utf-8-sig") as fh:
         w = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore")
         w.writeheader()

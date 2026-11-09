@@ -1,85 +1,86 @@
-﻿id,universidad,nombre_oficial,categoria,tipo_ingreso,en_alcance,facultad,campus,codigo_demre,vacantes_regulares_2027,nota
-uc-ingenieria,Pontificia Universidad Católica de Chile,Ingeniería,plan_comun,plan_comun,si,Facultad de Ingeniería,San Joaquín,12039,650,Ingreso único a Licenciatura en Ciencias de la Ingeniería con major; luego título de Ingeniero Civil UC en su especialidad. Exige M2 (pondera 15%).
-uc-lic-ciencia-datos,Pontificia Universidad Católica de Chile,Licenciatura en Ingeniería en Ciencia de Datos,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,San Joaquín,12089,80,Licenciatura (no título de ingeniero civil). Exige M2. Confirmar si es programa conjunto Ingeniería–Matemáticas.
-uc-lic-ciencia-computacion,Pontificia Universidad Católica de Chile,Licenciatura en Ingeniería en Ciencia de la Computación,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,San Joaquín,12100,100,Licenciatura (no título de ingeniero civil). Exige M2.
-uc-construccion-civil,Pontificia Universidad Católica de Chile,Construcción Civil,ing_no_civil,carrera_directa,si,Facultad de Ingeniería (Escuela de Construcción Civil),San Joaquín,12038,205,No lleva 'ingeniería' en el nombre pero se dicta en la Facultad de Ingeniería. No exige M2.
-uc-ing-recursos-naturales,Pontificia Universidad Católica de Chile,Ingeniería en Recursos Naturales,ing_no_civil,carrera_directa,si,Por confirmar (programa interdisciplinario),San Joaquín,12101,85,Confirmar facultad responsable antes de incluir.
-uc-ingenieria-comercial,Pontificia Universidad Católica de Chile,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Economía y Administración,San Joaquín,12014,418,No exige M2.
-uchile-plan-comun,Universidad de Chile,"Ingeniería y Ciencias, Plan Común",plan_comun,plan_comun,si,Facultad de Ciencias Físicas y Matemáticas (FCFM),Beauchef,11045,710,"Especialidad se elige tras dos años. Ingeniería Civil dura 11 semestres. Ponderaciones: NEM 10, Ranking 25, CL 10, M1 20, M2 20, Ciencias 15."
-uchile-ingenieria-comercial,Universidad de Chile,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Economía y Negocios (FEN),,11042,405,
-uchile-ing-informacion-control-gestion,Universidad de Chile,Ingeniería en Información y Control de Gestión,ing_no_civil,carrera_directa,no,Facultad de Economía y Negocios (FEN),,11027,146,"Ingeniería del área de negocios, no de la FCFM."
-usm-plan-comun,Universidad Técnica Federico Santa María,Ingeniería Civil Plan Común,plan_comun,plan_comun,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15300,,Ver data/planes_comunes.json: selección competitiva por ranking de primer año.
-usm-civil,Universidad Técnica Federico Santa María,Ingeniería Civil,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15311,,
-usm-civil-minas,Universidad Técnica Federico Santa María,Ingeniería Civil de Minas,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15312,,
-usm-civil-electrica,Universidad Técnica Federico Santa María,Ingeniería Civil Eléctrica,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15330,,
-usm-civil-fisica,Universidad Técnica Federico Santa María,Ingeniería Civil Física,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15384,,
-usm-civil-informatica,Universidad Técnica Federico Santa María,Ingeniería Civil Informática,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15360,,
-usm-civil-matematica,Universidad Técnica Federico Santa María,Ingeniería Civil Matemática,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15301,,
-usm-civil-mecanica,Universidad Técnica Federico Santa María,Ingeniería Civil Mecánica,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15340,,
-usm-civil-quimica,Universidad Técnica Federico Santa María,Ingeniería Civil Química,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15350,,
-usm-civil-telematica,Universidad Técnica Federico Santa María,Ingeniería Civil Telemática,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15361,,
-usm-diseno-productos,Universidad Técnica Federico Santa María,Ingeniería en Diseño de Productos,ing_no_civil,carrera_directa,si,USM (departamentos),San Joaquín,15381,,
-usm-civil-industrial,Universidad Técnica Federico Santa María,Ingeniería Civil Industrial,ing_civil,carrera_directa,si,USM (departamentos),Vitacura,15270,,
-usm-aviacion-comercial,Universidad Técnica Federico Santa María,Ingeniería en Aviación Comercial,ing_no_civil,carrera_directa,si,USM (departamentos),Vitacura,15220,,
-usm-ingenieria-comercial,Universidad Técnica Federico Santa María,Ingeniería Comercial,ing_comercial,carrera_directa,si,USM — Departamento de Ingeniería Comercial,Vitacura,15271,,
-usach-civil-biomedica,Universidad de Santiago de Chile,Ingeniería Civil Biomédica,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-en-ambiente,Universidad de Santiago de Chile,Ingeniería Civil en Ambiente,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-en-biotecnologia,Universidad de Santiago de Chile,Ingeniería Civil en Biotecnología,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-en-electricidad,Universidad de Santiago de Chile,Ingeniería Civil en Electricidad,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-en-geomensura-y-geomatica,Universidad de Santiago de Chile,Ingeniería Civil en Geomensura y Geomática,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-en-mecanica,Universidad de Santiago de Chile,Ingeniería Civil en Mecánica,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-en-metalurgia,Universidad de Santiago de Chile,Ingeniería Civil en Metalurgia,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-en-minas,Universidad de Santiago de Chile,Ingeniería Civil en Minas,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-en-obras-civiles,Universidad de Santiago de Chile,Ingeniería Civil en Obras Civiles,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-en-quimica,Universidad de Santiago de Chile,Ingeniería Civil en Química,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-en-telematica,Universidad de Santiago de Chile,Ingeniería Civil en Telemática,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-en-territorio-y-medio-ambiente,Universidad de Santiago de Chile,Ingeniería Civil en Territorio y Medio Ambiente,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-industrial,Universidad de Santiago de Chile,Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-mecatronica,Universidad de Santiago de Chile,Ingeniería Civil Mecatrónica,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-civil-informatica-plan-comun,Universidad de Santiago de Chile,Ingeniería Civil en Informática – Plan Común,plan_comun,plan_comun,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,90,Carrera nueva Admisión 2027 (90 vacantes según prensa). Especialidades por confirmar en Fase 3.
-usach-ejecucion-en-climatizacion,Universidad de Santiago de Chile,Ingeniería de Ejecución en Climatización,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-ejecucion-en-computacion-e-informatica,Universidad de Santiago de Chile,Ingeniería de Ejecución en Computación e Informática,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-ejecucion-en-electricidad,Universidad de Santiago de Chile,Ingeniería de Ejecución en Electricidad,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-ejecucion-en-mecanica,Universidad de Santiago de Chile,Ingeniería de Ejecución en Mecánica,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-ejecucion-en-metalurgia,Universidad de Santiago de Chile,Ingeniería de Ejecución en Metalurgia,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-ejecucion-en-minas,Universidad de Santiago de Chile,Ingeniería de Ejecución en Minas,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-ejecucion-en-quimica,Universidad de Santiago de Chile,Ingeniería de Ejecución en Química,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-ejecucion-industrial,Universidad de Santiago de Chile,Ingeniería de Ejecución Industrial,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",,,
-usach-ingenieria-comercial,Universidad de Santiago de Chile,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Administración y Economía (FAE),"Campus Usach, Estación Central",,,
-unab-civil,Universidad Andrés Bello,Ingeniería Civil,ing_civil,carrera_directa,si,Facultad de Ingeniería,,,,
-unab-civil-electrica,Universidad Andrés Bello,Ingeniería Civil Eléctrica,ing_civil,carrera_directa,si,Facultad de Ingeniería,,,,
-unab-civil-minas,Universidad Andrés Bello,Ingeniería Civil en Minas,ing_civil,carrera_directa,si,Facultad de Ingeniería,,,,
-unab-civil-industrial,Universidad Andrés Bello,Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería,Antonio Varas y Casona de Las Condes,,,Diurno y vespertino.
-unab-civil-informatica,Universidad Andrés Bello,Ingeniería Civil Informática,ing_civil,carrera_directa,si,Facultad de Ingeniería,Antonio Varas y Casona de Las Condes,,,
-unab-civil-biomedica,Universidad Andrés Bello,Ingeniería Civil Biomédica,ing_civil,carrera_directa,si,Por confirmar,Las Condes,,100,Carrera nueva Admisión 2027; no aparece aún en la nómina preliminar ni en el folleto 2026.
-unab-automatizacion-robotica,Universidad Andrés Bello,Ingeniería en Automatización y Robótica,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,,,,Diurno y vespertino.
-unab-computacion-informatica,Universidad Andrés Bello,Ingeniería en Computación e Informática,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,,,,Diurno y vespertino.
-unab-construccion,Universidad Andrés Bello,Ingeniería en Construcción,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,,,,
-unab-industrial,Universidad Andrés Bello,Ingeniería Industrial,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,,,,Diurno y vespertino.
-unab-ambiental,Universidad Andrés Bello,Ingeniería Ambiental,ing_no_civil,carrera_directa,si,Por confirmar,,,,
-unab-fisica,Universidad Andrés Bello,Ingeniería Física,ing_no_civil,carrera_directa,si,Por confirmar,,,,
-unab-biotecnologia,Universidad Andrés Bello,Ingeniería en Biotecnología,ing_no_civil,carrera_directa,si,Por confirmar,,,,
-unab-engineering-technology-management,Universidad Andrés Bello,Engineering and Technology Management,ing_no_civil,carrera_directa,si,Por confirmar,Las Condes,,60,Carrera nueva Admisión 2027.
-unab-ingenieria-comercial,Universidad Andrés Bello,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Economía y Negocios,Bellavista y Casona de Las Condes,,,Diurno y vespertino; 5 años.
-udp-plan-comun,Universidad Diego Portales,Ingeniería Civil Plan Común,plan_comun,plan_comun,si,Facultad de Ingeniería y Ciencias,,,,Primer año común; especialidad sin límite de cupos. Título profesional + magíster de continuidad.
-udp-civil-industrial,Universidad Diego Portales,Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,,,,
-udp-civil-obras-civiles,Universidad Diego Portales,Ingeniería Civil en Obras Civiles,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,,,,
-udp-civil-informatica-telecom,Universidad Diego Portales,Ingeniería Civil en Informática y Telecomunicaciones,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,,,,
-udp-civil-ciencia-datos-ia,Universidad Diego Portales,Ingeniería Civil en Ciencia de Datos e Inteligencia Artificial,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,,,,
-udp-ingenieria-comercial,Universidad Diego Portales,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Administración y Economía,Huechuraba,,,
-udp-control-gestion,Universidad Diego Portales,Ingeniería en Control de Gestión,ing_no_civil,carrera_directa,no,Facultad de Administración y Economía,Huechuraba,,,"Ingeniería del área de negocios, no de la Facultad de Ingeniería."
-uai-plan-comun,Universidad Adolfo Ibáñez,Ingeniería Civil (Plan Común),plan_comun,plan_comun,si,Facultad de Ingeniería y Ciencias,Peñalolén,,,En Santiago todas las ingenierías civiles entran por plan común (7 especialidades).
-uai-computer-science,Universidad Adolfo Ibáñez,Ingeniería en Computer Science,ing_no_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,Peñalolén,,,Ingreso directo. Exige M2.
-uai-bachillerato-ing-civil,Universidad Adolfo Ibáñez,Bachillerato de Ingeniería Civil,plan_comun,plan_comun,si,Facultad de Ingeniería y Ciencias,Peñalolén,,,Programa de entrada alternativo; confirmar diferencia con el plan común.
-uai-doble-arquitectura-industrial,Universidad Adolfo Ibáñez,Doble Título Arquitectura + Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias / Escuela de Arquitectura,Peñalolén,,,Doble título.
-uai-negocios-tecnologia,Universidad Adolfo Ibáñez,Ingeniería en Negocios y Tecnología,ing_no_civil,carrera_directa,si,Por confirmar,,,,
-uai-aeroespacial,Universidad Adolfo Ibáñez,Ingeniería Aeroespacial,ing_no_civil,carrera_directa,no,Facultad de Ingeniería y Ciencias,Base Aérea El Bosque (FACh),,,Aparece en la facultad pero no en la nómina DEMRE de Santiago; confirmar vía de ingreso.
-uai-ingenieria-comercial,Universidad Adolfo Ibáñez,Ingeniería Comercial,ing_comercial,carrera_directa,si,Escuela de Negocios,Peñalolén,,,"También existen Bachillerato de Ing. Comercial y dobles títulos (Derecho, Sociología)."
-udd-plan-comun,Universidad del Desarrollo,Ingeniería Civil Plan Común,plan_comun,plan_comun,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",,,Especialidad se elige tras 3 semestres; conduce a todas las carreras de la facultad salvo BioMedicina. Dura 11 semestres. Lista de especialidades basada en documento 2024.
-udd-civil-industrial,Universidad del Desarrollo,Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",,,
-udd-civil-obras-civiles,Universidad del Desarrollo,Ingeniería Civil en Obras Civiles,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",,,
-udd-civil-mineria,Universidad del Desarrollo,Ingeniería Civil en Minería,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",,,
-udd-civil-informatica-innovacion,Universidad del Desarrollo,Ingeniería Civil en Informática e Innovación Tecnológica,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",,,
-udd-civil-informatica-ia,Universidad del Desarrollo,Ingeniería Civil en Informática e Inteligencia Artificial,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",,,Carrera nueva.
-udd-civil-biomedicina,Universidad del Desarrollo,Ingeniería Civil en Biomedicina,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",,,Carrera nueva; no se accede por plan común.
-udd-ingenieria-comercial,Universidad del Desarrollo,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Economía y Negocios,"Campus Rector Ernesto Silva Bafalluy, Las Condes",,,"Nuevos dobles títulos 2027 con Derecho, Psicología y Diseño; también Bachillerato en Ing. Comercial."
+﻿id,universidad,nombre_oficial,categoria,tipo_ingreso,en_alcance,facultad,campus,codigo_demre,vacantes_regulares_2027,exige_m2,nota
+uc-ingenieria,Pontificia Universidad Católica de Chile,Ingeniería,plan_comun,plan_comun,si,Facultad de Ingeniería,San Joaquín,12039,650,True,Ingreso único a Licenciatura en Ciencias de la Ingeniería con major; luego título de Ingeniero Civil UC en su especialidad. Exige M2 (pondera 15%).
+uc-lic-ciencia-datos,Pontificia Universidad Católica de Chile,Licenciatura en Ingeniería en Ciencia de Datos,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,San Joaquín,12089,80,True,Licenciatura (no título de ingeniero civil). Exige M2. Confirmar si es programa conjunto Ingeniería–Matemáticas.
+uc-lic-ciencia-computacion,Pontificia Universidad Católica de Chile,Licenciatura en Ingeniería en Ciencia de la Computación,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,San Joaquín,12100,100,True,Licenciatura (no título de ingeniero civil). Exige M2.
+uc-construccion-civil,Pontificia Universidad Católica de Chile,Construcción Civil,ing_no_civil,carrera_directa,si,Facultad de Ingeniería (Escuela de Construcción Civil),San Joaquín,12038,205,False,No lleva 'ingeniería' en el nombre pero se dicta en la Facultad de Ingeniería. No exige M2.
+uc-ing-recursos-naturales,Pontificia Universidad Católica de Chile,Ingeniería en Recursos Naturales,ing_no_civil,carrera_directa,si,Por confirmar (programa interdisciplinario),San Joaquín,12101,85,True,Confirmar facultad responsable antes de incluir.
+uc-ingenieria-comercial,Pontificia Universidad Católica de Chile,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Economía y Administración,San Joaquín,12014,418,True,No exige M2.
+uchile-plan-comun,Universidad de Chile,"Ingeniería y Ciencias, Plan Común",plan_comun,plan_comun,si,Facultad de Ciencias Físicas y Matemáticas (FCFM),Beauchef,11045,710,True,"Especialidad se elige tras dos años. Ingeniería Civil dura 11 semestres. Ponderaciones: NEM 10, Ranking 25, CL 10, M1 20, M2 20, Ciencias 15."
+uchile-ingenieria-comercial,Universidad de Chile,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Economía y Negocios (FEN),,11042,405,True,
+uchile-ing-informacion-control-gestion,Universidad de Chile,Ingeniería en Información y Control de Gestión,ing_no_civil,carrera_directa,no,Facultad de Economía y Negocios (FEN),,11027,146,,"Ingeniería del área de negocios, no de la FCFM."
+usm-plan-comun,Universidad Técnica Federico Santa María,Ingeniería Civil Plan Común,plan_comun,plan_comun,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15300,130,True,Ver data/planes_comunes.json: selección competitiva por ranking de primer año.
+usm-civil,Universidad Técnica Federico Santa María,Ingeniería Civil,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15311,75,True,
+usm-civil-minas,Universidad Técnica Federico Santa María,Ingeniería Civil de Minas,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15312,100,True,
+usm-civil-electrica,Universidad Técnica Federico Santa María,Ingeniería Civil Eléctrica,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15330,60,True,
+usm-civil-fisica,Universidad Técnica Federico Santa María,Ingeniería Civil Física,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15384,40,True,
+usm-civil-informatica,Universidad Técnica Federico Santa María,Ingeniería Civil Informática,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15360,135,True,
+usm-civil-matematica,Universidad Técnica Federico Santa María,Ingeniería Civil Matemática,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15301,35,True,
+usm-civil-mecanica,Universidad Técnica Federico Santa María,Ingeniería Civil Mecánica,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15340,75,True,
+usm-civil-quimica,Universidad Técnica Federico Santa María,Ingeniería Civil Química,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15350,50,True,
+usm-civil-telematica,Universidad Técnica Federico Santa María,Ingeniería Civil Telemática,ing_civil,carrera_directa,si,"USM (organizada por departamentos, sin facultades)",San Joaquín,15361,75,True,
+usm-diseno-productos,Universidad Técnica Federico Santa María,Ingeniería en Diseño de Productos,ing_no_civil,carrera_directa,si,USM (departamentos),San Joaquín,15381,30,True,
+usm-civil-industrial,Universidad Técnica Federico Santa María,Ingeniería Civil Industrial,ing_civil,carrera_directa,si,USM (departamentos),Vitacura,15270,140,True,
+usm-aviacion-comercial,Universidad Técnica Federico Santa María,Ingeniería en Aviación Comercial,ing_no_civil,carrera_directa,si,USM (departamentos),Vitacura,15220,40,True,
+usm-ingenieria-comercial,Universidad Técnica Federico Santa María,Ingeniería Comercial,ing_comercial,carrera_directa,si,USM — Departamento de Ingeniería Comercial,Vitacura,15271,200,False,
+usach-civil-biomedica,Universidad de Santiago de Chile,Ingeniería Civil Biomédica,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16101,55,True,
+usach-civil-en-ambiente,Universidad de Santiago de Chile,Ingeniería Civil en Ambiente,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16105,40,True,
+usach-civil-en-biotecnologia,Universidad de Santiago de Chile,Ingeniería Civil en Biotecnología,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16104,55,True,
+usach-civil-en-electricidad,Universidad de Santiago de Chile,Ingeniería Civil en Electricidad,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16001,95,True,
+usach-civil-en-geomensura-y-geomatica,Universidad de Santiago de Chile,Ingeniería Civil en Geomensura y Geomática,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16107,30,True,
+usach-civil-en-mecanica,Universidad de Santiago de Chile,Ingeniería Civil en Mecánica,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16005,110,True,
+usach-civil-en-metalurgia,Universidad de Santiago de Chile,Ingeniería Civil en Metalurgia,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16006,50,True,
+usach-civil-en-minas,Universidad de Santiago de Chile,Ingeniería Civil en Minas,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16007,90,True,
+usach-civil-en-obras-civiles,Universidad de Santiago de Chile,Ingeniería Civil en Obras Civiles,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16008,90,True,
+usach-civil-en-quimica,Universidad de Santiago de Chile,Ingeniería Civil en Química,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16009,85,True,
+usach-civil-en-telematica,Universidad de Santiago de Chile,Ingeniería Civil en Telemática,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16102,60,True,
+usach-civil-en-territorio-y-medio-ambiente,Universidad de Santiago de Chile,Ingeniería Civil en Territorio y Medio Ambiente,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16111,25,True,
+usach-civil-industrial,Universidad de Santiago de Chile,Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16003,120,True,
+usach-civil-mecatronica,Universidad de Santiago de Chile,Ingeniería Civil Mecatrónica,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16103,110,True,
+usach-civil-informatica-plan-comun,Universidad de Santiago de Chile,Ingeniería Civil en Informática – Plan Común,plan_comun,plan_comun,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16113,90,True,Carrera nueva Admisión 2027 (90 vacantes según prensa). Especialidades por confirmar en Fase 3.
+usach-ejecucion-en-climatizacion,Universidad de Santiago de Chile,Ingeniería de Ejecución en Climatización,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16021,30,True,
+usach-ejecucion-en-computacion-e-informatica,Universidad de Santiago de Chile,Ingeniería de Ejecución en Computación e Informática,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16014,40,True,
+usach-ejecucion-en-electricidad,Universidad de Santiago de Chile,Ingeniería de Ejecución en Electricidad,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16011,60,True,
+usach-ejecucion-en-mecanica,Universidad de Santiago de Chile,Ingeniería de Ejecución en Mecánica,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16015,50,True,
+usach-ejecucion-en-metalurgia,Universidad de Santiago de Chile,Ingeniería de Ejecución en Metalurgia,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16016,25,True,
+usach-ejecucion-en-minas,Universidad de Santiago de Chile,Ingeniería de Ejecución en Minas,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16017,70,True,
+usach-ejecucion-en-quimica,Universidad de Santiago de Chile,Ingeniería de Ejecución en Química,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16019,35,True,
+usach-ejecucion-industrial,Universidad de Santiago de Chile,Ingeniería de Ejecución Industrial,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Usach, Estación Central",16013,70,True,
+usach-ingenieria-comercial,Universidad de Santiago de Chile,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Administración y Economía (FAE),"Campus Usach, Estación Central",16035,430,True,
+unab-civil,Universidad Andrés Bello,Ingeniería Civil,ing_civil,carrera_directa,si,Facultad de Ingeniería,,41044,150,True,
+unab-civil-electrica,Universidad Andrés Bello,Ingeniería Civil Eléctrica,ing_civil,carrera_directa,si,Facultad de Ingeniería,,41204,180,True,
+unab-civil-minas,Universidad Andrés Bello,Ingeniería Civil en Minas,ing_civil,carrera_directa,si,Facultad de Ingeniería,,41130,210,True,
+unab-civil-industrial,Universidad Andrés Bello,Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería,Antonio Varas y Casona de Las Condes,"['41046', '41206']",695,True,Diurno y vespertino.
+unab-civil-informatica,Universidad Andrés Bello,Ingeniería Civil Informática,ing_civil,carrera_directa,si,Facultad de Ingeniería,Antonio Varas y Casona de Las Condes,"['41045', '41207']",500,True,
+unab-civil-biomedica,Universidad Andrés Bello,Ingeniería Civil Biomédica,ing_civil,carrera_directa,si,Por confirmar,Las Condes,41227,100,True,Carrera nueva Admisión 2027; no aparece aún en la nómina preliminar ni en el folleto 2026.
+unab-automatizacion-robotica,Universidad Andrés Bello,Ingeniería en Automatización y Robótica,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,,41047,110,True,Diurno y vespertino.
+unab-computacion-informatica,Universidad Andrés Bello,Ingeniería en Computación e Informática,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,,41048,320,True,Diurno y vespertino.
+unab-construccion,Universidad Andrés Bello,Ingeniería en Construcción,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,,41049,100,True,
+unab-industrial,Universidad Andrés Bello,Ingeniería Industrial,ing_no_civil,carrera_directa,si,Facultad de Ingeniería,,41055,90,True,Diurno y vespertino.
+unab-ambiental,Universidad Andrés Bello,Ingeniería Ambiental,ing_no_civil,carrera_directa,si,Por confirmar,,41024,70,True,
+unab-fisica,Universidad Andrés Bello,Ingeniería Física,ing_no_civil,carrera_directa,si,Por confirmar,,41011,60,True,
+unab-biotecnologia,Universidad Andrés Bello,Ingeniería en Biotecnología,ing_no_civil,carrera_directa,si,Por confirmar,,41006,80,True,
+unab-engineering-technology-management,Universidad Andrés Bello,Engineering and Technology Management,ing_no_civil,carrera_directa,si,Por confirmar,Las Condes,41226,60,True,Carrera nueva Admisión 2027.
+unab-computer-science-engineering,Universidad Andrés Bello,Computer Science Engineering,ing_no_civil,carrera_directa,si,Por confirmar,Las Condes,41222,60,True,Carrera detectada en la oferta DEMRE 2027 (no figuraba en folleto 2026 ni en la nómina preliminar).
+unab-ingenieria-comercial,Universidad Andrés Bello,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Economía y Negocios,Bellavista y Casona de Las Condes,"['41129', '41028']",980,False,Diurno y vespertino; 5 años.
+udp-plan-comun,Universidad Diego Portales,Ingeniería Civil Plan Común,plan_comun,plan_comun,si,Facultad de Ingeniería y Ciencias,,38080,180,True,Primer año común; especialidad sin límite de cupos. Título profesional + magíster de continuidad.
+udp-civil-industrial,Universidad Diego Portales,Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,,38174,280,True,
+udp-civil-obras-civiles,Universidad Diego Portales,Ingeniería Civil en Obras Civiles,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,,38176,85,True,
+udp-civil-informatica-telecom,Universidad Diego Portales,Ingeniería Civil en Informática y Telecomunicaciones,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,,38175,185,True,
+udp-civil-ciencia-datos-ia,Universidad Diego Portales,Ingeniería Civil en Ciencia de Datos e Inteligencia Artificial,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,,38346,65,True,
+udp-ingenieria-comercial,Universidad Diego Portales,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Administración y Economía,Huechuraba,38003,360,False,
+udp-control-gestion,Universidad Diego Portales,Ingeniería en Control de Gestión,ing_no_civil,carrera_directa,no,Facultad de Administración y Economía,Huechuraba,38292,125,False,"Ingeniería del área de negocios, no de la Facultad de Ingeniería."
+uai-plan-comun,Universidad Adolfo Ibáñez,Ingeniería Civil (Plan Común),plan_comun,plan_comun,si,Facultad de Ingeniería y Ciencias,Peñalolén,42002,405,True,En Santiago todas las ingenierías civiles entran por plan común (7 especialidades).
+uai-computer-science,Universidad Adolfo Ibáñez,Ingeniería en Computer Science,ing_no_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias,Peñalolén,42202,35,True,Ingreso directo. Exige M2.
+uai-bachillerato-ing-civil,Universidad Adolfo Ibáñez,Bachillerato de Ingeniería Civil,plan_comun,plan_comun,si,Facultad de Ingeniería y Ciencias,Peñalolén,42012,55,False,Programa de entrada alternativo; confirmar diferencia con el plan común.
+uai-doble-arquitectura-industrial,Universidad Adolfo Ibáñez,Doble Título Arquitectura + Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería y Ciencias / Escuela de Arquitectura,Peñalolén,42106,35,True,Doble título.
+uai-negocios-tecnologia,Universidad Adolfo Ibáñez,Ingeniería en Negocios y Tecnología,ing_no_civil,carrera_directa,si,Por confirmar,,42101,30,False,
+uai-aeroespacial,Universidad Adolfo Ibáñez,Ingeniería Aeroespacial,ing_no_civil,carrera_directa,no,Facultad de Ingeniería y Ciencias,Base Aérea El Bosque (FACh),,,,Aparece en la facultad pero no en la nómina DEMRE de Santiago; confirmar vía de ingreso.
+uai-ingenieria-comercial,Universidad Adolfo Ibáñez,Ingeniería Comercial,ing_comercial,carrera_directa,si,Escuela de Negocios,Peñalolén,42001,420,False,"También existen Bachillerato de Ing. Comercial y dobles títulos (Derecho, Sociología)."
+udd-plan-comun,Universidad del Desarrollo,Ingeniería Civil Plan Común,plan_comun,plan_comun,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",44043,180,True,Especialidad se elige tras 3 semestres; conduce a todas las carreras de la facultad salvo BioMedicina. Dura 11 semestres. Lista de especialidades basada en documento 2024.
+udd-civil-industrial,Universidad del Desarrollo,Ingeniería Civil Industrial,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",44015,80,True,
+udd-civil-obras-civiles,Universidad del Desarrollo,Ingeniería Civil en Obras Civiles,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",44014,50,True,
+udd-civil-mineria,Universidad del Desarrollo,Ingeniería Civil en Minería,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",44039,100,True,
+udd-civil-informatica-innovacion,Universidad del Desarrollo,Ingeniería Civil en Informática e Innovación Tecnológica,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",44046,35,True,
+udd-civil-informatica-ia,Universidad del Desarrollo,Ingeniería Civil en Informática e Inteligencia Artificial,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",44052,25,True,Carrera nueva.
+udd-civil-biomedicina,Universidad del Desarrollo,Ingeniería Civil en Biomedicina,ing_civil,carrera_directa,si,Facultad de Ingeniería,"Campus Rector Ernesto Silva Bafalluy, Las Condes",44051,25,True,Carrera nueva; no se accede por plan común.
+udd-ingenieria-comercial,Universidad del Desarrollo,Ingeniería Comercial,ing_comercial,carrera_directa,si,Facultad de Economía y Negocios,"Campus Rector Ernesto Silva Bafalluy, Las Condes",44008,135,False,"Nuevos dobles títulos 2027 con Derecho, Psicología y Diseño; también Bachillerato en Ing. Comercial."

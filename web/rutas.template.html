@@ -24,7 +24,7 @@
   color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font:400 1rem/1.55 var(--f-body);
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px}
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
 .wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
 h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.15}
 h1{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:700}
@@ -94,10 +94,14 @@ a.chip:hover{border-color:var(--accent);color:var(--accent)}
 .sources{font-size:.85rem;color:var(--muted);display:flex;flex-direction:column;gap:4px}
 .sources ul{margin:0;padding-left:18px}
 footer{font-size:.82rem;color:var(--muted)}
+.topnav{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:.92rem;border-bottom:1px solid var(--line);padding-bottom:10px}
+.topnav a{text-decoration:none;color:var(--muted);font-weight:600}
+.topnav a[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--accent)}
 @media (prefers-reduced-motion:no-preference){.route{animation:in .25s ease-out}@keyframes in{from{transform:translateY(4px)}to{transform:none}}}
 </style>
 
 <div class="wrap">
+  __NAV__
   <header style="display:flex;flex-direction:column;gap:10px">
     <h1>¿Cómo se llega a una ingeniería?</h1>
     <p class="lede">En varias universidades no se postula a una carrera específica sino a un <b>plan común</b>: unos semestres compartidos y después se elige la especialidad. Lo que cambia entre universidades es <b>cuándo</b> se elige y <b>si hay cupos</b>. Elige una universidad para ver su ruta.</p>
