@@ -125,7 +125,7 @@ function pintar(res){
     <div><h2>Resultados</h2><p class="small" style="margin-top:4px">Ponderaciones y requisitos: ${esc(D.bases.ponderaciones)}. Cortes: ${esc(D.bases.cortes)}.</p></div>
     <div class="summary">${sum("todas","")}${sum("ok","ok")}${sum("poco","warn")}${sum("dificil","bad")}${sum("muy","bad")}${sum("sin","na")}${sum("req","na")}</div>
     <div class="filters"><label>Área <select id="f-area"><option value="todas">Todas</option>${D.areas.map(a=>`<option value="${a.id}" ${a.id===areaSel?"selected":""}>${esc(a.nombre)}</option>`).join("")}</select></label>
-      <label>Universidad <select id="f-uni"><option value="todas">Todas</option>${Object.entries(UNI).map(([k,v])=>`<option value="${k}" ${k===uniSel?"selected":""}>${v}</option>`).join("")}</select></label></div>
+      <label>Universidad <select id="f-uni"><option value="todas">Todas</option>${Object.entries(UNI).filter(([k])=>D.foco.includes(k)).map(([k,v])=>`<option value="${k}" ${k===uniSel?"selected":""}>${v}</option>`).join("")}</select></label></div>
     <div class="tablewrap"><table class="data"><thead><tr><th>Universidad</th><th>Carrera</th><th class="num">Tu ponderado</th><th class="num">Corte 2026</th><th class="num">Diferencia</th><th>Estado</th></tr></thead><tbody>${
       vis.map(r=>{const p=r.p,c=p.corte_2026; const m1w=p.ponderaciones.m1;
         const subir = r.diff!=null && r.diff<0 && m1w ? `<div class="how">≈ +${Math.ceil(-r.diff*100/m1w)} pts en M1 (pondera ${m1w}%)</div>` : "";
@@ -142,7 +142,7 @@ document.getElementById("calc").onclick = calcular;
 document.getElementById("ej").onclick = ()=>{ poner(EJEMPLO); filtroCat="todas"; calcular(); document.getElementById("estado").textContent="Puntajes de ejemplo, no son de nadie en particular."; };
 document.getElementById("limpiar").onclick = ()=>{ poner({}); document.getElementById("res").innerHTML=""; try{localStorage.removeItem("sim-puntajes");localStorage.removeItem("sim-resultado")}catch(e){} };
 document.getElementById("form").addEventListener("keydown", e=>{ if(e.key==="Enter"){ e.preventDefault(); calcular(); } });
-document.getElementById("pie").innerHTML = `Fuentes: <a href="${D.fuentes.demre}" target="_blank" rel="noopener">Oferta Definitiva DEMRE 2027</a> · ${Object.values(D.fuentes.cortes).map(f=>`<a href="${f.url}" target="_blank" rel="noopener">${esc(f.nombre)}</a>${f.oficial?"":" (secundaria)"}`).join(" · ")}. En USACH, seis carreras solo muestran la última matrícula 2025 y se usa ese dato (se indica en la fila). UNAB no publica cortes: sus carreras aparecen como "sin corte publicado". Consultado el ${D.consultado.split("-").reverse().join("-")}.`;
+document.getElementById("pie").innerHTML = `Fuentes: <a href="${D.fuentes.demre}" target="_blank" rel="noopener">Oferta Definitiva DEMRE 2027</a> · ${Object.values(D.fuentes.cortes).map(f=>`<a href="${f.url}" target="_blank" rel="noopener">${esc(f.nombre)}</a>${f.oficial?"":" (secundaria)"}`).join(" · ")}. En USACH, seis carreras solo muestran la última matrícula 2025 y se usa ese dato (se indica en la fila). Las carreras sin corte publicado aparecen como "sin corte publicado". Consultado el ${D.consultado.split("-").reverse().join("-")}.`;
 let guardado=null; try{ guardado=JSON.parse(localStorage.getItem("sim-puntajes")||"null") }catch(e){}
 poner(guardado || EJEMPLO); calcular();
 if(!guardado) document.getElementById("estado").textContent="Se muestran puntajes de ejemplo. Reemplázalos por los tuyos.";

@@ -3,7 +3,9 @@
 Áreas: agrupación propia de las 21 familias de carreras según el tipo de problema que resuelven y las habilidades que
 comparten (ver data/habilidades.json). 'vinculadas' indica áreas con las que comparten base o se cruzan.
 """
-import json, pathlib
+import json, pathlib, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from config import FOCO
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 D = lambda f: json.loads((ROOT / "data" / f).read_text(encoding="utf-8"))
@@ -52,7 +54,7 @@ def main():
     # casos sin perfil propio
     extra = {"uai-bachillerato-ing-civil": "uai-plan-comun", "uai-doble-arquitectura-industrial": None, "udd-ingenieria-comercial": None,
              "uai-ingenieria-comercial": None, "usach-civil-informatica-plan-comun": None}
-    familias_prog["uai-bachillerato-ing-civil"] = set(familias_prog.get("uai-plan-comun", set()))
+    familias_prog["uai-bachillerato-ing-civil"] = set(familias_prog.get("uai-plan-comun", set())) or {"industrial"}
     familias_prog["uai-doble-arquitectura-industrial"] = {"industrial"}
     familias_prog["udd-ingenieria-comercial"] = {"comercial"}
     familias_prog["uai-ingenieria-comercial"] = {"comercial"}
@@ -60,7 +62,7 @@ def main():
     pcs = {p["programa_id"]: p for p in pc["planes_comunes"]}
     programas = []
     for x in inv["programas"]:
-        if x["en_alcance"] != "si":
+        if x["en_alcance"] != "si" or x["universidad_id"] not in FOCO:
             continue
         fams = sorted(familias_prog.get(x["id"], set()))
         assert fams, f"sin familia: {x['id']}"
@@ -85,13 +87,13 @@ def main():
         "version": "0.6", "consultado": "2026-11-08",
         "bases": {"ponderaciones": "Oferta Definitiva DEMRE, Admisión 2027 (24-09-2026)",
                   "cortes": "Admisión 2026 (último proceso con resultados publicados)"},
-        "universidades": inv["universidades"],
+        "universidades": {k: v for k, v in inv["universidades"].items() if k in FOCO}, "foco": FOCO,
         "areas": AREAS,
         "familias": [{k: f[k] for k in ("id", "nombre", "n_perfiles", "que_hace", "te_puede_gustar_si", "distintivas", "porcentaje", "diferencia_vs_promedio")}
                      | {"area": fam_de_area[f["id"]]} for f in hab["familias"]],
         "habilidades": hab["habilidades"], "promedio_habilidades": hab["promedio_general"],
         "programas": programas,
-        "fuentes": {"demre": "https://demre.cl/publicaciones/pdf/2027-26-09-24-oferta-definitiva-carreras-p2027.pdf", "cortes": cortes["fuentes"]},
+        "fuentes": {"demre": "https://demre.cl/publicaciones/pdf/2027-26-09-24-oferta-definitiva-carreras-p2027.pdf", "cortes": {k: v for k, v in cortes["fuentes"].items() if k in {cortes["programas"][p["id"]]["fuente"] for p in programas if p["id"] in cortes["programas"]}}},
         "nota_cortes": cortes["nota"],
     }
     (ROOT / "data" / "plataforma.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")

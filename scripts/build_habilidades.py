@@ -153,6 +153,10 @@ FAM = {
 }
 
 def main():
+    from config import FOCO
+    global FAM
+    FAM = {k: (n, [i for i in ids if i.split('-')[0] in FOCO], t) for k, (n, ids, t) in FAM.items()}
+    FAM = {k: v for k, v in FAM.items() if v[1]}
     perf = {}
     for f in sorted(glob.glob(str(ROOT / "data" / "perfiles" / "*.json"))):
         for k, v in json.load(open(f, encoding="utf-8")).items():

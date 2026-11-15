@@ -64,6 +64,25 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .bar.lic{background:var(--accent-soft);color:var(--accent)}
 .bar.tit{background:var(--info-soft);color:var(--info)}
 .bar.unk{background:repeating-linear-gradient(45deg,var(--na-soft) 0 8px,transparent 8px 16px);color:var(--na);border:1px dashed var(--line)}
+.bar.lic2{background:var(--info-soft);color:var(--info)}
+.etapas{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.etapa{border-left:3px solid var(--line);padding:4px 0 4px 12px;display:flex;flex-direction:column;gap:3px}
+.etapa.e0{border-color:var(--accent)}.etapa.e1{border-color:var(--info)}.etapa.e2{border-color:var(--ink)}
+.etapa .k{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.etapa b{font-weight:600}
+.etapa span{font-size:.88rem;color:var(--muted)}
+.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;background:var(--info-soft);border-radius:10px;padding:12px 14px}
+.gloss div{font-size:.9rem}
+.grp{display:flex;flex-direction:column;gap:8px}
+.grp h4{margin:6px 0 0;font-size:.95rem;font-weight:600}
+.grp p{margin:0;font-size:.86rem;color:var(--muted)}
+dl.kv{margin:0;display:grid;grid-template-columns:auto 1fr;gap:3px 10px;font-size:.86rem}
+dl.kv dt{color:var(--muted)}
+dl.kv dd{margin:0}
+.mchips{display:flex;flex-wrap:wrap;gap:4px}
+.mchips span{font-size:.76rem;border:1px solid var(--line);border-radius:5px;padding:1px 6px;background:var(--bg)}
+.cont{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.cont article{border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:.9rem;display:flex;flex-direction:column;gap:6px}
 .ruler-note{font-size:.85rem;color:var(--muted);margin-top:6px}
 
 .rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
@@ -135,7 +154,11 @@ function ruler(p){
   const cells = n => Array.from({length:12},(_,i)=>`<div class="sem">S${i+1}</div>`).join("");
   let bars = "", note = "";
   const id = p.universidad_id, pc = p.duracion_plan_comun_semestres;
-  if (id === "uc"){
+  if (p.etapas){
+    const cls=["pc","lic2","esp"];
+    bars = p.etapas.map((e,i)=>`<div class="bar ${cls[i]||"esp"}" style="grid-column:${e.semestres[0]} / span ${e.semestres[1]-e.semestres[0]+1}">${esc(e.nombre)}</div>`).join("");
+    note = `Se elige especialidad al terminar el semestre ${pc}. Duración total: ${p.duracion_total}.`;
+  } else if (id === "uc"){
     bars = `<div class="bar lic" style="grid-column:1 / span 8">Licenciatura: ciencias básicas + major + minor</div>
             <div class="bar tit" style="grid-column:9 / span 4">Título (duración variable)</div>`;
     note = "El major se cursa dentro de los 4 años de licenciatura; el título se articula después.";
@@ -172,7 +195,23 @@ function render(id){
   const mid = p.etapa_intermedia ? `<div class="mid"><h3>Paso intermedio: ${esc(p.etapa_intermedia.nombre)} (${p.etapa_intermedia.opciones.length})</h3>
     <div class="chips">${p.etapa_intermedia.opciones.map(o=>`<a class="chip" href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.nombre)}</a>`).join("")}</div></div>` : "";
 
-  const outs = p.salidas.length ? p.salidas.map(o=>{
+  const card = o => {
+    const ni = o.tipo==="no_ingenieria";
+    const tp = o.titulo_profesional ? esc(o.titulo_profesional) : `<span style="color:var(--muted)">No entrega título profesional</span>`;
+    return `<article class="out${ni?" ni":""}"><div class="out-name">${esc(o.nombre)}</div>
+      <dl class="kv"><dt>Título</dt><dd>${tp}</dd><dt>Grado</dt><dd>${esc(o.grado)}</dd><dt>Duración</dt><dd>${o.duracion_semestres} semestres en total</dd></dl>
+      ${o.menciones&&o.menciones.length?`<div><div class="small" style="font-size:.78rem;color:var(--muted);margin-bottom:3px">${o.menciones.length>3?"Líneas de especialización":"Menciones"}</div><div class="mchips">${o.menciones.map(m=>`<span>${esc(m)}</span>`).join("")}</div></div>`:""}
+      ${o.despues?`<div class="out-note">${esc(o.despues)}</div>`:""}
+      <div class="out-foot"><a class="malla" href="${esc(o.malla_url)}" target="_blank" rel="noopener">Ficha y malla oficial</a></div></article>`;
+  };
+  const GRUPOS = {ingenieria:["Ingenierías civiles","Título profesional de Ingeniero/a Civil + grado de Licenciado/a en Ciencias de la Ingeniería. 11 semestres."],
+    tierra:["Ciencias de la Tierra","Título profesional (Geólogo/a o Geofísico/a) + grado de Licenciado/a en Ciencias. No son ingenierías."],
+    licenciatura:["Licenciaturas en ciencias","Solo grado académico, sin título profesional. 8 semestres; pensadas para seguir a magíster o doctorado."]};
+  const detallado = p.salidas.length && p.salidas.every(o=>o.grado);
+  const outs = detallado ? Object.entries(GRUPOS).map(([g,[t,d]])=>{
+      const xs=p.salidas.filter(o=>o.grupo===g); if(!xs.length) return "";
+      return `<div class="grp"><h4>${t} (${xs.length})</h4><p>${d}</p><div class="outs">${xs.map(card).join("")}</div></div>`;
+    }).join("") : p.salidas.length ? p.salidas.map(o=>{
     const ni = o.tipo==="no_ingenieria";
     const titulo = o.titulo && o.titulo!==o.nombre ? `<div class="out-title">${esc(o.titulo)}</div>` : "";
     const malla = o.malla_url ? `<a class="malla" href="${esc(o.malla_url)}" target="_blank" rel="noopener">Ver malla</a>` : `<span class="nomalla">Malla pendiente</span>`;
@@ -192,13 +231,16 @@ function render(id){
     </div>
     <p>${esc(p.resumen)}${extra}</p>
     ${ruler(p)}
+    ${p.etapas?`<div class="etapas">${p.etapas.map((e,i)=>`<div class="etapa e${i}"><span class="k">Semestres ${e.semestres[0]}–${e.semestres[1]} · ${esc(e.ciclo)}</span><b>${esc(e.nombre)}</b><span>${esc(e.que_pasa)}</span></div>`).join("")}</div>${p.etapas_nota?`<p class="ruler-note">${esc(p.etapas_nota)}</p>`:""}`:""}
     <div class="rules">${rules.map(r=>`<div class="rule"><span class="k">${r[0]}</span><span class="v">${esc(r[1])}</span></div>`).join("")}</div>
     ${callouts.join("")}
     ${mid}
     <div style="display:flex;flex-direction:column;gap:10px">
       <h3>${id==="uc" ? "Títulos a los que se accede" : "Carreras a las que se accede"} (${p.salidas.length})</h3>
-      <div class="outs">${outs}</div>
+      ${p.glosario?`<div class="gloss">${p.glosario.map(g=>`<div><b>${esc(g.termino)}:</b> ${esc(g.explicacion)}</div>`).join("")}</div>`:""}
+      ${detallado?outs:`<div class="outs">${outs}</div>`}
     </div>
+    ${p.continuidad?`<div style="display:flex;flex-direction:column;gap:10px"><h3>Después del título: seguir estudiando</h3><div class="cont">${p.continuidad.map(c=>`<article><b>${esc(c.nombre)}</b><span>${esc(c.detalle)}</span><a href="${esc(c.url)}" target="_blank" rel="noopener" style="font-size:.85rem">Fuente oficial</a></article>`).join("")}</div></div>`:""}
     <div class="sources"><h3>Fuentes</h3><ul>${p.fuentes.map(f=>`<li><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.nombre)}</a></li>`).join("")}</ul></div>
   </div>`;
   document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected", t.dataset.id===id));

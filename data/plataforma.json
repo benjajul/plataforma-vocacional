@@ -10,11 +10,15 @@
   "uchile": "Universidad de Chile",
   "usm": "Universidad Técnica Federico Santa María",
   "usach": "Universidad de Santiago de Chile",
-  "unab": "Universidad Andrés Bello",
-  "udp": "Universidad Diego Portales",
-  "uai": "Universidad Adolfo Ibáñez",
-  "udd": "Universidad del Desarrollo"
+  "udp": "Universidad Diego Portales"
  },
+ "foco": [
+  "uchile",
+  "uc",
+  "usm",
+  "usach",
+  "udp"
+ ],
  "areas": [
   {
    "id": "gestion",
@@ -122,7 +126,7 @@
   {
    "id": "industrial",
    "nombre": "Ingeniería Industrial",
-   "n_perfiles": 11,
+   "n_perfiles": 6,
    "que_hace": "Mejora cómo funcionan las organizaciones: procesos, logística, costos y decisiones. Usa modelos matemáticos y datos para encontrar la mejor forma de hacer algo con los recursos disponibles.",
    "te_puede_gustar_si": [
     "Te gusta organizar cosas y encontrar la forma más eficiente de hacerlas.",
@@ -130,51 +134,51 @@
     "Te atrae la idea de tener muchas puertas abiertas: finanzas, operaciones, tecnología o consultoría."
    ],
    "distintivas": [
-    "NEG",
-    "OPER",
     "MAT",
-    "INNO"
+    "NEG",
+    "DIS",
+    "SOST"
    ],
    "porcentaje": {
-    "MAT": 0.64,
-    "PROG": 0.09,
-    "DATA": 0.36,
-    "DIS": 0.64,
-    "OPER": 0.91,
+    "MAT": 1.0,
+    "PROG": 0.17,
+    "DATA": 0.33,
+    "DIS": 0.83,
+    "OPER": 1.0,
     "GEST": 1.0,
     "NEG": 1.0,
-    "CIEN": 0.36,
-    "INFRA": 0.09,
-    "INV": 0.18,
-    "INNO": 0.73,
-    "EQ": 0.73,
-    "COM": 0.45,
-    "ETI": 0.73,
-    "SOST": 0.73
+    "CIEN": 0.33,
+    "INFRA": 0.17,
+    "INV": 0.33,
+    "INNO": 0.67,
+    "EQ": 0.5,
+    "COM": 0.17,
+    "ETI": 0.67,
+    "SOST": 0.67
    },
    "diferencia_vs_promedio": {
-    "MAT": 0.23,
-    "PROG": -0.2,
-    "DATA": 0.09,
-    "DIS": -0.01,
+    "MAT": 0.48,
+    "PROG": -0.1,
+    "DATA": 0.11,
+    "DIS": 0.15,
     "OPER": 0.3,
-    "GEST": 0.17,
-    "NEG": 0.38,
-    "CIEN": -0.17,
-    "INFRA": -0.35,
-    "INV": -0.1,
-    "INNO": 0.15,
-    "EQ": 0.15,
-    "COM": 0.2,
-    "ETI": 0.14,
-    "SOST": 0.15
+    "GEST": 0.2,
+    "NEG": 0.34,
+    "CIEN": -0.24,
+    "INFRA": -0.32,
+    "INV": -0.04,
+    "INNO": 0.07,
+    "EQ": -0.02,
+    "COM": -0.04,
+    "ETI": 0.06,
+    "SOST": 0.09
    },
    "area": "gestion"
   },
   {
    "id": "informatica",
    "nombre": "Ingeniería Informática y Computación",
-   "n_perfiles": 12,
+   "n_perfiles": 6,
    "que_hace": "Diseña y construye software y sistemas computacionales: aplicaciones, plataformas, bases de datos, seguridad informática. Combina lógica, matemáticas y trabajo con equipos y clientes.",
    "te_puede_gustar_si": [
     "Te entretiene entender cómo funcionan los programas, juegos o apps por dentro.",
@@ -183,50 +187,50 @@
    ],
    "distintivas": [
     "PROG",
+    "MAT",
     "DIS",
-    "EQ",
-    "ETI"
+    "INV"
    ],
    "porcentaje": {
-    "MAT": 0.42,
+    "MAT": 0.83,
     "PROG": 1.0,
     "DATA": 0.33,
-    "DIS": 0.75,
-    "OPER": 0.25,
-    "GEST": 0.67,
-    "NEG": 0.08,
+    "DIS": 0.83,
+    "OPER": 0.5,
+    "GEST": 0.5,
+    "NEG": 0.0,
     "CIEN": 0.17,
     "INFRA": 0.0,
-    "INV": 0.33,
-    "INNO": 0.5,
-    "EQ": 0.67,
-    "COM": 0.42,
-    "ETI": 0.67,
-    "SOST": 0.25
+    "INV": 0.5,
+    "INNO": 0.67,
+    "EQ": 0.5,
+    "COM": 0.17,
+    "ETI": 0.5,
+    "SOST": 0.17
    },
    "diferencia_vs_promedio": {
-    "MAT": 0.01,
-    "PROG": 0.71,
-    "DATA": 0.06,
-    "DIS": 0.11,
-    "OPER": -0.36,
-    "GEST": -0.16,
-    "NEG": -0.54,
-    "CIEN": -0.37,
-    "INFRA": -0.44,
-    "INV": 0.05,
-    "INNO": -0.08,
-    "EQ": 0.09,
-    "COM": 0.16,
-    "ETI": 0.08,
-    "SOST": -0.33
+    "MAT": 0.32,
+    "PROG": 0.73,
+    "DATA": 0.11,
+    "DIS": 0.15,
+    "OPER": -0.2,
+    "GEST": -0.3,
+    "NEG": -0.66,
+    "CIEN": -0.41,
+    "INFRA": -0.48,
+    "INV": 0.12,
+    "INNO": 0.07,
+    "EQ": -0.02,
+    "COM": -0.04,
+    "ETI": -0.11,
+    "SOST": -0.41
    },
    "area": "computacion"
   },
   {
    "id": "datos_ia",
    "nombre": "Ciencia de Datos e Inteligencia Artificial",
-   "n_perfiles": 3,
+   "n_perfiles": 2,
    "que_hace": "Convierte grandes volúmenes de datos en decisiones y crea sistemas de inteligencia artificial: modelos que predicen, recomiendan o reconocen patrones.",
    "te_puede_gustar_si": [
     "Te gusta buscar patrones y sacar conclusiones a partir de información.",
@@ -235,42 +239,42 @@
    ],
    "distintivas": [
     "DATA",
+    "EQ",
     "INNO",
-    "PROG",
-    "EQ"
+    "ETI"
    ],
    "porcentaje": {
     "MAT": 0.0,
-    "PROG": 0.67,
+    "PROG": 0.5,
     "DATA": 1.0,
-    "DIS": 0.67,
-    "OPER": 0.33,
-    "GEST": 0.67,
+    "DIS": 0.5,
+    "OPER": 0.0,
+    "GEST": 0.5,
     "NEG": 0.0,
-    "CIEN": 0.33,
+    "CIEN": 0.5,
     "INFRA": 0.0,
-    "INV": 0.33,
+    "INV": 0.5,
     "INNO": 1.0,
-    "EQ": 0.67,
+    "EQ": 1.0,
     "COM": 0.0,
-    "ETI": 0.67,
+    "ETI": 1.0,
     "SOST": 0.0
    },
    "diferencia_vs_promedio": {
-    "MAT": -0.41,
-    "PROG": 0.37,
-    "DATA": 0.73,
-    "DIS": 0.02,
-    "OPER": -0.28,
-    "GEST": -0.16,
-    "NEG": -0.62,
-    "CIEN": -0.2,
-    "INFRA": -0.44,
-    "INV": 0.05,
-    "INNO": 0.42,
-    "EQ": 0.09,
-    "COM": -0.25,
-    "ETI": 0.08,
+    "MAT": -0.52,
+    "PROG": 0.23,
+    "DATA": 0.78,
+    "DIS": -0.19,
+    "OPER": -0.7,
+    "GEST": -0.3,
+    "NEG": -0.66,
+    "CIEN": -0.08,
+    "INFRA": -0.48,
+    "INV": 0.12,
+    "INNO": 0.41,
+    "EQ": 0.48,
+    "COM": -0.2,
+    "ETI": 0.39,
     "SOST": -0.58
    },
    "area": "computacion"
@@ -309,20 +313,20 @@
     "SOST": 0.67
    },
    "diferencia_vs_promedio": {
-    "MAT": -0.08,
-    "PROG": 0.37,
-    "DATA": 0.73,
-    "DIS": 0.36,
-    "OPER": 0.06,
-    "GEST": 0.17,
-    "NEG": 0.05,
-    "CIEN": -0.2,
-    "INFRA": 0.56,
-    "INV": -0.28,
-    "INNO": 0.42,
-    "EQ": 0.09,
-    "COM": 0.08,
-    "ETI": 0.08,
+    "MAT": -0.18,
+    "PROG": 0.4,
+    "DATA": 0.78,
+    "DIS": 0.31,
+    "OPER": -0.04,
+    "GEST": 0.2,
+    "NEG": 0.01,
+    "CIEN": -0.24,
+    "INFRA": 0.52,
+    "INV": -0.38,
+    "INNO": 0.41,
+    "EQ": 0.15,
+    "COM": 0.13,
+    "ETI": 0.06,
     "SOST": 0.09
    },
    "area": "computacion"
@@ -330,7 +334,7 @@
   {
    "id": "obras",
    "nombre": "Ingeniería Civil en Obras Civiles",
-   "n_perfiles": 8,
+   "n_perfiles": 5,
    "que_hace": "Diseña, calcula y dirige la construcción de infraestructura: edificios, puentes, carreteras, obras hidráulicas y sistemas de transporte, cuidando su seguridad y su impacto.",
    "te_puede_gustar_si": [
     "Te llaman la atención los edificios, puentes o caminos y te preguntas cómo se sostienen.",
@@ -339,50 +343,50 @@
    ],
    "distintivas": [
     "INFRA",
+    "DIS",
     "CIEN",
-    "ETI",
-    "DIS"
+    "ETI"
    ],
    "porcentaje": {
-    "MAT": 0.38,
+    "MAT": 0.2,
     "PROG": 0.0,
     "DATA": 0.0,
-    "DIS": 0.88,
-    "OPER": 0.38,
-    "GEST": 0.88,
-    "NEG": 0.5,
-    "CIEN": 0.88,
-    "INFRA": 0.88,
-    "INV": 0.25,
-    "INNO": 0.12,
-    "EQ": 0.38,
-    "COM": 0.38,
-    "ETI": 0.88,
-    "SOST": 0.75
+    "DIS": 1.0,
+    "OPER": 0.4,
+    "GEST": 0.8,
+    "NEG": 0.4,
+    "CIEN": 0.8,
+    "INFRA": 0.8,
+    "INV": 0.4,
+    "INNO": 0.2,
+    "EQ": 0.4,
+    "COM": 0.2,
+    "ETI": 0.8,
+    "SOST": 0.6
    },
    "diferencia_vs_promedio": {
-    "MAT": -0.04,
-    "PROG": -0.29,
-    "DATA": -0.27,
-    "DIS": 0.23,
-    "OPER": -0.24,
-    "GEST": 0.04,
-    "NEG": -0.12,
-    "CIEN": 0.34,
-    "INFRA": 0.43,
-    "INV": -0.03,
-    "INNO": -0.45,
-    "EQ": -0.2,
-    "COM": 0.12,
-    "ETI": 0.29,
-    "SOST": 0.17
+    "MAT": -0.32,
+    "PROG": -0.27,
+    "DATA": -0.22,
+    "DIS": 0.31,
+    "OPER": -0.3,
+    "GEST": 0.0,
+    "NEG": -0.26,
+    "CIEN": 0.22,
+    "INFRA": 0.32,
+    "INV": 0.03,
+    "INNO": -0.39,
+    "EQ": -0.12,
+    "COM": -0.0,
+    "ETI": 0.19,
+    "SOST": 0.02
    },
    "area": "infraestructura"
   },
   {
    "id": "construccion",
    "nombre": "Construcción",
-   "n_perfiles": 2,
+   "n_perfiles": 1,
    "que_hace": "Gestiona proyectos de construcción: planifica, presupuesta, coordina equipos y controla costos, plazos y calidad en obra.",
    "te_puede_gustar_si": [
     "Te gusta organizar personas y recursos para que un proyecto avance.",
@@ -390,51 +394,51 @@
     "Te interesa el mundo de la construcción más desde la gestión que desde el cálculo."
    ],
    "distintivas": [
-    "OPER",
-    "INFRA",
     "EQ",
-    "MAT"
+    "INFRA",
+    "MAT",
+    "SOST"
    ],
    "porcentaje": {
-    "MAT": 0.5,
+    "MAT": 1.0,
     "PROG": 0.0,
     "DATA": 0.0,
     "DIS": 0.0,
     "OPER": 1.0,
     "GEST": 1.0,
-    "NEG": 0.5,
+    "NEG": 0.0,
     "CIEN": 0.0,
     "INFRA": 1.0,
     "INV": 0.0,
     "INNO": 0.0,
-    "EQ": 0.5,
+    "EQ": 1.0,
     "COM": 0.0,
     "ETI": 0.0,
-    "SOST": 0.5
+    "SOST": 1.0
    },
    "diferencia_vs_promedio": {
-    "MAT": 0.09,
-    "PROG": -0.29,
-    "DATA": -0.27,
-    "DIS": -0.64,
-    "OPER": 0.39,
-    "GEST": 0.17,
-    "NEG": -0.12,
-    "CIEN": -0.54,
-    "INFRA": 0.56,
-    "INV": -0.28,
-    "INNO": -0.58,
-    "EQ": -0.08,
-    "COM": -0.25,
-    "ETI": -0.59,
-    "SOST": -0.08
+    "MAT": 0.48,
+    "PROG": -0.27,
+    "DATA": -0.22,
+    "DIS": -0.69,
+    "OPER": 0.3,
+    "GEST": 0.2,
+    "NEG": -0.66,
+    "CIEN": -0.58,
+    "INFRA": 0.52,
+    "INV": -0.38,
+    "INNO": -0.59,
+    "EQ": 0.48,
+    "COM": -0.2,
+    "ETI": -0.61,
+    "SOST": 0.42
    },
    "area": "infraestructura"
   },
   {
    "id": "minas",
    "nombre": "Ingeniería de Minas",
-   "n_perfiles": 7,
+   "n_perfiles": 4,
    "que_hace": "Planifica y dirige la extracción de minerales: evalúa yacimientos, diseña la mina, optimiza las operaciones y cuida la seguridad y el entorno.",
    "te_puede_gustar_si": [
     "Te interesan la geología y cómo se obtienen los recursos que usa la sociedad.",
@@ -444,41 +448,41 @@
    "distintivas": [
     "INFRA",
     "SOST",
-    "OPER",
+    "ETI",
     "NEG"
    ],
    "porcentaje": {
-    "MAT": 0.43,
-    "PROG": 0.14,
-    "DATA": 0.14,
-    "DIS": 0.71,
+    "MAT": 0.75,
+    "PROG": 0.25,
+    "DATA": 0.0,
+    "DIS": 0.75,
     "OPER": 1.0,
     "GEST": 1.0,
     "NEG": 1.0,
-    "CIEN": 0.71,
+    "CIEN": 0.75,
     "INFRA": 1.0,
-    "INV": 0.14,
-    "INNO": 0.43,
-    "EQ": 0.71,
-    "COM": 0.29,
-    "ETI": 0.71,
+    "INV": 0.25,
+    "INNO": 0.5,
+    "EQ": 0.75,
+    "COM": 0.5,
+    "ETI": 1.0,
     "SOST": 1.0
    },
    "diferencia_vs_promedio": {
-    "MAT": 0.02,
-    "PROG": -0.15,
-    "DATA": -0.13,
-    "DIS": 0.07,
-    "OPER": 0.39,
-    "GEST": 0.17,
-    "NEG": 0.38,
-    "CIEN": 0.18,
-    "INFRA": 0.56,
-    "INV": -0.14,
-    "INNO": -0.15,
-    "EQ": 0.14,
-    "COM": 0.03,
-    "ETI": 0.12,
+    "MAT": 0.23,
+    "PROG": -0.02,
+    "DATA": -0.22,
+    "DIS": 0.06,
+    "OPER": 0.3,
+    "GEST": 0.2,
+    "NEG": 0.34,
+    "CIEN": 0.17,
+    "INFRA": 0.52,
+    "INV": -0.12,
+    "INNO": -0.09,
+    "EQ": 0.23,
+    "COM": 0.3,
+    "ETI": 0.39,
     "SOST": 0.42
    },
    "area": "minerales"
@@ -494,10 +498,10 @@
     "Te gusta entender por qué un material resiste o falla."
    ],
    "distintivas": [
-    "OPER",
     "CIEN",
     "PROG",
-    "DIS"
+    "DIS",
+    "EQ"
    ],
    "porcentaje": {
     "MAT": 0.0,
@@ -517,20 +521,20 @@
     "SOST": 0.5
    },
    "diferencia_vs_promedio": {
-    "MAT": -0.41,
-    "PROG": 0.71,
-    "DATA": -0.27,
-    "DIS": 0.36,
-    "OPER": 0.39,
-    "GEST": 0.17,
-    "NEG": -0.12,
-    "CIEN": 0.46,
-    "INFRA": 0.06,
-    "INV": -0.28,
-    "INNO": -0.08,
-    "EQ": -0.08,
-    "COM": -0.25,
-    "ETI": -0.09,
+    "MAT": -0.52,
+    "PROG": 0.73,
+    "DATA": -0.22,
+    "DIS": 0.31,
+    "OPER": 0.3,
+    "GEST": 0.2,
+    "NEG": -0.16,
+    "CIEN": 0.42,
+    "INFRA": 0.02,
+    "INV": -0.38,
+    "INNO": -0.09,
+    "EQ": -0.02,
+    "COM": -0.2,
+    "ETI": -0.11,
     "SOST": -0.08
    },
    "area": "minerales"
@@ -538,7 +542,7 @@
   {
    "id": "electrica",
    "nombre": "Ingeniería Eléctrica y Energía",
-   "n_perfiles": 7,
+   "n_perfiles": 5,
    "que_hace": "Diseña y opera sistemas eléctricos y energéticos: generación (incluida la renovable), transmisión, electrónica, automatización y control.",
    "te_puede_gustar_si": [
     "Te interesa la electricidad, la electrónica o las energías renovables.",
@@ -547,49 +551,50 @@
    ],
    "distintivas": [
     "INFRA",
-    "SOST",
-    "DIS"
+    "INV",
+    "CIEN",
+    "SOST"
    ],
    "porcentaje": {
-    "MAT": 0.43,
-    "PROG": 0.43,
-    "DATA": 0.29,
-    "DIS": 0.71,
-    "OPER": 0.57,
-    "GEST": 0.86,
-    "NEG": 0.57,
-    "CIEN": 0.57,
+    "MAT": 0.4,
+    "PROG": 0.4,
+    "DATA": 0.2,
+    "DIS": 0.8,
+    "OPER": 0.8,
+    "GEST": 0.8,
+    "NEG": 0.8,
+    "CIEN": 0.8,
     "INFRA": 1.0,
-    "INV": 0.43,
-    "INNO": 0.57,
-    "EQ": 0.57,
-    "COM": 0.29,
-    "ETI": 0.57,
-    "SOST": 0.86
+    "INV": 0.6,
+    "INNO": 0.4,
+    "EQ": 0.4,
+    "COM": 0.4,
+    "ETI": 0.8,
+    "SOST": 0.8
    },
    "diferencia_vs_promedio": {
-    "MAT": 0.02,
+    "MAT": -0.12,
     "PROG": 0.13,
-    "DATA": 0.01,
-    "DIS": 0.07,
-    "OPER": -0.04,
-    "GEST": 0.03,
-    "NEG": -0.05,
-    "CIEN": 0.03,
-    "INFRA": 0.56,
-    "INV": 0.14,
-    "INNO": -0.01,
-    "EQ": -0.01,
-    "COM": 0.03,
-    "ETI": -0.02,
-    "SOST": 0.28
+    "DATA": -0.02,
+    "DIS": 0.11,
+    "OPER": 0.1,
+    "GEST": 0.0,
+    "NEG": 0.14,
+    "CIEN": 0.22,
+    "INFRA": 0.52,
+    "INV": 0.22,
+    "INNO": -0.19,
+    "EQ": -0.12,
+    "COM": 0.2,
+    "ETI": 0.19,
+    "SOST": 0.22
    },
    "area": "energia"
   },
   {
    "id": "mecanica",
    "nombre": "Ingeniería Mecánica",
-   "n_perfiles": 7,
+   "n_perfiles": 6,
    "que_hace": "Diseña, fabrica y mantiene máquinas, equipos y sistemas térmicos: desde motores y robots hasta plantas industriales y climatización.",
    "te_puede_gustar_si": [
     "Te gusta desarmar cosas para entender cómo funcionan.",
@@ -598,49 +603,50 @@
    ],
    "distintivas": [
     "INFRA",
-    "OPER",
-    "NEG"
+    "NEG",
+    "INV",
+    "CIEN"
    ],
    "porcentaje": {
-    "MAT": 0.43,
+    "MAT": 0.5,
     "PROG": 0.0,
     "DATA": 0.0,
-    "DIS": 0.57,
-    "OPER": 0.86,
-    "GEST": 0.57,
-    "NEG": 0.71,
-    "CIEN": 0.57,
-    "INFRA": 0.86,
-    "INV": 0.43,
-    "INNO": 0.57,
-    "EQ": 0.29,
-    "COM": 0.29,
-    "ETI": 0.43,
-    "SOST": 0.43
+    "DIS": 0.5,
+    "OPER": 0.83,
+    "GEST": 0.67,
+    "NEG": 0.83,
+    "CIEN": 0.67,
+    "INFRA": 0.83,
+    "INV": 0.5,
+    "INNO": 0.5,
+    "EQ": 0.33,
+    "COM": 0.33,
+    "ETI": 0.5,
+    "SOST": 0.5
    },
    "diferencia_vs_promedio": {
-    "MAT": 0.02,
-    "PROG": -0.29,
-    "DATA": -0.27,
-    "DIS": -0.07,
-    "OPER": 0.25,
-    "GEST": -0.26,
-    "NEG": 0.09,
-    "CIEN": 0.03,
-    "INFRA": 0.42,
-    "INV": 0.14,
-    "INNO": -0.01,
-    "EQ": -0.29,
-    "COM": 0.03,
-    "ETI": -0.16,
-    "SOST": -0.15
+    "MAT": -0.02,
+    "PROG": -0.27,
+    "DATA": -0.22,
+    "DIS": -0.19,
+    "OPER": 0.13,
+    "GEST": -0.13,
+    "NEG": 0.18,
+    "CIEN": 0.09,
+    "INFRA": 0.35,
+    "INV": 0.12,
+    "INNO": -0.09,
+    "EQ": -0.18,
+    "COM": 0.13,
+    "ETI": -0.11,
+    "SOST": -0.08
    },
    "area": "energia"
   },
   {
    "id": "automatizacion",
    "nombre": "Mecatrónica, Automatización y Robótica",
-   "n_perfiles": 2,
+   "n_perfiles": 1,
    "que_hace": "Integra mecánica, electrónica y programación para crear sistemas automáticos y robots.",
    "te_puede_gustar_si": [
     "Te gusta la robótica o armar proyectos con sensores y motores.",
@@ -648,43 +654,42 @@
     "Te atrae la automatización de procesos industriales."
    ],
    "distintivas": [
-    "NEG",
     "EQ",
-    "PROG",
-    "INFRA"
+    "NEG",
+    "CIEN"
    ],
    "porcentaje": {
     "MAT": 0.0,
-    "PROG": 0.5,
+    "PROG": 0.0,
     "DATA": 0.0,
-    "DIS": 0.5,
-    "OPER": 0.5,
-    "GEST": 0.5,
+    "DIS": 0.0,
+    "OPER": 0.0,
+    "GEST": 0.0,
     "NEG": 1.0,
-    "CIEN": 0.5,
-    "INFRA": 0.5,
+    "CIEN": 1.0,
+    "INFRA": 0.0,
     "INV": 0.0,
     "INNO": 0.0,
-    "EQ": 0.5,
+    "EQ": 1.0,
     "COM": 0.0,
     "ETI": 0.0,
     "SOST": 0.0
    },
    "diferencia_vs_promedio": {
-    "MAT": -0.41,
-    "PROG": 0.21,
-    "DATA": -0.27,
-    "DIS": -0.14,
-    "OPER": -0.11,
-    "GEST": -0.33,
-    "NEG": 0.38,
-    "CIEN": -0.04,
-    "INFRA": 0.06,
-    "INV": -0.28,
-    "INNO": -0.58,
-    "EQ": -0.08,
-    "COM": -0.25,
-    "ETI": -0.59,
+    "MAT": -0.52,
+    "PROG": -0.27,
+    "DATA": -0.22,
+    "DIS": -0.69,
+    "OPER": -0.7,
+    "GEST": -0.8,
+    "NEG": 0.34,
+    "CIEN": 0.42,
+    "INFRA": -0.48,
+    "INV": -0.38,
+    "INNO": -0.59,
+    "EQ": 0.48,
+    "COM": -0.2,
+    "ETI": -0.61,
     "SOST": -0.58
    },
    "area": "energia"
@@ -700,10 +705,10 @@
     "Te interesa producir de forma más limpia y eficiente."
    ],
    "distintivas": [
-    "INV",
     "CIEN",
-    "OPER",
-    "MAT"
+    "INV",
+    "MAT",
+    "EQ"
    ],
    "porcentaje": {
     "MAT": 0.75,
@@ -723,20 +728,20 @@
     "SOST": 0.75
    },
    "diferencia_vs_promedio": {
-    "MAT": 0.34,
-    "PROG": -0.29,
-    "DATA": -0.27,
-    "DIS": -0.14,
-    "OPER": 0.39,
-    "GEST": 0.17,
-    "NEG": -0.12,
-    "CIEN": 0.46,
-    "INFRA": -0.19,
-    "INV": 0.47,
-    "INNO": 0.17,
-    "EQ": 0.17,
-    "COM": -0.0,
-    "ETI": -0.34,
+    "MAT": 0.23,
+    "PROG": -0.27,
+    "DATA": -0.22,
+    "DIS": -0.19,
+    "OPER": 0.3,
+    "GEST": 0.2,
+    "NEG": -0.16,
+    "CIEN": 0.42,
+    "INFRA": -0.23,
+    "INV": 0.38,
+    "INNO": 0.16,
+    "EQ": 0.23,
+    "COM": 0.05,
+    "ETI": -0.36,
     "SOST": 0.17
    },
    "area": "minerales"
@@ -744,7 +749,7 @@
   {
    "id": "bio",
    "nombre": "Biotecnología y Bioingeniería",
-   "n_perfiles": 5,
+   "n_perfiles": 3,
    "que_hace": "Usa organismos vivos y procesos biológicos para crear productos y soluciones: alimentos, medicamentos, biocombustibles o descontaminación.",
    "te_puede_gustar_si": [
     "Te interesan la biología y la química, y también la ingeniería.",
@@ -753,50 +758,50 @@
    ],
    "distintivas": [
     "CIEN",
+    "DIS",
     "INV",
-    "OPER",
-    "DIS"
+    "MAT"
    ],
    "porcentaje": {
-    "MAT": 0.4,
+    "MAT": 0.67,
     "PROG": 0.0,
-    "DATA": 0.2,
-    "DIS": 0.8,
-    "OPER": 0.8,
-    "GEST": 0.8,
-    "NEG": 0.2,
+    "DATA": 0.33,
+    "DIS": 1.0,
+    "OPER": 1.0,
+    "GEST": 0.67,
+    "NEG": 0.33,
     "CIEN": 1.0,
-    "INFRA": 0.2,
-    "INV": 0.6,
-    "INNO": 0.6,
-    "EQ": 0.6,
+    "INFRA": 0.33,
+    "INV": 0.67,
+    "INNO": 0.67,
+    "EQ": 0.33,
     "COM": 0.0,
-    "ETI": 0.2,
-    "SOST": 0.6
+    "ETI": 0.33,
+    "SOST": 0.67
    },
    "diferencia_vs_promedio": {
-    "MAT": -0.01,
-    "PROG": -0.29,
-    "DATA": -0.07,
-    "DIS": 0.16,
-    "OPER": 0.19,
-    "GEST": -0.03,
-    "NEG": -0.42,
-    "CIEN": 0.46,
-    "INFRA": -0.24,
-    "INV": 0.32,
-    "INNO": 0.02,
-    "EQ": 0.02,
-    "COM": -0.25,
-    "ETI": -0.39,
-    "SOST": 0.02
+    "MAT": 0.15,
+    "PROG": -0.27,
+    "DATA": 0.11,
+    "DIS": 0.31,
+    "OPER": 0.3,
+    "GEST": -0.13,
+    "NEG": -0.32,
+    "CIEN": 0.42,
+    "INFRA": -0.15,
+    "INV": 0.29,
+    "INNO": 0.07,
+    "EQ": -0.18,
+    "COM": -0.2,
+    "ETI": -0.28,
+    "SOST": 0.09
    },
    "area": "vida"
   },
   {
    "id": "biomedica",
    "nombre": "Ingeniería Biomédica",
-   "n_perfiles": 3,
+   "n_perfiles": 1,
    "que_hace": "Aplica la ingeniería a la salud: dispositivos médicos, imágenes, biomecánica, sensores, datos clínicos y gestión de tecnología en hospitales.",
    "te_puede_gustar_si": [
     "Te interesa la salud, pero te atrae más la tecnología que la atención directa de pacientes.",
@@ -804,51 +809,51 @@
     "Te motiva crear soluciones que mejoren la vida de las personas."
    ],
    "distintivas": [
-    "CIEN",
-    "INNO",
     "EQ",
-    "DATA"
+    "ETI",
+    "CIEN",
+    "INNO"
    ],
    "porcentaje": {
     "MAT": 0.0,
-    "PROG": 0.33,
-    "DATA": 0.67,
+    "PROG": 1.0,
+    "DATA": 0.0,
     "DIS": 1.0,
-    "OPER": 0.33,
+    "OPER": 1.0,
     "GEST": 1.0,
-    "NEG": 0.33,
+    "NEG": 1.0,
     "CIEN": 1.0,
-    "INFRA": 0.33,
-    "INV": 0.33,
+    "INFRA": 1.0,
+    "INV": 1.0,
     "INNO": 1.0,
     "EQ": 1.0,
-    "COM": 0.33,
-    "ETI": 0.67,
-    "SOST": 0.67
+    "COM": 0.0,
+    "ETI": 1.0,
+    "SOST": 1.0
    },
    "diferencia_vs_promedio": {
-    "MAT": -0.41,
-    "PROG": 0.04,
-    "DATA": 0.39,
-    "DIS": 0.36,
-    "OPER": -0.28,
-    "GEST": 0.17,
-    "NEG": -0.29,
-    "CIEN": 0.46,
-    "INFRA": -0.11,
-    "INV": 0.05,
-    "INNO": 0.42,
-    "EQ": 0.42,
-    "COM": 0.08,
-    "ETI": 0.08,
-    "SOST": 0.09
+    "MAT": -0.52,
+    "PROG": 0.73,
+    "DATA": -0.22,
+    "DIS": 0.31,
+    "OPER": 0.3,
+    "GEST": 0.2,
+    "NEG": 0.34,
+    "CIEN": 0.42,
+    "INFRA": 0.52,
+    "INV": 0.62,
+    "INNO": 0.41,
+    "EQ": 0.48,
+    "COM": -0.2,
+    "ETI": 0.39,
+    "SOST": 0.42
    },
    "area": "vida"
   },
   {
    "id": "ambiental",
    "nombre": "Ingeniería Ambiental y Recursos Naturales",
-   "n_perfiles": 4,
+   "n_perfiles": 3,
    "que_hace": "Evalúa y reduce el impacto ambiental de proyectos y empresas: agua, residuos, contaminación, cambio climático y ordenamiento del territorio.",
    "te_puede_gustar_si": [
     "Te preocupan el cambio climático y el cuidado de la naturaleza.",
@@ -859,40 +864,40 @@
     "SOST",
     "ETI",
     "NEG",
-    "MAT"
+    "DIS"
    ],
    "porcentaje": {
-    "MAT": 0.75,
+    "MAT": 0.67,
     "PROG": 0.0,
     "DATA": 0.0,
-    "DIS": 0.75,
-    "OPER": 0.5,
+    "DIS": 1.0,
+    "OPER": 0.67,
     "GEST": 1.0,
     "NEG": 1.0,
-    "CIEN": 0.5,
-    "INFRA": 0.5,
+    "CIEN": 0.33,
+    "INFRA": 0.67,
     "INV": 0.0,
-    "INNO": 0.5,
-    "EQ": 0.5,
+    "INNO": 0.33,
+    "EQ": 0.33,
     "COM": 0.0,
     "ETI": 1.0,
     "SOST": 1.0
    },
    "diferencia_vs_promedio": {
-    "MAT": 0.34,
-    "PROG": -0.29,
-    "DATA": -0.27,
-    "DIS": 0.11,
-    "OPER": -0.11,
-    "GEST": 0.17,
-    "NEG": 0.38,
-    "CIEN": -0.04,
-    "INFRA": 0.06,
-    "INV": -0.28,
-    "INNO": -0.08,
-    "EQ": -0.08,
-    "COM": -0.25,
-    "ETI": 0.41,
+    "MAT": 0.15,
+    "PROG": -0.27,
+    "DATA": -0.22,
+    "DIS": 0.31,
+    "OPER": -0.04,
+    "GEST": 0.2,
+    "NEG": 0.34,
+    "CIEN": -0.24,
+    "INFRA": 0.18,
+    "INV": -0.38,
+    "INNO": -0.26,
+    "EQ": -0.18,
+    "COM": -0.2,
+    "ETI": 0.39,
     "SOST": 0.42
    },
    "area": "vida"
@@ -909,8 +914,8 @@
    ],
    "distintivas": [
     "MAT",
-    "INNO",
-    "DATA"
+    "DATA",
+    "INNO"
    ],
    "porcentaje": {
     "MAT": 1.0,
@@ -930,20 +935,20 @@
     "SOST": 0.0
    },
    "diferencia_vs_promedio": {
-    "MAT": 0.59,
-    "PROG": 0.04,
-    "DATA": 0.39,
-    "DIS": -0.31,
-    "OPER": -0.28,
-    "GEST": -0.5,
-    "NEG": -0.29,
-    "CIEN": -0.2,
-    "INFRA": -0.11,
-    "INV": 0.05,
-    "INNO": 0.42,
-    "EQ": -0.58,
-    "COM": 0.08,
-    "ETI": -0.26,
+    "MAT": 0.48,
+    "PROG": 0.07,
+    "DATA": 0.45,
+    "DIS": -0.35,
+    "OPER": -0.37,
+    "GEST": -0.46,
+    "NEG": -0.32,
+    "CIEN": -0.24,
+    "INFRA": -0.15,
+    "INV": -0.04,
+    "INNO": 0.41,
+    "EQ": -0.52,
+    "COM": 0.13,
+    "ETI": -0.28,
     "SOST": -0.58
    },
    "area": "exactas"
@@ -951,7 +956,7 @@
   {
    "id": "fisica",
    "nombre": "Ingeniería Física",
-   "n_perfiles": 2,
+   "n_perfiles": 1,
    "que_hace": "Aplica la física para desarrollar tecnología: instrumentación, óptica, materiales, energía o astronomía.",
    "te_puede_gustar_si": [
     "La física es tu ramo favorito y quieres llevarla a la práctica.",
@@ -961,42 +966,42 @@
    "distintivas": [
     "CIEN",
     "INV",
-    "MAT",
-    "NEG"
+    "INNO",
+    "MAT"
    ],
    "porcentaje": {
     "MAT": 1.0,
-    "PROG": 0.5,
-    "DATA": 0.5,
-    "DIS": 0.5,
-    "OPER": 0.5,
-    "GEST": 0.5,
+    "PROG": 0.0,
+    "DATA": 0.0,
+    "DIS": 1.0,
+    "OPER": 1.0,
+    "GEST": 1.0,
     "NEG": 1.0,
     "CIEN": 1.0,
     "INFRA": 0.0,
     "INV": 1.0,
-    "INNO": 0.5,
-    "EQ": 0.5,
+    "INNO": 1.0,
+    "EQ": 0.0,
     "COM": 0.0,
-    "ETI": 0.5,
-    "SOST": 0.5
+    "ETI": 0.0,
+    "SOST": 1.0
    },
    "diferencia_vs_promedio": {
-    "MAT": 0.59,
-    "PROG": 0.21,
-    "DATA": 0.23,
-    "DIS": -0.14,
-    "OPER": -0.11,
-    "GEST": -0.33,
-    "NEG": 0.38,
-    "CIEN": 0.46,
-    "INFRA": -0.44,
-    "INV": 0.72,
-    "INNO": -0.08,
-    "EQ": -0.08,
-    "COM": -0.25,
-    "ETI": -0.09,
-    "SOST": -0.08
+    "MAT": 0.48,
+    "PROG": -0.27,
+    "DATA": -0.22,
+    "DIS": 0.31,
+    "OPER": 0.3,
+    "GEST": 0.2,
+    "NEG": 0.34,
+    "CIEN": 0.42,
+    "INFRA": -0.48,
+    "INV": 0.62,
+    "INNO": 0.41,
+    "EQ": -0.52,
+    "COM": -0.2,
+    "ETI": -0.61,
+    "SOST": 0.42
    },
    "area": "exactas"
   },
@@ -1034,20 +1039,20 @@
     "SOST": 1.0
    },
    "diferencia_vs_promedio": {
-    "MAT": -0.41,
-    "PROG": -0.29,
-    "DATA": 0.73,
-    "DIS": 0.36,
-    "OPER": 0.39,
-    "GEST": 0.17,
-    "NEG": 0.38,
-    "CIEN": 0.46,
-    "INFRA": 0.56,
-    "INV": -0.28,
-    "INNO": 0.42,
-    "EQ": 0.42,
-    "COM": -0.25,
-    "ETI": 0.41,
+    "MAT": -0.52,
+    "PROG": -0.27,
+    "DATA": 0.78,
+    "DIS": 0.31,
+    "OPER": 0.3,
+    "GEST": 0.2,
+    "NEG": 0.34,
+    "CIEN": 0.42,
+    "INFRA": 0.52,
+    "INV": -0.38,
+    "INNO": 0.41,
+    "EQ": 0.48,
+    "COM": -0.2,
+    "ETI": 0.39,
     "SOST": 0.42
    },
    "area": "infraestructura"
@@ -1065,8 +1070,8 @@
    "distintivas": [
     "DIS",
     "NEG",
-    "INNO",
-    "SOST"
+    "SOST",
+    "INNO"
    ],
    "porcentaje": {
     "MAT": 0.0,
@@ -1086,20 +1091,20 @@
     "SOST": 1.0
    },
    "diferencia_vs_promedio": {
-    "MAT": -0.41,
-    "PROG": -0.29,
-    "DATA": -0.27,
-    "DIS": 0.36,
-    "OPER": -0.61,
-    "GEST": -0.83,
-    "NEG": 0.38,
-    "CIEN": -0.54,
-    "INFRA": -0.44,
-    "INV": -0.28,
-    "INNO": 0.42,
-    "EQ": -0.58,
-    "COM": -0.25,
-    "ETI": -0.59,
+    "MAT": -0.52,
+    "PROG": -0.27,
+    "DATA": -0.22,
+    "DIS": 0.31,
+    "OPER": -0.7,
+    "GEST": -0.8,
+    "NEG": 0.34,
+    "CIEN": -0.58,
+    "INFRA": -0.48,
+    "INV": -0.38,
+    "INNO": 0.41,
+    "EQ": -0.52,
+    "COM": -0.2,
+    "ETI": -0.61,
     "SOST": 0.42
    },
    "area": "energia"
@@ -1116,8 +1121,7 @@
    ],
    "distintivas": [
     "NEG",
-    "CIEN",
-    "OPER"
+    "CIEN"
    ],
    "porcentaje": {
     "MAT": 0.0,
@@ -1137,20 +1141,20 @@
     "SOST": 0.0
    },
    "diferencia_vs_promedio": {
-    "MAT": -0.41,
-    "PROG": -0.29,
-    "DATA": -0.27,
-    "DIS": -0.64,
-    "OPER": 0.39,
-    "GEST": 0.17,
-    "NEG": 0.38,
-    "CIEN": 0.46,
-    "INFRA": -0.44,
-    "INV": -0.28,
-    "INNO": -0.58,
-    "EQ": -0.58,
-    "COM": -0.25,
-    "ETI": -0.59,
+    "MAT": -0.52,
+    "PROG": -0.27,
+    "DATA": -0.22,
+    "DIS": -0.69,
+    "OPER": 0.3,
+    "GEST": 0.2,
+    "NEG": 0.34,
+    "CIEN": 0.42,
+    "INFRA": -0.48,
+    "INV": -0.38,
+    "INNO": -0.59,
+    "EQ": -0.52,
+    "COM": -0.2,
+    "ETI": -0.61,
     "SOST": -0.58
    },
    "area": "gestion"
@@ -1158,7 +1162,7 @@
   {
    "id": "comercial",
    "nombre": "Ingeniería Comercial y Negocios",
-   "n_perfiles": 7,
+   "n_perfiles": 5,
    "que_hace": "Forma para dirigir organizaciones y entender la economía: finanzas, marketing, personas, estrategia y emprendimiento.",
    "te_puede_gustar_si": [
     "Te interesan la economía, las empresas o emprender.",
@@ -1167,43 +1171,42 @@
    ],
    "distintivas": [
     "NEG",
-    "INNO",
     "EQ",
     "ETI"
    ],
    "porcentaje": {
     "MAT": 0.0,
-    "PROG": 0.14,
-    "DATA": 0.29,
+    "PROG": 0.0,
+    "DATA": 0.0,
     "DIS": 0.0,
-    "OPER": 0.29,
+    "OPER": 0.4,
     "GEST": 1.0,
     "NEG": 1.0,
-    "CIEN": 0.14,
+    "CIEN": 0.2,
     "INFRA": 0.0,
-    "INV": 0.14,
-    "INNO": 0.71,
-    "EQ": 0.71,
-    "COM": 0.14,
-    "ETI": 0.71,
-    "SOST": 0.43
+    "INV": 0.2,
+    "INNO": 0.6,
+    "EQ": 0.8,
+    "COM": 0.2,
+    "ETI": 0.8,
+    "SOST": 0.4
    },
    "diferencia_vs_promedio": {
-    "MAT": -0.41,
-    "PROG": -0.15,
-    "DATA": 0.01,
-    "DIS": -0.64,
-    "OPER": -0.32,
-    "GEST": 0.17,
-    "NEG": 0.38,
-    "CIEN": -0.39,
-    "INFRA": -0.44,
-    "INV": -0.14,
-    "INNO": 0.14,
-    "EQ": 0.14,
-    "COM": -0.11,
-    "ETI": 0.12,
-    "SOST": -0.15
+    "MAT": -0.52,
+    "PROG": -0.27,
+    "DATA": -0.22,
+    "DIS": -0.69,
+    "OPER": -0.3,
+    "GEST": 0.2,
+    "NEG": 0.34,
+    "CIEN": -0.38,
+    "INFRA": -0.48,
+    "INV": -0.17,
+    "INNO": 0.01,
+    "EQ": 0.28,
+    "COM": -0.0,
+    "ETI": 0.19,
+    "SOST": -0.18
    },
    "area": "gestion"
   }
@@ -1226,20 +1229,20 @@
   "SOST": "Cuidar el medio ambiente y la sostenibilidad"
  },
  "promedio_habilidades": {
-  "MAT": 0.41,
-  "PROG": 0.29,
-  "DATA": 0.27,
-  "DIS": 0.64,
-  "OPER": 0.61,
-  "GEST": 0.83,
-  "NEG": 0.62,
-  "CIEN": 0.54,
-  "INFRA": 0.44,
-  "INV": 0.28,
-  "INNO": 0.58,
-  "EQ": 0.58,
-  "COM": 0.25,
-  "ETI": 0.59,
+  "MAT": 0.52,
+  "PROG": 0.27,
+  "DATA": 0.22,
+  "DIS": 0.69,
+  "OPER": 0.7,
+  "GEST": 0.8,
+  "NEG": 0.66,
+  "CIEN": 0.58,
+  "INFRA": 0.48,
+  "INV": 0.38,
+  "INNO": 0.59,
+  "EQ": 0.52,
+  "COM": 0.2,
+  "ETI": 0.61,
   "SOST": 0.58
  },
  "programas": [
@@ -3385,543 +3388,6 @@
    "nota": ""
   },
   {
-   "id": "unab-civil",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería Civil",
-   "categoria": "ing_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": null,
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "41044",
-   "vacantes_2027": 150,
-   "ponderaciones": {
-    "nem": 30,
-    "ranking": 15,
-    "cl": 10,
-    "m1": 30,
-    "hyc": null,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": false,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "obras"
-   ],
-   "areas": [
-    "infraestructura"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": ""
-  },
-  {
-   "id": "unab-civil-electrica",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería Civil Eléctrica",
-   "categoria": "ing_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": null,
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "41204",
-   "vacantes_2027": 180,
-   "ponderaciones": {
-    "nem": 20,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 30,
-    "hyc": null,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": false,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "electrica"
-   ],
-   "areas": [
-    "energia"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": ""
-  },
-  {
-   "id": "unab-civil-minas",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería Civil en Minas",
-   "categoria": "ing_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": null,
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "41130",
-   "vacantes_2027": 210,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 35,
-    "cl": 10,
-    "m1": 30,
-    "hyc": null,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": false,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "minas"
-   ],
-   "areas": [
-    "minerales"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": ""
-  },
-  {
-   "id": "unab-civil-industrial",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería Civil Industrial",
-   "categoria": "ing_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Antonio Varas y Casona de Las Condes",
-   "facultad": "Facultad de Ingeniería",
-   "codigo": [
-    "41046",
-    "41206"
-   ],
-   "vacantes_2027": 695,
-   "ponderaciones": {
-    "nem": 20,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 30,
-    "hyc": null,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": false,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "industrial"
-   ],
-   "areas": [
-    "gestion"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": "Diurno y vespertino."
-  },
-  {
-   "id": "unab-civil-informatica",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería Civil Informática",
-   "categoria": "ing_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Antonio Varas y Casona de Las Condes",
-   "facultad": "Facultad de Ingeniería",
-   "codigo": [
-    "41045",
-    "41207"
-   ],
-   "vacantes_2027": 500,
-   "ponderaciones": {
-    "nem": 30,
-    "ranking": 10,
-    "cl": 10,
-    "m1": 35,
-    "hyc": null,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": false,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "informatica"
-   ],
-   "areas": [
-    "computacion"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": ""
-  },
-  {
-   "id": "unab-civil-biomedica",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería Civil Biomédica",
-   "categoria": "ing_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Las Condes",
-   "facultad": "Por confirmar",
-   "codigo": "41227",
-   "vacantes_2027": 100,
-   "ponderaciones": {
-    "nem": 25,
-    "ranking": 15,
-    "cl": 10,
-    "m1": 35,
-    "hyc": null,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": false,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "biomedica"
-   ],
-   "areas": [
-    "vida"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": "Carrera nueva Admisión 2027; no aparece aún en la nómina preliminar ni en el folleto 2026."
-  },
-  {
-   "id": "unab-automatizacion-robotica",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería en Automatización y Robótica",
-   "categoria": "ing_no_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": null,
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "41047",
-   "vacantes_2027": 110,
-   "ponderaciones": {
-    "nem": 30,
-    "ranking": 10,
-    "cl": 10,
-    "m1": 35,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "automatizacion"
-   ],
-   "areas": [
-    "energia"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": "Diurno y vespertino."
-  },
-  {
-   "id": "unab-computacion-informatica",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería en Computación e Informática",
-   "categoria": "ing_no_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": null,
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "41048",
-   "vacantes_2027": 320,
-   "ponderaciones": {
-    "nem": 30,
-    "ranking": 15,
-    "cl": 10,
-    "m1": 30,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "informatica"
-   ],
-   "areas": [
-    "computacion"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": "Diurno y vespertino."
-  },
-  {
-   "id": "unab-construccion",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería en Construcción",
-   "categoria": "ing_no_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": null,
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "41049",
-   "vacantes_2027": 100,
-   "ponderaciones": {
-    "nem": 30,
-    "ranking": 15,
-    "cl": 10,
-    "m1": 30,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "construccion"
-   ],
-   "areas": [
-    "infraestructura"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": ""
-  },
-  {
-   "id": "unab-industrial",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería Industrial",
-   "categoria": "ing_no_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": null,
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "41055",
-   "vacantes_2027": 90,
-   "ponderaciones": {
-    "nem": 30,
-    "ranking": 15,
-    "cl": 10,
-    "m1": 30,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "industrial"
-   ],
-   "areas": [
-    "gestion"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": "Diurno y vespertino."
-  },
-  {
-   "id": "unab-ambiental",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería Ambiental",
-   "categoria": "ing_no_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": null,
-   "facultad": "Por confirmar",
-   "codigo": "41024",
-   "vacantes_2027": 70,
-   "ponderaciones": {
-    "nem": 20,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 30,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "ambiental"
-   ],
-   "areas": [
-    "vida"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": ""
-  },
-  {
-   "id": "unab-fisica",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería Física",
-   "categoria": "ing_no_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": null,
-   "facultad": "Por confirmar",
-   "codigo": "41011",
-   "vacantes_2027": 60,
-   "ponderaciones": {
-    "nem": 20,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 30,
-    "hyc": null,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": false,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "fisica"
-   ],
-   "areas": [
-    "exactas"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": ""
-  },
-  {
-   "id": "unab-biotecnologia",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería en Biotecnología",
-   "categoria": "ing_no_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": null,
-   "facultad": "Por confirmar",
-   "codigo": "41006",
-   "vacantes_2027": 80,
-   "ponderaciones": {
-    "nem": 20,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 20,
-    "hyc": null,
-    "ciencias": 20,
-    "m2": 5
-   },
-   "hyc_o_ciencias": false,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "bio"
-   ],
-   "areas": [
-    "vida"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": ""
-  },
-  {
-   "id": "unab-engineering-technology-management",
-   "universidad_id": "unab",
-   "nombre": "Engineering and Technology Management",
-   "categoria": "ing_no_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Las Condes",
-   "facultad": "Por confirmar",
-   "codigo": "41226",
-   "vacantes_2027": 60,
-   "ponderaciones": {
-    "nem": 30,
-    "ranking": 10,
-    "cl": 10,
-    "m1": 35,
-    "hyc": null,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": false,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "industrial"
-   ],
-   "areas": [
-    "gestion"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": "Carrera nueva Admisión 2027."
-  },
-  {
-   "id": "unab-computer-science-engineering",
-   "universidad_id": "unab",
-   "nombre": "Computer Science Engineering",
-   "categoria": "ing_no_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Las Condes",
-   "facultad": "Por confirmar",
-   "codigo": "41222",
-   "vacantes_2027": 60,
-   "ponderaciones": {
-    "nem": 30,
-    "ranking": 10,
-    "cl": 10,
-    "m1": 35,
-    "hyc": null,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": false,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "informatica"
-   ],
-   "areas": [
-    "computacion"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": "Carrera detectada en la oferta DEMRE 2027 (no figuraba en folleto 2026 ni en la nómina preliminar)."
-  },
-  {
-   "id": "unab-ingenieria-comercial",
-   "universidad_id": "unab",
-   "nombre": "Ingeniería Comercial",
-   "categoria": "ing_comercial",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Bellavista y Casona de Las Condes",
-   "facultad": "Facultad de Economía y Negocios",
-   "codigo": [
-    "41129",
-    "41028"
-   ],
-   "vacantes_2027": 980,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 40,
-    "cl": 10,
-    "m1": 30,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": null
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": false,
-   "puntaje_ponderado_minimo": null,
-   "promedio_cl_m1_minimo": 458,
-   "familias": [
-    "comercial"
-   ],
-   "areas": [
-    "gestion"
-   ],
-   "plan_comun": null,
-   "corte_2026": null,
-   "nota": "Diurno y vespertino; 5 años."
-  },
-  {
    "id": "udp-plan-comun",
    "universidad_id": "udp",
    "nombre": "Ingeniería Civil Plan Común",
@@ -4153,673 +3619,6 @@
    "plan_comun": null,
    "corte_2026": null,
    "nota": ""
-  },
-  {
-   "id": "uai-plan-comun",
-   "universidad_id": "uai",
-   "nombre": "Ingeniería Civil (Plan Común)",
-   "categoria": "plan_comun",
-   "tipo_ingreso": "plan_comun",
-   "campus": "Peñalolén",
-   "facultad": "Facultad de Ingeniería y Ciencias",
-   "codigo": "42002",
-   "vacantes_2027": 405,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 40,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": 640,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "bio",
-    "electrica",
-    "industrial",
-    "informatica",
-    "mecanica",
-    "minas",
-    "obras"
-   ],
-   "areas": [
-    "computacion",
-    "energia",
-    "gestion",
-    "infraestructura",
-    "minerales",
-    "vida"
-   ],
-   "plan_comun": {
-    "mecanismo": "no_informado",
-    "cupos": "no_informado",
-    "n_salidas": 7
-   },
-   "corte_2026": {
-    "valor": 815.0,
-    "medida": "puntaje ponderado de corte",
-    "ingresaron": 422,
-    "ingresaron_medida": "convocados (seleccionados)",
-    "historico": null,
-    "fuente": "UAI — Puntajes de selección Admisión 2026",
-    "url": "https://www.uai.cl/admision/ponderaciones-y-puntajes/puntajes",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": true,
-    "nota": null
-   },
-   "nota": "En Santiago todas las ingenierías civiles entran por plan común (7 especialidades)."
-  },
-  {
-   "id": "uai-computer-science",
-   "universidad_id": "uai",
-   "nombre": "Ingeniería en Computer Science",
-   "categoria": "ing_no_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Peñalolén",
-   "facultad": "Facultad de Ingeniería y Ciencias",
-   "codigo": "42202",
-   "vacantes_2027": 35,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 40,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": 640,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "informatica"
-   ],
-   "areas": [
-    "computacion"
-   ],
-   "plan_comun": null,
-   "corte_2026": {
-    "valor": 756.8,
-    "medida": "puntaje ponderado de corte",
-    "ingresaron": 35,
-    "ingresaron_medida": "convocados (seleccionados)",
-    "historico": null,
-    "fuente": "UAI — Puntajes de selección Admisión 2026",
-    "url": "https://www.uai.cl/admision/ponderaciones-y-puntajes/puntajes",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": true,
-    "nota": null
-   },
-   "nota": "Ingreso directo. Exige M2."
-  },
-  {
-   "id": "uai-bachillerato-ing-civil",
-   "universidad_id": "uai",
-   "nombre": "Bachillerato de Ingeniería Civil",
-   "categoria": "plan_comun",
-   "tipo_ingreso": "plan_comun",
-   "campus": "Peñalolén",
-   "facultad": "Facultad de Ingeniería y Ciencias",
-   "codigo": "42012",
-   "vacantes_2027": 55,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 45,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": null
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": false,
-   "puntaje_ponderado_minimo": 640,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "bio",
-    "electrica",
-    "industrial",
-    "informatica",
-    "mecanica",
-    "minas",
-    "obras"
-   ],
-   "areas": [
-    "computacion",
-    "energia",
-    "gestion",
-    "infraestructura",
-    "minerales",
-    "vida"
-   ],
-   "plan_comun": null,
-   "corte_2026": {
-    "valor": 792.1,
-    "medida": "puntaje ponderado de corte",
-    "ingresaron": 75,
-    "ingresaron_medida": "convocados (seleccionados)",
-    "historico": null,
-    "fuente": "UAI — Puntajes de selección Admisión 2026",
-    "url": "https://www.uai.cl/admision/ponderaciones-y-puntajes/puntajes",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": true,
-    "nota": null
-   },
-   "nota": "Programa de entrada alternativo; confirmar diferencia con el plan común."
-  },
-  {
-   "id": "uai-doble-arquitectura-industrial",
-   "universidad_id": "uai",
-   "nombre": "Doble Título Arquitectura + Ingeniería Civil Industrial",
-   "categoria": "ing_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Peñalolén",
-   "facultad": "Facultad de Ingeniería y Ciencias / Escuela de Arquitectura",
-   "codigo": "42106",
-   "vacantes_2027": 35,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 40,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": 640,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "industrial"
-   ],
-   "areas": [
-    "gestion"
-   ],
-   "plan_comun": null,
-   "corte_2026": {
-    "valor": 800.7,
-    "medida": "puntaje ponderado de corte",
-    "ingresaron": 35,
-    "ingresaron_medida": "convocados (seleccionados)",
-    "historico": null,
-    "fuente": "UAI — Puntajes de selección Admisión 2026",
-    "url": "https://www.uai.cl/admision/ponderaciones-y-puntajes/puntajes",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": true,
-    "nota": null
-   },
-   "nota": "Doble título."
-  },
-  {
-   "id": "uai-negocios-tecnologia",
-   "universidad_id": "uai",
-   "nombre": "Ingeniería en Negocios y Tecnología",
-   "categoria": "ing_no_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": null,
-   "facultad": "Por confirmar",
-   "codigo": "42101",
-   "vacantes_2027": 30,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 45,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": null
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": false,
-   "puntaje_ponderado_minimo": 640,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "comercial"
-   ],
-   "areas": [
-    "gestion"
-   ],
-   "plan_comun": null,
-   "corte_2026": {
-    "valor": 794.9,
-    "medida": "puntaje ponderado de corte",
-    "ingresaron": 32,
-    "ingresaron_medida": "convocados (seleccionados)",
-    "historico": null,
-    "fuente": "UAI — Puntajes de selección Admisión 2026",
-    "url": "https://www.uai.cl/admision/ponderaciones-y-puntajes/puntajes",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": true,
-    "nota": null
-   },
-   "nota": ""
-  },
-  {
-   "id": "uai-ingenieria-comercial",
-   "universidad_id": "uai",
-   "nombre": "Ingeniería Comercial",
-   "categoria": "ing_comercial",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Peñalolén",
-   "facultad": "Escuela de Negocios",
-   "codigo": "42001",
-   "vacantes_2027": 420,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 45,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": null
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": false,
-   "puntaje_ponderado_minimo": 640,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "comercial"
-   ],
-   "areas": [
-    "gestion"
-   ],
-   "plan_comun": null,
-   "corte_2026": {
-    "valor": 811.4,
-    "medida": "puntaje ponderado de corte",
-    "ingresaron": 465,
-    "ingresaron_medida": "convocados (seleccionados)",
-    "historico": null,
-    "fuente": "UAI — Puntajes de selección Admisión 2026",
-    "url": "https://www.uai.cl/admision/ponderaciones-y-puntajes/puntajes",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": true,
-    "nota": null
-   },
-   "nota": "También existen Bachillerato de Ing. Comercial y dobles títulos (Derecho, Sociología)."
-  },
-  {
-   "id": "udd-plan-comun",
-   "universidad_id": "udd",
-   "nombre": "Ingeniería Civil Plan Común",
-   "categoria": "plan_comun",
-   "tipo_ingreso": "plan_comun",
-   "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "44043",
-   "vacantes_2027": 180,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 40,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": 500,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "datos_ia",
-    "industrial",
-    "informatica",
-    "minas",
-    "obras"
-   ],
-   "areas": [
-    "computacion",
-    "gestion",
-    "infraestructura",
-    "minerales"
-   ],
-   "plan_comun": {
-    "mecanismo": "garantizado",
-    "cupos": "sin_limite",
-    "n_salidas": 6
-   },
-   "corte_2026": {
-    "valor": 680.65,
-    "medida": "puntaje de corte",
-    "ingresaron": null,
-    "ingresaron_medida": null,
-    "historico": null,
-    "fuente": "Preu Filadd — Puntajes de corte UDD 2026",
-    "url": "https://blog.filadd.cl/puntajes-de-corte-universidad-del-desarrollo-udd/",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": false,
-    "nota": null
-   },
-   "nota": "Especialidad se elige tras 3 semestres; conduce a todas las carreras de la facultad salvo BioMedicina. Dura 11 semestres. Lista de especialidades basada en documento 2024."
-  },
-  {
-   "id": "udd-civil-industrial",
-   "universidad_id": "udd",
-   "nombre": "Ingeniería Civil Industrial",
-   "categoria": "ing_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "44015",
-   "vacantes_2027": 80,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 40,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": 500,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "industrial"
-   ],
-   "areas": [
-    "gestion"
-   ],
-   "plan_comun": null,
-   "corte_2026": {
-    "valor": 767.25,
-    "medida": "puntaje de corte",
-    "ingresaron": null,
-    "ingresaron_medida": null,
-    "historico": null,
-    "fuente": "Preu Filadd — Puntajes de corte UDD 2026",
-    "url": "https://blog.filadd.cl/puntajes-de-corte-universidad-del-desarrollo-udd/",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": false,
-    "nota": null
-   },
-   "nota": ""
-  },
-  {
-   "id": "udd-civil-obras-civiles",
-   "universidad_id": "udd",
-   "nombre": "Ingeniería Civil en Obras Civiles",
-   "categoria": "ing_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "44014",
-   "vacantes_2027": 50,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 40,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": 500,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "obras"
-   ],
-   "areas": [
-    "infraestructura"
-   ],
-   "plan_comun": null,
-   "corte_2026": {
-    "valor": 512.95,
-    "medida": "puntaje de corte",
-    "ingresaron": null,
-    "ingresaron_medida": null,
-    "historico": null,
-    "fuente": "Preu Filadd — Puntajes de corte UDD 2026",
-    "url": "https://blog.filadd.cl/puntajes-de-corte-universidad-del-desarrollo-udd/",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": false,
-    "nota": "Cifra baja respecto de las otras carreras; verificar."
-   },
-   "nota": ""
-  },
-  {
-   "id": "udd-civil-mineria",
-   "universidad_id": "udd",
-   "nombre": "Ingeniería Civil en Minería",
-   "categoria": "ing_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "44039",
-   "vacantes_2027": 100,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 40,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": 500,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "minas"
-   ],
-   "areas": [
-    "minerales"
-   ],
-   "plan_comun": null,
-   "corte_2026": {
-    "valor": 616.15,
-    "medida": "puntaje de corte",
-    "ingresaron": null,
-    "ingresaron_medida": null,
-    "historico": null,
-    "fuente": "Preu Filadd — Puntajes de corte UDD 2026",
-    "url": "https://blog.filadd.cl/puntajes-de-corte-universidad-del-desarrollo-udd/",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": false,
-    "nota": null
-   },
-   "nota": ""
-  },
-  {
-   "id": "udd-civil-informatica-innovacion",
-   "universidad_id": "udd",
-   "nombre": "Ingeniería Civil en Informática e Innovación Tecnológica",
-   "categoria": "ing_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "44046",
-   "vacantes_2027": 35,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 40,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": 500,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "informatica"
-   ],
-   "areas": [
-    "computacion"
-   ],
-   "plan_comun": null,
-   "corte_2026": {
-    "valor": 763.45,
-    "medida": "puntaje de corte",
-    "ingresaron": null,
-    "ingresaron_medida": null,
-    "historico": null,
-    "fuente": "Preu Filadd — Puntajes de corte UDD 2026",
-    "url": "https://blog.filadd.cl/puntajes-de-corte-universidad-del-desarrollo-udd/",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": false,
-    "nota": null
-   },
-   "nota": ""
-  },
-  {
-   "id": "udd-civil-informatica-ia",
-   "universidad_id": "udd",
-   "nombre": "Ingeniería Civil en Informática e Inteligencia Artificial",
-   "categoria": "ing_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "44052",
-   "vacantes_2027": 25,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 40,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": 500,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "datos_ia"
-   ],
-   "areas": [
-    "computacion"
-   ],
-   "plan_comun": null,
-   "corte_2026": {
-    "valor": 782.1,
-    "medida": "puntaje de corte",
-    "ingresaron": null,
-    "ingresaron_medida": null,
-    "historico": null,
-    "fuente": "Preu Filadd — Puntajes de corte UDD 2026",
-    "url": "https://blog.filadd.cl/puntajes-de-corte-universidad-del-desarrollo-udd/",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": false,
-    "nota": null
-   },
-   "nota": "Carrera nueva."
-  },
-  {
-   "id": "udd-civil-biomedicina",
-   "universidad_id": "udd",
-   "nombre": "Ingeniería Civil en Biomedicina",
-   "categoria": "ing_civil",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-   "facultad": "Facultad de Ingeniería",
-   "codigo": "44051",
-   "vacantes_2027": 25,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 25,
-    "cl": 10,
-    "m1": 40,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": 5
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": true,
-   "puntaje_ponderado_minimo": 650,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "biomedica"
-   ],
-   "areas": [
-    "vida"
-   ],
-   "plan_comun": null,
-   "corte_2026": {
-    "valor": 881.4,
-    "medida": "puntaje de corte",
-    "ingresaron": null,
-    "ingresaron_medida": null,
-    "historico": null,
-    "fuente": "UDD — Proceso de Admisión 2026: alzas de puntajes de corte",
-    "url": "https://www.udd.cl/noticias/2026/01/30/proceso-de-admision-2026-udd-registra-alzas-de-puntajes-de-corte-en-diversas-carreras/",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": true,
-    "nota": null
-   },
-   "nota": "Carrera nueva; no se accede por plan común."
-  },
-  {
-   "id": "udd-ingenieria-comercial",
-   "universidad_id": "udd",
-   "nombre": "Ingeniería Comercial",
-   "categoria": "ing_comercial",
-   "tipo_ingreso": "carrera_directa",
-   "campus": "Campus Rector Ernesto Silva Bafalluy, Las Condes",
-   "facultad": "Facultad de Economía y Negocios",
-   "codigo": "44008",
-   "vacantes_2027": 135,
-   "ponderaciones": {
-    "nem": 10,
-    "ranking": 30,
-    "cl": 10,
-    "m1": 40,
-    "hyc": 10,
-    "ciencias": 10,
-    "m2": null
-   },
-   "hyc_o_ciencias": true,
-   "exige_m2": false,
-   "puntaje_ponderado_minimo": 600,
-   "promedio_cl_m1_minimo": 500,
-   "familias": [
-    "comercial"
-   ],
-   "areas": [
-    "gestion"
-   ],
-   "plan_comun": null,
-   "corte_2026": {
-    "valor": 772.3,
-    "medida": "puntaje de corte",
-    "ingresaron": null,
-    "ingresaron_medida": null,
-    "historico": null,
-    "fuente": "UDD — Proceso de Admisión 2026: alzas de puntajes de corte",
-    "url": "https://www.udd.cl/noticias/2026/01/30/proceso-de-admision-2026-udd-registra-alzas-de-puntajes-de-corte-en-diversas-carreras/",
-    "anio": 2026,
-    "primer_matriculado": null,
-    "oficial": true,
-    "nota": null
-   },
-   "nota": "Nuevos dobles títulos 2027 con Derecho, Psicología y Diseño; también Bachillerato en Ing. Comercial."
   }
  ],
  "fuentes": {
@@ -4839,21 +3638,6 @@
     "nombre": "USM — Admisión Centralizada PAES (tabla DEMRE 2026)",
     "url": "https://usm.cl/admision/admision-centralizada-paes-3/",
     "oficial": true
-   },
-   "uai": {
-    "nombre": "UAI — Puntajes de selección Admisión 2026",
-    "url": "https://www.uai.cl/admision/ponderaciones-y-puntajes/puntajes",
-    "oficial": true
-   },
-   "udd_oficial": {
-    "nombre": "UDD — Proceso de Admisión 2026: alzas de puntajes de corte",
-    "url": "https://www.udd.cl/noticias/2026/01/30/proceso-de-admision-2026-udd-registra-alzas-de-puntajes-de-corte-en-diversas-carreras/",
-    "oficial": true
-   },
-   "udd_filadd": {
-    "nombre": "Preu Filadd — Puntajes de corte UDD 2026",
-    "url": "https://blog.filadd.cl/puntajes-de-corte-universidad-del-desarrollo-udd/",
-    "oficial": false
    },
    "udp_preuai": {
     "nombre": "PreuAI — Puntajes de corte UDP",

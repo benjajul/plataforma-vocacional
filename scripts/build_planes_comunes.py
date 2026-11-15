@@ -19,9 +19,16 @@ import json, pathlib
 
 CONSULTADO = "2026-11-08"
 
-def salida(nombre, *, titulo=None, malla=None, programa_directo_id=None, tipo="ing_civil", nota=""):
+def salida(nombre, *, titulo=None, malla=None, programa_directo_id=None, tipo="ing_civil", nota="", **extra):
+    """extra (opcional, hoy solo U. de Chile): titulo_profesional, grado, duracion_semestres, menciones, grupo, despues"""
     return {"nombre": nombre, "titulo": titulo or nombre, "tipo": tipo, "malla_url": malla,
-            "programa_directo_id": programa_directo_id, "nota": nota}
+            "programa_directo_id": programa_directo_id, "nota": nota, **extra}
+
+def uch(nombre, n, slug, titulo_prof, mencion_grado, *, sem=11, menciones=None, grupo="ingenieria", ciencias=False, tipo="ing_civil", despues=None, nota=""):
+    grado = f"Licenciado/a en Ciencias{'' if ciencias else ' de la Ingeniería'}, mención {mencion_grado}"
+    return salida(nombre, titulo=titulo_prof or grado, malla=UCH+f"{n}/{slug}", tipo=tipo, nota=nota,
+                  titulo_profesional=titulo_prof, grado=grado, duracion_semestres=sem,
+                  menciones=menciones or [], grupo=grupo, despues=despues)
 
 UCH = "https://uchile.cl/carreras/"
 SP = "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/"
@@ -44,28 +51,51 @@ PLANES = [
       "irrevocable": None,
       "apoyo": "Unidad de Orientación Vocacional e 'Inicia Beauchef' presentan las especialidades.",
     },
-    "duracion_total": "11 semestres (Ingeniería Civil, incluye plan común)",
-    "grado_intermedio": "Licenciatura en Ciencias de la Ingeniería, mención según especialidad",
+    "duracion_total": "11 semestres en las ingenierías civiles y Geología; 10 en Geofísica; 8 en las licenciaturas de Astronomía y Física (todas incluyen el plan común)",
+    "grado_intermedio": "Licenciatura en Ciencias de la Ingeniería (o en Ciencias), con la mención de la especialidad",
+    "etapas": [
+      {"nombre": "Plan Común", "ciclo": "ciclo inicial", "semestres": [1, 4], "que_pasa": "Matemática, física, programación y cursos de introducción a la ingeniería, iguales para todos. Al terminar se elige especialidad."},
+      {"nombre": "Licenciatura", "ciclo": "ciclo especializado", "semestres": [5, 8], "que_pasa": "Cursos de base de la especialidad elegida. Se obtiene el grado de Licenciado/a (grado académico)."},
+      {"nombre": "Especialidad", "ciclo": "ciclo especializado profesional", "semestres": [9, 11], "que_pasa": "Cursos profesionales, electivos y la memoria o trabajo de título. Se obtiene el título profesional."},
+    ],
+    "etapas_nota": "Los nombres de los tres ciclos aparecen en las mallas oficiales FCFM (malla de Geofísica: 'Especialidad' en los semestres IX y X). La división exacta 1–4 / 5–8 / 9–11 es la estructura de referencia; cada malla la ajusta.",
+    "glosario": [
+      {"termino": "Grado académico (licenciatura)", "explicacion": "Certifica la formación en ciencias de la especialidad. Permite postular a magíster y doctorado, en Chile o el extranjero."},
+      {"termino": "Título profesional", "explicacion": "Habilita para ejercer la profesión (por ejemplo, firmar como Ingeniero/a Civil). Se obtiene al final, después de la memoria o trabajo de título."},
+    ],
+    "continuidad": [
+      {"nombre": "Articulación pregrado–magíster", "detalle": "Un estudiante de la etapa de especialidad puede cursar en paralelo un magíster de la FCFM (de su área o de otra) y obtener título profesional y grado de magíster con una sola tesis, un examen y un informe final. Requiere situación académica regular y aprobación del comité del magíster y de la Escuela.",
+       "url": "https://ingenieria.uchile.cl/dam/jcr:ec5338a6-a331-459a-8a5a-f1329a994b43/ARTICULACION%20EPEC%20FCFM%202024.pdf"},
+      {"nombre": "Doble titulación en Francia", "detalle": "La FCFM tiene programas de doble titulación con escuelas de ingeniería francesas, dentro de su programa de movilidad internacional. Las condiciones se publican en cada convocatoria.",
+       "url": "https://ingenieria.uchile.cl/dam/jcr:d32271bf-3772-4c9e-8e58-ea95cb128c3b/Revista_2026_final.pdf"},
+    ],
     "salidas": [
-      salida("Ingeniería Civil", titulo="Ingeniero/a Civil (menciones Estructuras, Construcción y Geotecnia; Hidráulica, Sanitaria y Ambiental; Transporte)", malla=UCH+"4969/ingenieria-civil"),
-      salida("Ingeniería Civil de Minas", malla=UCH+"4977/ingenieria-civil-de-minas"),
-      salida("Ingeniería Civil en Biotecnología", malla=UCH+"4970/ingenieria-civil-en-biotecnologia"),
-      salida("Ingeniería Civil en Computación", malla=UCH+"4971/ingenieria-civil-en-computacion"),
-      salida("Ingeniería Civil Eléctrica", malla=UCH+"4972/ingenieria-civil-electrica"),
-      salida("Ingeniería Civil Industrial", malla="https://uchile.cl/dam/jcr:cdc0ae92-f9b3-46fb-8aff-4d49fe4c6440/MallaCivilIndustrial2021.jpg",
-             nota="Especialización desde el 5.º semestre."),
-      salida("Ingeniería Civil Matemática", malla=UCH+"4974/ingenieria-civil-matematica"),
-      salida("Ingeniería Civil Mecánica", malla=UCH+"4976/ingenieria-civil-mecanica"),
-      salida("Ingeniería Civil Química", malla=UCH+"4978/ingenieria-civil-quimica"),
-      salida("Geología", tipo="no_ingenieria"),
-      salida("Geofísica", tipo="no_ingenieria"),
-      salida("Licenciatura en Ciencias mención Astronomía", tipo="no_ingenieria"),
-      salida("Licenciatura en Ciencias mención Física", tipo="no_ingenieria"),
+      uch("Ingeniería Civil", 4969, "ingenieria-civil", "Ingeniero/a Civil", "Civil",
+          menciones=["Estructuras, Construcción y Geotecnia", "Hidráulica, Sanitaria y Ambiental", "Transporte"]),
+      uch("Ingeniería Civil de Minas", 4977, "ingenieria-civil-de-minas", "Ingeniero/a Civil de Minas", "Minas y Metalurgia Extractiva"),
+      uch("Ingeniería Civil en Biotecnología", 4970, "ingenieria-civil-en-biotecnologia", "Ingeniero/a Civil en Biotecnología", "Biotecnología"),
+      uch("Ingeniería Civil en Computación", 4971, "ingenieria-civil-en-computacion", "Ingeniero/a Civil en Computación", "Computación"),
+      uch("Ingeniería Civil Eléctrica", 4972, "ingenieria-civil-electrica", "Ingeniero/a Civil Eléctrico/a", "Eléctrica",
+          menciones=["Automática y Bioingeniería", "Energía Eléctrica", "Telecomunicaciones y Electrónica", "Robótica", "Instrumentación Astronómica", "Procesamiento de Voz e Imágenes"]),
+      uch("Ingeniería Civil Industrial", 4973, "ingenieria-civil-industrial", "Ingeniero/a Civil Industrial", "Industrial"),
+      uch("Ingeniería Civil Matemática", 4974, "ingenieria-civil-matematica", "Ingeniero/a Civil Matemático/a", "Matemática",
+          despues="La propia carrera destaca la continuación a magíster y doctorado para quienes siguen la carrera científica."),
+      uch("Ingeniería Civil Mecánica", 4976, "ingenieria-civil-mecanica", "Ingeniero/a Civil Mecánico/a", "Mecánica"),
+      uch("Ingeniería Civil Química", 4978, "ingenieria-civil-quimica", "Ingeniero/a Civil Químico/a", "Química"),
+      uch("Geología", 4979, "geologia", "Geólogo/a", "Geología", ciencias=True, grupo="tierra", tipo="no_ingenieria"),
+      uch("Geofísica", 4982, "geofisica", "Geofísico/a", "Geofísica", sem=10, ciencias=True, grupo="tierra", tipo="no_ingenieria",
+          menciones=["Tierra Sólida", "Atmósfera"]),
+      uch("Licenciatura en Ciencias mención Astronomía", 4980, "astronomia", None, "Astronomía", sem=8, ciencias=True, grupo="licenciatura", tipo="no_ingenieria",
+          despues="El camino habitual es seguir un magíster o doctorado en astronomía o áreas afines."),
+      uch("Licenciatura en Ciencias mención Física", 8450, "fisica", None, "Física", sem=8, ciencias=True, grupo="licenciatura", tipo="no_ingenieria",
+          despues="El camino habitual es seguir un magíster o doctorado en física o áreas afines."),
     ],
     "fuentes": [
       {"nombre": "FCFM — Preguntas frecuentes de admisión", "url": "https://ingenieria.uchile.cl/admision/preguntas-frecuentes"},
       {"nombre": "FCFM — Plazo para elegir tu especialidad", "url": "https://ingenieria.uchile.cl/escuela/pregrado/informacion-para-estudiantes/plazo-para-elegir-tu-especialidad"},
-      {"nombre": "U. de Chile — Ingeniería Civil", "url": "https://uchile.cl/carreras/4969/ingenieria-civil"},
+      {"nombre": "U. de Chile — fichas de cada carrera (título, grado y duración)", "url": "https://uchile.cl/carreras"},
+      {"nombre": "FCFM — Malla Geofísica (ciclos Plan Común, Licenciatura y Especialidad)", "url": "https://portaluchile.uchile.cl/dam/jcr:460ebcc8-9b64-412f-bab0-946e6bf1c6fc/Malla%20Geof%C3%ADsica%20Tierra%20s%C3%B3lida.pdf"},
+      {"nombre": "FCFM — Articulación pregrado y magíster (EPEC 2024)", "url": "https://ingenieria.uchile.cl/dam/jcr:ec5338a6-a331-459a-8a5a-f1329a994b43/ARTICULACION%20EPEC%20FCFM%202024.pdf"},
     ],
   },
   # ---------------- UC ----------------
@@ -258,9 +288,11 @@ def main():
             if s["programa_directo_id"]:
                 assert s["programa_directo_id"] in ids, f"salida apunta a programa inexistente: {s['programa_directo_id']}"
         pc["consultado"] = CONSULTADO
-    out = {"version": "0.3", "consultado": CONSULTADO, "planes_comunes": PLANES}
+    from config import FOCO
+    planes = [pc for pc in PLANES if pc["universidad_id"] in FOCO]
+    out = {"version": "0.4", "consultado": CONSULTADO, "foco": FOCO, "planes_comunes": planes}
     (root / "data" / "planes_comunes.json").write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"{len(PLANES)} planes comunes, {sum(len(p['salidas']) for p in PLANES)} salidas")
+    print(f"{len(planes)} planes comunes en foco, {sum(len(p['salidas']) for p in planes)} salidas")
 
 if __name__ == "__main__":
     main()

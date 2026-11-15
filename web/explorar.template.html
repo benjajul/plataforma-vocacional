@@ -27,7 +27,7 @@ __BASE_CSS__
   __NAV__
   <header style="display:flex;flex-direction:column;gap:10px">
     <h1>Explorar ingenierías</h1>
-    <p class="lede">82 carreras de ingeniería e Ingeniería Comercial en 8 universidades de Santiago. Navega por <b>área</b> (carreras emparentadas por lo que hacen) o por <b>universidad</b>. Para cada carrera: vacantes y ponderaciones de la Admisión 2027, y el puntaje de corte y matriculados de la Admisión 2026 cuando la universidad los publica.</p>
+    <p class="lede">52 carreras de ingeniería e Ingeniería Comercial en 5 universidades de Santiago: U. de Chile, UC, USM, USACH y UDP. Navega por <b>área</b> (carreras emparentadas por lo que hacen) o por <b>universidad</b>. Para cada carrera: vacantes y ponderaciones de la Admisión 2027, y el puntaje de corte y matriculados de la Admisión 2026 cuando la universidad los publica.</p>
   </header>
 
   <div class="modes" role="group" aria-label="Forma de navegar">
@@ -99,7 +99,7 @@ function render(){
         return `<div class="fam"><div class="famhead"><h2>${esc(f.nombre)}</h2><a class="small" href="habilidades.html#fam-${f.id}">Ver habilidades de esta carrera</a></div><p class="small" style="max-width:75ch">${esc(f.que_hace)}</p>${tabla(ps,true)}</div>`}).join("")}</div>`;
     location.replace("#area-"+state.area);
   } else {
-    sel.innerHTML = `<div class="unis">${Object.keys(UNI).map(u=>`<button class="btn" type="button" data-uni="${u}" aria-pressed="${u===state.uni}">${UNI[u]}</button>`).join("")}</div>`;
+    sel.innerHTML = `<div class="unis">${Object.keys(UNI).filter(u=>D.foco.includes(u)).map(u=>`<button class="btn" type="button" data-uni="${u}" aria-pressed="${u===state.uni}">${UNI[u]}</button>`).join("")}</div>`;
     const ps = D.programas.filter(p=>p.universidad_id===state.uni);
     lista.innerHTML = `<div class="card fade"><div><h2>${esc(D.universidades[state.uni])}</h2><p class="small" style="margin-top:4px">${ps.length} carreras en el alcance del proyecto. Las carreras que llevan a varias áreas (planes comunes) aparecen en cada una.</p></div>
       ${D.areas.map(a=>{const qs=filtrar(ps.filter(p=>p.areas.includes(a.id))); if(!qs.length) return "";

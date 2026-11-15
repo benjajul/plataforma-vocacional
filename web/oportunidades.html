@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oportunidades por Universidad</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+</head>
+<body>
+<style>
+/* Estilos comunes de la plataforma (se insertan en cada página al construir el sitio). Columna de lectura ~920px. */
+:root{
+  --bg:#f3f6f7; --surface:#ffffff; --ink:#15212b; --muted:#566673; --line:#d5dee3;
+  --accent:#0d5f86; --accent-soft:#dcebf2; --mark:#a15c00; --mark-soft:#fbead1;
+  --ok:#1f7a4d; --ok-soft:#dcf1e5; --warn:#a15c00; --warn-soft:#fbead1; --bad:#b03a2e; --bad-soft:#f8e1de; --na:#6b7680; --na-soft:#e7ebee;
+  --info:#5b4fa8; --info-soft:#e7e3f7;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f171d; --surface:#16222a; --ink:#e4ecf0; --muted:#9aabb6; --line:#2a3a45;
+  --accent:#6cb8dd; --accent-soft:#18394a; --mark:#f0b35c; --mark-soft:#3d2c12;
+  --ok:#6fcf9b; --ok-soft:#173a29; --warn:#f0b35c; --warn-soft:#3d2c12; --bad:#f08a7e; --bad-soft:#40201c; --na:#a3adb5; --na-soft:#26323a;
+  --info:#b0a6f0; --info-soft:#2a2547; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f171d; --surface:#16222a; --ink:#e4ecf0; --muted:#9aabb6; --line:#2a3a45;
+  --accent:#6cb8dd; --accent-soft:#18394a; --mark:#f0b35c; --mark-soft:#3d2c12;
+  --ok:#6fcf9b; --ok-soft:#173a29; --warn:#f0b35c; --warn-soft:#3d2c12; --bad:#f08a7e; --bad-soft:#40201c; --na:#a3adb5; --na-soft:#26323a;
+  --info:#b0a6f0; --info-soft:#2a2547; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.55 var(--f-body);margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:16px 48px}
+.wrap{max-width:940px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:700} h2{font-size:1.4rem;font-weight:700}
+h3{font:600 .78rem var(--f-body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+p{margin:0} a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lede{color:var(--muted);max-width:70ch}
+.topnav{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:.92rem;border-bottom:1px solid var(--line);padding-bottom:10px}
+.topnav a{text-decoration:none;color:var(--muted);font-weight:600;padding-block:2px}
+.topnav a[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--accent)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:16px}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:2px 10px;font-size:.82rem;font-weight:600;white-space:nowrap}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.p-ok{color:var(--ok);background:var(--ok-soft)} .p-warn{color:var(--warn);background:var(--warn-soft)}
+.p-bad{color:var(--bad);background:var(--bad-soft)} .p-na{color:var(--na);background:var(--na-soft)} .p-info{color:var(--info);background:var(--info-soft)}
+.chip{font-size:.84rem;border:1px solid var(--line);border-radius:6px;padding:3px 9px;background:var(--bg);color:var(--ink);text-decoration:none}
+.btn{font:600 .95rem var(--f-body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:8px 14px;cursor:pointer}
+.btn[aria-pressed="true"],.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table.data{border-collapse:collapse;width:100%;font-size:.88rem;min-width:640px}
+table.data th{font:600 .72rem var(--f-body);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.data td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+table.data tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.mono{font-family:var(--f-mono);font-size:.8rem}
+.small{font-size:.82rem;color:var(--muted)}
+.src{font-size:.75rem;color:var(--muted)}
+.note{background:var(--accent-soft);border-radius:10px;padding:12px 14px;font-size:.93rem}
+footer{font-size:.82rem;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.fade{animation:fade .2s ease-out}@keyframes fade{from{transform:translateY(3px)}to{transform:none}}}
+
+/* Layout: tabla comparativa (scroll horizontal propio en móvil) + pestañas por universidad con 5 bloques */
+.cmp th[scope=row]{font-weight:600;white-space:normal;min-width:9rem}
+.cmp td{min-width:9.5rem;vertical-align:top;font-size:.86rem;line-height:1.35}
+.cmp thead th{white-space:nowrap}
+.st{display:inline-block;width:.6rem;height:.6rem;border-radius:50%;margin-right:6px;vertical-align:1px}
+.st.si{background:var(--ok)}.st.warn{background:var(--warn)}.st.na{background:var(--na);opacity:.5}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.uni-head{display:flex;flex-direction:column;gap:6px}
+.uni-head h2{font-size:1.35rem}
+.blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px}
+.block{display:flex;flex-direction:column;gap:8px}
+.block h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-family:var(--f-body);font-weight:600;margin:0}
+.block ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px}
+.block li{font-size:.94rem;line-height:1.45;white-space:pre-line}
+.src{font-size:.78rem;margin-left:4px;white-space:nowrap}
+.orient{background:var(--info-soft);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.orient b{font-weight:600}
+.orient p{margin:0}
+.nota{font-size:.84rem;color:var(--muted)}
+.pend{background:var(--warn-soft);border-radius:10px;padding:12px 14px;font-size:.92rem}
+</style>
+
+<div class="wrap">
+  <nav class="topnav" aria-label="Secciones"><a href="index.html">Explorar</a><a href="rutas.html">Rutas de ingreso</a><a href="habilidades.html">Habilidades</a><a href="simulador.html">Simulador</a><a href="cuestionario.html">Cuestionario</a><a href="oportunidades.html" aria-current="page">Más allá del título</a></nav>
+  <header style="display:flex;flex-direction:column;gap:10px">
+    <h1>Más allá del título</h1>
+    <p class="lede">Lo que cada universidad ofrece además de la carrera: seguir a un magíster sin empezar de cero, estudiar o titularse en el extranjero, prácticas y cómo se ve en los rankings internacionales. Son datos que pesan en el CV y en las oportunidades laborales y académicas.</p>
+  </header>
+
+  <section class="card" style="display:flex;flex-direction:column;gap:10px">
+    <h2 style="font-size:1.15rem">Comparación rápida</h2>
+    <div class="tablewrap"><table class="data cmp" id="cmp"></table></div>
+    <p class="nota"><span class="st si"></span>Ofrece o destaca <span class="st warn" style="margin-left:12px"></span>Parcial o con matices <span class="st na" style="margin-left:12px"></span>No encontrado en fuentes públicas (no significa que no exista). * = dato de una carrera, puede variar entre carreras.</p>
+  </section>
+
+  <div class="pend" id="pend"></div>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="card" id="uni" style="display:flex;flex-direction:column;gap:16px"></div>
+  </section>
+
+  <footer id="pie"></footer>
+</div>
+
+<script>
+const D = {"version": "0.7", "consultado": "2026-11-09", "filas": [{"id": "doble", "nombre": "Doble título en el extranjero"}, {"id": "intercambio", "nombre": "Intercambio semestral"}, {"id": "magister", "nombre": "Título + magíster articulado"}, {"id": "practicas", "nombre": "Prácticas obligatorias"}, {"id": "qs", "nombre": "QS 2026 Ingeniería y Tecnología"}, {"id": "acred", "nombre": "Acreditación internacional"}], "universidades": [{"id": "uchile", "nombre": "Universidad de Chile", "resumen": "Facultad de ciencias e ingeniería con plan común amplio (incluye Geología, Geofísica, Astronomía y Física) y mucha investigación. Primera de Chile en minería en el ranking QS por materia.", "tabla": {"doble": {"estado": "si", "texto": "Écoles Centrales (Francia), desde 2014"}, "intercambio": {"estado": "si", "texto": "Sí (cifras no publicadas en lo consultado)"}, "magister": {"estado": "si", "texto": "Sí, una sola tesis para ambos"}, "practicas": {"estado": "si", "texto": "2 prácticas, mín. 180 h cada una*"}, "qs": {"estado": "si", "texto": "=132 del mundo · 2.ª de Chile"}, "acred": {"estado": "na", "texto": "No encontrada"}}, "destaca": [{"texto": "Ingeniería en Minas y Mineralurgia: 16.ª del mundo y 1.ª de Latinoamérica (QS 2026).", "fuente": "qs26"}, {"texto": "Ciencias de la Computación: =118 del mundo, la mejor ubicada de Chile (QS 2026).", "fuente": "qs26"}, {"texto": "Ingeniería y Tecnología en general: =132 del mundo (QS 2026).", "fuente": "qs26"}], "magister": [{"texto": "Articulación pregrado–magíster: en la etapa de especialidad se puede cursar en paralelo un magíster de la FCFM (de la misma u otra área) y obtener título y magíster con una sola tesis, un examen y un informe final. Requiere situación académica regular y aprobación del comité del magíster.", "fuente": "uch_art"}], "extranjero": [{"texto": "Doble titulación con el Groupe des Écoles Centrales (CentraleSupélec, Lyon, Nantes, Lille y Marsella): unos 2 años en Francia y regreso a Chile para titularse. Convenio desde 2014; más de 50 estudiantes lo han cursado (marzo 2024).", "fuente": "uch_dt"}], "practicas": [{"texto": "Prácticas Profesional I (4.º año) y II (5.º año), mínimo 180 horas cada una (unas 4 semanas), recomendadas en vacaciones de verano. *Dato de Ingeniería Civil Mecánica; cada departamento fija su norma.", "fuente": "uch_prac"}], "orientacion": "Fuerte en ciencias e investigación: es la opción que más abre la puerta a magíster, doctorado y carreras científicas, sin dejar de lado la industria (minería, energía, computación)."}, {"id": "uc", "nombre": "Pontificia Universidad Católica de Chile", "resumen": "Licenciatura de 4 años con major y minor, que permite combinar una ingeniería con otra área (por ejemplo, gestión o datos). Primera de Chile en Ingeniería y Tecnología en el ranking QS por materia.", "tabla": {"doble": {"estado": "si", "texto": "4 instituciones (Francia e Italia)"}, "intercambio": {"estado": "si", "texto": "Más de 350 universidades socias"}, "magister": {"estado": "si", "texto": "Título + magíster UC"}, "practicas": {"estado": "si", "texto": "2 prácticas: ≥4 semanas y ≥360 h"}, "qs": {"estado": "si", "texto": "=99 del mundo · 1.ª de Chile"}, "acred": {"estado": "si", "texto": "ABET en 5 títulos (dato 2021)"}}, "destaca": [{"texto": "Ingeniería y Tecnología: =99 del mundo, 1.ª de Chile (QS 2026).", "fuente": "qs26"}, {"texto": "Ingeniería Civil y Estructural: 41.ª del mundo y 1.ª de Latinoamérica (QS 2026).", "fuente": "qs26"}, {"texto": "Negocios y Estudios de Gestión: =64 del mundo (QS 2026), útil si se combina ingeniería con un minor de gestión.", "fuente": "qs26"}, {"texto": "Acreditación ABET (EE.UU.) desde 2007 en Ingeniería Civil y en los títulos de Ingeniero Civil de Industrias con diploma en Química, Mecánica, Eléctrica y Computación. La página es de 2021: conviene confirmar vigencia.", "fuente": "uc_abet"}, {"texto": "Flexibilidad: 13 majors disciplinarios, 9 interdisciplinarios, 20 minors de profundidad y 19 de amplitud.", "fuente": "uc_plan"}, {"texto": "Además del título de ingeniero, se puede postular a un segundo título UC (Medicina, Arquitectura o Diseño), con cupos limitados.", "fuente": "uc_plan"}], "magister": [{"texto": "Tras la licenciatura, una de las rutas es título profesional + magíster en Ingeniería UC. Se pueden iniciar programas de magíster y doctorado UC mientras se cursa el título.", "fuente": "uc_brochure"}], "extranjero": [{"texto": "Doble título con el Groupe des Écoles Centrales, École Polytechnique, Mines Saint-Étienne (Francia) y Politecnico di Milano (Italia). Se va después de 8 semestres (400 créditos) y se estudian 4 semestres afuera. Requisitos: promedio 5,0 a 5,5, inglés y, para Francia, francés A2. Lo han cursado 297 estudiantes.", "fuente": "uc_dt"}, {"texto": "Intercambio de uno o dos semestres con más de 350 universidades.", "fuente": "uc_ext"}], "practicas": [{"texto": "Práctica I (trabajo operativo, al menos 4 semanas) y Práctica II (profesional, al menos 360 horas, unos 2 meses).", "fuente": "uc_prac"}], "orientacion": "La más flexible: el sistema de major y minor permite armar un perfil técnico, de gestión o mixto. El título de Ingeniero Civil de Industrias con diplomas mezcla ingeniería y gestión; junto al buen ranking en Negocios, facilita orientarse a cargos de gestión."}, {"id": "usm", "nombre": "Universidad Técnica Federico Santa María", "resumen": "Universidad tecnológica con tradición industrial. Tiene las prácticas más largas del grupo y doble título con Politecnico di Milano para casi todas sus ingenierías.", "tabla": {"doble": {"estado": "si", "texto": "4 instituciones (Italia y Francia)"}, "intercambio": {"estado": "si", "texto": "Sí (cifras no publicadas en lo consultado)"}, "magister": {"estado": "na", "texto": "No se encontró programa formal"}, "practicas": {"estado": "si", "texto": "2 prácticas de 8 semanas (320 h)*"}, "qs": {"estado": "si", "texto": "=273 del mundo · 3.ª de Chile"}, "acred": {"estado": "si", "texto": "Ing. Civil Informática (desde dic. 2024)"}}, "destaca": [{"texto": "Ingeniería y Tecnología: =273 del mundo, 3.ª de Chile (QS 2026). También aparece en Civil y Estructural (201-275), Eléctrica (251-300) y Computación (351-400).", "fuente": "qs26"}, {"texto": "Ingeniería Civil Informática tiene acreditación con criterios internacionales (equivalentes al Acuerdo de Washington), vigente desde diciembre de 2024.", "fuente": "usm_acr"}, {"texto": "Ing. Civil Informática: empleabilidad de 97 % (Casa Central) y 95 % (San Joaquín). El 38 % y 22 % de los titulados sigue estudiando (estudio propio 2022).", "fuente": "usm_emp"}], "magister": [{"texto": "No se encontró un programa formal de título + magíster articulado. Sí hay magíster en la USM, pero la continuidad depende de cada programa.", "fuente": null}], "extranjero": [{"texto": "Doble título con:\n• Politecnico di Milano: todas las ingenierías de Casa Central y Campus Santiago, salvo Diseño de Productos y Obras Civiles; 4 semestres.\n• INSA Lyon: Informática y Mecánica; 2 años.\n• IMT Atlantique: Telemática.\n• Audencia Nantes: Ingeniería Comercial.", "fuente": "usm_dt"}], "practicas": [{"texto": "Práctica Industrial y Práctica Profesional, de 8 semanas (320 horas) cada una: la primera tras aprobar el 5.º semestre y la segunda tras el 8.º. *Dato de Ingeniería Civil Industrial.", "fuente": "usm_prac"}], "orientacion": "Perfil técnico y de planta: prácticas largas y tradición en la industria y la ingeniería aplicada. Prepara sobre todo para cargos técnicos y operativos."}, {"id": "usach", "nombre": "Universidad de Santiago de Chile", "resumen": "Universidad estatal con la oferta de ingeniería más amplia del grupo, que incluye carreras civiles y de ejecución (más cortas y aplicadas). Tiene un magíster articulado con cupos para Industrial.", "tabla": {"doble": {"estado": "warn", "texto": "Contemplado en sus convenios; no publica lista"}, "intercambio": {"estado": "si", "texto": "Sí, tras aprobar 1.er año; becas"}, "magister": {"estado": "si", "texto": "Industrial: hasta 10 cupos/año"}, "practicas": {"estado": "si", "texto": "Mín. 180 h; se pueden hacer afuera"}, "qs": {"estado": "warn", "texto": "353 del mundo (QS 2025)"}, "acred": {"estado": "na", "texto": "No encontrada"}}, "destaca": [{"texto": "Ingeniería Mecánica: 351-400 del mundo (QS 2026).", "fuente": "qs26"}, {"texto": "Ingeniería y Tecnología en general: puesto 353 del mundo (QS 2025; en la nota de 2026 no aparece entre las 3 chilenas mejor ubicadas).", "fuente": "qs25"}, {"texto": "Junto a las ingenierías civiles ofrece ingenierías de ejecución: carreras más cortas y aplicadas, con su propio corte de ingreso.", "fuente": null}], "magister": [{"texto": "Ingeniería Civil Industrial → Magíster en Ciencias de la Ingeniería, mención Industrial: hasta 10 estudiantes por año, 8 cursos y el trabajo de graduación compartidos (90 créditos SCT), en los últimos semestres.", "fuente": "usach_art"}, {"texto": "La universidad aprobó una política institucional de articulación (2026) para extender este tipo de rutas; todavía no detalla programas de ingeniería.", "fuente": "usach_pol"}], "extranjero": [{"texto": "Intercambio semestral con universidades con convenio, después de aprobar el primer año. Hay becas según vulnerabilidad y mérito, y los cursos se reconocen con un contrato de estudios previo.", "fuente": "usach_mov"}, {"texto": "La Facultad de Ingeniería contempla convenios de doble titulación, pero no se encontró una lista pública de socios.", "fuente": "usach_conv"}], "practicas": [{"texto": "Prácticas obligatorias de al menos 180 horas, tras aprobar el 5.º nivel. Se pueden hacer en el extranjero (jornada completa, hasta 3 meses).", "fuente": "usach_prac"}], "orientacion": "Perfil aplicado e industrial. Las carreras de ejecución apuntan a roles operativos; las civiles abren también la puerta a la gestión."}, {"id": "udp", "nombre": "Universidad Diego Portales", "resumen": "Facultad más pequeña, con plan común de 1 año, pasantías laborales tempranas y magíster de continuidad con un solo semestre adicional.", "tabla": {"doble": {"estado": "na", "texto": "No se encontró para ingeniería"}, "intercambio": {"estado": "si", "texto": "Más de 150 instituciones (toda la UDP)"}, "magister": {"estado": "si", "texto": "1 semestre adicional"}, "practicas": {"estado": "si", "texto": "2 pasantías de 200 h"}, "qs": {"estado": "na", "texto": "No aparece entre las chilenas destacadas"}, "acred": {"estado": "na", "texto": "No encontrada"}}, "destaca": [{"texto": "Ingeniería Civil Industrial con tres menciones: Operaciones y Logística, Análisis de Datos y Energía Sostenible.", "fuente": "udp_ici"}, {"texto": "Red de empresas: en 2022 hubo 696 estudiantes en práctica en 494 empresas, y 334 titulados de ingeniería.", "fuente": "udp_fic"}], "magister": [{"texto": "Magíster de continuidad: se postula al obtener la licenciatura (tras el 8.º semestre) y se cursa con solo un semestre adicional.", "fuente": "udp_pos"}, {"texto": "Detalle en Ingeniería Civil Industrial: se postula al magíster tras el 8.º semestre, incluida la Pasantía Laboral II.", "fuente": "udp_ici"}], "extranjero": [{"texto": "La UDP tiene convenios con más de 150 instituciones extranjeras (cifra de toda la universidad).", "fuente": "udp_int"}, {"texto": "En ingeniería la movilidad saliente ha sido baja: entre 2 y 10 estudiantes por año en 2016-2021.", "fuente": "udp_fic"}], "practicas": [{"texto": "Pasantía Laboral I (entre los semestres 4 y 5) y Pasantía Laboral II (entre el 8 y el 9), de al menos 200 horas cada una.", "fuente": "udp_ici"}], "orientacion": "Orientada a la gestión y a la empresa: pasantías desde el 2.º año, menciones aplicadas y discurso centrado en personas y sostenibilidad. Es la más cercana al perfil de gestión o gerencial entre las cinco."}], "fuentes": {"qs26": {"nombre": "Emol — QS World University Rankings by Subject 2026 (25-03-2026)", "url": "https://www.emol.com/noticias/Nacional/2026/03/25/1195345/universidades-chilenas-ranking-mundial-materia.html", "oficial": false}, "qs25": {"nombre": "Meganoticias — QS by Subject 2025, Ingeniería y Tecnología (12-03-2025)", "url": "https://www.meganoticias.cl/nacional/478718-mejores-universidades-chilenas-en-ingeneria-pdp-12-03-2025.html", "oficial": false}, "uch_art": {"nombre": "FCFM — Articulación pregrado y magíster (EPEC 2024)", "url": "https://ingenieria.uchile.cl/dam/jcr:ec5338a6-a331-459a-8a5a-f1329a994b43/ARTICULACION%20EPEC%20FCFM%202024.pdf", "oficial": true}, "uch_dt": {"nombre": "U. de Chile — Doble titulación con las Écoles Centrales (28-03-2024)", "url": "https://www.uchile.cl/noticias/214599/programa-doble-titulacion-visita-institucional-de-ecoles-centrales", "oficial": true}, "uch_prac": {"nombre": "FCFM DIMEC — Normativa de prácticas profesionales (2024)", "url": "https://dimec.uchile.cl/wp-content/uploads/2024/11/Normativa_practicas_profesionales_de_DIMEC.pdf", "oficial": true}, "uc_dt": {"nombre": "Ingeniería UC — Guía Doble Título 2025", "url": "https://dobletitulo.ing.uc.cl/wp-content/uploads/2025/08/Guia-Doble-Titulo-2025.pdf", "oficial": true}, "uc_ext": {"nombre": "Ingeniería UC — Estudia en el extranjero", "url": "https://www.ing.uc.cl/programas-de-estudio/estudia-en-el-extranjero/", "oficial": true}, "uc_plan": {"nombre": "Ingeniería UC — Plan de estudios (majors y minors)", "url": "https://www.ing.uc.cl/en/programas-de-estudio/pregrado/plan-estudios/plan-estudios-ingenieria-uc", "oficial": true}, "uc_abet": {"nombre": "Ingeniería UC — Títulos profesionales y acreditación ABET", "url": "https://www.ing.uc.cl/en/programas-de-estudio/pregrado/plan-estudios/titulos-profesionales-ingenieria/", "oficial": true}, "uc_prac": {"nombre": "Ingeniería UC — Actividades del alumno (prácticas)", "url": "https://www.ing.uc.cl/wp-content/uploads/2021/01/Actividades-Alumno-Ingenier%C3%ADa-UC.pdf", "oficial": true}, "uc_brochure": {"nombre": "Admisión UC — Ingeniería y Tecnología", "url": "https://admision.uc.cl/htdocs/content/uploads/2023/06/Brochure-Ingenieria-y-Tecnologia.pdf", "oficial": true}, "usm_dt": {"nombre": "USM Internacional — Convenios de doble título", "url": "https://internacional.usm.cl/movilidad/desde-la-usm-internacional/doble-titulacion/convenios-de-doble-titulo/", "oficial": true}, "usm_prac": {"nombre": "USM Departamento de Industrias — Manual de prácticas (2026)", "url": "https://www.industrias.usm.cl/wp-content/uploads/2026/08/Manual_practicas_DI.pdf", "oficial": true}, "usm_acr": {"nombre": "Acreditaci — Programas acreditados con criterios internacionales", "url": "https://www.acreditaci.cl/en/accredited-programs/accredited-under-international-criteria/", "oficial": true}, "usm_emp": {"nombre": "USM — Dashboard Ing. Civil Informática (estudio de empleabilidad 2022)", "url": "https://gestal.usm.cl/wp-content/uploads/2023/05/Dashboard-Carreras-Ingenieria-Civil-Informatica-Casa-Central-San-Joaquin-2022.pdf", "oficial": true}, "usach_art": {"nombre": "USACH — Acuerdo de articulación Ing. Civil Industrial y Magíster", "url": "https://mcii.usach.cl/sites/mcii/files/acuerdoarticulacionvipo_vra_mcii_ici2012_ici2020_firmadotodos.pdf", "oficial": true}, "usach_pol": {"nombre": "USACH — Política institucional de articulación (2026)", "url": "https://proyectoipg.usach.cl/ipg/wp-content/uploads/2026/04/POLITICA-INSTITUCIONAL-DE-ARTICULACION.pdf", "oficial": true}, "usach_mov": {"nombre": "USACH DRII — Reglamento de movilidad estudiantil internacional", "url": "https://www.drii.usach.cl/sites/drii/files/resolucion_reglamento_de_movilidad_estudiantil_internacional.pdf", "oficial": true}, "usach_conv": {"nombre": "USACH FING — Proceso de convenios internacionales", "url": "https://vimefing.usach.cl/wp-content/uploads/2023/11/Infografia_proceso_convenios_internacionales.pdf", "oficial": true}, "usach_prac": {"nombre": "USACH FING — Normativa de prácticas profesionales (2019)", "url": "https://finginternacional.usach.cl/sites/ingenieriaglobal/files/resolucion_ndeg6151_de_22.08.19_practicas_profesionales.pdf", "oficial": true}, "udp_ici": {"nombre": "Admisión UDP — Ingeniería Civil Industrial 2026", "url": "https://admision.udp.cl/cms/wp-content/uploads/2025/09/INGENIERIA-CIVIL-INDUSTRIAL_2026.pdf", "oficial": true}, "udp_pos": {"nombre": "UDP — Feria de posgrados, Facultad de Ingeniería y Ciencias", "url": "https://feriavirtualposgrados.udp.cl/cms/wp-content/uploads/2023/09/ingenieria_feria.pdf", "oficial": true}, "udp_int": {"nombre": "UDP Internacional — Folleto Globaliza UDP", "url": "https://internacional.udp.cl/cms/wp-content/uploads/2023/07/230711_Folleto_GlobalizaUDP.pdf", "oficial": true}, "udp_fic": {"nombre": "UDP — Cuenta pública Facultad de Ingeniería y Ciencias 2022", "url": "https://ingenieriayciencias.udp.cl/cms/wp-content/uploads/2023/05/Cuenta-FIC-2022-10.05.2023.pdf", "oficial": true}}, "pendiente": "Empleabilidad al 1.er año e ingreso al 4.º año por carrera (Mi Futuro, Mineduc): mifuturo.cl no se pudo consultar desde esta sesión. Se agregará cuando se pueda leer el buscador.", "nota_orientacion": "La 'orientación' es una lectura nuestra a partir de los datos de esta página (prácticas, menciones, rankings, rutas de continuidad), no una clasificación oficial. Ninguna fuente pública mide qué tan 'gerencial' o 'técnico' es el egresado de cada universidad."};
+const esc = s => String(s ?? "").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const CORTO = {uchile:"U. de Chile",uc:"UC",usm:"USM",usach:"USACH",udp:"UDP"};
+
+document.getElementById("cmp").innerHTML =
+  `<thead><tr><th></th>${D.universidades.map(u=>`<th scope="col">${CORTO[u.id]}</th>`).join("")}</tr></thead>
+   <tbody>${D.filas.map(f=>`<tr><th scope="row">${esc(f.nombre)}</th>${D.universidades.map(u=>{const c=u.tabla[f.id];return `<td><span class="st ${c.estado}"></span>${esc(c.texto)}</td>`}).join("")}</tr>`).join("")}</tbody>`;
+
+document.getElementById("pend").innerHTML = `<b>Pendiente:</b> ${esc(D.pendiente)}`;
+
+const fuente = k => { if(!k) return ""; const f=D.fuentes[k]; return ` <a class="src" href="${esc(f.url)}" target="_blank" rel="noopener" title="${esc(f.nombre)}">fuente${f.oficial?"":" (prensa)"}</a>`; };
+const lista = xs => `<ul>${xs.map(x=>`<li>${esc(x.texto)}${fuente(x.fuente)}</li>`).join("")}</ul>`;
+
+function render(id){
+  const u = D.universidades.find(x=>x.id===id);
+  document.getElementById("uni").innerHTML = `
+    <div class="uni-head"><h2>${esc(u.nombre)}</h2><p style="margin:0">${esc(u.resumen)}</p></div>
+    <div class="blocks">
+      <div class="block"><h3>En qué destaca</h3>${lista(u.destaca)}</div>
+      <div class="block"><h3>Seguir a un magíster</h3>${lista(u.magister)}</div>
+      <div class="block"><h3>Al extranjero</h3>${lista(u.extranjero)}</div>
+      <div class="block"><h3>Prácticas</h3>${lista(u.practicas)}</div>
+    </div>
+    <div class="orient"><b>Orientación del egresado (lectura nuestra)</b><p>${esc(u.orientacion)}</p><p class="nota">${esc(D.nota_orientacion)}</p></div>`;
+  document.querySelectorAll("#tabs .btn").forEach(b=>b.setAttribute("aria-pressed", b.dataset.id===id));
+  try{ history.replaceState(null,"","#"+id) }catch(e){}
+}
+const tabs = document.getElementById("tabs");
+tabs.innerHTML = D.universidades.map(u=>`<button class="btn" data-id="${u.id}" aria-pressed="false">${CORTO[u.id]}</button>`).join("");
+tabs.querySelectorAll(".btn").forEach(b=>b.addEventListener("click",()=>render(b.dataset.id)));
+const h = location.hash.slice(1);
+render(D.universidades.some(u=>u.id===h) ? h : D.universidades[0].id);
+
+document.getElementById("pie").innerHTML = `Datos consultados el ${D.consultado.split("-").reverse().join("-")} en fuentes oficiales de cada universidad, salvo los rankings QS (notas de prensa con la tabla oficial). Cada afirmación enlaza a su fuente. Las condiciones de doble título, intercambio y magíster cambian cada año: confirmar con la universidad antes de decidir.`;
+</script>
+</body>
+</html>

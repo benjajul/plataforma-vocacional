@@ -1,0 +1,86 @@
+<title>Oportunidades por Universidad</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+__BASE_CSS__
+/* Layout: tabla comparativa (scroll horizontal propio en móvil) + pestañas por universidad con 5 bloques */
+.cmp th[scope=row]{font-weight:600;white-space:normal;min-width:9rem}
+.cmp td{min-width:9.5rem;vertical-align:top;font-size:.86rem;line-height:1.35}
+.cmp thead th{white-space:nowrap}
+.st{display:inline-block;width:.6rem;height:.6rem;border-radius:50%;margin-right:6px;vertical-align:1px}
+.st.si{background:var(--ok)}.st.warn{background:var(--warn)}.st.na{background:var(--na);opacity:.5}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.uni-head{display:flex;flex-direction:column;gap:6px}
+.uni-head h2{font-size:1.35rem}
+.blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px}
+.block{display:flex;flex-direction:column;gap:8px}
+.block h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-family:var(--f-body);font-weight:600;margin:0}
+.block ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px}
+.block li{font-size:.94rem;line-height:1.45;white-space:pre-line}
+.src{font-size:.78rem;margin-left:4px;white-space:nowrap}
+.orient{background:var(--info-soft);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.orient b{font-weight:600}
+.orient p{margin:0}
+.nota{font-size:.84rem;color:var(--muted)}
+.pend{background:var(--warn-soft);border-radius:10px;padding:12px 14px;font-size:.92rem}
+</style>
+
+<div class="wrap">
+  __NAV__
+  <header style="display:flex;flex-direction:column;gap:10px">
+    <h1>Más allá del título</h1>
+    <p class="lede">Lo que cada universidad ofrece además de la carrera: seguir a un magíster sin empezar de cero, estudiar o titularse en el extranjero, prácticas y cómo se ve en los rankings internacionales. Son datos que pesan en el CV y en las oportunidades laborales y académicas.</p>
+  </header>
+
+  <section class="card" style="display:flex;flex-direction:column;gap:10px">
+    <h2 style="font-size:1.15rem">Comparación rápida</h2>
+    <div class="tablewrap"><table class="data cmp" id="cmp"></table></div>
+    <p class="nota"><span class="st si"></span>Ofrece o destaca <span class="st warn" style="margin-left:12px"></span>Parcial o con matices <span class="st na" style="margin-left:12px"></span>No encontrado en fuentes públicas (no significa que no exista). * = dato de una carrera, puede variar entre carreras.</p>
+  </section>
+
+  <div class="pend" id="pend"></div>
+
+  <section style="display:flex;flex-direction:column;gap:14px">
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="card" id="uni" style="display:flex;flex-direction:column;gap:16px"></div>
+  </section>
+
+  <footer id="pie"></footer>
+</div>
+
+<script>
+const D = __DATA__;
+const esc = s => String(s ?? "").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const CORTO = {uchile:"U. de Chile",uc:"UC",usm:"USM",usach:"USACH",udp:"UDP"};
+
+document.getElementById("cmp").innerHTML =
+  `<thead><tr><th></th>${D.universidades.map(u=>`<th scope="col">${CORTO[u.id]}</th>`).join("")}</tr></thead>
+   <tbody>${D.filas.map(f=>`<tr><th scope="row">${esc(f.nombre)}</th>${D.universidades.map(u=>{const c=u.tabla[f.id];return `<td><span class="st ${c.estado}"></span>${esc(c.texto)}</td>`}).join("")}</tr>`).join("")}</tbody>`;
+
+document.getElementById("pend").innerHTML = `<b>Pendiente:</b> ${esc(D.pendiente)}`;
+
+const fuente = k => { if(!k) return ""; const f=D.fuentes[k]; return ` <a class="src" href="${esc(f.url)}" target="_blank" rel="noopener" title="${esc(f.nombre)}">fuente${f.oficial?"":" (prensa)"}</a>`; };
+const lista = xs => `<ul>${xs.map(x=>`<li>${esc(x.texto)}${fuente(x.fuente)}</li>`).join("")}</ul>`;
+
+function render(id){
+  const u = D.universidades.find(x=>x.id===id);
+  document.getElementById("uni").innerHTML = `
+    <div class="uni-head"><h2>${esc(u.nombre)}</h2><p style="margin:0">${esc(u.resumen)}</p></div>
+    <div class="blocks">
+      <div class="block"><h3>En qué destaca</h3>${lista(u.destaca)}</div>
+      <div class="block"><h3>Seguir a un magíster</h3>${lista(u.magister)}</div>
+      <div class="block"><h3>Al extranjero</h3>${lista(u.extranjero)}</div>
+      <div class="block"><h3>Prácticas</h3>${lista(u.practicas)}</div>
+    </div>
+    <div class="orient"><b>Orientación del egresado (lectura nuestra)</b><p>${esc(u.orientacion)}</p><p class="nota">${esc(D.nota_orientacion)}</p></div>`;
+  document.querySelectorAll("#tabs .btn").forEach(b=>b.setAttribute("aria-pressed", b.dataset.id===id));
+  try{ history.replaceState(null,"","#"+id) }catch(e){}
+}
+const tabs = document.getElementById("tabs");
+tabs.innerHTML = D.universidades.map(u=>`<button class="btn" data-id="${u.id}" aria-pressed="false">${CORTO[u.id]}</button>`).join("");
+tabs.querySelectorAll(".btn").forEach(b=>b.addEventListener("click",()=>render(b.dataset.id)));
+const h = location.hash.slice(1);
+render(D.universidades.some(u=>u.id===h) ? h : D.universidades[0].id);
+
+document.getElementById("pie").innerHTML = `Datos consultados el ${D.consultado.split("-").reverse().join("-")} en fuentes oficiales de cada universidad, salvo los rankings QS (notas de prensa con la tabla oficial). Cada afirmación enlaza a su fuente. Las condiciones de doble título, intercambio y magíster cambian cada año: confirmar con la universidad antes de decidir.`;
+</script>

@@ -92,7 +92,7 @@ footer{font-size:.82rem;color:var(--muted)}
   __NAV__
   <header style="display:flex;flex-direction:column;gap:10px">
     <h1>¿Qué habilidades desarrolla cada ingeniería?</h1>
-    <p class="lede">Revisamos <b id="nperf"></b> perfiles de egreso oficiales de 8 universidades y marcamos en cada uno 15 habilidades. El mapa muestra en qué porcentaje de los perfiles de cada carrera aparece cada habilidad. Las celdas con borde son las que <b>más distinguen</b> a esa carrera frente al resto. Toca una carrera para ver su ficha.</p>
+    <p class="lede">Revisamos <b id="nperf"></b> perfiles de egreso oficiales de 5 universidades y marcamos en cada uno 15 habilidades. El mapa muestra en qué porcentaje de los perfiles de cada carrera aparece cada habilidad. Las celdas con borde son las que <b>más distinguen</b> a esa carrera frente al resto. Toca una carrera para ver su ficha.</p>
   </header>
 
   <section class="map" aria-label="Mapa de habilidades">
@@ -122,7 +122,7 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;","
 const shade = p => `color-mix(in srgb, var(--accent) ${Math.round(8 + p*82)}%, var(--surface))`;
 document.getElementById("nperf").textContent = D.n_perfiles;
 document.getElementById("fecha").textContent = D.consultado.split("-").reverse().join("-");
-document.getElementById("metodo").textContent = "Cada perfil se marcó con las habilidades que menciona: en U. de Chile, UC, USM y USACH se aplicó una lista fija de palabras clave al texto oficial; en UNAB, UDP, UAI y UDD se leyó un resumen de la página oficial y se marcó a mano con las mismas 15 habilidades. Se cuenta si la habilidad aparece o no (no cuántas veces). Una habilidad 'distingue' a una carrera cuando aparece en sus perfiles bastante más que en el promedio de todas. 'Gestionar proyectos y recursos' aparece en " + Math.round(D.promedio_general.GEST*100) + "% de todos los perfiles, así que es común a casi todas las ingenierías. Las carreras con 1 o 2 perfiles se ordenan por cuántas veces se menciona cada habilidad, y deben leerse con más cautela.";
+document.getElementById("metodo").textContent = "Cada perfil se marcó con las habilidades que menciona: en U. de Chile, UC, USM y USACH se aplicó una lista fija de palabras clave al texto oficial; en UDP se leyó un resumen de la página oficial y se marcó a mano con las mismas 15 habilidades. Se cuenta si la habilidad aparece o no (no cuántas veces). Una habilidad 'distingue' a una carrera cuando aparece en sus perfiles bastante más que en el promedio de todas. 'Gestionar proyectos y recursos' aparece en " + Math.round(D.promedio_general.GEST*100) + "% de todos los perfiles, así que es común a casi todas las ingenierías. Las carreras con 1 o 2 perfiles se ordenan por cuántas veces se menciona cada habilidad, y deben leerse con más cautela.";
 document.getElementById("ramp").innerHTML = [0,.25,.5,.75,1].map(p=>`<i style="background:${shade(p)}"></i>`).join("");
 
 const tabla = document.getElementById("tabla");

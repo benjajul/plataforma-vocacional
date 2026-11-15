@@ -71,11 +71,17 @@ Prototipo: `web/rutas.html` (generado con `python3 scripts/build_web.py`).
 - `web/cuestionario.html`: 17 preguntas cotidianas (escala 0–3) que se traducen a las 15 habilidades y se comparan con el perfil distintivo de cada familia. Sugiere 3 carreras, 2 áreas y universidades; si se usó el simulador, cruza el resultado.
 - `web/base.css`: estilos compartidos (claro/oscuro).
 
+## Foco y "Más allá del título" (v0.7, 09-11-2026)
+- `scripts/config.py` → `FOCO`: universidades que muestra el sitio (U. de Chile, UC, USM, USACH, UDP). UNAB, UDD y UAI quedan fuera por decisión de Benjamín; sus datos se conservan en `data/inventario.json` y `data/perfiles/` y vuelven al agregarlas a `FOCO`.
+- `scripts/build_oportunidades.py` → `data/oportunidades.json` → `web/oportunidades.html`: continuidad a magíster, doble título e intercambio, prácticas, rankings QS 2026 por materia, acreditación internacional y una "orientación del egresado" (interpretación propia, marcada como tal). Cada afirmación enlaza a su fuente.
+- Pendiente: empleabilidad e ingresos por carrera (Mi Futuro).
+
 ## Cómo regenerar
     python3 scripts/build_inventario.py
     python3 scripts/build_planes_comunes.py
     python3 scripts/build_habilidades.py
     python3 scripts/build_plataforma.py
+    python3 scripts/build_oportunidades.py
     python3 scripts/build_web.py
 
 ## Publicar en GitHub Pages

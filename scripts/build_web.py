@@ -13,6 +13,7 @@ PAGINAS = [  # (archivo, etiqueta del menú, template, datos)
     ("habilidades.html", "Habilidades", "habilidades.template.html", "habilidades.json"),
     ("simulador.html", "Simulador", "simulador.template.html", "plataforma.json"),
     ("cuestionario.html", "Cuestionario", "cuestionario.template.html", "plataforma.json"),
+    ("oportunidades.html", "Más allá del título", "oportunidades.template.html", "oportunidades.json"),
 ]
 BASE_CSS = (web / "base.css").read_text(encoding="utf-8")
 
