@@ -1307,6 +1307,15 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": {
+    "rango": true,
+    "n_salidas_con_dato": 6,
+    "empleabilidad_1_min": 0.8222,
+    "empleabilidad_1_max": 0.9714,
+    "ingreso_4_min_mm": 2.4,
+    "ingreso_4_max_mm": 3.5,
+    "ingreso_abierto": false
+   },
    "nota": "Ingreso único a Licenciatura en Ciencias de la Ingeniería con major; luego título de Ingeniero Civil UC en su especialidad. Exige M2 (pondera 15%)."
   },
   {
@@ -1355,6 +1364,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": "Licenciatura (no título de ingeniero civil). Exige M2. Confirmar si es programa conjunto Ingeniería–Matemáticas."
   },
   {
@@ -1403,6 +1413,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": "Licenciatura (no título de ingeniero civil). Exige M2."
   },
   {
@@ -1450,6 +1461,17 @@
     "primer_matriculado": null,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Construcción Civil",
+    "empleabilidad_1": 0.8475,
+    "empleabilidad_2": 0.9065,
+    "ingreso_4_texto": "De $1 millón 800 mil a $1 millón 900 mil",
+    "ingreso_4_min_mm": 1.8,
+    "ingreso_4_max_mm": 1.9,
+    "retencion_1": 0.8813,
+    "duracion_real_sem": 11.9552,
+    "continuidad_estudios": 0.0706
    },
    "nota": "No lleva 'ingeniería' en el nombre pero se dicta en la Facultad de Ingeniería. No exige M2."
   },
@@ -1499,6 +1521,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": "Confirmar facultad responsable antes de incluir."
   },
   {
@@ -1546,6 +1569,17 @@
     "primer_matriculado": null,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Comercial",
+    "empleabilidad_1": 0.9308,
+    "empleabilidad_2": 0.9608,
+    "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+    "ingreso_4_min_mm": 2.5,
+    "ingreso_4_max_mm": 3,
+    "retencion_1": 0.953,
+    "duracion_real_sem": 12.3422,
+    "continuidad_estudios": 0.0129
    },
    "nota": "No exige M2."
   },
@@ -1610,6 +1644,15 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": {
+    "rango": true,
+    "n_salidas_con_dato": 10,
+    "empleabilidad_1_min": 0.7167,
+    "empleabilidad_1_max": 0.9509,
+    "ingreso_4_min_mm": 2.1,
+    "ingreso_4_max_mm": 3.5,
+    "ingreso_abierto": true
+   },
    "nota": "Especialidad se elige tras dos años. Ingeniería Civil dura 11 semestres. Ponderaciones: NEM 10, Ranking 25, CL 10, M1 20, M2 20, Ciencias 15."
   },
   {
@@ -1654,6 +1697,17 @@
     "primer_matriculado": 961.7,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Comercial",
+    "empleabilidad_1": 0.9216,
+    "empleabilidad_2": 0.9457,
+    "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+    "ingreso_4_min_mm": 2.5,
+    "ingreso_4_max_mm": 3,
+    "retencion_1": 0.9482,
+    "duracion_real_sem": 12.002,
+    "continuidad_estudios": 0.0766
    },
    "nota": ""
   },
@@ -1716,6 +1770,15 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": {
+    "rango": true,
+    "n_salidas_con_dato": 8,
+    "empleabilidad_1_min": 0.8636,
+    "empleabilidad_1_max": 0.9811,
+    "ingreso_4_min_mm": 2.4,
+    "ingreso_4_max_mm": 3,
+    "ingreso_abierto": false
+   },
    "nota": "Ver data/planes_comunes.json: selección competitiva por ranking de primer año."
   },
   {
@@ -1760,6 +1823,17 @@
     "primer_matriculado": null,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Civil",
+    "empleabilidad_1": 0.9441,
+    "empleabilidad_2": 0.9608,
+    "ingreso_4_texto": "De $2 millones 400 mil a $2 millones 500 mil",
+    "ingreso_4_min_mm": 2.4,
+    "ingreso_4_max_mm": 2.5,
+    "retencion_1": 0.8989,
+    "duracion_real_sem": 17.5354,
+    "continuidad_estudios": 0.0237
    },
    "nota": ""
   },
@@ -1806,6 +1880,17 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": {
+    "carrera": "Ingeniería Civil de Minas",
+    "empleabilidad_1": 0.8718,
+    "empleabilidad_2": 0.9146,
+    "ingreso_4_texto": "s/i",
+    "ingreso_4_min_mm": null,
+    "ingreso_4_max_mm": null,
+    "retencion_1": 0.9167,
+    "duracion_real_sem": 15.1791,
+    "continuidad_estudios": 0.0312
+   },
    "nota": ""
   },
   {
@@ -1850,6 +1935,17 @@
     "primer_matriculado": null,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Civil Eléctrica",
+    "empleabilidad_1": 0.8974,
+    "empleabilidad_2": 0.9216,
+    "ingreso_4_texto": "s/i",
+    "ingreso_4_min_mm": null,
+    "ingreso_4_max_mm": null,
+    "retencion_1": 0.9252,
+    "duracion_real_sem": 18.4909,
+    "continuidad_estudios": 0.0652
    },
    "nota": ""
   },
@@ -1896,6 +1992,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": ""
   },
   {
@@ -1940,6 +2037,17 @@
     "primer_matriculado": null,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Civil Informática",
+    "empleabilidad_1": 0.9373,
+    "empleabilidad_2": 0.954,
+    "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+    "ingreso_4_min_mm": 2.5,
+    "ingreso_4_max_mm": 3,
+    "retencion_1": 0.8921,
+    "duracion_real_sem": 15.035,
+    "continuidad_estudios": 0.0539
    },
    "nota": ""
   },
@@ -1986,6 +2094,17 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": {
+    "carrera": "Ingeniería Civil Matemática",
+    "empleabilidad_1": 0.8636,
+    "empleabilidad_2": null,
+    "ingreso_4_texto": "s/i",
+    "ingreso_4_min_mm": null,
+    "ingreso_4_max_mm": null,
+    "retencion_1": 0.9286,
+    "duracion_real_sem": 15.2424,
+    "continuidad_estudios": 0.1
+   },
    "nota": ""
   },
   {
@@ -2030,6 +2149,17 @@
     "primer_matriculado": null,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Civil Mecánica",
+    "empleabilidad_1": 0.9186,
+    "empleabilidad_2": 0.9401,
+    "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+    "ingreso_4_min_mm": 2.5,
+    "ingreso_4_max_mm": 3,
+    "retencion_1": 0.8931,
+    "duracion_real_sem": 16.877,
+    "continuidad_estudios": 0.0306
    },
    "nota": ""
   },
@@ -2076,6 +2206,17 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": {
+    "carrera": "Ingeniería Civil Química",
+    "empleabilidad_1": 0.8712,
+    "empleabilidad_2": 0.9536,
+    "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+    "ingreso_4_min_mm": 2.5,
+    "ingreso_4_max_mm": 3,
+    "retencion_1": 0.8716,
+    "duracion_real_sem": 16.7636,
+    "continuidad_estudios": 0.0642
+   },
    "nota": ""
   },
   {
@@ -2120,6 +2261,17 @@
     "primer_matriculado": null,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Civil Telemática",
+    "empleabilidad_1": 0.9811,
+    "empleabilidad_2": null,
+    "ingreso_4_texto": "s/i",
+    "ingreso_4_min_mm": null,
+    "ingreso_4_max_mm": null,
+    "retencion_1": 0.7685,
+    "duracion_real_sem": 16.2353,
+    "continuidad_estudios": 0.0492
    },
    "nota": ""
   },
@@ -2166,6 +2318,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": ""
   },
   {
@@ -2210,6 +2363,17 @@
     "primer_matriculado": null,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Civil Industrial",
+    "empleabilidad_1": 0.9248,
+    "empleabilidad_2": 0.9671,
+    "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+    "ingreso_4_min_mm": 2.5,
+    "ingreso_4_max_mm": 3,
+    "retencion_1": 0.9286,
+    "duracion_real_sem": 14.7117,
+    "continuidad_estudios": 0.0165
    },
    "nota": ""
   },
@@ -2256,6 +2420,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": ""
   },
   {
@@ -2300,6 +2465,17 @@
     "primer_matriculado": null,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Comercial",
+    "empleabilidad_1": 0.8507,
+    "empleabilidad_2": 0.9222,
+    "ingreso_4_texto": "De $2 millones 100 mil a $2 millones 200 mil",
+    "ingreso_4_min_mm": 2.1,
+    "ingreso_4_max_mm": 2.2,
+    "retencion_1": 0.8319,
+    "duracion_real_sem": 12.7535,
+    "continuidad_estudios": 0.0217
    },
    "nota": ""
   },
@@ -2346,6 +2522,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": ""
   },
   {
@@ -2391,6 +2568,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": ""
   },
   {
@@ -2436,6 +2614,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": ""
   },
   {
@@ -2480,6 +2659,17 @@
     "primer_matriculado": 862.75,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Civil en Electricidad",
+    "empleabilidad_1": 0.9635,
+    "empleabilidad_2": 0.9556,
+    "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+    "ingreso_4_min_mm": 2.5,
+    "ingreso_4_max_mm": 3,
+    "retencion_1": 0.7379,
+    "duracion_real_sem": 16.5319,
+    "continuidad_estudios": 0.0341
    },
    "nota": ""
   },
@@ -2526,6 +2716,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": ""
   },
   {
@@ -2570,6 +2761,17 @@
     "primer_matriculado": 884.05,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Civil en Mecánica",
+    "empleabilidad_1": 0.932,
+    "empleabilidad_2": 0.9821,
+    "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+    "ingreso_4_min_mm": 2.5,
+    "ingreso_4_max_mm": 3,
+    "retencion_1": 0.7955,
+    "duracion_real_sem": 15.3019,
+    "continuidad_estudios": 0.036
    },
    "nota": ""
   },
@@ -2616,6 +2818,17 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": {
+    "carrera": "Ingeniería Civil en Metalurgia",
+    "empleabilidad_1": 0.8095,
+    "empleabilidad_2": 0.9383,
+    "ingreso_4_texto": "Desde $3 millones a $3 millones 500 mil",
+    "ingreso_4_min_mm": 3,
+    "ingreso_4_max_mm": 3.5,
+    "retencion_1": 0.6094,
+    "duracion_real_sem": null,
+    "continuidad_estudios": 0.01
+   },
    "nota": ""
   },
   {
@@ -2660,6 +2873,17 @@
     "primer_matriculado": 895.25,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Civil en Minas",
+    "empleabilidad_1": 0.9195,
+    "empleabilidad_2": 0.9767,
+    "ingreso_4_texto": "Sobre $3 millones 500 mil",
+    "ingreso_4_min_mm": 3.5,
+    "ingreso_4_max_mm": null,
+    "retencion_1": 0.6709,
+    "duracion_real_sem": 16.619,
+    "continuidad_estudios": 0.0298
    },
    "nota": ""
   },
@@ -2706,6 +2930,17 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": {
+    "carrera": "Ingeniería Civil en Obras Civiles",
+    "empleabilidad_1": 0.8591,
+    "empleabilidad_2": 0.9226,
+    "ingreso_4_texto": "De $2 millones a $2 millones 100 mil",
+    "ingreso_4_min_mm": 2,
+    "ingreso_4_max_mm": 2.1,
+    "retencion_1": 0.7805,
+    "duracion_real_sem": 15.5,
+    "continuidad_estudios": 0.025
+   },
    "nota": ""
   },
   {
@@ -2750,6 +2985,17 @@
     "primer_matriculado": 872.65,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Civil en Química",
+    "empleabilidad_1": 0.8983,
+    "empleabilidad_2": 0.9474,
+    "ingreso_4_texto": "De $2 millones a $2 millones 100 mil",
+    "ingreso_4_min_mm": 2,
+    "ingreso_4_max_mm": 2.1,
+    "retencion_1": 0.7391,
+    "duracion_real_sem": 14.8947,
+    "continuidad_estudios": 0.0074
    },
    "nota": ""
   },
@@ -2796,6 +3042,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": ""
   },
   {
@@ -2841,6 +3088,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": ""
   },
   {
@@ -2885,6 +3133,17 @@
     "primer_matriculado": 878,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Civil Industrial",
+    "empleabilidad_1": 0.9317,
+    "empleabilidad_2": 0.9735,
+    "ingreso_4_texto": "De $2 millones 400 mil a $2 millones 500 mil",
+    "ingreso_4_min_mm": 2.4,
+    "ingreso_4_max_mm": 2.5,
+    "retencion_1": 0.8544,
+    "duracion_real_sem": 15.6812,
+    "continuidad_estudios": 0.0199
    },
    "nota": ""
   },
@@ -2931,6 +3190,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": ""
   },
   {
@@ -2980,6 +3240,7 @@
     "oficial": true,
     "nota": "El plan común es nuevo en 2027; la ficha muestra cifras 2026 que corresponden a la carrera de Informática anterior."
    },
+   "empleo": null,
    "nota": "Carrera nueva Admisión 2027 (90 vacantes según prensa). Especialidades por confirmar en Fase 3."
   },
   {
@@ -3025,6 +3286,7 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": null,
    "nota": ""
   },
   {
@@ -3069,6 +3331,17 @@
     "primer_matriculado": 827.8,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería de Ejecución en Computación e Informática",
+    "empleabilidad_1": 0.9364,
+    "empleabilidad_2": 0.9885,
+    "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+    "ingreso_4_min_mm": 2.5,
+    "ingreso_4_max_mm": 3,
+    "retencion_1": 0.8689,
+    "duracion_real_sem": null,
+    "continuidad_estudios": 0.0534
    },
    "nota": ""
   },
@@ -3115,6 +3388,17 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": {
+    "carrera": "Ingeniería de Ejecución en Electricidad",
+    "empleabilidad_1": 0.9234,
+    "empleabilidad_2": 0.9602,
+    "ingreso_4_texto": "De $2 millones 100 mil a $2 millones 200 mil",
+    "ingreso_4_min_mm": 2.1,
+    "ingreso_4_max_mm": 2.2,
+    "retencion_1": 0.5938,
+    "duracion_real_sem": 12.7833,
+    "continuidad_estudios": 0.0716
+   },
    "nota": ""
   },
   {
@@ -3159,6 +3443,17 @@
     "primer_matriculado": 804.05,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería de Ejecución en Mecánica",
+    "empleabilidad_1": 0.8256,
+    "empleabilidad_2": 0.8952,
+    "ingreso_4_texto": "De $1 millón 800 mil a $1 millón 900 mil",
+    "ingreso_4_min_mm": 1.8,
+    "ingreso_4_max_mm": 1.9,
+    "retencion_1": 0.5227,
+    "duracion_real_sem": 12.9655,
+    "continuidad_estudios": 0.1498
    },
    "nota": ""
   },
@@ -3205,6 +3500,17 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": {
+    "carrera": "Ingeniería de Ejecución en Metalurgia",
+    "empleabilidad_1": 0.7222,
+    "empleabilidad_2": 0.8824,
+    "ingreso_4_texto": "De $1 millón 800 mil a $1 millón 900 mil",
+    "ingreso_4_min_mm": 1.8,
+    "ingreso_4_max_mm": 1.9,
+    "retencion_1": 0.4138,
+    "duracion_real_sem": null,
+    "continuidad_estudios": 0.1294
+   },
    "nota": ""
   },
   {
@@ -3249,6 +3555,17 @@
     "primer_matriculado": 798.9,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería de Ejecución en Minas",
+    "empleabilidad_1": 0.7383,
+    "empleabilidad_2": 0.8495,
+    "ingreso_4_texto": "De $2 millones 300 mil a $2 millones 400 mil",
+    "ingreso_4_min_mm": 2.3,
+    "ingreso_4_max_mm": 2.4,
+    "retencion_1": 0.4386,
+    "duracion_real_sem": 14.2432,
+    "continuidad_estudios": 0.1471
    },
    "nota": ""
   },
@@ -3295,6 +3612,17 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": {
+    "carrera": "Ingeniería de Ejecución en Química",
+    "empleabilidad_1": 0.8041,
+    "empleabilidad_2": 0.9,
+    "ingreso_4_texto": "De $1 millón 500 mil a $1 millón 600 mil",
+    "ingreso_4_min_mm": 1.5,
+    "ingreso_4_max_mm": 1.6,
+    "retencion_1": null,
+    "duracion_real_sem": 13.7586,
+    "continuidad_estudios": 0.122
+   },
    "nota": ""
   },
   {
@@ -3340,6 +3668,17 @@
     "oficial": true,
     "nota": null
    },
+   "empleo": {
+    "carrera": "Ingeniería de Ejecución Industrial",
+    "empleabilidad_1": 0.8652,
+    "empleabilidad_2": 0.8883,
+    "ingreso_4_texto": "De $1 millón 800 mil a $1 millón 900 mil",
+    "ingreso_4_min_mm": 1.8,
+    "ingreso_4_max_mm": 1.9,
+    "retencion_1": 0.6667,
+    "duracion_real_sem": 11.5341,
+    "continuidad_estudios": 0.1232
+   },
    "nota": ""
   },
   {
@@ -3384,6 +3723,17 @@
     "primer_matriculado": 886.95,
     "oficial": true,
     "nota": null
+   },
+   "empleo": {
+    "carrera": "Ingeniería Comercial",
+    "empleabilidad_1": 0.8824,
+    "empleabilidad_2": 0.9053,
+    "ingreso_4_texto": "De $1 millón 900 mil a $2 millones",
+    "ingreso_4_min_mm": 1.9,
+    "ingreso_4_max_mm": 2,
+    "retencion_1": 0.8746,
+    "duracion_real_sem": 11.594,
+    "continuidad_estudios": 0.0494
    },
    "nota": ""
   },
@@ -3441,6 +3791,15 @@
     "oficial": false,
     "nota": null
    },
+   "empleo": {
+    "rango": true,
+    "n_salidas_con_dato": 3,
+    "empleabilidad_1_min": 0.8382,
+    "empleabilidad_1_max": 0.9262,
+    "ingreso_4_min_mm": 1.9,
+    "ingreso_4_max_mm": 3,
+    "ingreso_abierto": false
+   },
    "nota": "Primer año común; especialidad sin límite de cupos. Título profesional + magíster de continuidad."
   },
   {
@@ -3486,6 +3845,17 @@
     "oficial": false,
     "nota": null
    },
+   "empleo": {
+    "carrera": "Ingeniería Civil Industrial",
+    "empleabilidad_1": 0.8966,
+    "empleabilidad_2": 0.9397,
+    "ingreso_4_texto": "De $2 millones 200 mil a $2 millones 300 mil",
+    "ingreso_4_min_mm": 2.2,
+    "ingreso_4_max_mm": 2.3,
+    "retencion_1": 0.9416,
+    "duracion_real_sem": 13.5,
+    "continuidad_estudios": 0.0147
+   },
    "nota": ""
   },
   {
@@ -3519,6 +3889,17 @@
    ],
    "plan_comun": null,
    "corte_2026": null,
+   "empleo": {
+    "carrera": "Ingeniería Civil en Obras Civiles",
+    "empleabilidad_1": 0.8382,
+    "empleabilidad_2": 0.875,
+    "ingreso_4_texto": "De $1 millón 900 mil a $2 millones",
+    "ingreso_4_min_mm": 1.9,
+    "ingreso_4_max_mm": 2,
+    "retencion_1": 0.8372,
+    "duracion_real_sem": 14.3662,
+    "continuidad_estudios": 0.0151
+   },
    "nota": ""
   },
   {
@@ -3552,6 +3933,17 @@
    ],
    "plan_comun": null,
    "corte_2026": null,
+   "empleo": {
+    "carrera": "Ingeniería Civil en Informática y Telecomunicaciones",
+    "empleabilidad_1": 0.9262,
+    "empleabilidad_2": 0.9639,
+    "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+    "ingreso_4_min_mm": 2.5,
+    "ingreso_4_max_mm": 3,
+    "retencion_1": 0.9133,
+    "duracion_real_sem": 13.6111,
+    "continuidad_estudios": 0
+   },
    "nota": ""
   },
   {
@@ -3585,6 +3977,7 @@
    ],
    "plan_comun": null,
    "corte_2026": null,
+   "empleo": null,
    "nota": ""
   },
   {
@@ -3618,6 +4011,17 @@
    ],
    "plan_comun": null,
    "corte_2026": null,
+   "empleo": {
+    "carrera": "Ingeniería Comercial",
+    "empleabilidad_1": 0.8137,
+    "empleabilidad_2": 0.8855,
+    "ingreso_4_texto": "De $2 millones a $2 millones 100 mil",
+    "ingreso_4_min_mm": 2,
+    "ingreso_4_max_mm": 2.1,
+    "retencion_1": 0.9016,
+    "duracion_real_sem": 12.5818,
+    "continuidad_estudios": 0.053
+   },
    "nota": ""
   }
  ],
@@ -3651,5 +4055,15 @@
    }
   }
  },
- "nota_cortes": "El 'puntaje de corte' no se publica de forma centralizada. Cada universidad informa una medida distinta (último matriculado, último seleccionado o puntaje mínimo de selección); se registra cuál es en 'medida'. Las cifras de Filadd y PreuAI son de fuentes secundarias que declaran usar datos DEMRE: dos cifras de la UDD coinciden con lo publicado por la propia universidad y la de Ingeniería Comercial UAI de PreuAI coincide con la oficial."
+ "nota_cortes": "El 'puntaje de corte' no se publica de forma centralizada. Cada universidad informa una medida distinta (último matriculado, último seleccionado o puntaje mínimo de selección); se registra cuál es en 'medida'. Las cifras de Filadd y PreuAI son de fuentes secundarias que declaran usar datos DEMRE: dos cifras de la UDD coinciden con lo publicado por la propia universidad y la de Ingeniería Comercial UAI de PreuAI coincide con la oficial.",
+ "empleo_fuente": {
+  "fuente": "SIES – Mi Futuro (Mineduc), Buscador de Empleabilidad e Ingresos 2025-2026",
+  "url": "https://www.mifuturo.cl/mi-futuro-buscadores/",
+  "notas": [
+   "Datos por institución y carrera, sin distinguir sede.",
+   "Empleabilidad: proporción de titulados con ingresos iguales o superiores al sueldo mínimo al 1.er y 2.º año de titulación.",
+   "Ingreso: rango del ingreso promedio mensual bruto al 4.º año de titulación.",
+   "s/i = sin información (pocos casos); n/a = no aplica."
+  ]
+ }
 }

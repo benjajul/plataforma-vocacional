@@ -6,6 +6,7 @@ comparten (ver data/habilidades.json). 'vinculadas' indica áreas con las que co
 import json, pathlib, sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from config import FOCO
+import empleo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 D = lambda f: json.loads((ROOT / "data" / f).read_text(encoding="utf-8"))
@@ -81,6 +82,8 @@ def main():
                             "ingresaron_medida": c.get("ingresaron_medida"), "historico": c.get("historico"),
                             "fuente": fuente_c["nombre"], "url": c.get("url") or fuente_c["url"], "anio": c.get("anio", 2026), "primer_matriculado": c.get("primer_matriculado"), "oficial": fuente_c["oficial"], "nota": c.get("nota")}
                            if c else None),
+            "empleo": (empleo.programa(x["id"]) if x["id"] not in pcs
+                       else empleo.resumen_plan([sal.get("empleo") for sal in pcs[x["id"]]["salidas"]])),
             "nota": x["nota"],
         })
     out = {
@@ -95,6 +98,7 @@ def main():
         "programas": programas,
         "fuentes": {"demre": "https://demre.cl/publicaciones/pdf/2027-26-09-24-oferta-definitiva-carreras-p2027.pdf", "cortes": {k: v for k, v in cortes["fuentes"].items() if k in {cortes["programas"][p["id"]]["fuente"] for p in programas if p["id"] in cortes["programas"]}}},
         "nota_cortes": cortes["nota"],
+        "empleo_fuente": {k: empleo.mf()[k] for k in ("fuente", "url", "notas")} if empleo.mf().get("fuente") else None,
     }
     (ROOT / "data" / "plataforma.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     con = sum(1 for p in programas if p["corte_2026"])

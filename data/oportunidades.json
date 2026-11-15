@@ -1,5 +1,437 @@
 {
- "version": "0.7",
+ "version": "0.7.1",
+ "empleo": {
+  "fuente": "SIES – Mi Futuro (Mineduc), Buscador de Empleabilidad e Ingresos 2025-2026",
+  "url": "https://www.mifuturo.cl/mi-futuro-buscadores/",
+  "notas": [
+   "Datos por institución y carrera, sin distinguir sede.",
+   "Empleabilidad: proporción de titulados con ingresos iguales o superiores al sueldo mínimo al 1.er y 2.º año de titulación.",
+   "Ingreso: rango del ingreso promedio mensual bruto al 4.º año de titulación.",
+   "s/i = sin información (pocos casos); n/a = no aplica."
+  ],
+  "comparables": [
+   {
+    "nombre": "Ing. Civil Industrial",
+    "celdas": {
+     "uchile": {
+      "carrera": "Ingeniería Civil Industrial",
+      "empleabilidad_1": 0.9509,
+      "empleabilidad_2": 0.9714,
+      "ingreso_4_min_mm": 3,
+      "ingreso_4_max_mm": 3.5,
+      "ingreso_4_texto": "Desde $3 millones a $3 millones 500 mil",
+      "continuidad_estudios": 0.009,
+      "duracion_real_sem": null,
+      "retencion_1": null
+     },
+     "uc": {
+      "carrera": "Ingeniería Civil de Industrias",
+      "empleabilidad_1": 0.9572,
+      "empleabilidad_2": 0.9649,
+      "ingreso_4_min_mm": 3,
+      "ingreso_4_max_mm": 3.5,
+      "ingreso_4_texto": "Desde $3 millones a $3 millones 500 mil",
+      "continuidad_estudios": 0.0129,
+      "duracion_real_sem": 14.7659,
+      "retencion_1": null
+     },
+     "usm": {
+      "carrera": "Ingeniería Civil Industrial",
+      "empleabilidad_1": 0.9248,
+      "empleabilidad_2": 0.9671,
+      "ingreso_4_min_mm": 2.5,
+      "ingreso_4_max_mm": 3,
+      "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+      "continuidad_estudios": 0.0165,
+      "duracion_real_sem": 14.7117,
+      "retencion_1": 0.9286
+     },
+     "usach": {
+      "carrera": "Ingeniería Civil Industrial",
+      "empleabilidad_1": 0.9317,
+      "empleabilidad_2": 0.9735,
+      "ingreso_4_min_mm": 2.4,
+      "ingreso_4_max_mm": 2.5,
+      "ingreso_4_texto": "De $2 millones 400 mil a $2 millones 500 mil",
+      "continuidad_estudios": 0.0199,
+      "duracion_real_sem": 15.6812,
+      "retencion_1": 0.8544
+     },
+     "udp": {
+      "carrera": "Ingeniería Civil Industrial",
+      "empleabilidad_1": 0.8966,
+      "empleabilidad_2": 0.9397,
+      "ingreso_4_min_mm": 2.2,
+      "ingreso_4_max_mm": 2.3,
+      "ingreso_4_texto": "De $2 millones 200 mil a $2 millones 300 mil",
+      "continuidad_estudios": 0.0147,
+      "duracion_real_sem": 13.5,
+      "retencion_1": 0.9416
+     }
+    }
+   },
+   {
+    "nombre": "Ing. Civil en Computación / Informática",
+    "celdas": {
+     "uchile": {
+      "carrera": "Ingeniería Civil en Computación",
+      "empleabilidad_1": 0.9242,
+      "empleabilidad_2": 0.9649,
+      "ingreso_4_min_mm": 3,
+      "ingreso_4_max_mm": 3.5,
+      "ingreso_4_texto": "Desde $3 millones a $3 millones 500 mil",
+      "continuidad_estudios": 0.0375,
+      "duracion_real_sem": null,
+      "retencion_1": null
+     },
+     "uc": {
+      "carrera": "Ingeniería Civil de Computación",
+      "empleabilidad_1": 0.9495,
+      "empleabilidad_2": 0.9118,
+      "ingreso_4_min_mm": null,
+      "ingreso_4_max_mm": null,
+      "ingreso_4_texto": "s/i",
+      "continuidad_estudios": 0,
+      "duracion_real_sem": 14.6709,
+      "retencion_1": null
+     },
+     "usm": {
+      "carrera": "Ingeniería Civil Informática",
+      "empleabilidad_1": 0.9373,
+      "empleabilidad_2": 0.954,
+      "ingreso_4_min_mm": 2.5,
+      "ingreso_4_max_mm": 3,
+      "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+      "continuidad_estudios": 0.0539,
+      "duracion_real_sem": 15.035,
+      "retencion_1": 0.8921
+     },
+     "usach": {
+      "carrera": "Ingeniería Civil en Informática",
+      "empleabilidad_1": 0.9853,
+      "empleabilidad_2": 0.9649,
+      "ingreso_4_min_mm": 3,
+      "ingreso_4_max_mm": 3.5,
+      "ingreso_4_texto": "Desde $3 millones a $3 millones 500 mil",
+      "continuidad_estudios": 0,
+      "duracion_real_sem": 16,
+      "retencion_1": 0.8846
+     },
+     "udp": {
+      "carrera": "Ingeniería Civil en Informática y Telecomunicaciones",
+      "empleabilidad_1": 0.9262,
+      "empleabilidad_2": 0.9639,
+      "ingreso_4_min_mm": 2.5,
+      "ingreso_4_max_mm": 3,
+      "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+      "continuidad_estudios": 0,
+      "duracion_real_sem": 13.6111,
+      "retencion_1": 0.9133
+     }
+    }
+   },
+   {
+    "nombre": "Ing. Civil Eléctrica",
+    "celdas": {
+     "uchile": {
+      "carrera": "Ingeniería Civil Eléctrica",
+      "empleabilidad_1": 0.9328,
+      "empleabilidad_2": 0.977,
+      "ingreso_4_min_mm": 2.5,
+      "ingreso_4_max_mm": 3,
+      "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+      "continuidad_estudios": 0.0493,
+      "duracion_real_sem": null,
+      "retencion_1": null
+     },
+     "uc": {
+      "carrera": "Ingeniería Civil Electricista",
+      "empleabilidad_1": 0.9273,
+      "empleabilidad_2": 0.9065,
+      "ingreso_4_min_mm": null,
+      "ingreso_4_max_mm": null,
+      "ingreso_4_texto": "s/i",
+      "continuidad_estudios": 0.0682,
+      "duracion_real_sem": 15.1111,
+      "retencion_1": null
+     },
+     "usm": {
+      "carrera": "Ingeniería Civil Eléctrica",
+      "empleabilidad_1": 0.8974,
+      "empleabilidad_2": 0.9216,
+      "ingreso_4_min_mm": null,
+      "ingreso_4_max_mm": null,
+      "ingreso_4_texto": "s/i",
+      "continuidad_estudios": 0.0652,
+      "duracion_real_sem": 18.4909,
+      "retencion_1": 0.9252
+     },
+     "usach": {
+      "carrera": "Ingeniería Civil en Electricidad",
+      "empleabilidad_1": 0.9635,
+      "empleabilidad_2": 0.9556,
+      "ingreso_4_min_mm": 2.5,
+      "ingreso_4_max_mm": 3,
+      "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+      "continuidad_estudios": 0.0341,
+      "duracion_real_sem": 16.5319,
+      "retencion_1": 0.7379
+     },
+     "udp": null
+    }
+   },
+   {
+    "nombre": "Ing. Civil Mecánica",
+    "celdas": {
+     "uchile": {
+      "carrera": "Ingeniería Civil Mecánica",
+      "empleabilidad_1": 0.9186,
+      "empleabilidad_2": 0.9408,
+      "ingreso_4_min_mm": 2.5,
+      "ingreso_4_max_mm": 3,
+      "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+      "continuidad_estudios": 0.0214,
+      "duracion_real_sem": null,
+      "retencion_1": null
+     },
+     "uc": {
+      "carrera": "Ingeniería Civil Mecánico",
+      "empleabilidad_1": 0.9189,
+      "empleabilidad_2": 0.9552,
+      "ingreso_4_min_mm": 2.5,
+      "ingreso_4_max_mm": 3,
+      "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+      "continuidad_estudios": 0.0337,
+      "duracion_real_sem": 16.1429,
+      "retencion_1": null
+     },
+     "usm": {
+      "carrera": "Ingeniería Civil Mecánica",
+      "empleabilidad_1": 0.9186,
+      "empleabilidad_2": 0.9401,
+      "ingreso_4_min_mm": 2.5,
+      "ingreso_4_max_mm": 3,
+      "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+      "continuidad_estudios": 0.0306,
+      "duracion_real_sem": 16.877,
+      "retencion_1": 0.8931
+     },
+     "usach": {
+      "carrera": "Ingeniería Civil en Mecánica",
+      "empleabilidad_1": 0.932,
+      "empleabilidad_2": 0.9821,
+      "ingreso_4_min_mm": 2.5,
+      "ingreso_4_max_mm": 3,
+      "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+      "continuidad_estudios": 0.036,
+      "duracion_real_sem": 15.3019,
+      "retencion_1": 0.7955
+     },
+     "udp": null
+    }
+   },
+   {
+    "nombre": "Ing. Civil de Minas",
+    "celdas": {
+     "uchile": {
+      "carrera": "Ingeniería Civil de Minas",
+      "empleabilidad_1": 0.9231,
+      "empleabilidad_2": 0.9825,
+      "ingreso_4_min_mm": 3.5,
+      "ingreso_4_max_mm": null,
+      "ingreso_4_texto": "Sobre $3 millones 500 mil",
+      "continuidad_estudios": 0.0455,
+      "duracion_real_sem": null,
+      "retencion_1": null
+     },
+     "uc": null,
+     "usm": {
+      "carrera": "Ingeniería Civil de Minas",
+      "empleabilidad_1": 0.8718,
+      "empleabilidad_2": 0.9146,
+      "ingreso_4_min_mm": null,
+      "ingreso_4_max_mm": null,
+      "ingreso_4_texto": "s/i",
+      "continuidad_estudios": 0.0312,
+      "duracion_real_sem": 15.1791,
+      "retencion_1": 0.9167
+     },
+     "usach": {
+      "carrera": "Ingeniería Civil en Minas",
+      "empleabilidad_1": 0.9195,
+      "empleabilidad_2": 0.9767,
+      "ingreso_4_min_mm": 3.5,
+      "ingreso_4_max_mm": null,
+      "ingreso_4_texto": "Sobre $3 millones 500 mil",
+      "continuidad_estudios": 0.0298,
+      "duracion_real_sem": 16.619,
+      "retencion_1": 0.6709
+     },
+     "udp": null
+    }
+   },
+   {
+    "nombre": "Ing. Civil (obras civiles)",
+    "celdas": {
+     "uchile": {
+      "carrera": "Ingeniería Civil",
+      "empleabilidad_1": 0.9336,
+      "empleabilidad_2": 0.955,
+      "ingreso_4_min_mm": 2.3,
+      "ingreso_4_max_mm": 2.4,
+      "ingreso_4_texto": "De $2 millones 300 mil a $2 millones 400 mil",
+      "continuidad_estudios": 0.0288,
+      "duracion_real_sem": null,
+      "retencion_1": 0.9323
+     },
+     "uc": {
+      "carrera": "Ingeniería Civil, Diplomas en Diseño y Construcción de Obras e Ingeniería y Gestión de la Construcción",
+      "empleabilidad_1": 0.9714,
+      "empleabilidad_2": 0.9506,
+      "ingreso_4_min_mm": 2.4,
+      "ingreso_4_max_mm": 2.5,
+      "ingreso_4_texto": "De $2 millones 400 mil a $2 millones 500 mil",
+      "continuidad_estudios": 0.0122,
+      "duracion_real_sem": 15.84,
+      "retencion_1": null
+     },
+     "usm": {
+      "carrera": "Ingeniería Civil",
+      "empleabilidad_1": 0.9441,
+      "empleabilidad_2": 0.9608,
+      "ingreso_4_min_mm": 2.4,
+      "ingreso_4_max_mm": 2.5,
+      "ingreso_4_texto": "De $2 millones 400 mil a $2 millones 500 mil",
+      "continuidad_estudios": 0.0237,
+      "duracion_real_sem": 17.5354,
+      "retencion_1": 0.8989
+     },
+     "usach": {
+      "carrera": "Ingeniería Civil en Obras Civiles",
+      "empleabilidad_1": 0.8591,
+      "empleabilidad_2": 0.9226,
+      "ingreso_4_min_mm": 2,
+      "ingreso_4_max_mm": 2.1,
+      "ingreso_4_texto": "De $2 millones a $2 millones 100 mil",
+      "continuidad_estudios": 0.025,
+      "duracion_real_sem": 15.5,
+      "retencion_1": 0.7805
+     },
+     "udp": {
+      "carrera": "Ingeniería Civil en Obras Civiles",
+      "empleabilidad_1": 0.8382,
+      "empleabilidad_2": 0.875,
+      "ingreso_4_min_mm": 1.9,
+      "ingreso_4_max_mm": 2,
+      "ingreso_4_texto": "De $1 millón 900 mil a $2 millones",
+      "continuidad_estudios": 0.0151,
+      "duracion_real_sem": 14.3662,
+      "retencion_1": 0.8372
+     }
+    }
+   },
+   {
+    "nombre": "Ing. Civil Química",
+    "celdas": {
+     "uchile": {
+      "carrera": "Ingeniería Civil Química",
+      "empleabilidad_1": 0.8118,
+      "empleabilidad_2": 0.9342,
+      "ingreso_4_min_mm": 2.1,
+      "ingreso_4_max_mm": 2.2,
+      "ingreso_4_texto": "De $2 millones 100 mil a $2 millones 200 mil",
+      "continuidad_estudios": 0.0761,
+      "duracion_real_sem": null,
+      "retencion_1": null
+     },
+     "uc": null,
+     "usm": {
+      "carrera": "Ingeniería Civil Química",
+      "empleabilidad_1": 0.8712,
+      "empleabilidad_2": 0.9536,
+      "ingreso_4_min_mm": 2.5,
+      "ingreso_4_max_mm": 3,
+      "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+      "continuidad_estudios": 0.0642,
+      "duracion_real_sem": 16.7636,
+      "retencion_1": 0.8716
+     },
+     "usach": {
+      "carrera": "Ingeniería Civil en Química",
+      "empleabilidad_1": 0.8983,
+      "empleabilidad_2": 0.9474,
+      "ingreso_4_min_mm": 2,
+      "ingreso_4_max_mm": 2.1,
+      "ingreso_4_texto": "De $2 millones a $2 millones 100 mil",
+      "continuidad_estudios": 0.0074,
+      "duracion_real_sem": 14.8947,
+      "retencion_1": 0.7391
+     },
+     "udp": null
+    }
+   },
+   {
+    "nombre": "Ingeniería Comercial",
+    "celdas": {
+     "uchile": {
+      "carrera": "Ingeniería Comercial",
+      "empleabilidad_1": 0.9216,
+      "empleabilidad_2": 0.9457,
+      "ingreso_4_min_mm": 2.5,
+      "ingreso_4_max_mm": 3,
+      "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+      "continuidad_estudios": 0.0766,
+      "duracion_real_sem": 12.002,
+      "retencion_1": 0.9482
+     },
+     "uc": {
+      "carrera": "Ingeniería Comercial",
+      "empleabilidad_1": 0.9308,
+      "empleabilidad_2": 0.9608,
+      "ingreso_4_min_mm": 2.5,
+      "ingreso_4_max_mm": 3,
+      "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+      "continuidad_estudios": 0.0129,
+      "duracion_real_sem": 12.3422,
+      "retencion_1": 0.953
+     },
+     "usm": {
+      "carrera": "Ingeniería Comercial",
+      "empleabilidad_1": 0.8507,
+      "empleabilidad_2": 0.9222,
+      "ingreso_4_min_mm": 2.1,
+      "ingreso_4_max_mm": 2.2,
+      "ingreso_4_texto": "De $2 millones 100 mil a $2 millones 200 mil",
+      "continuidad_estudios": 0.0217,
+      "duracion_real_sem": 12.7535,
+      "retencion_1": 0.8319
+     },
+     "usach": {
+      "carrera": "Ingeniería Comercial",
+      "empleabilidad_1": 0.8824,
+      "empleabilidad_2": 0.9053,
+      "ingreso_4_min_mm": 1.9,
+      "ingreso_4_max_mm": 2,
+      "ingreso_4_texto": "De $1 millón 900 mil a $2 millones",
+      "continuidad_estudios": 0.0494,
+      "duracion_real_sem": 11.594,
+      "retencion_1": 0.8746
+     },
+     "udp": {
+      "carrera": "Ingeniería Comercial",
+      "empleabilidad_1": 0.8137,
+      "empleabilidad_2": 0.8855,
+      "ingreso_4_min_mm": 2,
+      "ingreso_4_max_mm": 2.1,
+      "ingreso_4_texto": "De $2 millones a $2 millones 100 mil",
+      "continuidad_estudios": 0.053,
+      "duracion_real_sem": 12.5818,
+      "retencion_1": 0.9016
+     }
+    }
+   }
+  ]
+ },
  "consultado": "2026-11-09",
  "filas": [
   {
@@ -499,6 +931,5 @@
    "oficial": true
   }
  },
- "pendiente": "Empleabilidad al 1.er año e ingreso al 4.º año por carrera (Mi Futuro, Mineduc): mifuturo.cl no se pudo consultar desde esta sesión. Se agregará cuando se pueda leer el buscador.",
  "nota_orientacion": "La 'orientación' es una lectura nuestra a partir de los datos de esta página (prácticas, menciones, rankings, rutas de continuidad), no una clasificación oficial. Ninguna fuente pública mide qué tan 'gerencial' o 'técnico' es el egresado de cada universidad."
 }

@@ -95,7 +95,18 @@
             "Transporte"
           ],
           "grupo": "ingenieria",
-          "despues": null
+          "despues": null,
+          "empleo": {
+            "carrera": "Ingeniería Civil",
+            "empleabilidad_1": 0.9336,
+            "empleabilidad_2": 0.955,
+            "ingreso_4_texto": "De $2 millones 300 mil a $2 millones 400 mil",
+            "ingreso_4_min_mm": 2.3,
+            "ingreso_4_max_mm": 2.4,
+            "retencion_1": 0.9323,
+            "duracion_real_sem": null,
+            "continuidad_estudios": 0.0288
+          }
         },
         {
           "nombre": "Ingeniería Civil de Minas",
@@ -109,7 +120,18 @@
           "duracion_semestres": 11,
           "menciones": [],
           "grupo": "ingenieria",
-          "despues": null
+          "despues": null,
+          "empleo": {
+            "carrera": "Ingeniería Civil de Minas",
+            "empleabilidad_1": 0.9231,
+            "empleabilidad_2": 0.9825,
+            "ingreso_4_texto": "Sobre $3 millones 500 mil",
+            "ingreso_4_min_mm": 3.5,
+            "ingreso_4_max_mm": null,
+            "retencion_1": null,
+            "duracion_real_sem": null,
+            "continuidad_estudios": 0.0455
+          }
         },
         {
           "nombre": "Ingeniería Civil en Biotecnología",
@@ -123,7 +145,18 @@
           "duracion_semestres": 11,
           "menciones": [],
           "grupo": "ingenieria",
-          "despues": null
+          "despues": null,
+          "empleo": {
+            "carrera": "Ingeniería Civil en Biotecnología",
+            "empleabilidad_1": 0.725,
+            "empleabilidad_2": 0.8667,
+            "ingreso_4_texto": "s/i",
+            "ingreso_4_min_mm": null,
+            "ingreso_4_max_mm": null,
+            "retencion_1": null,
+            "duracion_real_sem": null,
+            "continuidad_estudios": 0.0625
+          }
         },
         {
           "nombre": "Ingeniería Civil en Computación",
@@ -137,7 +170,18 @@
           "duracion_semestres": 11,
           "menciones": [],
           "grupo": "ingenieria",
-          "despues": null
+          "despues": null,
+          "empleo": {
+            "carrera": "Ingeniería Civil en Computación",
+            "empleabilidad_1": 0.9242,
+            "empleabilidad_2": 0.9649,
+            "ingreso_4_texto": "Desde $3 millones a $3 millones 500 mil",
+            "ingreso_4_min_mm": 3,
+            "ingreso_4_max_mm": 3.5,
+            "retencion_1": null,
+            "duracion_real_sem": null,
+            "continuidad_estudios": 0.0375
+          }
         },
         {
           "nombre": "Ingeniería Civil Eléctrica",
@@ -158,7 +202,18 @@
             "Procesamiento de Voz e Imágenes"
           ],
           "grupo": "ingenieria",
-          "despues": null
+          "despues": null,
+          "empleo": {
+            "carrera": "Ingeniería Civil Eléctrica",
+            "empleabilidad_1": 0.9328,
+            "empleabilidad_2": 0.977,
+            "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+            "ingreso_4_min_mm": 2.5,
+            "ingreso_4_max_mm": 3,
+            "retencion_1": null,
+            "duracion_real_sem": null,
+            "continuidad_estudios": 0.0493
+          }
         },
         {
           "nombre": "Ingeniería Civil Industrial",
@@ -172,7 +227,18 @@
           "duracion_semestres": 11,
           "menciones": [],
           "grupo": "ingenieria",
-          "despues": null
+          "despues": null,
+          "empleo": {
+            "carrera": "Ingeniería Civil Industrial",
+            "empleabilidad_1": 0.9509,
+            "empleabilidad_2": 0.9714,
+            "ingreso_4_texto": "Desde $3 millones a $3 millones 500 mil",
+            "ingreso_4_min_mm": 3,
+            "ingreso_4_max_mm": 3.5,
+            "retencion_1": null,
+            "duracion_real_sem": null,
+            "continuidad_estudios": 0.009
+          }
         },
         {
           "nombre": "Ingeniería Civil Matemática",
@@ -186,7 +252,18 @@
           "duracion_semestres": 11,
           "menciones": [],
           "grupo": "ingenieria",
-          "despues": "La propia carrera destaca la continuación a magíster y doctorado para quienes siguen la carrera científica."
+          "despues": "La propia carrera destaca la continuación a magíster y doctorado para quienes siguen la carrera científica.",
+          "empleo": {
+            "carrera": "Ingeniería Civil Matemática",
+            "empleabilidad_1": 0.7167,
+            "empleabilidad_2": 0.8205,
+            "ingreso_4_texto": "s/i",
+            "ingreso_4_min_mm": null,
+            "ingreso_4_max_mm": null,
+            "retencion_1": null,
+            "duracion_real_sem": null,
+            "continuidad_estudios": 0.141
+          }
         },
         {
           "nombre": "Ingeniería Civil Mecánica",
@@ -200,7 +277,18 @@
           "duracion_semestres": 11,
           "menciones": [],
           "grupo": "ingenieria",
-          "despues": null
+          "despues": null,
+          "empleo": {
+            "carrera": "Ingeniería Civil Mecánica",
+            "empleabilidad_1": 0.9186,
+            "empleabilidad_2": 0.9408,
+            "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+            "ingreso_4_min_mm": 2.5,
+            "ingreso_4_max_mm": 3,
+            "retencion_1": null,
+            "duracion_real_sem": null,
+            "continuidad_estudios": 0.0214
+          }
         },
         {
           "nombre": "Ingeniería Civil Química",
@@ -214,7 +302,18 @@
           "duracion_semestres": 11,
           "menciones": [],
           "grupo": "ingenieria",
-          "despues": null
+          "despues": null,
+          "empleo": {
+            "carrera": "Ingeniería Civil Química",
+            "empleabilidad_1": 0.8118,
+            "empleabilidad_2": 0.9342,
+            "ingreso_4_texto": "De $2 millones 100 mil a $2 millones 200 mil",
+            "ingreso_4_min_mm": 2.1,
+            "ingreso_4_max_mm": 2.2,
+            "retencion_1": null,
+            "duracion_real_sem": null,
+            "continuidad_estudios": 0.0761
+          }
         },
         {
           "nombre": "Geología",
@@ -228,7 +327,18 @@
           "duracion_semestres": 11,
           "menciones": [],
           "grupo": "tierra",
-          "despues": null
+          "despues": null,
+          "empleo": {
+            "carrera": "Geología",
+            "empleabilidad_1": 0.7321,
+            "empleabilidad_2": 0.8081,
+            "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+            "ingreso_4_min_mm": 2.5,
+            "ingreso_4_max_mm": 3,
+            "retencion_1": null,
+            "duracion_real_sem": null,
+            "continuidad_estudios": 0.1339
+          }
         },
         {
           "nombre": "Geofísica",
@@ -245,7 +355,8 @@
             "Atmósfera"
           ],
           "grupo": "tierra",
-          "despues": null
+          "despues": null,
+          "empleo": null
         },
         {
           "nombre": "Licenciatura en Ciencias mención Astronomía",
@@ -259,7 +370,8 @@
           "duracion_semestres": 8,
           "menciones": [],
           "grupo": "licenciatura",
-          "despues": "El camino habitual es seguir un magíster o doctorado en astronomía o áreas afines."
+          "despues": "El camino habitual es seguir un magíster o doctorado en astronomía o áreas afines.",
+          "empleo": null
         },
         {
           "nombre": "Licenciatura en Ciencias mención Física",
@@ -273,7 +385,8 @@
           "duracion_semestres": 8,
           "menciones": [],
           "grupo": "licenciatura",
-          "despues": "El camino habitual es seguir un magíster o doctorado en física o áreas afines."
+          "despues": "El camino habitual es seguir un magíster o doctorado en física o áreas afines.",
+          "empleo": null
         }
       ],
       "fuentes": [
@@ -418,7 +531,18 @@
           "tipo": "ing_civil",
           "malla_url": null,
           "programa_directo_id": null,
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil, Diplomas en Diseño y Construcción de Obras e Ingeniería y Gestión de la Construcción",
+            "empleabilidad_1": 0.9714,
+            "empleabilidad_2": 0.9506,
+            "ingreso_4_texto": "De $2 millones 400 mil a $2 millones 500 mil",
+            "ingreso_4_min_mm": 2.4,
+            "ingreso_4_max_mm": 2.5,
+            "retencion_1": null,
+            "duracion_real_sem": 15.84,
+            "continuidad_estudios": 0.0122
+          }
         },
         {
           "nombre": "Ingeniero Civil de Industrias",
@@ -426,7 +550,18 @@
           "tipo": "ing_civil",
           "malla_url": null,
           "programa_directo_id": null,
-          "nota": "Es la salida 'industrial' de la UC; se combina con un diploma técnico."
+          "nota": "Es la salida 'industrial' de la UC; se combina con un diploma técnico.",
+          "empleo": {
+            "carrera": "Ingeniería Civil de Industrias",
+            "empleabilidad_1": 0.9572,
+            "empleabilidad_2": 0.9649,
+            "ingreso_4_texto": "Desde $3 millones a $3 millones 500 mil",
+            "ingreso_4_min_mm": 3,
+            "ingreso_4_max_mm": 3.5,
+            "retencion_1": null,
+            "duracion_real_sem": 14.7659,
+            "continuidad_estudios": 0.0129
+          }
         },
         {
           "nombre": "Ingeniero Civil de Computación",
@@ -434,7 +569,18 @@
           "tipo": "ing_civil",
           "malla_url": null,
           "programa_directo_id": null,
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil de Computación",
+            "empleabilidad_1": 0.9495,
+            "empleabilidad_2": 0.9118,
+            "ingreso_4_texto": "s/i",
+            "ingreso_4_min_mm": null,
+            "ingreso_4_max_mm": null,
+            "retencion_1": null,
+            "duracion_real_sem": 14.6709,
+            "continuidad_estudios": 0
+          }
         },
         {
           "nombre": "Ingeniero Civil Electricista",
@@ -442,7 +588,18 @@
           "tipo": "ing_civil",
           "malla_url": null,
           "programa_directo_id": null,
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil Electricista",
+            "empleabilidad_1": 0.9273,
+            "empleabilidad_2": 0.9065,
+            "ingreso_4_texto": "s/i",
+            "ingreso_4_min_mm": null,
+            "ingreso_4_max_mm": null,
+            "retencion_1": null,
+            "duracion_real_sem": 15.1111,
+            "continuidad_estudios": 0.0682
+          }
         },
         {
           "nombre": "Ingeniero Civil Mecánico",
@@ -450,7 +607,18 @@
           "tipo": "ing_civil",
           "malla_url": null,
           "programa_directo_id": null,
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil Mecánico",
+            "empleabilidad_1": 0.9189,
+            "empleabilidad_2": 0.9552,
+            "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+            "ingreso_4_min_mm": 2.5,
+            "ingreso_4_max_mm": 3,
+            "retencion_1": null,
+            "duracion_real_sem": 16.1429,
+            "continuidad_estudios": 0.0337
+          }
         },
         {
           "nombre": "Ingeniero Civil de Biotecnología",
@@ -458,7 +626,18 @@
           "tipo": "ing_civil",
           "malla_url": null,
           "programa_directo_id": null,
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil en Biotecnología",
+            "empleabilidad_1": 0.8222,
+            "empleabilidad_2": null,
+            "ingreso_4_texto": "s/i",
+            "ingreso_4_min_mm": null,
+            "ingreso_4_max_mm": null,
+            "retencion_1": null,
+            "duracion_real_sem": null,
+            "continuidad_estudios": 0.0526
+          }
         },
         {
           "nombre": "Ingeniero Civil Matemático Computacional",
@@ -466,7 +645,8 @@
           "tipo": "ing_civil",
           "malla_url": null,
           "programa_directo_id": null,
-          "nota": ""
+          "nota": "",
+          "empleo": null
         },
         {
           "nombre": "Articulación con Médico Cirujano, Arquitecto o Diseñador UC",
@@ -474,7 +654,8 @@
           "tipo": "no_ingenieria",
           "malla_url": null,
           "programa_directo_id": null,
-          "nota": "Vacantes limitadas; requiere postulación y selección."
+          "nota": "Vacantes limitadas; requiere postulación y selección.",
+          "empleo": null
         }
       ],
       "fuentes": [
@@ -520,7 +701,18 @@
           "tipo": "ing_civil",
           "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQDcpUxPns9GRJq2WgCGaqJPAQYqzYwUZ5pd4KKswDeCVdg?e=9SzTnH",
           "programa_directo_id": "usm-civil",
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil",
+            "empleabilidad_1": 0.9441,
+            "empleabilidad_2": 0.9608,
+            "ingreso_4_texto": "De $2 millones 400 mil a $2 millones 500 mil",
+            "ingreso_4_min_mm": 2.4,
+            "ingreso_4_max_mm": 2.5,
+            "retencion_1": 0.8989,
+            "duracion_real_sem": 17.5354,
+            "continuidad_estudios": 0.0237
+          }
         },
         {
           "nombre": "Ingeniería Civil de Minas",
@@ -528,7 +720,18 @@
           "tipo": "ing_civil",
           "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBVUUO4UA03SqHG4jkxCGxwAenm-FJjo8gBPdxT0ec54Ew?e=DGySzl",
           "programa_directo_id": "usm-civil-minas",
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil de Minas",
+            "empleabilidad_1": 0.8718,
+            "empleabilidad_2": 0.9146,
+            "ingreso_4_texto": "s/i",
+            "ingreso_4_min_mm": null,
+            "ingreso_4_max_mm": null,
+            "retencion_1": 0.9167,
+            "duracion_real_sem": 15.1791,
+            "continuidad_estudios": 0.0312
+          }
         },
         {
           "nombre": "Ingeniería Civil Eléctrica",
@@ -536,7 +739,18 @@
           "tipo": "ing_civil",
           "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQDZ0sWXoGXvQJrfX6EyQyKYAYJROwzQQzfGTkVx0Bbl7Hs?e=5EwD9O",
           "programa_directo_id": "usm-civil-electrica",
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil Eléctrica",
+            "empleabilidad_1": 0.8974,
+            "empleabilidad_2": 0.9216,
+            "ingreso_4_texto": "s/i",
+            "ingreso_4_min_mm": null,
+            "ingreso_4_max_mm": null,
+            "retencion_1": 0.9252,
+            "duracion_real_sem": 18.4909,
+            "continuidad_estudios": 0.0652
+          }
         },
         {
           "nombre": "Ingeniería Civil Física",
@@ -544,7 +758,8 @@
           "tipo": "ing_civil",
           "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBnqJYyFZxbQI2jB5dfO87KAcmviiBgOW-x-AjssTh660w?e=vtSKZo",
           "programa_directo_id": "usm-civil-fisica",
-          "nota": ""
+          "nota": "",
+          "empleo": null
         },
         {
           "nombre": "Ingeniería Civil Informática",
@@ -552,7 +767,18 @@
           "tipo": "ing_civil",
           "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQCz2fCQ-qwoQLp3HpJkE6nCAWQ6F3XeXcswa-qyobhU7Xk?e=9s0YlQ",
           "programa_directo_id": "usm-civil-informatica",
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil Informática",
+            "empleabilidad_1": 0.9373,
+            "empleabilidad_2": 0.954,
+            "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+            "ingreso_4_min_mm": 2.5,
+            "ingreso_4_max_mm": 3,
+            "retencion_1": 0.8921,
+            "duracion_real_sem": 15.035,
+            "continuidad_estudios": 0.0539
+          }
         },
         {
           "nombre": "Ingeniería Civil Matemática",
@@ -560,7 +786,18 @@
           "tipo": "ing_civil",
           "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQD2zpR9tcUSR7DmKW25d6LdAUUO9Cwk_7SkZ9w5n-pXoJs?e=Kw6lvi",
           "programa_directo_id": "usm-civil-matematica",
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil Matemática",
+            "empleabilidad_1": 0.8636,
+            "empleabilidad_2": null,
+            "ingreso_4_texto": "s/i",
+            "ingreso_4_min_mm": null,
+            "ingreso_4_max_mm": null,
+            "retencion_1": 0.9286,
+            "duracion_real_sem": 15.2424,
+            "continuidad_estudios": 0.1
+          }
         },
         {
           "nombre": "Ingeniería Civil Mecánica",
@@ -568,7 +805,18 @@
           "tipo": "ing_civil",
           "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBJHhY7n5h_T5br1QVNCjGQAd5hpN4Tq0iSvTPceZQI0MI?e=hbDbs1",
           "programa_directo_id": "usm-civil-mecanica",
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil Mecánica",
+            "empleabilidad_1": 0.9186,
+            "empleabilidad_2": 0.9401,
+            "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+            "ingreso_4_min_mm": 2.5,
+            "ingreso_4_max_mm": 3,
+            "retencion_1": 0.8931,
+            "duracion_real_sem": 16.877,
+            "continuidad_estudios": 0.0306
+          }
         },
         {
           "nombre": "Ingeniería Civil Química",
@@ -576,7 +824,18 @@
           "tipo": "ing_civil",
           "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQAb1xZ3jZAvR4Ejdm5nkqxwAegbwjH1cmalYmWGVz7KoyQ?e=5dHFlJ",
           "programa_directo_id": "usm-civil-quimica",
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil Química",
+            "empleabilidad_1": 0.8712,
+            "empleabilidad_2": 0.9536,
+            "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+            "ingreso_4_min_mm": 2.5,
+            "ingreso_4_max_mm": 3,
+            "retencion_1": 0.8716,
+            "duracion_real_sem": 16.7636,
+            "continuidad_estudios": 0.0642
+          }
         },
         {
           "nombre": "Ingeniería Civil Telemática",
@@ -584,7 +843,18 @@
           "tipo": "ing_civil",
           "malla_url": "https://usmcl-my.sharepoint.com/:b:/g/personal/diseno_admision_usm_cl/IQBdlCP7cd-MTp14pTPSSnecAUVvKtLmdGHjJq6P2ZJt-Zg?e=x0qaEJ",
           "programa_directo_id": "usm-civil-telematica",
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil Telemática",
+            "empleabilidad_1": 0.9811,
+            "empleabilidad_2": null,
+            "ingreso_4_texto": "s/i",
+            "ingreso_4_min_mm": null,
+            "ingreso_4_max_mm": null,
+            "retencion_1": 0.7685,
+            "duracion_real_sem": 16.2353,
+            "continuidad_estudios": 0.0492
+          }
         }
       ],
       "nota_salidas": "Lista = ingenierías civiles que se dictan en San Joaquín, según la regla 'oferta del campus donde esté matriculado'. La USM no publica la lista ni los cupos por cohorte fuera de su portal interno.",
@@ -627,7 +897,18 @@
           "tipo": "ing_civil",
           "malla_url": "https://admision.udp.cl/cms/wp-content/uploads/2025/09/INGENIERIA-CIVIL-INDUSTRIAL_2026.pdf",
           "programa_directo_id": "udp-civil-industrial",
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil Industrial",
+            "empleabilidad_1": 0.8966,
+            "empleabilidad_2": 0.9397,
+            "ingreso_4_texto": "De $2 millones 200 mil a $2 millones 300 mil",
+            "ingreso_4_min_mm": 2.2,
+            "ingreso_4_max_mm": 2.3,
+            "retencion_1": 0.9416,
+            "duracion_real_sem": 13.5,
+            "continuidad_estudios": 0.0147
+          }
         },
         {
           "nombre": "Ingeniería Civil en Obras Civiles",
@@ -635,7 +916,18 @@
           "tipo": "ing_civil",
           "malla_url": "https://eoc.udp.cl/cms/wp-content/uploads/2023/12/MALLA-INGENIERIA-CIVIL-EN-OBRAS-CIVILES.pdf",
           "programa_directo_id": "udp-civil-obras-civiles",
-          "nota": "Malla publicada en 2023."
+          "nota": "Malla publicada en 2023.",
+          "empleo": {
+            "carrera": "Ingeniería Civil en Obras Civiles",
+            "empleabilidad_1": 0.8382,
+            "empleabilidad_2": 0.875,
+            "ingreso_4_texto": "De $1 millón 900 mil a $2 millones",
+            "ingreso_4_min_mm": 1.9,
+            "ingreso_4_max_mm": 2,
+            "retencion_1": 0.8372,
+            "duracion_real_sem": 14.3662,
+            "continuidad_estudios": 0.0151
+          }
         },
         {
           "nombre": "Ingeniería Civil en Informática y Telecomunicaciones",
@@ -643,7 +935,18 @@
           "tipo": "ing_civil",
           "malla_url": "https://eit.udp.cl/cms/wp-content/uploads/2025/12/INGENIERIA-CIVIL-EN-INFORMATICA-Y-TELECOMUNICACIONES.pdf",
           "programa_directo_id": "udp-civil-informatica-telecom",
-          "nota": ""
+          "nota": "",
+          "empleo": {
+            "carrera": "Ingeniería Civil en Informática y Telecomunicaciones",
+            "empleabilidad_1": 0.9262,
+            "empleabilidad_2": 0.9639,
+            "ingreso_4_texto": "Desde $2 millones 500 mil a $3 millones",
+            "ingreso_4_min_mm": 2.5,
+            "ingreso_4_max_mm": 3,
+            "retencion_1": 0.9133,
+            "duracion_real_sem": 13.6111,
+            "continuidad_estudios": 0
+          }
         },
         {
           "nombre": "Ingeniería Civil en Ciencia de Datos e Inteligencia Artificial",
@@ -651,7 +954,8 @@
           "tipo": "ing_civil",
           "malla_url": "https://admision.udp.cl/cms/wp-content/uploads/2025/09/INGENIERIA-CIVIL-EN-CIENCIA-DE-DATOS-E-INTELIGENCIA-ARTIFICIAL_2026.pdf",
           "programa_directo_id": "udp-civil-ciencia-datos-ia",
-          "nota": ""
+          "nota": "",
+          "empleo": null
         }
       ],
       "fuentes": [
@@ -685,7 +989,8 @@
           "tipo": "ing_civil",
           "malla_url": null,
           "programa_directo_id": null,
-          "nota": ""
+          "nota": "",
+          "empleo": null
         },
         {
           "nombre": "Ingeniería Civil en Informática y Ciberseguridad",
@@ -693,7 +998,8 @@
           "tipo": "ing_civil",
           "malla_url": null,
           "programa_directo_id": null,
-          "nota": ""
+          "nota": "",
+          "empleo": null
         },
         {
           "nombre": "Ingeniería Civil en Informática e Inteligencia Artificial",
@@ -701,7 +1007,8 @@
           "tipo": "ing_civil",
           "malla_url": null,
           "programa_directo_id": null,
-          "nota": ""
+          "nota": "",
+          "empleo": null
         }
       ],
       "fuentes": [

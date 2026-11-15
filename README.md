@@ -76,6 +76,12 @@ Prototipo: `web/rutas.html` (generado con `python3 scripts/build_web.py`).
 - `scripts/build_oportunidades.py` → `data/oportunidades.json` → `web/oportunidades.html`: continuidad a magíster, doble título e intercambio, prácticas, rankings QS 2026 por materia, acreditación internacional y una "orientación del egresado" (interpretación propia, marcada como tal). Cada afirmación enlaza a su fuente.
 - Pendiente: empleabilidad e ingresos por carrera (Mi Futuro).
 
+## Empleabilidad e ingresos (v0.7.1, 15-11-2026)
+- Fuente: base "Buscador de Empleabilidad e Ingresos 2025-2026" (SIES – Mi Futuro, Mineduc), descargada por Benjamín desde https://www.mifuturo.cl/mi-futuro-buscadores/.
+- `scripts/parse_mifuturo.py <xlsx>` → `data/mifuturo_2025_2026.json` (solo las 5 universidades en foco; el xlsx no se guarda en el repo). Correrlo de nuevo cuando salga una edición nueva.
+- `scripts/empleo.py`: cruce explícito programa → carrera de Mi Futuro (y cada salida de plan común). Sin fila = sin dato; no se aproxima.
+- Se muestra en Explorar (columna nueva; en planes comunes, rango entre especialidades), Rutas (cada salida), Simulador (bajo cada carrera) y "Más allá del título" (tabla de carreras equivalentes con empleo, ingreso, % que sigue estudiando y duración real).
+
 ## Cómo regenerar
     python3 scripts/build_inventario.py
     python3 scripts/build_planes_comunes.py

@@ -22,6 +22,10 @@ __BASE_CSS__
 .orient b{font-weight:600}
 .orient p{margin:0}
 .nota{font-size:.84rem;color:var(--muted)}
+.emp-t .e1{font:600 1.05rem var(--f-display)}
+.emp-t .ing{font-size:.86rem}
+.emp-t .mini{font-size:.76rem;color:var(--muted);margin-top:4px;line-height:1.35}
+.emp-t .na-cell{color:var(--muted);font-size:.8rem;font-style:italic}
 .pend{background:var(--warn-soft);border-radius:10px;padding:12px 14px;font-size:.92rem}
 </style>
 
@@ -38,7 +42,7 @@ __BASE_CSS__
     <p class="nota"><span class="st si"></span>Ofrece o destaca <span class="st warn" style="margin-left:12px"></span>Parcial o con matices <span class="st na" style="margin-left:12px"></span>No encontrado en fuentes públicas (no significa que no exista). * = dato de una carrera, puede variar entre carreras.</p>
   </section>
 
-  <div class="pend" id="pend"></div>
+  <section class="card" id="empleo" style="display:flex;flex-direction:column;gap:10px"></section>
 
   <section style="display:flex;flex-direction:column;gap:14px">
     <div class="tabs" role="tablist" id="tabs"></div>
@@ -57,7 +61,22 @@ document.getElementById("cmp").innerHTML =
   `<thead><tr><th></th>${D.universidades.map(u=>`<th scope="col">${CORTO[u.id]}</th>`).join("")}</tr></thead>
    <tbody>${D.filas.map(f=>`<tr><th scope="row">${esc(f.nombre)}</th>${D.universidades.map(u=>{const c=u.tabla[f.id];return `<td><span class="st ${c.estado}"></span>${esc(c.texto)}</td>`}).join("")}</tr>`).join("")}</tbody>`;
 
-document.getElementById("pend").innerHTML = `<b>Pendiente:</b> ${esc(D.pendiente)}`;
+const pctE = x => x==null ? "s/i" : Math.round(x*100)+"%";
+const mm = x => String(Math.round(x*10)/10).replace(".",",");
+const ingE = e => e.ingreso_4_min_mm==null ? "s/i" : e.ingreso_4_max_mm==null ? `más de $${mm(e.ingreso_4_min_mm)} M` : `$${mm(e.ingreso_4_min_mm)}–${mm(e.ingreso_4_max_mm)} M`;
+(function(){
+  const el = document.getElementById("empleo");
+  if(!D.empleo){ el.remove(); return; }
+  const E = D.empleo;
+  const celda = c => !c ? `<td class="na-cell">No la imparte o sin dato</td>` :
+    `<td><div class="e1">${pctE(c.empleabilidad_1)}</div><div class="ing">${ingE(c)}</div>
+      <div class="mini">Sigue estudiando: ${pctE(c.continuidad_estudios)}<br>Duración real: ${c.duracion_real_sem?mm(c.duracion_real_sem)+" sem.":"s/i"}</div></td>`;
+  el.innerHTML = `<h2 style="font-size:1.15rem">Empleo e ingresos en carreras equivalentes</h2>
+    <p style="margin:0">Para cada carrera: <b>empleabilidad al 1.er año</b> de titulación, <b>ingreso promedio mensual bruto al 4.º año</b> (en millones de pesos), qué porcentaje de titulados sigue estudiando (magíster, doctorado u otra carrera) y cuántos semestres demoran de verdad en titularse.</p>
+    <div class="tablewrap"><table class="data cmp emp-t"><thead><tr><th></th>${D.universidades.map(u=>`<th scope="col">${CORTO[u.id]}</th>`).join("")}</tr></thead>
+    <tbody>${E.comparables.map(r=>`<tr><th scope="row">${esc(r.nombre)}</th>${D.universidades.map(u=>celda(r.celdas[u.id])).join("")}</tr>`).join("")}</tbody></table></div>
+    <p class="nota">Fuente: <a href="${esc(E.url)}" target="_blank" rel="noopener">${esc(E.fuente)}</a>. ${E.notas.map(esc).join(" ")} Las cifras son de toda la universidad (USM incluye Valparaíso). Las diferencias de 2 o 3 puntos en empleabilidad no son significativas.</p>`;
+})();
 
 const fuente = k => { if(!k) return ""; const f=D.fuentes[k]; return ` <a class="src" href="${esc(f.url)}" target="_blank" rel="noopener" title="${esc(f.nombre)}">fuente${f.oficial?"":" (prensa)"}</a>`; };
 const lista = xs => `<ul>${xs.map(x=>`<li>${esc(x.texto)}${fuente(x.fuente)}</li>`).join("")}</ul>`;

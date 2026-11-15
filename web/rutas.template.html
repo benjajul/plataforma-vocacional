@@ -104,6 +104,9 @@ a.chip:hover{border-color:var(--accent);color:var(--accent)}
 .out.ni{border-style:dashed}
 .out-name{font-weight:600;font-size:1rem;line-height:1.3}
 .out-title{font-size:.86rem;color:var(--muted)}
+.emp{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:.82rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:6px}
+.emp b{color:var(--ink);font-weight:600}
+.emp.na{font-style:italic}
 .out-foot{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:auto}
 .tag{font-family:var(--f-mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;padding:2px 6px;border-radius:4px;background:var(--bg);color:var(--muted);border:1px solid var(--line)}
 .tag.direct{color:var(--ok);border-color:var(--ok)}
@@ -135,7 +138,7 @@ footer{font-size:.82rem;color:var(--muted)}
   <nav class="tabs" role="tablist" id="tabs"></nav>
   <section id="route" aria-live="polite"></section>
 
-  <footer>Datos consultados en fuentes oficiales el <span id="fecha"></span>. Cada ruta indica sus fuentes. Los cupos y reglas pueden cambiar cada año; confirmar con la universidad antes de postular.</footer>
+  <footer>Datos consultados en fuentes oficiales el <span id="fecha"></span>. Cada ruta indica sus fuentes. Empleabilidad e ingresos: <a href="https://www.mifuturo.cl/mi-futuro-buscadores/" target="_blank" rel="noopener">Mi Futuro 2025-2026 (Mineduc)</a>, por carrera y universidad sin distinguir sede; empleabilidad al 1.er año de titulación e ingreso promedio mensual bruto al 4.º año. Los cupos y reglas pueden cambiar cada año; confirmar con la universidad antes de postular.</footer>
 </div>
 
 <script>
@@ -146,6 +149,10 @@ const MEC = {libre:"Elección libre, sin cupos",garantizado:"Cupo garantizado",c
 const CUPOS = {sin_limite:"Sin límite",limitados:"Limitados por cohorte",no_informado:"No informado"};
 const ORDER = ["uchile","uc","usm","udp","udd","uai","usach"];
 const planes = ORDER.map(u=>DATA.planes_comunes.find(p=>p.universidad_id===u)).filter(Boolean);
+const pctE = x => x==null ? "s/i" : Math.round(x*100)+"%";
+const mm = x => String(Math.round(x*10)/10).replace(".",",");
+const ingE = e => e.ingreso_4_min_mm==null ? "s/i" : e.ingreso_4_max_mm==null ? `más de $${mm(e.ingreso_4_min_mm)} M` : `$${mm(e.ingreso_4_min_mm)}–${mm(e.ingreso_4_max_mm)} M`;
+const empleoLinea = e => e ? `<div class="emp" title="Mi Futuro 2025-2026 (Mineduc), datos de toda la universidad"><span>Empleo 1.er año <b>${pctE(e.empleabilidad_1)}</b></span><span>Ingreso 4.º año <b>${ingE(e)}</b></span></div>` : `<div class="emp na">Sin datos de empleabilidad (carrera nueva o sin titulados suficientes)</div>`;
 const esc = s => String(s ?? "").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const mecClass = m => "m-" + (m==="garantizado" ? "libre" : m);
 document.getElementById("fecha").textContent = DATA.consultado.split("-").reverse().join("-");
@@ -202,6 +209,7 @@ function render(id){
       <dl class="kv"><dt>Título</dt><dd>${tp}</dd><dt>Grado</dt><dd>${esc(o.grado)}</dd><dt>Duración</dt><dd>${o.duracion_semestres} semestres en total</dd></dl>
       ${o.menciones&&o.menciones.length?`<div><div class="small" style="font-size:.78rem;color:var(--muted);margin-bottom:3px">${o.menciones.length>3?"Líneas de especialización":"Menciones"}</div><div class="mchips">${o.menciones.map(m=>`<span>${esc(m)}</span>`).join("")}</div></div>`:""}
       ${o.despues?`<div class="out-note">${esc(o.despues)}</div>`:""}
+      ${empleoLinea(o.empleo)}
       <div class="out-foot"><a class="malla" href="${esc(o.malla_url)}" target="_blank" rel="noopener">Ficha y malla oficial</a></div></article>`;
   };
   const GRUPOS = {ingenieria:["Ingenierías civiles","Título profesional de Ingeniero/a Civil + grado de Licenciado/a en Ciencias de la Ingeniería. 11 semestres."],
@@ -219,6 +227,7 @@ function render(id){
     const tipo = ni ? `<span class="tag">No es ingeniería</span>` : "";
     return `<article class="out${ni?" ni":""}"><div class="out-name">${esc(o.nombre)}</div>${titulo}
       ${o.nota?`<div class="out-note">${esc(o.nota)}</div>`:""}
+      ${o.nombre.startsWith("Articulación")?"":empleoLinea(o.empleo)}
       <div class="out-foot">${malla}${direct}${tipo}</div></article>`;
   }).join("") : `<div class="callout na">Esta universidad todavía no publica a qué carreras lleva este plan común.</div>`;
 

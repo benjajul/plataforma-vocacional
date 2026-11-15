@@ -152,10 +152,29 @@ def main():
                        "resumen": u["resumen"], "tabla": {k: {"estado": v[0], "texto": v[1]} for k, v in u["tabla"].items()},
                        "destaca": items(u["destaca"]), "magister": items(u["magister"]), "extranjero": items(u["extranjero"]),
                        "practicas": items(u["practicas"]), "orientacion": u["orientacion"]})
-    out = {"version": "0.7", "consultado": CONSULTADO, "filas": [{"id": a, "nombre": b} for a, b in FILAS],
+    import empleo
+    mfc = empleo.mf()["carreras"]
+    COMP = [("Ing. Civil Industrial", ["Ingeniería Civil Industrial"]),
+            ("Ing. Civil en Computación / Informática", ["Ingeniería Civil en Computación e Informática"]),
+            ("Ing. Civil Eléctrica", ["Ingeniería Civil Eléctrica"]),
+            ("Ing. Civil Mecánica", ["Ingeniería Civil Mecánica"]),
+            ("Ing. Civil de Minas", ["Ingeniería Civil en Minas"]),
+            ("Ing. Civil (obras civiles)", ["Ingeniería Civil en Obras Civiles", "Ingeniería Civil, plan común y licenciatura en Ciencias de la Ingeniería"]),
+            ("Ing. Civil Química", ["Ingeniería Civil Química"]),
+            ("Ingeniería Comercial", ["Ingeniería Comercial"])]
+    comparables = []
+    for nombre, gens in COMP:
+        celdas = {}
+        for uid in FOCO:
+            fila = next((c for g in gens for c in mfc if c["universidad_id"] == uid and c["carrera_generica"] == g), None)
+            celdas[uid] = ({k: fila[k] for k in ("carrera", "empleabilidad_1", "empleabilidad_2", "ingreso_4_min_mm", "ingreso_4_max_mm",
+                                                  "ingreso_4_texto", "continuidad_estudios", "duracion_real_sem", "retencion_1")} if fila else None)
+        comparables.append({"nombre": nombre, "celdas": celdas})
+    out = {"version": "0.7.1",
+           "empleo": {"fuente": empleo.mf().get("fuente"), "url": empleo.mf().get("url"), "notas": empleo.mf().get("notas", []),
+                      "comparables": comparables} if mfc else None, "consultado": CONSULTADO, "filas": [{"id": a, "nombre": b} for a, b in FILAS],
            "universidades": salida,
            "fuentes": {k: {"nombre": n, "url": url, "oficial": of} for k, (n, url, of) in F.items()},
-           "pendiente": "Empleabilidad al 1.er año e ingreso al 4.º año por carrera (Mi Futuro, Mineduc): mifuturo.cl no se pudo consultar desde esta sesión. Se agregará cuando se pueda leer el buscador.",
            "nota_orientacion": "La 'orientación' es una lectura nuestra a partir de los datos de esta página (prácticas, menciones, rankings, rutas de continuidad), no una clasificación oficial. Ninguna fuente pública mide qué tan 'gerencial' o 'técnico' es el egresado de cada universidad."}
     (ROOT / "data" / "oportunidades.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{len(salida)} universidades; {len(F)} fuentes")

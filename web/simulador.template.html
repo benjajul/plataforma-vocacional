@@ -129,12 +129,19 @@ function pintar(res){
     <div class="tablewrap"><table class="data"><thead><tr><th>Universidad</th><th>Carrera</th><th class="num">Tu ponderado</th><th class="num">Corte 2026</th><th class="num">Diferencia</th><th>Estado</th></tr></thead><tbody>${
       vis.map(r=>{const p=r.p,c=p.corte_2026; const m1w=p.ponderaciones.m1;
         const subir = r.diff!=null && r.diff<0 && m1w ? `<div class="how">≈ +${Math.ceil(-r.diff*100/m1w)} pts en M1 (pondera ${m1w}%)</div>` : "";
-        return `<tr><td><b>${UNI[p.universidad_id]}</b></td><td>${esc(p.nombre)}${p.plan_comun?` <span class="small">(${p.universidad_id==="uc"?"licenciatura + título":"plan común"})</span>`:""}${r.problemas.map(x=>`<div class="req">${esc(x)}</div>`).join("")}${c&&!c.oficial?`<div class="src">Corte de fuente secundaria</div>`:""}</td>
+        return `<tr><td><b>${UNI[p.universidad_id]}</b></td><td>${esc(p.nombre)}${p.plan_comun?` <span class="small">(${p.universidad_id==="uc"?"licenciatura + título":"plan común"})</span>`:""}${r.problemas.map(x=>`<div class="req">${esc(x)}</div>`).join("")}${c&&!c.oficial?`<div class="src">Corte de fuente secundaria</div>`:""}${empSim(p.empleo)}</td>
         <td class="num">${f1(r.ponderado)}</td><td class="num">${c?f1(c.valor):"—"}${c?`<div class="src">${esc(c.medida)}</div>`:""}</td>
         <td class="num"><span class="diff ${r.diff==null?"":r.diff>=0?"pos":"neg"}">${r.diff==null?"—":(r.diff>0?"+":"")+f1(r.diff)}</span>${subir}</td>
         <td><span class="pill ${CAT[r.cat].c}">${CAT[r.cat].t}</span></td></tr>`}).join("") || `<tr><td colspan="6" class="small">No hay carreras en esta combinación de filtros.</td></tr>`}</tbody></table></div>
-    <p class="small">"≈ +X pts en M1" es una guía: cuántos puntos tendría que subir solo tu M1 para alcanzar el corte, manteniendo lo demás igual.</p>
+    <p class="small">Empleo e ingreso: Mi Futuro 2025-2026 (Mineduc). "≈ +X pts en M1" es una guía: cuántos puntos tendría que subir solo tu M1 para alcanzar el corte, manteniendo lo demás igual.</p>
   </div>`;
+}
+function empSim(e){
+  if(!e) return "";
+  const pc=x=>Math.round(x*100)+"%", m=x=>String(Math.round(x*10)/10).replace(".",",");
+  if(e.rango) return e.empleabilidad_1_min==null?"":`<div class="src">Empleo 1.er año: ${pc(e.empleabilidad_1_min)}–${pc(e.empleabilidad_1_max)} según especialidad</div>`;
+  const ing = e.ingreso_4_min_mm==null ? "" : e.ingreso_4_max_mm==null ? ` · ingreso 4.º año más de $${m(e.ingreso_4_min_mm)} M` : ` · ingreso 4.º año $${m(e.ingreso_4_min_mm)}–${m(e.ingreso_4_max_mm)} M`;
+  return e.empleabilidad_1==null?"":`<div class="src">Empleo 1.er año: ${pc(e.empleabilidad_1)}${ing}</div>`;
 }
 document.addEventListener("click", e=>{ const b=e.target.closest("[data-cat]"); if(b){ filtroCat=b.dataset.cat; calcular(); } });
 document.addEventListener("change", e=>{ if(e.target.id==="f-area"||e.target.id==="f-uni") calcular(); });

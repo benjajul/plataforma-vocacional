@@ -290,6 +290,10 @@ def main():
         pc["consultado"] = CONSULTADO
     from config import FOCO
     planes = [pc for pc in PLANES if pc["universidad_id"] in FOCO]
+    import empleo
+    for pc in planes:
+        for sal in pc["salidas"]:
+            sal["empleo"] = empleo.salida(pc["programa_id"], pc["universidad_id"], sal["nombre"])
     out = {"version": "0.4", "consultado": CONSULTADO, "foco": FOCO, "planes_comunes": planes}
     (root / "data" / "planes_comunes.json").write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"{len(planes)} planes comunes en foco, {sum(len(p['salidas']) for p in planes)} salidas")
